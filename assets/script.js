@@ -114,7 +114,11 @@ if (productKeys.length > 0) {
             <span>${item.name}</span> 
           </div>
           <div class="col-price">${item.price}</div>
-          <div class="col-quantity">${item.quantity}</div>
+          <div class="col-quantity">
+            <button class="btn-minus">-</button>
+            ${item.quantity}
+            <button class="btn-plus">+</button>
+          </div>
           <div class="col-total">${totalPrice}</div>
           <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
         </div>

@@ -1,5 +1,5 @@
 /* button */
-button {
+.button-1 {
     border: none;
     color: #fff;
     background-image: linear-gradient(to right, var(--color-text), var(--color-one), #00ADEF, var(--color-text), var(--color-one));
@@ -11,7 +11,7 @@ button {
     transition: all 0.5s ease;
 }
 
-button:hover {
+.button-1:hover {
     background-position: 100% 0;
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -184,16 +184,20 @@ button:hover {
     margin: 100px 0;
 }
 
-.section-3 .user-card-header .user-cart {
+.section-3 .container {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.section-3 .user-card-header .user-cart__title {
     padding: 11px 16px;
     font-size: 22px;
 }
 
-.section-3 .user-card-header .user-cart i {
+.section-3 .user-card-header .user-cart__title i {
     color: var(--color-two);
 }
 
-.section-3 .user-card-header .user-cart .inner-desc {
+.section-3 .user-card-header .user-cart__title .inner-desc {
     margin-left: 10px;
 }
 
@@ -220,17 +224,21 @@ button:hover {
 
 .section-3 .user-card-body .column-feature {
     color: var(--color-background);
+    padding: 12px;
     margin-bottom: 15px;
 }
 
 .section-3 .user-card-body .column-products .grid-products {
-    border-bottom: 1px solid var(--color-background);
-    padding: 7px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 16px;
 }
 
 .section-3 .user-card-body .column-products .grid-products:last-child {
     border-style: none;
 }
+
 
 .section-3 .user-card-body .col-del {
     color: var(--color-background);
@@ -243,11 +251,29 @@ button:hover {
     gap: 10px;
 } 
 
+
 .section-3 .user-card-body .column-products .col-product img {
     aspect-ratio: 4 / 3;
     width: 50px;
     height: auto;
     object-fit: cover;
+}
+
+.section-3 .user-card-body .column-products .grid-products .col-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-3 .user-card-body .column-products .grid-products .col-quantity button {
+    border-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--color-two);
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
 }
 
 .section-3 .user-card-body .column-products .col-total,
@@ -261,7 +287,7 @@ button:hover {
     font-size: 20px;
 }
 
-.section-3 .button {
+.section-3 .button-1 {
     margin-left: 90%;
 }
 
@@ -495,7 +521,7 @@ button:hover {
     margin-top: 2px;
 }
 
-.section-4 .grid-row .col-left .personal-detail .card-body button {
+.section-4 .grid-row .col-left .personal-detail .card-body .button-1 {
     margin-left: 50%;
 }
 

@@ -115,42 +115,44 @@
 
 <div class="section-3">
   <div class="container">
-    <div class="user-card-header">
-      <h2 class="user-cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="inner-desc">Giỏ hàng của bạn</span>
-      </h2>
-    </div>
-    <div class="user-card-body">
-      <div class="card-empty show">
-        <div class="user-card-empty">
-          Chưa có sản phẩm trong giỏ hàng
-        </div>
+    <div class="user-card">
+      <div class="user-card-header">
+        <h2 class="user-cart__title">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="inner-desc">Giỏ hàng của bạn</span>
+        </h2>
       </div>
-      <div class="card-non-empty hidden">
-        <div class="column-feature">
-          <div class="grid-products">
-            <div class="col-action">
-              <input type="checkbox" id="selectAll">
+      <div class="user-card-body">
+        <div class="card-empty show">
+          <div class="user-card-empty">
+            Chưa có sản phẩm trong giỏ hàng
+          </div>
+        </div>
+        <div class="card-non-empty hidden">
+          <div class="column-feature">
+            <div class="grid-products">
+              <div class="col-action">
+                <input type="checkbox" id="selectAll">
+              </div>
+              <div class="col-product">Tất cả</div>
+              <div class="col-price">Đơn giá</div>
+              <div class="col-quantity">Số lượng</div>
+              <div class="col-total">Thành tiền</div>
+              <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
             </div>
-            <div class="col-product">Tất cả</div>
-            <div class="col-price">Đơn giá</div>
-            <div class="col-quantity">Số lượng</div>
-            <div class="col-total">Thành tiền</div>
-            <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
           </div>
-        </div>
-        <div class="column-products">
+          <div class="column-products">
 
-        </div>
-        <div class="column-total-price">
-          <div>Tổng tiền hàng:
-            <span>0 VNĐ</span>
+          </div>
+          <div class="column-total-price">
+            <div>Tổng tiền hàng:
+              <span>0 VNĐ</span>
+            </div>
           </div>
         </div>
       </div>
+      <button class="button-1">Xác nhận</button>
     </div>
-    <button class="button">Xác nhận</button>
   </div>
 </div>
 
@@ -214,7 +216,7 @@
                         </select>
                       </div>
                     </div>
-                    <button type="submit">Lưu thông tin</button>
+                    <button class="button-1" type="submit">Lưu thông tin</button>
                   </form>
                 </div>
               </div>
