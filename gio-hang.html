@@ -51,7 +51,7 @@
               <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <div class="item-active"></div>
-          </div>  
+          </div>
           <div class="timeline-title">
             <i class="fa-solid fa-cart-shopping"></i>
             <strong class="timeline-content">Giỏ hàng</strong>
@@ -66,7 +66,7 @@
               <i class="fa-regular fa-address-card"></i>
             </div>
             <div class="item-active"></div>
-          </div>  
+          </div>
           <div class="timeline-title">
             <i class="fa-regular fa-address-book"></i>
             <strong class="timeline-content">Thông tin cá nhân</strong>
@@ -81,7 +81,7 @@
               <i class="fa-solid fa-credit-card"></i>
             </div>
             <div class="item-active"></div>
-          </div>  
+          </div>
           <div class="timeline-title">
             <i class="fa-regular fa-credit-card"></i>
             <strong class="timeline-content">Thanh Toán</strong>
@@ -96,7 +96,7 @@
               <i class="fa-solid fa-check"></i>
             </div>
             <div class="item-active"></div>
-          </div>  
+          </div>
           <div class="timeline-title">
             <i class="fa-solid fa-circle-check"></i>
             <strong class="timeline-content">Hoàn thành</strong>
@@ -149,9 +149,9 @@
               <span>0 VNĐ</span>
             </div>
           </div>
+          <button class="button-1 btn__user-card">Xác nhận</button>
         </div>
       </div>
-      <button class="button-1">Xác nhận</button>
     </div>
   </div>
 </div>
@@ -160,7 +160,7 @@
 
 <!-- section 4 -->
 
-<div class="section-4">
+<div class="section-4 ">
   <div class="inner-wrap">
     <div class="imgs">
       <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="">
@@ -190,26 +190,28 @@
                   <form id="personalForm">
                     <div class="form-group">
                       <label for="fullName">Họ và tên</label>
-                      <input id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name" required>
+                      <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name"
+                        required>
                     </div>
 
                     <div class="form-group">
                       <label for="Email">Email</label>
-                      <input id="Email" type="email" placeholder="nguyenvana@gmail.com" autocomplete="email">
+                      <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
+                        autocomplete="email">
                     </div>
 
                     <div class="form-group">
                       <label for="phoneNumber">Số điện thoại</label>
-                      <input id="phoneNumber" type="number" placeholder="1234567890" required>
+                      <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required>
                     </div>
                     <div class="form-row">
                       <div class="form-group">
                         <label for="dateOfBirth">Ngày sinh</label>
-                        <input id="dateOfBirth" type="date">
+                        <input name="dateOfBirth" id="dateOfBirth" type="date">
                       </div>
                       <div class="form-group">
                         <label for="sex">Giới tính</label>
-                        <select id="sex">
+                        <select name="sex" id="sex">
                           <option>Nam</option>
                           <option>Nữ</option>
                           <option>Khác</option>
@@ -223,7 +225,7 @@
             </div>
           </div>
         </div>
-        <div class="col-right">
+        <div class="col-right hidden">
           <div class="profile-infor-wrap">
             <div class="profile-infor-header">
               <div class="card-title">
@@ -263,7 +265,7 @@
                 </div>
               </div>
             </div>
-
+            <button class="button-1">Xác nhận</button>
           </div>
         </div>
       </div>
@@ -275,7 +277,7 @@
 
 
 <!-- section-5 -->
-<div class="section-5">
+<div class="section-5 ">
   <div class="container">
     <div class="payment">
       <div class="payment-header">
@@ -316,6 +318,7 @@
             </div>
           </div>
         </div>
+        <button class="button-1">Chuyển khoản ngay</button>
       </div>
     </div>
   </div>
@@ -336,93 +339,91 @@
           <p class="order-success__subtitle">Cảm ơn bạn đã tin tưởng và lựa chọn chúng tôi!</p>
         </div>
       </div>
-      <div class="order-sucess_grid">
-        <div class="order-success__left">
-          <div class="buyer-card">
-            <div class="buyer-card__header">
+      <div class="buyer-card">
+        <div class="buyer-card__header">
+          <i class="fa-solid fa-user"></i>
+          <span class="buyer-card__title">Thông tin người mua</span>
+        </div>
+        <div class="buyer-card__body">
+          <div class="buyer-card__row ">
+            <span class="buyer-card__label">
+              Họ và tên
+            </span>
+            <span class="buyer-card__value buyer-name">
               <i class="fa-solid fa-user"></i>
-              <span class="buyer-card__title">Thông tin người mua</span>
-            </div>
-            <div class="buyer-card__body">
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Họ và tên
-                </span>
-                <span class="buyer-card__value">
-                  <i class="fa-solid fa-user"></i>
+              <span class="buyer-text"></span>
 
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Email
-                </span>
-                <span class="buyer-card__value">
-                  <i class="fa-solid fa-envelope"></i>
-
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Số điện thoại
-                </span>
-                <span class="buyer-card__value">
-                  <i class="fa-solid fa-phone"></i>
-
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Ngày sinh
-                </span>
-                <span class="buyer-card__value">
-                  <i class="fa-solid fa-cake-candles"></i>
-
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Địa chỉ
-                </span>
-                <span class="buyer-card__value">
-                  <i class="fa-solid fa-location-dot"></i>
-
-
-                </span>
-              </div>
-
-            </div>
+            </span>
           </div>
-          <div class="course-list">
-            <div class="course-list__header">
-              <div class="course-list__title">
-                <i class="fa-solid fa-book"></i>
-                Danh sách khoá học
-              </div>
-              <span class="course-list__count">2 khoá học</span>
-            </div>
-            <div class="course-list__body">
-              <div class="course-item">
-                <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="Course"
-                  class="course-item__thumb">
-                <div class="course-item__name">Khoá học tiếng anh cơ bản</div>
-                <div class="course-item__price">
-                  <span class="course-item__price-value">1.200.000 VNĐ</span>
-                  <span class="course-item__price-x">x1</span>
-                </div>
-              </div>
-            </div>
+          <div class="buyer-card__row">
+            <span class="buyer-card__label">
+              Email
+            </span>
+            <span class="buyer-card__value buyer-email">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="buyer-text"></span>
+
+            </span>
+          </div>
+          <div class="buyer-card__row">
+            <span class="buyer-card__label">
+              Số điện thoại
+            </span>
+            <span class="buyer-card__value buyer-phoneNumber">
+              <i class="fa-solid fa-phone"></i>
+              <span class="buyer-text"></span>
+
+            </span>
+          </div>
+          <div class="buyer-card__row">
+            <span class="buyer-card__label">
+              Ngày sinh
+            </span>
+            <span class="buyer-card__value buyer-dateOfBirth">
+              <i class="fa-solid fa-cake-candles"></i>
+              <span class="buyer-text"></span>
+
+            </span>
+          </div>
+          <div class="buyer-card__row">
+            <span class="buyer-card__label">
+              Giới tính
+            </span>
+            <span class="buyer-card__value buyer-gender">
+              <i class="fas fa-venus-mars"></i>
+              <span class="buyer-text"></span>
+
+            </span>
+          </div>
+
+          <div class="buyer-card__row">
+            <span class="buyer-card__label">
+              Thời gian đặt hàng
+            </span>
+            <span class="buyer-card__value buyer-orderDate">
+              <i class="fa-regular fa-clock"></i>
+              <span class="buyer-text"></span>
+
+            </span>
           </div>
         </div>
-        <div class="order-sucess__right">
-          <div class="payment-card">
-            <div class="payment-card__title">
-              <i class="fa-regular fa-credit-card"></i>
-              Tổng thanh toán
+      </div>
+      <div class="course-list">
+        <div class="course-list__header">
+          <div class="course-list__title">
+            <i class="fa-solid fa-book"></i>
+            Danh sách khoá học
+          </div>
+          <span class="course-list__count">2 khoá học</span>
+        </div>
+        <div class="course-list__body">
+          <div class="course-item">
+            <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="Course"
+              class="course-item__thumb">
+            <div class="course-item__name">Khoá học tiếng anh cơ bản</div>
+            <div class="course-item__price">
+              <span class="course-item__price-value">1.200.000 VNĐ</span>
+              <span class="course-item__price-x">x1</span>
             </div>
           </div>
         </div>
