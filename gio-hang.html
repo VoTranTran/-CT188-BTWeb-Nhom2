@@ -13,433 +13,518 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<!-- section 1 -->
-<div class="section-1">
-  <div class="container">
-    <ul class="inner-wrap">
-      <li class="list-item">
-        <i class="fa-solid fa-house"></i>
-        <a href="index.html">
-          <span>Trang chủ</span>
-        </a>
-      </li>
-      <div class="item-between">
-        /
+
+<body>
+
+
+  <header class="header fixed">
+    <div class="container">
+      <div class="header-body">
+        <a href="index.html" class="logo"></a>
+        <nav class="navbar">
+          <ul class="navbar-left">
+            <li>
+              <a href="index.html">Trang chủ</a>
+            </li>
+            <li><a href="./gioithieu.html" class="home-style">Giới thiệu</a></li>
+            <li><a href="./khoahoc.html">Khóa học</a></li>
+          </ul>
+          <ul class="navbar-right">
+            <a href="./giohang.html"><span class="shopping-icon-frame"><i
+                  class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
+            <li class="frame">
+              <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
+            </li>
+            <li class="frame">
+              <a href="./dangnhap.html" class="color-green">Đăng nhập</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <li class="list-item">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <a href="/">
-          <span>Giỏ hàng</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-<!-- end section 1 -->
+    </div>
+  </header>
 
 
-<!-- section 2 -->
 
-<div class="section-2">
-  <div class="container">
-    <div class="order-timeline">
-      <div class="timeline-bar"></div>
+
+
+
+  <!-- section 1 -->
+  <div class="section-1">
+    <div class="container">
       <ul class="inner-wrap">
         <li class="list-item">
-          <div class="timeline-wrapper">
-            <div class="timeline-icon active">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-            <div class="item-active"></div>
-          </div>
-          <div class="timeline-title">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <strong class="timeline-content">Giỏ hàng</strong>
-          </div>
-          <div class="timeline-desc">Sản phẩm đã được thêm</div>
-          <div class="timeline-status">Vừa xong</div>
+          <i class="fa-solid fa-house"></i>
+          <a href="index.html">
+            <span>Trang chủ</span>
+          </a>
         </li>
-
+        <div class="item-between">
+          /
+        </div>
         <li class="list-item">
-          <div class="timeline-wrapper">
-            <div class="timeline-icon">
-              <i class="fa-regular fa-address-card"></i>
-            </div>
-            <div class="item-active"></div>
-          </div>
-          <div class="timeline-title">
-            <i class="fa-regular fa-address-book"></i>
-            <strong class="timeline-content">Thông tin cá nhân</strong>
-          </div>
-          <div class="timeline-desc">Chờ xác nhận thông tin cá nhân</div>
-          <div class="timeline-status">Đang chờ</div>
-        </li>
-
-        <li class="list-item">
-          <div class="timeline-wrapper">
-            <div class="timeline-icon">
-              <i class="fa-solid fa-credit-card"></i>
-            </div>
-            <div class="item-active"></div>
-          </div>
-          <div class="timeline-title">
-            <i class="fa-regular fa-credit-card"></i>
-            <strong class="timeline-content">Thanh Toán</strong>
-          </div>
-          <div class="timeline-desc">Chờ xác nhận thanh toán</div>
-          <div class="timeline-status">Đang chờ</div>
-        </li>
-
-        <li class="list-item">
-          <div class="timeline-wrapper">
-            <div class="timeline-icon">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="item-active"></div>
-          </div>
-          <div class="timeline-title">
-            <i class="fa-solid fa-circle-check"></i>
-            <strong class="timeline-content">Hoàn thành</strong>
-          </div>
-          <div class="timeline-desc">Cảm ơn bạn đã mua hàng</div>
-          <div class="timeline-status">Đang chờ</div>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/">
+            <span>Giỏ hàng</span>
+          </a>
         </li>
       </ul>
     </div>
   </div>
-</div>
+  <!-- end section 1 -->
 
-<!-- end section 2 -->
 
-<!-- section 3 -->
+  <!-- section 2 -->
 
-<div class="section-3">
-  <div class="container">
-    <div class="user-card">
-      <div class="user-card-header">
-        <h2 class="user-cart__title">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span class="inner-desc">Giỏ hàng của bạn</span>
-        </h2>
-      </div>
-      <div class="user-card-body">
-        <div class="card-empty show">
-          <div class="user-card-empty">
-            Chưa có sản phẩm trong giỏ hàng
-          </div>
-        </div>
-        <div class="card-non-empty hidden">
-          <div class="column-feature">
-            <div class="grid-products">
-              <div class="col-action">
-                <input type="checkbox" id="selectAll">
-              </div>
-              <div class="col-product">Tất cả</div>
-              <div class="col-price">Đơn giá</div>
-              <div class="col-quantity">Số lượng</div>
-              <div class="col-total">Thành tiền</div>
-              <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
-            </div>
-          </div>
-          <div class="column-products">
-
-          </div>
-          <div class="column-total-price">
-            <div>Tổng tiền hàng:
-              <span>0 VNĐ</span>
-            </div>
-          </div>
-          <button class="button-1 btn__user-card">Xác nhận</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- end section 3 -->
-
-<!-- section 4 -->
-
-<div class="section-4 ">
-  <div class="inner-wrap">
-    <div class="imgs">
-      <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="">
-      <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt="">
-      <img src="assets/images/0dcbe195-cd5e-41e1-9859-baf8a678e842-removebg-preview.png" alt="">
-    </div>
+  <div class="section-2">
     <div class="container">
-      <div class="grid-row">
-        <div class="col-left">
-          <div class="personal-wrap">
-
-            <div class="personal-header">
-              <h2>
-                <i class="fa-regular fa-address-card"></i>
-                <span class="personal-detail">Thông tin cá nhân</span>
-              </h2>
-              <p class="personal-desc">Vui lòng nhập thông tin cá nhân trước khi thanh toán</p>
-            </div>
-
-            <div class="personal-detail">
-              <div class="personal-card">
-                <div class="card-title">
-                  <i class="fa-regular fa-id-card"></i>
-                  <span>Thông tin cơ bản</span>
-                </div>
-                <div class="card-body">
-                  <form id="personalForm">
-                    <div class="form-group">
-                      <label for="fullName">Họ và tên</label>
-                      <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name"
-                        required>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="Email">Email</label>
-                      <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
-                        autocomplete="email">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="phoneNumber">Số điện thoại</label>
-                      <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group">
-                        <label for="dateOfBirth">Ngày sinh</label>
-                        <input name="dateOfBirth" id="dateOfBirth" type="date">
-                      </div>
-                      <div class="form-group">
-                        <label for="sex">Giới tính</label>
-                        <select name="sex" id="sex">
-                          <option>Nam</option>
-                          <option>Nữ</option>
-                          <option>Khác</option>
-                        </select>
-                      </div>
-                    </div>
-                    <button class="button-1" type="submit">Lưu thông tin</button>
-                  </form>
-                </div>
+      <div class="order-timeline">
+        <div class="timeline-bar"></div>
+        <ul class="inner-wrap">
+          <li class="list-item">
+            <div class="timeline-wrapper">
+              <div class="timeline-icon active">
+                <i class="fa-solid fa-cart-shopping"></i>
               </div>
+              <div class="item-active"></div>
+            </div>
+            <div class="timeline-title">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <strong class="timeline-content">Giỏ hàng</strong>
+            </div>
+            <div class="timeline-desc">Sản phẩm đã được thêm</div>
+            <div class="timeline-status">Vừa xong</div>
+          </li>
+
+          <li class="list-item">
+            <div class="timeline-wrapper">
+              <div class="timeline-icon">
+                <i class="fa-regular fa-address-card"></i>
+              </div>
+              <div class="item-active"></div>
+            </div>
+            <div class="timeline-title">
+              <i class="fa-regular fa-address-book"></i>
+              <strong class="timeline-content">Thông tin cá nhân</strong>
+            </div>
+            <div class="timeline-desc">Chờ xác nhận thông tin cá nhân</div>
+            <div class="timeline-status">Đang chờ</div>
+          </li>
+
+          <li class="list-item">
+            <div class="timeline-wrapper">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <div class="item-active"></div>
+            </div>
+            <div class="timeline-title">
+              <i class="fa-regular fa-credit-card"></i>
+              <strong class="timeline-content">Thanh Toán</strong>
+            </div>
+            <div class="timeline-desc">Chờ xác nhận thanh toán</div>
+            <div class="timeline-status">Đang chờ</div>
+          </li>
+
+          <li class="list-item">
+            <div class="timeline-wrapper">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="item-active"></div>
+            </div>
+            <div class="timeline-title">
+              <i class="fa-solid fa-circle-check"></i>
+              <strong class="timeline-content">Hoàn thành</strong>
+            </div>
+            <div class="timeline-desc">Cảm ơn bạn đã mua hàng</div>
+            <div class="timeline-status">Đang chờ</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- end section 2 -->
+
+  <!-- section 3 -->
+
+  <div class="section-3">
+    <div class="container">
+      <div class="user-card">
+        <div class="user-card-header">
+          <h2 class="user-cart__title">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="inner-desc">Giỏ hàng của bạn</span>
+          </h2>
+        </div>
+        <div class="user-card-body">
+          <div class="card-empty show">
+            <div class="user-card-empty">
+              Chưa có sản phẩm trong giỏ hàng
             </div>
           </div>
-        </div>
-        <div class="col-right hidden">
-          <div class="profile-infor-wrap">
-            <div class="profile-infor-header">
-              <div class="card-title">
-                <i class="fa-regular fa-circle-user"></i>
-                <span>Thông tin đã lưu</span>
+          <div class="card-non-empty hidden">
+            <div class="column-feature">
+              <div class="grid-products">
+                <div class="col-action">
+                  <input type="checkbox" id="selectAll">
+                </div>
+                <div class="col-product">Tất cả</div>
+                <div class="col-price">Đơn giá</div>
+                <div class="col-quantity">Số lượng</div>
+                <div class="col-total">Thành tiền</div>
+                <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
               </div>
             </div>
-            <div class="profile-infor-body">
-              <div class="infor-empty" id="empty-state">
-                <p>Chưa có thông tin</p>
-              </div>
+            <div class="column-products">
 
-              <div class="infor-display" id="infor-display">
-                <div class="infor-row">
-                  <span class="infor-label">Họ và tên: </span>
-                  <span class="infor-value" id="displayName"></span>
-                </div>
-
-                <div class="infor-row">
-                  <span class="infor-label">Email: </span>
-                  <span class="infor-value" id="displayEmail"></span>
-                </div>
-
-                <div class="infor-row">
-                  <span class="infor-label">Số điện thoại: </span>
-                  <span class="infor-value" id="displayPhone"></span>
-                </div>
-
-                <div class="infor-row">
-                  <span class="infor-label">Ngày sinh: </span>
-                  <span class="infor-value" id="displayBirthday"></span>
-                </div>
-
-                <div class="infor-row">
-                  <span class="infor-label">Giới tính: </span>
-                  <span class="infor-value" id="displayGender"></span>
-                </div>
+            </div>
+            <div class="column-total-price">
+              <div>Tổng tiền hàng:
+                <span>0 VNĐ</span>
               </div>
             </div>
-            <button class="button-1">Xác nhận</button>
+            <button class="button-1 btn__user-card">Xác nhận</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- end section 4 -->
+  <!-- end section 3 -->
 
+  <!-- section 4 -->
 
-<!-- section-5 -->
-<div class="section-5 ">
-  <div class="container">
-    <div class="payment">
-      <div class="payment-header">
-        <h2 class="payment-content">
-          <i class="fa-regular fa-credit-card"></i>
-          <span>Thanh toán</span>
-        </h2>
+  <div class="section-4 hidden">
+    <div class="inner-wrap">
+      <div class="imgs">
+        <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="">
+        <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt="">
+        <img src="assets/images/0dcbe195-cd5e-41e1-9859-baf8a678e842-removebg-preview.png" alt="">
       </div>
-      <div class="payment-body">
-        <div class="payment-amount">
-          <span class="amount-label">
-            <i class="fa-solid fa-coins"></i>
-            Số tiền cần thanh toán:
-          </span>
-          <span class="amount-value">0 VNĐ
-          </span>
+      <div class="container">
+        <div class="grid-row">
+          <div class="col-left">
+            <div class="personal-wrap">
+
+              <div class="personal-header">
+                <h2>
+                  <i class="fa-regular fa-address-card"></i>
+                  <span class="personal-detail">Thông tin cá nhân</span>
+                </h2>
+                <p class="personal-desc">Vui lòng nhập thông tin cá nhân trước khi thanh toán</p>
+              </div>
+
+              <div class="personal-detail">
+                <div class="personal-card">
+                  <div class="card-title">
+                    <i class="fa-regular fa-id-card"></i>
+                    <span>Thông tin cơ bản</span>
+                  </div>
+                  <div class="card-body">
+                    <form id="personalForm">
+                      <div class="form-group">
+                        <label for="fullName">Họ và tên</label>
+                        <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name"
+                          required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
+                          autocomplete="email">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="phoneNumber">Số điện thoại</label>
+                        <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="dateOfBirth">Ngày sinh</label>
+                          <input name="dateOfBirth" id="dateOfBirth" type="date">
+                        </div>
+                        <div class="form-group">
+                          <label for="sex">Giới tính</label>
+                          <select name="sex" id="sex">
+                            <option>Nam</option>
+                            <option>Nữ</option>
+                            <option>Khác</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button class="button-1" type="submit">Lưu thông tin</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-right hidden">
+            <div class="profile-infor-wrap">
+              <div class="profile-infor-header">
+                <div class="card-title">
+                  <i class="fa-regular fa-circle-user"></i>
+                  <span>Thông tin đã lưu</span>
+                </div>
+              </div>
+              <div class="profile-infor-body">
+                <div class="infor-empty" id="empty-state">
+                  <p>Chưa có thông tin</p>
+                </div>
+
+                <div class="infor-display" id="infor-display">
+                  <div class="infor-row">
+                    <span class="infor-label">Họ và tên: </span>
+                    <span class="infor-value" id="displayName"></span>
+                  </div>
+
+                  <div class="infor-row">
+                    <span class="infor-label">Email: </span>
+                    <span class="infor-value" id="displayEmail"></span>
+                  </div>
+
+                  <div class="infor-row">
+                    <span class="infor-label">Số điện thoại: </span>
+                    <span class="infor-value" id="displayPhone"></span>
+                  </div>
+
+                  <div class="infor-row">
+                    <span class="infor-label">Ngày sinh: </span>
+                    <span class="infor-value" id="displayBirthday"></span>
+                  </div>
+
+                  <div class="infor-row">
+                    <span class="infor-label">Giới tính: </span>
+                    <span class="infor-value" id="displayGender"></span>
+                  </div>
+                </div>
+              </div>
+              <button class="button-1">Xác nhận</button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="credit-card">
-          <ul class="list-card" id="bank">
+  <!-- end section 4 -->
 
+
+  <!-- section-5 -->
+  <div class="section-5 hidden">
+    <div class="container">
+      <div class="payment">
+        <div class="payment-header">
+          <h2 class="payment-content">
+            <i class="fa-regular fa-credit-card"></i>
+            <span>Thanh toán</span>
+          </h2>
+        </div>
+        <div class="payment-body">
+          <div class="payment-amount">
+            <span class="amount-label">
+              <i class="fa-solid fa-coins"></i>
+              Số tiền cần thanh toán:
+            </span>
+            <span class="amount-value">0 VNĐ
+            </span>
+          </div>
+
+          <div class="credit-card">
+            <ul class="list-card" id="bank">
+
+            </ul>
+          </div>
+
+          <div class="credit-infor">
+            <div class="grid-card-infor">
+              <div class="grid-card-left hidden">
+                <div class="bank-infor">
+                  <div class="bank-name">Ngân hàng: </div>
+                  <div class="account-holder">Chủ tài khoản: </div>
+                  <div class="account-number">Số tài khoản: </div>
+                  <div class="content">Nội dung chuyển khoản: </div>
+                </div>
+              </div>
+
+              <div class="grid-card-right">
+
+              </div>
+            </div>
+          </div>
+          <button class="button-1">Chuyển khoản ngay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section 5 -->
+
+  <!-- section-6 -->
+
+  <div class="section-6 hidden">
+    <div class="container">
+      <div class="order-success">
+        <div class="order-success__header">
+          <div class="order-sucess_badge">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="order-success__title-group">
+            <h2 class="order-success__title">Đăng kí khoá học thành công</h2>
+            <p class="order-success__subtitle">Cảm ơn bạn đã tin tưởng và lựa chọn chúng tôi!</p>
+          </div>
+        </div>
+        <div class="buyer-card">
+          <div class="buyer-card__header">
+            <i class="fa-solid fa-user"></i>
+            <span class="buyer-card__title">Thông tin người mua</span>
+          </div>
+          <div class="buyer-card__body">
+            <div class="buyer-card__row ">
+              <span class="buyer-card__label">
+                Họ và tên
+              </span>
+              <span class="buyer-card__value buyer-name">
+                <i class="fa-solid fa-user"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+            <div class="buyer-card__row">
+              <span class="buyer-card__label">
+                Email
+              </span>
+              <span class="buyer-card__value buyer-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+            <div class="buyer-card__row">
+              <span class="buyer-card__label">
+                Số điện thoại
+              </span>
+              <span class="buyer-card__value buyer-phoneNumber">
+                <i class="fa-solid fa-phone"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+            <div class="buyer-card__row">
+              <span class="buyer-card__label">
+                Ngày sinh
+              </span>
+              <span class="buyer-card__value buyer-dateOfBirth">
+                <i class="fa-solid fa-cake-candles"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+            <div class="buyer-card__row">
+              <span class="buyer-card__label">
+                Giới tính
+              </span>
+              <span class="buyer-card__value buyer-gender">
+                <i class="fas fa-venus-mars"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+
+            <div class="buyer-card__row">
+              <span class="buyer-card__label">
+                Thời gian đặt hàng
+              </span>
+              <span class="buyer-card__value buyer-orderDate">
+                <i class="fa-regular fa-clock"></i>
+                <span class="buyer-text"></span>
+
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="course-list">
+          <div class="course-list__header">
+            <div class="course-list__title">
+              <i class="fa-solid fa-book"></i>
+              Danh sách khoá học
+            </div>
+            <span class="course-list__count">0 khoá học</span>
+          </div>
+          <div class="course-list__body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end section-6 -->
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./assets/img/trangchu/logocty.png" alt="Logo công ty" />
+      </div>
+      <div class="footer-body">
+        <div class="footer-left">
+          <p class="footer-name">
+            Công ty Cổ phần Đầu tư phát triển Group 2
+          </p>
+          <p class="footer-info">
+            Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+            Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com
+            <br />
+            Giờ làm việc: 7h - 11h30 | 13h - 21h
+          </p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-name">Follow us</p>
+          <ul class="footer-contact">
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP 2</a>
+            </li>
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a>
+            </li>
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                STORIES</a>
+            </li>
           </ul>
         </div>
-
-        <div class="credit-infor">
-          <div class="grid-card-infor">
-            <div class="grid-card-left hidden">
-              <div class="bank-infor">
-                <div class="bank-name">Ngân hàng: </div>
-                <div class="account-holder">Chủ tài khoản: </div>
-                <div class="account-number">Số tài khoản: </div>
-                <div class="content">Nội dung chuyển khoản: </div>
-              </div>
-            </div>
-
-            <div class="grid-card-right">
-
-            </div>
-          </div>
-        </div>
-        <button class="button-1">Chuyển khoản ngay</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end section 5 -->
-
-<!-- section-6 -->
-
-<div class="section-6">
-  <div class="container">
-    <div class="order-success">
-      <div class="order-success__header">
-        <div class="order-sucess_badge">
-          <i class="fa-solid fa-check"></i>
-        </div>
-        <div class="order-success__title-group">
-          <h2 class="order-success__title">Đăng kí khoá học thành công</h2>
-          <p class="order-success__subtitle">Cảm ơn bạn đã tin tưởng và lựa chọn chúng tôi!</p>
-        </div>
-      </div>
-      <div class="buyer-card">
-        <div class="buyer-card__header">
-          <i class="fa-solid fa-user"></i>
-          <span class="buyer-card__title">Thông tin người mua</span>
-        </div>
-        <div class="buyer-card__body">
-          <div class="buyer-card__row ">
-            <span class="buyer-card__label">
-              Họ và tên
-            </span>
-            <span class="buyer-card__value buyer-name">
-              <i class="fa-solid fa-user"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-          <div class="buyer-card__row">
-            <span class="buyer-card__label">
-              Email
-            </span>
-            <span class="buyer-card__value buyer-email">
-              <i class="fa-solid fa-envelope"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-          <div class="buyer-card__row">
-            <span class="buyer-card__label">
-              Số điện thoại
-            </span>
-            <span class="buyer-card__value buyer-phoneNumber">
-              <i class="fa-solid fa-phone"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-          <div class="buyer-card__row">
-            <span class="buyer-card__label">
-              Ngày sinh
-            </span>
-            <span class="buyer-card__value buyer-dateOfBirth">
-              <i class="fa-solid fa-cake-candles"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-          <div class="buyer-card__row">
-            <span class="buyer-card__label">
-              Giới tính
-            </span>
-            <span class="buyer-card__value buyer-gender">
-              <i class="fas fa-venus-mars"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-
-          <div class="buyer-card__row">
-            <span class="buyer-card__label">
-              Thời gian đặt hàng
-            </span>
-            <span class="buyer-card__value buyer-orderDate">
-              <i class="fa-regular fa-clock"></i>
-              <span class="buyer-text"></span>
-
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="course-list">
-        <div class="course-list__header">
-          <div class="course-list__title">
-            <i class="fa-solid fa-book"></i>
-            Danh sách khoá học
-          </div>
-          <span class="course-list__count">2 khoá học</span>
-        </div>
-        <div class="course-list__body">
-          <div class="course-item">
-            <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="Course"
-              class="course-item__thumb">
-            <div class="course-item__name">Khoá học tiếng anh cơ bản</div>
-            <div class="course-item__price">
-              <span class="course-item__price-value">1.200.000 VNĐ</span>
-              <span class="course-item__price-x">x1</span>
-            </div>
-          </div>
+        <div class="footer-right">
+          <p class="footer-name">Hỗ trợ khách hàng</p>
+          <ul class="footer-support">
+            <li><a href="" class="footer-info">Chính sách và Bảo mật</a></li>
+            <li><a href="" class="footer-info">Quyền lợi khách hàng</a></li>
+            <li><a href="" class="footer-info">Hướng dẫn sử dụng</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-<!-- end section-6 -->
+  </footer>
 
 
 
-<script type="module" src="assets/script.js"></script>
 
-<body>
+
+
+
+
+
+
+
+  <script type="module" src="assets/script.js"></script>
+
+
 
 </body>
 

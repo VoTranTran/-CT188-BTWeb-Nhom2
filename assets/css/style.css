@@ -94,12 +94,14 @@
 .section-2 {
     margin: 25px 0;
     position: sticky;
-    top: 0;
-    z-index: 10;
+    top: 81px;
+    z-index: 2;
 }
 
 .section-2 .container {
-    background-color: #6b7280;
+    background-color: #bae0ff;
+    border-radius: 16px;
+    padding: 20px 0;
 }
 
 .section-2 .order-timeline {
