@@ -1,0 +1,321 @@
+/* Dùng chung */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "open sans", sans-serif;
+  color: #263238;
+}
+
+a {
+  text-decoration: none;
+  color: #263238;
+}
+
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.color-chocolate {
+  color: chocolate;
+}
+.color-green {
+  color: #67a606;
+}
+.color-red {
+  color: red;
+}
+.color-blue {
+  color: blue;
+}
+.col-yellow {
+  color: #f2ce5a;
+}
+.dis-none {
+  display: none;
+}
+.dis-inline-block {
+  display: inline-block;
+}
+.text-center {
+  text-align: center;
+}
+.lh {
+  line-height: 1.8;
+}
+.arrow-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.arrow-box i {
+  font-size: 2rem;
+  color: #000;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+/* ===== Overlay ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 90%;
+  max-width: 420px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 3;
+  font-size: 1.6rem;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ===== Form style ===== */
+.modal h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.modal-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7a00;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.modal-submit:hover {
+  opacity: 0.7;
+}
+.modal input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ff7b00c5;
+  outline: none;
+  transition: 0.2s;
+  font-size: 1.6rem;
+}
+
+.modal input:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 3px rgba(191, 121, 0, 0.15);
+}
+
+/* ===== Close button ===== */
+#closeBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ccc;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+/* Hiển thị đã đăng ký thành công */
+.popup {
+  display: none;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(99, 246, 99);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.popup.show {
+  display: block;
+  animation: slideDown 0.5s ease forwards;
+}
+.popup.hide {
+  animation: slideUp 0.4s ease forwards;
+}
+/* ---------------------------------------------------------------------------- */
+
+/* Header */
+/* Header */
+.header {
+  background-color: #e3f2fd;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  height: 8rem;
+}
+.header.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.navbar-right {
+  float: right;
+}
+.home-style {
+  text-shadow: 0.4px 0 0 black;
+  font-size: 1.9rem;
+}
+.header-body {
+  display: flex;
+  align-items: center;
+}
+
+.header-body .logo {
+    mix-blend-mode: multiply;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 8rem;
+}
+
+.header-body nav {
+  flex-grow: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-size: 1.8rem;
+  padding: 1.6rem;
+}
+
+nav a:hover {
+  text-shadow: 0.4px 0 0 currentColor;
+}
+.frame {
+  padding: 10px 0;
+  border-radius: 20px;
+  background-color: white;
+}
+.frame:hover {
+  opacity: 0.7;
+}
+.shopping-icon-frame {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+.shopping-icon-frame:hover {
+  opacity: 0.7;
+}
+/* ---------------------------------------------------------------------------- */
+/* Footer */
+.footer {
+  background-color: #f3fffe;
+  padding: 1rem 0 2rem;
+}
+
+.footer-logo img {
+  width: 20rem;
+  object-fit: cover;
+  height: 8rem;
+  margin-left: -35px;
+}
+
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -5px;
+}
+
+.footer-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-info {
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.footer-icon {
+  margin-right: 8px;
+}
+/* ------------------------------------------------------------------------------- */
+.btn-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  /* animation: shakePause 2.5s infinite; */
+}
+.btn-contact i {
+  animation: wiggle 0.6s infinite;
+  font-size: 3em;
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+}
