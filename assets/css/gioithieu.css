@@ -1,0 +1,244 @@
+/*chung*/
+.section-title {
+  text-align: center;
+  /* font-family: "Sen", sans-serif; */
+  font-weight: 700;
+  font-size: 2.5rem;
+  /* color: #444; */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  /* background: #fdec7b; */
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 10px;
+}
+/* Hero */
+.intro-bgr {
+  width: 100%;
+  height: 70vh;
+  min-height: 300px;
+  background-image: url(../img/gioithieu/background.png);
+  background-size: cover;
+  background-position: center;
+}
+/*Brand*/
+
+.brand {
+  background: linear-gradient(135deg, #f2fffd, #fffdf7);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.brand::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #fdec7b;
+  border-radius: 50%;
+  top: -150px;
+  left: -150px;
+  opacity: 0.25;
+}
+
+.brand::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #58cbca;
+  border-radius: 50%;
+  bottom: -120px;
+  right: -120px;
+  opacity: 0.2;
+}
+.brand-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.brand-story-text {
+  flex: 1;
+  /* font-style: italic; */
+  font-size: 2rem;
+  text-align: left;
+  line-height: 1.5;
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+}
+.brand-story-text strong {
+  display: block;
+  background: #ee6961;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin: 10px 0;
+  font-weight: 600;
+  text-align: center;
+}
+.brand-image {
+  flex: 1;
+}
+
+.brand-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+}
+.brand-image img:hover {
+  transform: scale(1.03);
+}
+/*PP Giang day*/
+.method {
+  padding: 40px 0;
+}
+
+.method-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.method-item {
+  width: 100%;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #58cbca, #fdec7b) border-box;
+  border: 3px solid transparent;
+}
+
+.method-img {
+  padding: 5px;
+  background: #fff;
+  margin-bottom: 15px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.method-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.method-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: #aaa;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #58cbca, #fdec7b) border-box;
+  border: 3px solid transparent;
+}
+
+.method-item h3 {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/*Giao vien*/
+
+.teacher {
+  padding: 40px 0;
+  background: #f2fffd;
+}
+
+.teacher-list {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.teacher-item {
+  text-align: center;
+  background: transparent;
+  width: 335px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-top: 5px solid #2ec4b6;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.teacher-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* z-index: 10; */
+  border-top: 5px solid #2ec4b6;
+}
+
+.teacher-img {
+  width: 300px;
+  height: 360px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.teacher-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.teacher-name {
+  font-family: "Sen", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.teacher-item p {
+  font-size: 1.5rem;
+  margin: 2px 0;
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.teacher-view-more i {
+  cursor: pointer;
+}
+.teacher-more {
+  display: none;
+  margin-top: 70px;
+}
+.teacher-more.active {
+  display: block;
+}
+.teacher-view-more.active {
+  transform: rotate(180deg);
+}
+.library img {
+  width: 100%;
+  display: block;
+}

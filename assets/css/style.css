@@ -4,11 +4,11 @@
 }
 
 :root {
-  --color-one: #63DEFF;
-  --color-two: #FCDD51;
-  --color-text: #001C66;
-  --color-background: #6b7280;
-}
+    --color-one: #63DEFF;
+    --color-two: #FCDD51;
+    --color-text: #001C66;
+    --color-background: #6b7280;
+}   
 
 html {
   font-size: 62.5%;
@@ -19,7 +19,7 @@ body {
   font-size: 1.6rem;
   font-family: "open sans", sans-serif;
   color: #263238;
-
+  
 }
 
 a {
@@ -29,20 +29,20 @@ a {
 
 
 img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-  border-color: currentcolor;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border-color: currentcolor;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .container {
@@ -51,43 +51,33 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
-
 .color-chocolate {
   color: chocolate;
 }
-
 .color-green {
   color: #67a606;
 }
-
 .color-red {
   color: red;
 }
-
 .color-blue {
   color: blue;
 }
-
 .col-yellow {
   color: #f2ce5a;
 }
-
 .dis-none {
   display: none;
 }
-
 .dis-inline-block {
   display: inline-block;
 }
-
 .text-center {
   text-align: center;
 }
-
 .lh {
   line-height: 1.8;
 }
-
 .arrow-box {
   display: flex;
   justify-content: center;
@@ -101,19 +91,15 @@ li {
   color: #000;
   animation: bounce 1s infinite;
 }
-
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(5px);
   }
-
   50% {
     transform: translateY(-3px);
   }
 }
-
 /* ===== Overlay ===== */
 .overlay {
   position: fixed;
@@ -162,7 +148,6 @@ li {
   margin-bottom: 20px;
   font-size: 2rem;
 }
-
 .modal-submit {
   width: 100%;
   padding: 12px;
@@ -174,11 +159,9 @@ li {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .modal-submit:hover {
   opacity: 0.7;
 }
-
 .modal input {
   width: 100%;
   padding: 12px 14px;
@@ -207,7 +190,6 @@ li {
   cursor: pointer;
   transition: 0.2s;
 }
-
 /* Hiển thị đã đăng ký thành công */
 .popup {
   display: none;
@@ -221,16 +203,13 @@ li {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
-
 .popup.show {
   display: block;
   animation: slideDown 0.5s ease forwards;
 }
-
 .popup.hide {
   animation: slideUp 0.4s ease forwards;
 }
-
 /* ---------------------------------------------------------------------------- */
 
 /* Header */
@@ -241,22 +220,18 @@ li {
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   height: 8rem;
 }
-
 .header.fixed {
   position: sticky;
   top: 0;
   z-index: 2;
 }
-
 .navbar-right {
   float: right;
 }
-
 .home-style {
   text-shadow: 0.4px 0 0 black;
   font-size: 1.9rem;
 }
-
 .header-body {
   display: flex;
   align-items: center;
@@ -290,27 +265,22 @@ nav a {
 nav a:hover {
   text-shadow: 0.4px 0 0 currentColor;
 }
-
 .frame {
   padding: 10px 0;
   border-radius: 20px;
   background-color: white;
 }
-
 .frame:hover {
   opacity: 0.7;
 }
-
 .shopping-icon-frame {
   padding: 10px;
   border-radius: 50%;
   background-color: white;
 }
-
 .shopping-icon-frame:hover {
   opacity: 0.7;
 }
-
 /* ---------------------------------------------------------------------------- */
 /* Footer */
 .footer {
@@ -345,7 +315,6 @@ nav a:hover {
 .footer-icon {
   margin-right: 8px;
 }
-
 /* ------------------------------------------------------------------------------- */
 .btn-contact {
   position: fixed;
@@ -356,27 +325,21 @@ nav a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
   /* animation: shakePause 2.5s infinite; */
 }
-
 .btn-contact i {
   animation: wiggle 0.6s infinite;
   font-size: 3em;
 }
-
 @keyframes wiggle {
-
   0%,
   100% {
     transform: rotate(0deg);
   }
-
   25% {
     transform: rotate(-8deg);
   }
-
   50% {
     transform: rotate(8deg);
   }
-
   75% {
     transform: rotate(-8deg);
   }

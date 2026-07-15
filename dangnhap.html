@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect"  href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="dangnhap.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Bright English - Đăng nhập</title>
+</head>
+<body>
+
+  <header class="header fixed">
+    <div class="container">
+      <div class="header-body">
+          <a href="index.html" class="logo"></a>
+          <nav class="navbar">
+            <ul class="navbar-left">
+              <li>
+                <a href="index.html" >Trang chủ</a>
+              </li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
+              <li class="frame">
+                <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
+              </li>
+              <li class="frame">
+                <a href="./dangnhap.html" class="color-green home-style">Đăng nhập</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+  <div class="dangnhap-container"> <!-- Khung chứa toàn bộ phần đăng nhập -->
+    <div class="dangnhap-box">
+      <!-- ĐĂNG NHẬP -->
+      <div id="formDangNhap">
+          <h1>Đăng nhập</h1>
+          <form id="dangnhapForm">
+            <div class="form-group">
+              <label>Email hoặc số điện thoại</label>
+              <input type="text" id="account" placeholder="Nhập Email hoặc số điện thoại">
+              <small id="accountError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+              <label>Mật khẩu</label>
+              <div class="oNhapMatKhau">
+                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                <i id="conMatDangNhap" class="fa-solid fa-eye conMat" onclick="anHienMatKhauDangNhap()"></i>
+              </div>
+              <small id="passwordError" class="error"></small>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" id="remember">
+              <label for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+
+            <button type="button" onclick="dangNhap()">ĐĂNG NHẬP</button>
+
+            <div class="quenmatkhau-link">
+              <a href="#" onclick="moQuenMatKhau()">Quên mật khẩu?</a>
+            </div>
+
+            <div class="dangky-link">Chưa có tài khoản?
+              <a href="dangky.html">Đăng ký</a>
+            </div>
+
+            <div class="trangchu-link">
+              <a href="trangchu.html">← Quay lại Trang chủ</a>
+            </div>
+          </form>
+      </div>
+
+      <!-- QUÊN MẬT KHẨU -->
+      <div id="formQuenMatKhau">
+        <h1>Quên mật khẩu</h1>
+        <form>
+          <div class="form-group">
+            <label>Email hoặc số điện thoại</label>
+            <input type="text" id="accountForgot" placeholder="Nhập Email hoặc số điện thoại">
+            <small id="accountErrorForgot" class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Mã xác nhận</label>
+            <div class="code-box">
+              <input type="text" id="code" placeholder="Nhập mã xác nhận">
+              <button type="button" class="code-btn" onclick="taoMaXacNhan()">
+                Lấy mã
+              </button>
+            </div>
+            <small id="codeError" class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Mật khẩu mới</label>
+            <div class="oNhapMatKhau">
+              <input type="password" id="passwordForgot" placeholder="Nhập mật khẩu mới">
+              <i id="conMatMoi" class="fa-solid fa-eye conMat"
+                onclick="anHienMatKhau('passwordForgot','conMatMoi')">
+              </i>
+            </div>
+            <small id="passwordErrorForgot" class="error"></small>
+          </div>
+
+          <div class="form-group">
+            <label>Nhập lại mật khẩu</label>
+            <div class="oNhapMatKhau">
+              <input type="password" id="repasswordForgot" placeholder="Nhập lại mật khẩu">
+              <i id="conMatNhapLai" class="fa-solid fa-eye conMat"
+                onclick="anHienMatKhau('repasswordForgot','conMatNhapLai')">
+              </i>
+            </div>
+            <small id="repasswordErrorForgot" class="error"></small>
+          </div>
+
+          <button type="button" onclick="capNhatMatKhau()">CẬP NHẬT MẬT KHẨU</button>
+
+          <div class="dangky-link">
+            <a href="#" onclick="quayLaiDangNhap()">← Quay lại Đăng nhập</a>
+          </div>
+
+          <div class="trangchu-link">
+            <a href="trangchu.html">← Quay lại Trang chủ</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    
+  <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="./assets/img/trangchu/logocty.png" alt="Logo công ty" />
+        </div>
+        <div class="footer-body">
+          <div class="footer-left">
+            <p class="footer-name">
+              Công ty Cổ phần Đầu tư phát triển Group 2
+            </p>
+            <p class="footer-info">
+              Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com
+              <br />
+              Giờ làm việc: 7h - 11h30 | 13h - 21h
+            </p>
+          </div>
+          <div class="footer-center">
+            <p class="footer-name">Follow us</p>
+            <ul class="footer-contact">
+              <li>
+                <a href="" class="footer-info"
+                  ><i
+                    class="fa-brands fa-facebook footer-icon color-blue"
+                  ></i
+                  >CTY GROUP 2</a
+                >
+              </li>
+              <li>
+                <a href="" class="footer-info"
+                  ><i
+                    class="fa-brands fa-youtube footer-icon color-red"
+                  ></i
+                  >GROUP 2</a
+                >
+              </li>
+              <li>
+                <a href="" class="footer-info"
+                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                  STORIES</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p class="footer-name">Hỗ trợ khách hàng</p>
+            <ul class="footer-support">
+              <li><a href="" class="footer-info">Chính sách và Bảo mật</a></li>
+              <li><a href="" class="footer-info">Quyền lợi khách hàng</a></li>
+              <li><a href="" class="footer-info">Hướng dẫn sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <a href="" class="btn-contact">
+    <i class="fa-brands fa-facebook-messenger color-blue"></i>
+  </a>
+
+  <script src="dangnhap.js"></script><!--Liên kết tới file JavaScript.-->
+</body>
+</html>

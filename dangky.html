@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="dangky.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Bright English - Đăng ký</title>
+</head>
+<body>
+
+  <header class="header fixed">
+      <div class="container">
+        <div class="header-body">
+          <a href="index.html" class="logo"></a>
+          <nav class="navbar">
+            <ul class="navbar-left">
+              <li>
+                <a href="index.html" >Trang chủ</a>
+              </li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
+              <li class="frame">
+                <a href="./dangky.html" class="color-chocolate home-style">Đăng ký</a>
+              </li>
+              <li class="frame">
+                <a href="./dangnhap.html" class="color-green">Đăng nhập</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+
+  <div class="dangky-container"> <!-- Khung chứa toàn bộ phần đăng ký -->
+    <div class="dangky-box"> <!-- Hộp chứa form đăng ký -->
+
+      <!-- Tiêu đề -->
+      <h1>Tạo tài khoản</h1>
+        
+      <!-- Form đăng ký -->
+      <form id="registerForm">
+
+        <!-- Họ và tên -->
+        <div class="form-group">
+          <label for="fullname">Họ và tên</label> <!-- Nhãn của ô nhập -->
+          <input type="text" id="fullname" placeholder="Nhập họ và tên"> <!-- Ô nhập họ tên -->
+          <small id="fullnameError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
+        </div>
+
+        <!-- Email hoặc số điện thoại -->
+        <div class="form-group">
+          <label for="account">Email hoặc số điện thoại</label> <!-- Nhãn của ô nhập -->
+          <input type="text" id="account" placeholder="Nhập email hoặc số điện thoại"> <!-- Ô nhập sđt hoặc email -->
+          <small id="accountError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
+        </div>
+
+        <!-- Mật khẩu -->
+        <div class="form-group">
+          <label for="password">Mật khẩu</label> <!-- Nhãn của ô nhập -->
+          <div class="oNhapMatKhau"> <!-- Khung chứa ô nhập và icon con mắt -->
+            <input type="password" id="password" placeholder="Nhập mật khẩu"> <!-- Ô nhập mật khẩu -->
+            <i
+              id="conMat1"
+              class="fa-solid fa-eye conMat"
+              onclick="anHienMatKhau('password','conMat1')">
+            </i> <!-- Icon hiện/ẩn mật khẩu -->
+          </div>
+          <small id="passwordError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
+        </div>
+
+        <!-- Nhập lại mật khẩu -->
+        <div class="form-group">
+          <label for="repassword"> Nhập lại mật khẩu</label> <!-- Nhãn của ô nhập -->
+          <div class="oNhapMatKhau">
+            <input type="password" id="repassword" placeholder="Nhập lại mật khẩu"> <!-- Ô nhập lại mật khẩu -->
+            <i
+              id="conMat2"
+              class="fa-solid fa-eye conMat"
+              onclick="anHienMatKhau('repassword','conMat2')">
+            </i> <!-- Icon hiện/ẩn mật khẩu -->
+          </div>
+          <small id="repasswordError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
+        </div>
+
+        <!-- Điều khoản sử dụng -->
+        <div class="checkbox">
+          <input type="checkbox" id="agree">
+          <label for="agree">Tôi đồng ý với điều khoản sử dụng</label> <!-- Nội dung điều khoản -->
+        </div>
+        <small id="agreeError" class="error"></small> <!-- Hiển thị lỗi nếu chưa tích -->
+
+        <!-- Nút đăng ký -->
+        <button type="button" onclick="dangKy()">ĐĂNG KÝ</button>
+
+        <!-- Liên kết chuyển sang trang đăng nhập -->
+        <div class="dangnhap-link">
+          Đã có tài khoản?
+          <a href="dangnhap.html">Đăng nhập</a>
+        </div>
+
+        <!-- Liên kết quay về trang chủ -->
+        <div class="trangchu-link"> 
+          <a href="trangchu.html">← Quay lại Trang chủ</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="./assets/img/trangchu/logocty.png" alt="Logo công ty" />
+        </div>
+        <div class="footer-body">
+          <div class="footer-left">
+            <p class="footer-name">
+              Công ty Cổ phần Đầu tư phát triển Group 2
+            </p>
+            <p class="footer-info">
+              Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com
+              <br />
+              Giờ làm việc: 7h - 11h30 | 13h - 21h
+            </p>
+          </div>
+          <div class="footer-center">
+            <p class="footer-name">Follow us</p>
+            <ul class="footer-contact">
+              <li>
+                <a href="" class="footer-info"
+                  ><i
+                    class="fa-brands fa-facebook footer-icon color-blue"
+                  ></i
+                  >CTY GROUP 2</a
+                >
+              </li>
+              <li>
+                <a href="" class="footer-info"
+                  ><i
+                    class="fa-brands fa-youtube footer-icon color-red"
+                  ></i
+                  >GROUP 2</a
+                >
+              </li>
+              <li>
+                <a href="" class="footer-info"
+                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                  STORIES</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p class="footer-name">Hỗ trợ khách hàng</p>
+            <ul class="footer-support">
+              <li><a href="" class="footer-info">Chính sách và Bảo mật</a></li>
+              <li><a href="" class="footer-info">Quyền lợi khách hàng</a></li>
+              <li><a href="" class="footer-info">Hướng dẫn sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+    <a href="" class="btn-contact">
+      <i class="fa-brands fa-facebook-messenger color-blue"></i>
+    </a>
+
+  <!-- Liên kết tới file js xử lý các chức năng của trang đăng ký -->
+  <script src="dangky.js"></script>
+</body>
+</html>

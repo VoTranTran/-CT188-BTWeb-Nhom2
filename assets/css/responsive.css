@@ -1,0 +1,237 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 991.98px) {
+  /* ==================Trang chủ========================== */
+  .header .navbar {
+    display: none;
+  }
+  .header {
+    /* position: relative; */
+  }
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% 50%;
+  }
+  .menu-header__icon {
+    position: fixed;
+    cursor: pointer;
+    top: 25px;
+    left: 0;
+    z-index: 1;
+  }
+  .menu-overlay {
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-drawer {
+    position: fixed;
+    background-color: #f3fffe;
+    inset: 0 55% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.4s;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  .menu-drawer-list {
+    padding: 0 20px 20px 20px;
+    line-height: 2;
+    font-size: 2rem;
+  }
+  .menu-drawer-list a {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .navbar-link:hover {
+    background-color: #fffbcc;
+    font-weight: 500;
+  }
+  .mobile-drawer-logo {
+    background-image: url(../img/logo.png);
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .menu-drawer-iconclose {
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: bisque;
+    color: burlywood;
+  }
+  .sub-menu {
+    list-style-type: circle;
+  }
+  .sub-menu li {
+    margin-left: 2rem;
+  }
+  .why-us-body,
+  .roadmap-body-2,
+  .feedback-body {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .why-us-reason,
+  .feedback-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .why-us,
+  .consult,
+  .roadmap,
+  .feedback {
+    padding: 5rem 0;
+  }
+  .roadmap-body-1 {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: -50px;
+    row-gap: 15px;
+  }
+  .roadmap-img img {
+    width: 100%;
+  }
+  .why-us h3,
+  .why-us h2,
+  .roadmap h2 {
+    line-height: 1.5;
+  }
+  .consult-img {
+    display: none;
+  }
+  .footer-center,
+  .footer-right {
+    display: none;
+  }
+  .footer-name {
+    line-height: 1.5;
+  }
+  .footer-info {
+    font-size: 1.2rem;
+  }
+  /* ======================Giới thiệu============================= */
+  .method-list,
+  .teacher-list,
+  .brand-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .method-item {
+    width: 80%;
+  }
+  .intro-bgr {
+    height: 40vh;
+    min-height: 220px;
+  }
+  /* ====================Đăng nhập================================== */
+  .login-img {
+    display: none;
+  }
+  .container_login {
+    flex-direction: column;
+    width: 90%;
+  }
+  .form-sign-in {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container_login > div {
+    flex: 0;
+  }
+  .btn-contact {
+    font-size: 0.75em;
+    right: 20px;
+  }
+  /* ====================Đăng ký================================== */
+  .register-img {
+    display: none;
+  }
+  .container_register {
+    flex-direction: column;
+    width: 90%;
+  }
+  .form-register {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container_register > div {
+    flex: 0;
+  }
+  .btn-contact {
+    font-size: 0.75em;
+    right: 20px;
+  }
+  /* ====================Khóa học riêng================================== */
+  .course-nav {
+    display: none;
+  }
+  .course-hero .course-img,
+  #course-register .inf-left {
+    display: none;
+  }
+  .course-hero-body .course-intro {
+    width: 100%;
+    line-height: 1.5;
+  }
+  .course-details-body,
+  .course-more-body {
+    flex-direction: column;
+  }
+  .goal-item {
+    width: 80%;
+  }
+  #course-register .inf-right,
+  .course-more .course-item {
+    width: 100%;
+  }
+  /* ===============Giỏ hàng====================================================== */
+  .empty-cart img {
+    width: 100%;
+  }
+  .shopping h1 {
+    text-align: center;
+  }
+  .cart-item {
+    flex-direction: column;
+  }
+  .cart-info h4 {
+    margin: 10px 0;
+  }
+  .cart-info p {
+    display: none;
+  }
+  .cart-total {
+    margin: 15px 0 15px 0;
+  }
+  .shopping h3 {
+    text-align: center;
+  }
+  .checkout-frame {
+    justify-content: center;
+  }
+}
