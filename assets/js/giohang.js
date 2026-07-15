@@ -1,7 +1,3 @@
-import {
-  fetchApi
-} from "./fetchApi.js";
-
 function setupTimelineScroll() {
   const icons = document.querySelectorAll('.timeline-icon');
   const sections = ['.section-3', '.section-4', '.section-5', '.section-6'];
