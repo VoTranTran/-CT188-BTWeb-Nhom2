@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" href="reset.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,10 +16,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
+
     <link rel="stylesheet" href="trangchu.css" />
-    
+
     <link
       rel="shortcut icon"
       href="./assets/img/favicon.png"
@@ -31,29 +34,59 @@
     <div class="top-banner">
         <span class="badge-hot">Hot</span>
         <span>Ưu đãi tháng này: Tặng kèm học liệu Flashcard & Đăng ký học thử miễn phí!</span>
-        <a href="#consultant" class="col-yellow top-banner__link">Đăng ký ngay <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#consultant" class="col-yellow top-banner-link">Đăng ký ngay <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <header class="header fixed">
       <div class="container">
         <div class="header-body">
-          <a href="main.html" class="logo">
+          
+          <div class="mobile-header">
+            <input type="checkbox" id="menu-control" class="menu-checkbox dis-none" />
+            
+            <label for="menu-control" class="menu-header__icon">
+              <i class="fa-solid fa-bars" style="font-size: 2.4rem; padding: 10px;"></i>
+            </label>
+
+            <label for="menu-control" class="menu-overlay"></label>
+
+            <div class="menu-drawer">
+              <div class="mobile-drawer-logo">
+                <label for="menu-control" class="menu-drawer-iconclose">
+                  <i class="fa-solid fa-xmark" style="padding: 5px 8px;"></i>
+                </label>
+              </div>
+              
+              <ul class="menu-drawer-list">
+                <li><a href="trangchu.html" class="navbar-link">Trang chủ</a></li>
+                <li><a href="#courses" class="navbar-link">Khóa học</a></li>
+                <li><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
+                <li><a href="#consultant" class="navbar-link">Tư vấn miễn phí</a></li>
+                <hr style="border: 0.5px solid #ccc; margin: 15px 0;">
+                <li><a href="./giohang.html" class="navbar-link"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
+                <li><a href="./dangky.html" class="navbar-link" style="color: chocolate;">Đăng ký</a></li>
+                <li><a href="./dangnhap.html" class="navbar-link" style="color: #67a606;">Đăng nhập</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="trangchu.html" class="logo">
             <img src="logo.png" alt="BrightEnglish Logo" />
           </a>
+
           <nav class="navbar">
             <ul class="navbar-left">
-              <li><a href="main.html" class="home-style">Trang chủ</a></li>
+              <li><a href="trangchu.html" class="home-style">Trang chủ</a></li>
               <li><a href="#courses">Khóa học</a></li>
               <li><a href="./gioithieu.html">Giới thiệu</a></li>
               <li><a href="#consultant">Tư vấn miễn phí</a></li>
             </ul>
             <ul class="navbar-right">
-              <a href="./giohang.html"
-                ><span class="shopping-icon-frame"
-                  ><i
-                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"
-                  ></i></span
-              ></a>
+              <a href="./giohang.html">
+                <span class="shopping-icon-frame">
+                  <i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i>
+                </span>
+              </a>
               <li class="frame">
                 <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
               </li>
@@ -62,6 +95,7 @@
               </li>
             </ul>
           </nav>
+
         </div>
       </div>
     </header>
@@ -87,19 +121,19 @@
 
       <section id="courses" class="courses-section">
         <div class="container">
-            <div class="courses-header">
-                <h2 class="courses-title">Hệ Thống Khóa Học Cho Trẻ</h2>
-                <p class="courses-subtitle">Chương trình đào tạo chuẩn tương tác, giúp bé tiếp cận ngoại ngữ một cách tự nhiên nhất.</p>
+            <div class="section-header-box">
+                <h2 class="section-title">Hệ Thống Khóa Học Cho Trẻ</h2>
+                <p class="section-subtitle">Chương trình đào tạo chuẩn tương tác, giúp bé tiếp cận ngoại ngữ một cách tự nhiên nhất.</p>
             </div>
             <div class="courses-grid">
                 <div class="course-card">
-                    <img src="khoahoc1.png" alt="Khóa học Mầm non" class="course-card__img">
-                    <div class="course-card__content">
+                    <img src="khoa hoc 1.png" alt="Khóa học Mầm non" class="course-card-img">
+                    <div class="course-card-body">
                         <span class="course-badge blue">Độ tuổi 3 - 6</span>
-                        <h3 class="course-card__title">Khóa Học Tiếng Anh Mầm Non</h3>
-                        <p class="course-card__desc">Kích hoạt phản xạ nghe nói nhạy bén từ sớm cho bé qua các hoạt động vui nhộn, bài hát sinh động, tạo dựng tình yêu ngôn ngữ tự nhiên.</p>
-                        <div class="course-card__footer">
-                            <div class="course-card__price">
+                        <h3 class="course-card-title">Khóa Học Tiếng Anh Mầm Non</h3>
+                        <p class="course-card-desc">Kích hoạt phản xạ nghe nói nhạy bén từ sớm cho bé qua các hoạt động vui nhộn, bài hát sinh động, tạo dựng tình yêu ngôn ngữ tự nhiên.</p>
+                        <div class="course-card-footer">
+                            <div class="course-price-box">
                                 <span class="old-price">2.200.000đ</span>
                                 <span class="new-price color-green">1.290.000đ</span>
                             </div>
@@ -108,13 +142,13 @@
                     </div>
                 </div>
                 <div class="course-card">
-                    <img src="khoahoc2.png" alt="Khóa học Tiểu học" class="course-card__img">
-                    <div class="course-card__content">
+                    <img src="khoa hoc 2.png" alt="Khóa học Tiểu học" class="course-card-img">
+                    <div class="course-card-body">
                         <span class="course-badge yellow">Độ tuổi 6 - 11</span>
-                        <h3 class="course-card__title">Khóa Học Tiếng Anh Tiểu Học</h3>
-                        <p class="course-card__desc">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết, lồng ghép tư duy phản biện. Giúp con tự tin bứt phá điểm số trên lớp và các kỳ thi quốc tế.</p>
-                        <div class="course-card__footer">
-                            <div class="course-card__price">
+                        <h3 class="course-card-title">Khóa Học Tiếng Anh Tiểu Học</h3>
+                        <p class="course-card-desc">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết, lồng ghép tư duy phản biện. Giúp con tự tin bứt phá điểm số trên lớp và các kỳ thi quốc tế.</p>
+                        <div class="course-card-footer">
+                            <div class="course-price-box">
                                 <span class="old-price">3.000.000đ</span>
                                 <span class="new-price color-green">1.790.000đ</span>
                             </div>
@@ -128,40 +162,38 @@
 
       <section class="features-trust-section">
           <div class="container">
-              <h2 class="trust-section-title">Phương Pháp Giảng Dạy Đột Phá</h2>
-              <p class="trust-section-subtitle">Lấy trẻ làm trung tâm để mang lại trải nghiệm học tập hứng khởi và hiệu quả nhất.</p>
+              <h2 class="trust-title">Phương Pháp Giảng Dạy Đột Phá</h2>
+              <p class="trust-subtitle">Lấy trẻ làm trung tâm để mang lại trải nghiệm học tập hứng khởi và hiệu quả nhất.</p>
               
               <div class="trust-grid">
                   <div class="trust-card">
-                      <i class="fa-solid fa-music trust-card__icon"></i>
-                      <h4 class="trust-card__title">SONGS (Bài hát)</h4>
-                      <p class="trust-card__desc">Học qua giai điệu vui tươi giúp trẻ dễ tiếp thu, ghi nhớ từ vựng và luyện phát âm chuẩn xác ngay từ đầu.</p>
+                      <i class="fa-solid fa-music trust-icon"></i>
+                      <h4 class="trust-card-title">SONGS (Bài hát)</h4>
+                      <p class="trust-card-desc">Học qua giai điệu vui tươi giúp trẻ dễ tiếp thu, ghi nhớ từ vựng và luyện phát âm chuẩn xác ngay từ đầu.</p>
                   </div>
                   <div class="trust-card">
-                      <i class="fa-regular fa-clone trust-card__icon"></i>
-                      <h4 class="trust-card__title">FLASHCARD (Thẻ từ)</h4>
-                      <p class="trust-card__desc">Hình ảnh trực quan sinh động giúp kích thích tối đa trí nhớ não bộ, liên tưởng từ vựng nhanh chóng.</p>
+                      <i class="fa-regular fa-clone trust-icon"></i>
+                      <h4 class="trust-card-title">FLASHCARD (Thẻ từ)</h4>
+                      <p class="trust-card-desc">Hình ảnh trực quan sinh động giúp kích thích tối đa trí nhớ não bộ, liên tưởng từ vựng nhanh chóng.</p>
                   </div>
                   <div class="trust-card">
-                      <i class="fa-solid fa-brain trust-card__icon"></i>
-                      <h4 class="trust-card__title">CRITICAL THINKING</h4>
-                      <p class="trust-card__desc">Phương pháp tư duy phản biện lồng ghép giúp trẻ chủ động phân tích, giải quyết vấn đề bằng tiếng Anh.</p>
+                      <i class="fa-solid fa-brain trust-icon"></i>
+                      <h4 class="trust-card-title">CRITICAL THINKING</h4>
+                      <p class="trust-card-desc">Phương pháp tư duy phản biện lồng ghép giúp trẻ chủ động phân tích, giải quyết vấn đề bằng tiếng Anh.</p>
                   </div>
               </div>
           </div>
       </section>
 
       <section id="consultant" class="consultant-section">
-        <div class="container consultant-container">
-            <div class="consultant-info">
-                <div class="consultant-info__top">
-                    <h3 class="consultant-info__title">Đồng hành cùng con vươn xa!</h3>
-                    <p class="consultant-info__desc">Đội ngũ giảng viên giàu kinh nghiệm (đạt chứng chỉ TESOL từ các trường đại học hàng đầu như Oxford, Harvard, Cambridge) luôn sẵn sàng đồng hành cùng con.</p>
-                    <div class="consultant-features">
+        <div class="container consultant-row">
+            <div class="consultant-left-col">
+                <div class="consultant-left-top">
+                    <h3 class="consultant-head-title">Đồng hành cùng con vươn xa!</h3>
+                    <p class="consultant-head-desc">Đội ngũ giảng viên giàu kinh nghiệm (đạt chứng chỉ TESOL từ các trường đại học hàng đầu như Oxford, Harvard, Cambridge) luôn sẵn sàng đồng hành cùng con.</p>
+                    <div class="consultant-feature-list">
                         <div class="consultant-feature-item">
-                            <div class="consultant-feature-icon">
-                                <i class="fa-solid fa-phone-volume"></i>
-                            </div>
+                            <div class="consultant-feature-icon"><i class="fa-solid fa-phone-volume"></i></div>
                             <div class="consultant-feature-text">
                                 <h4 class="consultant-feature-title">Tư vấn lộ trình học thử</h4>
                                 <p class="consultant-feature-desc">Định hướng phương pháp phù hợp với tính cách của trẻ.</p>
@@ -169,14 +201,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="consultant-slogan">
+                <div class="consultant-quote">
                     * Được sai. Được thử. Được trưởng thành.
                 </div>
             </div>
             
             <div class="form-col-box">
-                <h3 class="form-col-box__title">Nhận Tư Vấn Lộ Trình Cho Bé</h3>
-                <p class="form-col-box__subtitle">Ba mẹ điền thông tin dưới đây để nhận lịch kiểm tra trình độ miễn phí.</p>
+                <h3 class="form-title">Nhận Tư Vấn Lộ Trình Cho Bé</h3>
+                <p class="form-subtitle">Ba mẹ điền thông tin dưới đây để nhận lịch kiểm tra trình độ miễn phí.</p>
                 <form id="consultantForm">
                     <div class="form-row">
                         <div class="form-group-box">
@@ -197,7 +229,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn-submit-form">Gửi yêu cầu nhận tư vấn</button>
+                    <button type="submit" class="btn-submit-consultant">Gửi yêu cầu nhận tư vấn</button>
                 </form>
             </div>
         </div>
@@ -208,7 +240,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-logo">
-          <img src="logocty.png" alt="Company Logo" />
+          <img src="logocty.png" alt="Group 2 Logo" />
         </div>
         <div class="footer-body">
           <div class="footer-left">
@@ -264,6 +296,6 @@
       <i class="fa-brands fa-facebook-messenger color-blue"></i>
     </a>
     
-    <script src="trangchu.js"></script>
+    <script src="gioithieu.js"></script>
   </body>
 </html>
