@@ -1,12 +1,4 @@
-.header {
-  transition: all 0.3s ease;
-}
 
-.header.header-scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 10px 0; /* Thu nhỏ header lại một chút cho gọn */
-}
 .top-banner { 
   background-color: #263238; 
   color: #fff; 
@@ -426,7 +418,14 @@
 .btn-submit-consultant:hover {
   opacity: 0.9;
 }
+.header {
+  transition: all 0.3s ease;
+}
 
+.header.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 0; 
 
 @media (max-width: 991.98px) {
   .hero {
