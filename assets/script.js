@@ -5,15 +5,15 @@ import {
 function setupTimelineScroll() {
   const icons = document.querySelectorAll('.timeline-icon');
   const sections = ['.section-3', '.section-4', '.section-5', '.section-6'];
-  const headerHeight = 205; 
+  const headerHeight = 205;
   icons.forEach((icon, index) => {
-    icon.addEventListener('click', function() {
+    icon.addEventListener('click', function () {
       if (this.classList.contains('active')) {
         const section = document.querySelector(sections[index]);
         if (section) {
           const sectionTop = section.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({
-            top: sectionTop - headerHeight, // Trừ đi chiều cao header
+            top: sectionTop - headerHeight,
             behavior: 'smooth'
           });
         }
@@ -22,9 +22,18 @@ function setupTimelineScroll() {
   });
 }
 
+function toggleVisibility(selector) {
+  toggleSelector = document.querySelector(selector);
+  if (toggleSelector.classList.contains("hidden")) {
+    toggleSelector.classList.remove("hidden");
+    toggleSelector.classList.add("show");
+  }
+}
+
+
 function updateTimeLine(step) {
   const timeline_bar = document.querySelector(".timeline-bar");
-  timeline_bar.classList.remove('step-0','step-1', 'step-2', 'step-3', 'step-4');
+  timeline_bar.classList.remove('step-0', 'step-1', 'step-2', 'step-3', 'step-4');
   timeline_bar.classList.add(`step-${step}`);
 
 
@@ -246,7 +255,8 @@ function btn_products() {
 // end section-3
 
 // section-4
-function saveUserInfo() {
+
+function formatBirthDay(DateOfBirth) {
   let displayDate = '';
   const dateOfBirth = localStorage.getItem('dateOfBirth');
   if (dateOfBirth) {
@@ -254,13 +264,23 @@ function saveUserInfo() {
     date.getDate();
     displayDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
   }
-  document.getElementById('displayName').textContent = localStorage.getItem("fullName");
-  document.getElementById('displayEmail').textContent = localStorage.getItem("Email") || 'Không có';
-  document.getElementById('displayPhone').textContent = localStorage.getItem("phoneNumber");
-  document.getElementById('displayBirthday').textContent = displayDate;
-  document.getElementById('displayGender').textContent = localStorage.getItem("sex");
+}
+
+function saveUserInfo() {
+  const detailForm = JSON.parse(localStorage.getItem("savedForm"));
+  console.log(detailForm);
+  document.getElementById('displayName').textContent = detailForm.fullName;
+  document.getElementById('displayEmail').textContent = detailForm.email;
+  document.getElementById('displayPhone').textContent = detailForm.phoneNumber;
+  document.getElementById('displayBirthday').textContent = formatBirthDay(detailForm.DateOfBirth);
+  document.getElementById('displayGender').textContent = detailForm.sex;
   document.getElementById('empty-state').style.display = 'none';
   document.getElementById('infor-display').classList.add('show');
+  const col_right_UserInfo = document.querySelector(".section-4 .col-right");
+  if (col_right_UserInfo.classList.contains("hidden")) {
+    col_right_UserInfo.classList.remove("hidden");
+    col_right_UserInfo.classList.add("show");
+  }
 }
 // end section-4
 
@@ -274,38 +294,33 @@ function selectBank() {
         el.classList.add("hidden");
       });
       const credit_infor = document.querySelector(".credit-infor");
-      if(credit_infor.classList.contains("hidden")) {
+      if (credit_infor.classList.contains("hidden")) {
         credit_infor.classList.remove("hidden");
         credit_infor.classList.add("show");
       }
       const card_default = document.querySelector(".card-default");
-      if(card_default.classList.contains("show")) {
+      if (card_default.classList.contains("show")) {
         card_default.classList.remove("show");
         card_default.classList.add("hidden");
-      } 
+      }
 
       const bankId = this.id;
       const card_right = document.querySelector(`#bankData-${bankId}`);
       console.log(card_right);
       if (card_right) {
         card_right.classList.remove("hidden");
-        card_right.classList.add("active");      
-      } 
+        card_right.classList.add("active");
+      }
 
       const bankName = this.getAttribute('name');
       const btn_credit = document.querySelector(".section-5 .payment-body .button-1");
       btn_credit.onclick = () => {
         if (confirm("Chấp nhận chuyển khoản")) {
           localStorage.setItem('bankName', bankName);
-          const time_now = new Date();
-          const order_Date = time_now.toUTCString();
-          localStorage.setItem("order_Date", order_Date);
+          const time_now = new Date().toLocaleString('vi-VN');
+          localStorage.setItem("order_Date", time_now);
           displayOrderInfo();
-          const section_6 = document.querySelector(".section-6");
-          if (section_6.classList.contains("hidden")) {
-            section_6.classList.remove("hidden");
-            section_6.classList.add("show");
-          }
+          toggleVisibility(".section-6");
           updateTimeLine(3);
         }
       }
@@ -316,18 +331,13 @@ function selectBank() {
 
 // section 6
 function displayOrderInfo() {
-  const fullName = localStorage.getItem('fullName');
-  const email = localStorage.getItem('Email');
-  const phoneNumber = localStorage.getItem('phoneNumber');
-  const dateOfBirth = localStorage.getItem('dateOfBirth');
-  const gender = localStorage.getItem('sex');
-  const order_Date = localStorage.getItem('order_Date');
-
-  document.querySelector(".section-6 .buyer-card__body .buyer-name span").innerHTML = fullName;
-  document.querySelector(".section-6 .buyer-card__body .buyer-email span").innerHTML = email;
-  document.querySelector(".section-6 .buyer-card__body .buyer-phoneNumber span").innerHTML = phoneNumber;
-  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = dateOfBirth;
-  document.querySelector(".section-6 .buyer-card__body .buyer-gender span").innerHTML = gender;
+  
+  const detailForm = JSON.parse(localStorage.getItem("savedForm"));
+  document.querySelector(".section-6 .buyer-card__body .buyer-name span").innerHTML = detailForm.fullName;
+  document.querySelector(".section-6 .buyer-card__body .buyer-email span").innerHTML = detailForm.email;
+  document.querySelector(".section-6 .buyer-card__body .buyer-phoneNumber span").innerHTML = detailForm.phoneNumber;
+  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.DateOfBirth;
+  document.querySelector(".section-6 .buyer-card__body .buyer-gender span").innerHTML = detailForm.sex;
   document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = order_Date;
 
   const courseList = document.querySelector(".course-list__body");
@@ -412,72 +422,29 @@ if (productKeys.length > 0) {
 }
 
 
-fetchApi("http://localhost:3000/banks")
-  .then(data => {
-    let htmls = "";
-    let value = "";
-    const name = document.querySelector("#fullName");
-    const phoneNumber = document.querySelector("#phoneNumber");
-    data.forEach(item => {
-      htmls += `
-      <li class="card-item" name="${item.name}" id="${item.id}">
-        <img src="${item.logo}" alt="${item.shortName}">
-        <div class="card-title">${item.name}</div>
-        <div class="card-circle"></div>
-      </li>
-      `
-      value += `
-      <div class="bank-value hidden" id="bankData-${item.id}">
-        <div class="bank-name-value">${item.shortName}</div>
-        <div class="account-holder-value">Bright English</div>
-        <div class="account-number-value">${item.accountNumber}</div>
-        <div class="content-value">....</div>
-      </div>`
-    });
-    const bank = document.querySelector("#bank")
-    bank.innerHTML = htmls;
-    const bankValue = document.querySelector(".grid-card-right")
-    bankValue.innerHTML = value;
-    selectBank();
-  });
-
+selectBank();
 
 
 const form = document.querySelector("#personalForm");
 form.addEventListener('submit', function (event) {
+  alert("Thông tin của bạn đã được lưu");
   event.preventDefault();
-  const fullName = document.getElementById('fullName');
-  const email = document.getElementById('Email');
-  const phoneNumber = document.getElementById('phoneNumber');
-  const dateOfBirth = document.getElementById('dateOfBirth');
-  const sex = document.getElementById('sex');
-
-  let displayDate = '';
-  if (dateOfBirth) {
-    const date = new Date(dateOfBirth);
-    displayDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+  if (typeof Storage !== undefined) {
+    let newInfo = {
+      fullName: document.getElementById('fullName').value,
+      email: document.getElementById('Email').value,
+      phoneNumber: document.getElementById('phoneNumber').value,
+      dateOfBirth: document.getElementById('dateOfBirth').value,
+      sex: document.getElementById('sex').value
+    }
+    localStorage.setItem("savedForm", JSON.stringify(newInfo));
   }
-
-  localStorage.setItem(fullName.name, fullName.value);
-  localStorage.setItem(email.name, email.value);
-  localStorage.setItem(phoneNumber.name, phoneNumber.value);
-  localStorage.setItem(dateOfBirth.name, dateOfBirth.value);
-  localStorage.setItem(sex.name, sex.value);
   saveUserInfo();
-  const col_right_UserInfo = document.querySelector(".section-4 .col-right");
-  if (col_right_UserInfo.classList.contains("hidden")) {
-    col_right_UserInfo.classList.remove("hidden");
-    col_right_UserInfo.classList.add("show");
-  }
 })
 
 const btn_UserInfo = document.querySelector(".section-4 .col-right button");
 btn_UserInfo.addEventListener('click', () => {
-  const section_5 = document.querySelector(".section-5");
-  if (section_5.classList.contains("hidden")) {
-    section_5.classList.remove("hidden");
-    section_5.classList.add("show");
-  }
+  toggleVisibility(".section-5");
   updateTimeLine(2);
 })
 
