@@ -1,4 +1,5 @@
 
+/* --- 1. Top Banner --- */
 .top-banner { 
   background-color: #263238; 
   color: #fff; 
@@ -10,7 +11,7 @@
   align-items: center; 
   gap: 10px; 
 }
-.top-banner__link {
+.top-banner-link {
   font-weight: 600; 
   margin-left: 5px;
 }
@@ -23,6 +24,8 @@
   font-size: 1.2rem; 
   text-transform: uppercase; 
 }
+
+/* --- 2. Hero Section --- */
 .hero { 
   background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%); 
   padding: 80px 0; 
@@ -32,6 +35,9 @@
   align-items: center; 
   justify-content: space-between; 
   gap: 40px; 
+}
+.hero-text {
+  flex: 1;
 }
 .hero-badge { 
   display: inline-block; 
@@ -43,9 +49,6 @@
   font-size: 1.3rem; 
   margin-bottom: 20px; 
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px; 
-}
-.hero-text {
-  flex: 1;
 }
 .hero-title { 
   font-family: 'Poppins', sans-serif; 
@@ -78,6 +81,8 @@
   height: 350px; 
   object-fit: cover;
 }
+
+/* --- 3. CTA Buttons --- */
 .btn-yellow-cta { 
   background-color: chocolate; 
   color: #fff !important; 
@@ -87,6 +92,10 @@
   font-size: 1.6rem; 
   box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3); 
   display: inline-block; 
+  transition: opacity 0.2s;
+}
+.btn-yellow-cta:hover {
+  opacity: 0.9;
 }
 .btn-outline-cta { 
   border: 2px solid #263238; 
@@ -96,27 +105,30 @@
   font-weight: 600; 
   font-size: 1.6rem; 
   display: inline-block; 
+  transition: all 0.2s ease;
 }
 .btn-outline-cta:hover { 
   background-color: #263238; 
   color: #fff !important; 
 }
+
+/* --- 4. Courses Section --- */
 .courses-section { 
   padding: 80px 0; 
   background-color: #fff; 
 }
-.courses-header {
+.section-header-box {
   text-align: center; 
   margin-bottom: 50px;
 }
-.courses-title {
+.section-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 3.2rem; 
   font-weight: 700; 
   color: #263238; 
   margin-bottom: 15px;
 }
-.courses-subtitle {
+.section-subtitle {
   font-size: 1.6rem; 
   color: #607d8b; 
   max-width: 600px; 
@@ -138,12 +150,12 @@
   display: flex; 
   flex-direction: column; 
 }
-.course-card__img {
+.course-card-img {
   height: 220px; 
   width: 100%; 
   object-fit: cover;
 }
-.course-card__content {
+.course-card-body {
   padding: 25px; 
   flex-grow: 1; 
   display: flex; 
@@ -167,34 +179,34 @@
   background-color: #fff8e1; 
   color: #ffb300; 
 }
-.course-card__title {
+.course-card-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 2rem; 
   font-weight: 700; 
   margin-bottom: 12px; 
   color: #263238;
 }
-.course-card__desc {
+.course-card-desc {
   color: #607d8b; 
   font-size: 1.45rem; 
   line-height: 1.6; 
   margin-bottom: 20px; 
   flex-grow: 1;
 }
-.course-card__footer {
+.course-card-footer {
   display: flex; 
   align-items: center; 
   justify-content: space-between; 
   border-top: 1px solid #f0f4f8; 
   padding-top: 15px;
 }
-.course-card__price .old-price {
+.course-price-box .old-price {
   display: block; 
   text-decoration: line-through; 
   color: #b0bec5; 
   font-size: 1.4rem;
 }
-.course-card__price .new-price {
+.course-price-box .new-price {
   display: block; 
   font-size: 2rem; 
   font-weight: 800; 
@@ -208,10 +220,13 @@
   font-weight: 600; 
   font-size: 1.4rem; 
   text-align: center; 
+  transition: background-color 0.2s;
 }
 .btn-learn-more:hover { 
   background-color: #67a606; 
 }
+
+/* --- 5. Features Section --- */
 .features-trust-section { 
   padding: 60px 0; 
   background-color: #f8fbfd; 
@@ -219,13 +234,13 @@
   border-top: 1px solid #eef5fa; 
   border-bottom: 1px solid #eef5fa; 
 }
-.trust-section-title {
+.trust-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   color: #263238;
 }
-.trust-section-subtitle {
+.trust-subtitle {
   font-size: 1.6rem; 
   color: #607d8b; 
   margin-top: 10px;
@@ -247,51 +262,53 @@
 .trust-card:hover { 
   transform: translateY(-5px); 
 }
-.trust-card__icon {
+.trust-icon {
   font-size: 3.5rem; 
   color: #67a606; 
   margin-bottom: 15px;
 }
-.trust-card__title {
+.trust-card-title {
   font-size: 1.8rem; 
   font-weight: 700; 
   margin-bottom: 10px; 
   color: #263238;
 }
-.trust-card__desc {
+.trust-card-desc {
   font-size: 1.4rem; 
   color: #607d8b; 
   line-height: 1.6;
 }
+
+/* --- 6. Consultant Section --- */
 .consultant-section { 
   padding: 80px 0; 
   background-color: #f3fffe; 
 }
-.consultant-container {
+.consultant-row {
   display: flex; 
   gap: 50px; 
   align-items: stretch;
 }
-.consultant-info {
+.consultant-left-col {
   flex: 1; 
   display: flex; 
   flex-direction: column; 
   justify-content: space-between;
 }
-.consultant-info__title {
+.consultant-head-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   margin-bottom: 15px; 
   color: #263238;
 }
-.consultant-info__desc {
+.consultant-head-desc {
   font-size: 1.6rem; 
   color: #546e7a; 
   line-height: 1.7; 
   margin-bottom: 40px;
 }
-.consultant-features {
+.consultant-feature-list {
   display: flex; 
   flex-direction: column; 
   gap: 25px;
@@ -325,12 +342,14 @@
   color: #607d8b; 
   font-size: 1.45rem;
 }
-.consultant-slogan {
+.consultant-quote {
   font-size: 1.3rem; 
   color: #90a4ae; 
   margin-top: 30px; 
   font-style: italic;
 }
+
+/* --- 7. Form --- */
 .form-col-box { 
   background: #fff; 
   padding: 40px; 
@@ -338,14 +357,14 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.04); 
   border: 1px solid #eef5fa; 
 }
-.form-col-box__title {
+.form-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 2.4rem; 
   font-weight: 700; 
   margin-bottom: 8px; 
   color: #263238;
 }
-.form-col-box__subtitle {
+.form-subtitle {
   color: #78909c; 
   font-size: 1.45rem; 
   margin-bottom: 30px;
@@ -382,7 +401,7 @@
   border-color: #67a606; 
   background-color: #fff; 
 }
-.btn-submit-form {
+.btn-submit-consultant {
   width: 100%; 
   padding: 15px; 
   background-color: chocolate; 
@@ -395,4 +414,70 @@
   box-shadow: 0 4px 12px rgba(210, 105, 30, 0.2); 
   margin-top: 10px; 
   font-family: inherit;
+  transition: opacity 0.2s;
+}
+.btn-submit-consultant:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   CSS RESPONSIVE RIÊNG TRANG CHỦ (Tự chuyển layout mượt mà khi qua Mobile/Tablet)
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .hero-image {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 30px;
+  }
+  .trust-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .trust-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .consultant-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .consultant-left-col {
+    text-align: center;
+  }
+  .consultant-feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .form-col-box {
+    padding: 30px 20px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
