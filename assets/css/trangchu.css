@@ -1,5 +1,4 @@
 
-/* --- 1. Top Banner --- */
 .top-banner { 
   background-color: #263238; 
   color: #fff; 
@@ -25,7 +24,7 @@
   text-transform: uppercase; 
 }
 
-/* --- 2. Hero Section --- */
+
 .hero { 
   background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%); 
   padding: 80px 0; 
@@ -82,7 +81,7 @@
   object-fit: cover;
 }
 
-/* --- 3. CTA Buttons --- */
+
 .btn-yellow-cta { 
   background-color: chocolate; 
   color: #fff !important; 
@@ -112,7 +111,7 @@
   color: #fff !important; 
 }
 
-/* --- 4. Courses Section --- */
+
 .courses-section { 
   padding: 80px 0; 
   background-color: #fff; 
@@ -226,7 +225,7 @@
   background-color: #67a606; 
 }
 
-/* --- 5. Features Section --- */
+
 .features-trust-section { 
   padding: 60px 0; 
   background-color: #f8fbfd; 
@@ -279,7 +278,7 @@
   line-height: 1.6;
 }
 
-/* --- 6. Consultant Section --- */
+
 .consultant-section { 
   padding: 80px 0; 
   background-color: #f3fffe; 
@@ -349,7 +348,7 @@
   font-style: italic;
 }
 
-/* --- 7. Form --- */
+
 .form-col-box { 
   background: #fff; 
   padding: 40px; 
@@ -420,9 +419,7 @@
   opacity: 0.9;
 }
 
-/* ==========================================================================
-   CSS RESPONSIVE RIÊNG TRANG CHỦ (Tự chuyển layout mượt mà khi qua Mobile/Tablet)
-   ========================================================================== */
+
 @media (max-width: 991.98px) {
   .hero {
     padding: 40px 0;
