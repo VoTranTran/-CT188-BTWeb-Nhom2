@@ -1,642 +1,418 @@
-/* ==========================================================================
-   PHẦN 1: CSS GỐC TỪ FILE WORD (Giữ nguyên toàn bộ cấu trúc & thuộc tính)
-   ========================================================================== */
-.section-title {
-  text-align: center; /* [cite: 3] */
-  font-weight: 700; /* [cite: 5] */
-  font-size: 2.5rem; /* [cite: 6] */
-  margin-bottom: 30px; /* [cite: 8] */
-  text-transform: uppercase; /* [cite: 9] */
-}
-.section-title::after {
-  content: ""; /* [cite: 12] */
-  width: 80px; /* [cite: 13] */
-  height: 4px; /* [cite: 14] */
-  background: #fdec7b; /* Sử dụng màu vàng thương hiệu */ /* [cite: 15] */
-  display: block; /* [cite: 16] */
-  margin: 15px auto 0; /* [cite: 17] */
-  border-radius: 10px; /* [cite: 18] */
-}
-/* Hero */
-.intro-bgr {
-  width: 100%; /* [cite: 22] */
-  height: 70vh; /* [cite: 23] */
-  min-height: 300px; /* [cite: 24] */
-  background-image: url(../img/gioithieu/background.png); /* [cite: 25] */
-  background-size: cover; /* [cite: 26] */
-  background-position: center; /* [cite: 27] */
-}
-/*Brand*/
-.brand {
-  background: linear-gradient(135deg, #f2fffd, #fffdf7); /*  */
-  padding: 60px 0; /* [cite: 32] */
-  position: relative; /* [cite: 33] */
-  overflow: hidden; /* [cite: 34] */
-}
-.brand::before {
-  content: ""; /* [cite: 37] */
-  position: absolute; /* [cite: 38] */
-  width: 400px; /* [cite: 39] */
-  height: 400px; /* [cite: 40] */
-  background: #fdec7b; /*  */
-  border-radius: 50%; /* [cite: 42] */
-  top: -150px; /* [cite: 43] */
-  left: -150px; /* [cite: 44] */
-  opacity: 0.25; /* [cite: 45] */
-}
-.brand::after {
-  content: ""; /* [cite: 48] */
-  position: absolute; /* [cite: 49] */
-  width: 300px; /* [cite: 50] */
-  height: 300px; /* [cite: 51] */
-  background: #58cbca; /* [cite: 52] */
-  border-radius: 50%; /* [cite: 53] */
-  bottom: -120px; /* [cite: 54] */
-  right: -120px; /* [cite: 55] */
-  opacity: 0.2; /* [cite: 56] */
-}
-.brand-content {
-  display: flex; /* [cite: 59] */
-  align-items: center; /* [cite: 60] */
-  gap: 50px; /* [cite: 61] */
-}
-.brand-story-text {
-  flex: 1; /* [cite: 64] */
-  font-size: 2rem; /* [cite: 66] */
-  text-align: left; /* [cite: 67] */
-  line-height: 1.5; /* [cite: 68] */
-  background: white; /* [cite: 69] */
-  border-radius: 30px; /* [cite: 70] */
-  padding: 30px; /* [cite: 71] */
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05); /* [cite: 72] */
-}
-.brand-story-text strong {
-  display: block; /* [cite: 75] */
-  background: #ee6961; /*  */
-  color: white; /* [cite: 77] */
-  padding: 6px 18px; /* [cite: 78] */
-  border-radius: 30px; /* [cite: 79] */
-  margin: 10px 0; /* [cite: 80] */
-  font-weight: 600; /* [cite: 81] */
-  text-align: center; /* [cite: 82] */
-}
-.brand-image {
-  flex: 1; /* [cite: 85] */
-}
-.brand-image img {
-  width: 100%; /* [cite: 88] */
-  border-radius: 10px; /* [cite: 89] */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* [cite: 90] */
-  transition: 0.4s ease; /* [cite: 91] */
-}
-.brand-image img:hover {
-  transform: scale(1.03); /* [cite: 94] */
-}
-/*PP Giang day*/
-.method {
-  padding: 40px 0; /* [cite: 98] */
-}
-.method-list {
-  display: flex; /* [cite: 101] */
-  justify-content: space-between; /* [cite: 102] */
-  gap: 30px; /* [cite: 103] */
-}
-.method-item {
-  width: 100%; /* [cite: 106] */
-  text-align: center; /* [cite: 107] */
-  flex: 1; /* [cite: 108] */
-  padding: 20px; /* [cite: 109] */
-  border-radius: 10px; /* [cite: 110] */
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease; /* [cite: 111, 112, 113] */
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, #58cbca, #fdec7b) border-box; /* [cite: 114, 115, 116] */
-  border: 3px solid transparent; /* [cite: 117] */
-}
-.method-img {
-  padding: 5px; /* [cite: 120] */
-  background: #fff; /* [cite: 121] */
-  margin-bottom: 15px; /* [cite: 122] */
-  height: 250px; /* [cite: 123] */
-  display: flex; /* [cite: 124] */
-  align-items: center; /* [cite: 125] */
-  justify-content: center; /* [cite: 126] */
-  overflow: hidden; /* [cite: 127] */
-  border-radius: 10px; /* [cite: 128] */
-}
-.method-img img {
-  max-width: 100%; /* [cite: 131] */
-  max-height: 100%; /* [cite: 132] */
-  object-fit: contain; /* [cite: 133] */
-  border-radius: 10px; /* [cite: 134] */
-}
-.method-item:hover {
-  transform: scale(1.05); /* [cite: 137] */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* [cite: 138] */
-  border-color: #aaa; /* [cite: 139] */
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, #58cbca, #fdec7b) border-box; /* [cite: 140, 141, 142] */
-  border: 3px solid transparent; /* [cite: 143] */
-}
-.method-item h3 {
-  font-family: "Sen", sans-serif; /* [cite: 146] */
-  font-weight: 700; /* [cite: 147] */
-  color: #333; /* [cite: 148] */
-  text-transform: uppercase; /* [cite: 149] */
-}
-/*Giao vien*/
-.teacher {
-  padding: 40px 0; /* [cite: 153] */
-  background: #f2fffd; /* [cite: 154] */
-}
-.teacher-list {
-  display: flex; /* [cite: 157] */
-  justify-content: center; /* [cite: 158] */
-  gap: 60px; /* [cite: 159] */
-  flex-wrap: wrap; /* [cite: 160] */
-}
-.teacher-item {
-  text-align: center; /* [cite: 163] */
-  background: transparent; /* [cite: 164] */
-  width: 335px; /* [cite: 165] */
-  padding: 10px; /* [cite: 166] */
-  border-radius: 20px; /* [cite: 167] */
-  background-color: #fff; /* [cite: 168] */
-  border: 2px solid #ccc; /* [cite: 169] */
-  border-top: 5px solid #2ec4b6; /* [cite: 170] */
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease; /* [cite: 171, 172, 173] */
-}
-.teacher-item:hover {
-  transform: scale(1.05); /* [cite: 176] */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* [cite: 177] */
-  border-top: 5px solid #2ec4b6; /* [cite: 179] */
-}
-.teacher-img {
-  width: 300px; /* [cite: 182] */
-  height: 360px; /* [cite: 183] */
-  margin: 0 auto 20px; /* [cite: 184] */
-  overflow: hidden; /* [cite: 185] */
-  border-radius: 15px; /* [cite: 186] */
-}
-.teacher-img img {
-  width: 100%; /* [cite: 189] */
-  height: 100%; /* [cite: 190] */
-  object-fit: cover; /* [cite: 191] */
-  object-position: top; /* [cite: 192] */
-}
-.teacher-name {
-  font-family: "Sen", sans-serif; /* [cite: 195] */
-  font-weight: 800; /* [cite: 196] */
-  font-size: 2rem; /* [cite: 197] */
-  margin-bottom: 10px; /* [cite: 198] */
-  text-transform: uppercase; /* [cite: 199] */
-}
-.teacher-item p {
-  font-size: 1.5rem; /* [cite: 202] */
-  margin: 2px 0; /* [cite: 203] */
-  color: #555; /* [cite: 204] */
-  font-family: "Open Sans", sans-serif; /* [cite: 205] */
-  line-height: 1.5; /* [cite: 206] */
-}
-.teacher-view-more i {
-  cursor: pointer; /* [cite: 209] */
-}
-.teacher-more {
-  display: none; /* [cite: 212] */
-  margin-top: 70px; /* [cite: 213] */
-}
-.teacher-more.active {
-  display: block; /* [cite: 216] */
-}
-.teacher-view-more.active {
-  transform: rotate(180deg); /* [cite: 219] */
-}
-.library img {
-  width: 100%; /* [cite: 222] */
-  display: block; /* [cite: 223] */
-}
-
-/* ==========================================================================
-   PHẦN 2: CHỈNH SỬA MÀU SẮC ĐỂ ĐỒNG BỘ VỚI FILE WORD
-   ========================================================================== */
-
-.top-banner { 
-  background-color: #2ec4b6; /* Đổi sang tone xanh ngọc thương hiệu nhẹ nhàng hơn màu xám cũ */
-  color: #fff; 
-  text-align: center; 
-  padding: 10px; 
-  font-size: 1.4rem; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  gap: 10px; 
+.top-banner {  
+  background-color: #2ec4b6; /* Thay xám đậm #263238 bằng xanh ngọc thương hiệu */ 
+  color: #fff;  
+  text-align: center;  
+  padding: 10px;  
+  font-size: 1.4rem;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 10px;  
 }
 .top-banner-link {
-  font-weight: 600; 
+  font-weight: 600;  
   margin-left: 5px;
-  color: #fffdf7; /* Đồng bộ chữ trong link banner trắng sữa */
+  color: #fdec7b; /* Thay đổi link banner sang màu vàng nhạt thương hiệu cho nổi bật */
 }
-.badge-hot { 
-  background-color: #ee6961; /* Đổi màu đỏ tươi sang màu đỏ san hô ấm áp của thương hiệu */
-  color: #fff; 
-  padding: 2px 8px; 
-  border-radius: 4px; 
-  font-weight: 700; 
-  font-size: 1.2rem; 
-  text-transform: uppercase; 
+.badge-hot {  
+  background-color: #ee6961; /* Thay đỏ tươi bằng đỏ san hô thương hiệu */ 
+  color: #fff;  
+  padding: 2px 8px;  
+  border-radius: 4px;  
+  font-weight: 700;  
+  font-size: 1.2rem;  
+  text-transform: uppercase;  
 }
 
-.hero { 
-  background: linear-gradient(180deg, #f2fffd 0%, #ffffff 100%); /* Đổi xanh dương pastel sang màu nền xanh mint dịu của brand */
-  padding: 80px 0; 
+
+.hero {  
+  background: linear-gradient(180deg, #f2fffd 0%, #ffffff 100%); /* Thay xanh dương nhạt bằng nền xanh nhạt của brand */ 
+  padding: 80px 0;  
 }
-.hero-container { 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 40px; 
+.hero-container {  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  gap: 40px;  
 }
 .hero-text {
   flex: 1;
 }
-.hero-badge { 
-  display: inline-block; 
-  background-color: #fff; 
-  color: #58cbca; /* Đổi màu chocolate sang xanh ngọc chủ đạo */
-  padding: 6px 14px; 
-  border-radius: 20px; 
-  font-weight: 700; 
-  font-size: 1.3rem; 
-  margin-bottom: 20px; 
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px; 
+.hero-badge {  
+  display: inline-block;  
+  background-color: #fff;  
+  color: #ee6961; /* Thay chocolate bằng đỏ san hô thương hiệu */ 
+  padding: 6px 14px;  
+  border-radius: 20px;  
+  font-weight: 700;  
+  font-size: 1.3rem;  
+  margin-bottom: 20px;  
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;  
 }
-.hero-title { 
-  font-family: "Open Sans", sans-serif !important; 
-  font-size: 4.4rem; 
-  font-weight: 800; 
-  line-height: 1.2; 
-  margin-bottom: 25px; 
-  color: #263238; 
+.hero-title {  
+  font-family: "Open Sans", sans-serif !important;  
+  font-size: 4.4rem;  
+  font-weight: 800;  
+  line-height: 1.2;  
+  margin-bottom: 25px;  
+  color: #263238;  
 }
 .hero-desc {
-  color: #546e7a; 
-  margin-bottom: 35px; 
-  font-size: 1.6rem; 
+  color: #546e7a;  
+  margin-bottom: 35px;  
+  font-size: 1.6rem;  
   line-height: 1.8;
 }
 .hero-buttons {
-  display: flex; 
+  display: flex;  
   gap: 15px;
 }
 .hero-image {
-  flex: 1; 
-  display: flex; 
+  flex: 1;  
+  display: flex;  
   justify-content: flex-end;
 }
 .hero-image img {
-  border-radius: 20px; 
-  box-shadow: 0 15px 35px rgba(88, 203, 202, 0.15); /* Chuyển shadow nhẹ nhàng sang sắc xanh ngọc */
-  width: 100%; 
-  max-width: 500px; 
-  height: 350px; 
+  border-radius: 20px;  
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);  
+  width: 100%;  
+  max-width: 500px;  
+  height: 350px;  
   object-fit: cover;
 }
 
-/* Nút CTA màu Vàng sáng có tương phản cao cho chữ đọc dễ chịu */
-.btn-yellow-cta { 
-  background-color: #fdec7b; /* Chuyển từ màu chocolate sang vàng thương hiệu đúng như tên class */
-  color: #333 !important; /* Thay chữ trắng bằng chữ tối để nổi bật nhất trên nền vàng */
-  padding: 14px 28px; 
-  border-radius: 30px; 
-  font-weight: 600; 
-  font-size: 1.6rem; 
-  box-shadow: 0 4px 15px rgba(253, 236, 123, 0.3); /* Đồng bộ bóng mờ màu vàng ấm */
-  display: inline-block; 
+
+.btn-yellow-cta {  
+  background-color: #fdec7b; /* Đổi chocolate thành màu vàng thương hiệu cho đúng tên class "btn-yellow-cta" */ 
+  color: #263238 !important; /* Chuyển màu chữ sang tối để dễ đọc trên nền vàng sáng */ 
+  padding: 14px 28px;  
+  border-radius: 30px;  
+  font-weight: 600;  
+  font-size: 1.6rem;  
+  box-shadow: 0 4px 15px rgba(253, 236, 123, 0.3); /* Đồng bộ bóng đổ màu vàng nhạt */ 
+  display: inline-block;  
   transition: opacity 0.2s;
 }
 .btn-yellow-cta:hover {
   opacity: 0.9;
 }
-
-/* Nút CTA viền màu xanh ngọc */
-.btn-outline-cta { 
-  border: 2px solid #58cbca; /* Thay viền xám đen bằng viền màu xanh ngọc chủ đạo */
-  color: #58cbca; 
-  padding: 12px 26px; 
-  border-radius: 30px; 
-  font-weight: 600; 
-  font-size: 1.6rem; 
-  display: inline-block; 
+.btn-outline-cta {  
+  border: 2px solid #58cbca; /* Thay xám đen bằng màu xanh ngọc thương hiệu */ 
+  color: #58cbca;  
+  padding: 12px 26px;  
+  border-radius: 30px;  
+  font-weight: 600;  
+  font-size: 1.6rem;  
+  display: inline-block;  
   transition: all 0.2s ease;
 }
-.btn-outline-cta:hover { 
-  background-color: #58cbca; 
-  color: #fff !important; 
+.btn-outline-cta:hover {  
+  background-color: #58cbca;  
+  color: #fff !important;  
 }
 
-.courses-section { 
-  padding: 80px 0; 
-  background-color: #fff; 
+
+.courses-section {  
+  padding: 80px 0;  
+  background-color: #fff;  
 }
 .section-header-box {
-  text-align: center; 
+  text-align: center;  
   margin-bottom: 50px;
 }
 .section-title {
-  font-family: "Open Sans", sans-serif; 
-  font-size: 3.2rem; 
-  font-weight: 700; 
-  color: #263238; 
+  font-family: "Open Sans", sans-serif;  
+  font-size: 3.2rem;  
+  font-weight: 700;  
+  color: #263238;  
   margin-bottom: 15px;
 }
 .section-subtitle {
-  font-size: 1.6rem; 
-  color: #607d8b; 
-  max-width: 600px; 
+  font-size: 1.6rem;  
+  color: #607d8b;  
+  max-width: 600px;  
   margin: 0 auto;
 }
-.courses-grid { 
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 40px; 
-  max-width: 900px; 
-  margin: 0 auto; 
+.courses-grid {  
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 40px;  
+  max-width: 900px;  
+  margin: 0 auto;  
 }
-.course-card { 
-  background: #fff; 
-  border: 1px solid #eef5fa; 
-  border-radius: 16px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02); 
-  display: flex; 
-  flex-direction: column; 
+.course-card {  
+  background: #fff;  
+  border: 1px solid #eef5fa;  
+  border-radius: 16px;  
+  overflow: hidden;  
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);  
+  display: flex;  
+  flex-direction: column;  
 }
 .course-card-img {
-  height: 220px; 
-  width: 100%; 
+  height: 220px;  
+  width: 100%;  
   object-fit: cover;
 }
 .course-card-body {
-  padding: 25px; 
-  flex-grow: 1; 
-  display: flex; 
+  padding: 25px;  
+  flex-grow: 1;  
+  display: flex;  
   flex-direction: column;
 }
-.course-badge { 
-  display: inline-block; 
-  padding: 4px 12px; 
-  border-radius: 4px; 
-  font-size: 1.2rem; 
-  font-weight: 700; 
-  margin-bottom: 15px; 
-  align-self: flex-start; 
-  text-transform: uppercase; 
+.course-badge {  
+  display: inline-block;  
+  padding: 4px 12px;  
+  border-radius: 4px;  
+  font-size: 1.2rem;  
+  font-weight: 700;  
+  margin-bottom: 15px;  
+  align-self: flex-start;  
+  text-transform: uppercase;  
 }
-.course-badge.blue { 
-  background-color: #f2fffd; /* Tone nền xanh nhạt brand */
-  color: #2ec4b6; /* Chữ xanh teal nổi bật */
+.course-badge.blue {  
+  background-color: #f2fffd; /* Đồng bộ sang nền xanh pastel nhạt */ 
+  color: #2ec4b6; /* Chữ xanh teal nổi bật */ 
 }
-.course-badge.yellow { 
-  background-color: #fffdf7; /* Tone nền kem nhẹ brand */
-  color: #b59500; /* Chữ vàng nâu hài hòa */
+.course-badge.yellow {  
+  background-color: #fffdf7; /* Đồng bộ sang nền vàng nhạt */ 
+  color: #b59500; /* Chữ vàng sậm dễ đọc */ 
 }
 .course-card-title {
-  font-family: "Open Sans", sans-serif; 
-  font-size: 2rem; 
-  font-weight: 700; 
-  margin-bottom: 12px; 
+  font-family: "Open Sans", sans-serif;  
+  font-size: 2rem;  
+  font-weight: 700;  
+  margin-bottom: 12px;  
   color: #263238;
 }
 .course-card-desc {
-  color: #607d8b; 
-  font-size: 1.45rem; 
-  line-height: 1.6; 
-  margin-bottom: 20px; 
+  color: #607d8b;  
+  font-size: 1.45rem;  
+  line-height: 1.6;  
+  margin-bottom: 20px;  
   flex-grow: 1;
 }
 .course-card-footer {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  border-top: 1px solid #f0f4f8; 
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  border-top: 1px solid #f0f4f8;  
   padding-top: 15px;
 }
 .course-price-box .old-price {
-  display: block; 
-  text-decoration: line-through; 
-  color: #b0bec5; 
+  display: block;  
+  text-decoration: line-through;  
+  color: #b0bec5;  
   font-size: 1.4rem;
 }
 .course-price-box .new-price {
-  display: block; 
-  font-size: 2rem; 
-  font-weight: 800; 
+  display: block;  
+  font-size: 2rem;  
+  font-weight: 800;  
   font-family: "Open Sans", sans-serif;
-  color: #ee6961; /* Đổi mức giá sang màu đỏ san hô kích thích người dùng click mua */
+  color: #ee6961; /* Đổi màu hiển thị giá mới sang đỏ san hô để tăng kích thích mua hàng */
 }
-.btn-learn-more { 
-  background-color: #2ec4b6; /* Đổi sang màu xanh teal nhấn */
-  color: #fff !important; 
-  padding: 8px 18px; 
-  border-radius: 6px; 
-  font-weight: 600; 
-  font-size: 1.4rem; 
-  text-align: center; 
+.btn-learn-more {  
+  background-color: #2ec4b6; /* Thay màu xám tối bằng màu xanh ngọc đậm */ 
+  color: #fff !important;  
+  padding: 8px 18px;  
+  border-radius: 6px;  
+  font-weight: 600;  
+  font-size: 1.4rem;  
+  text-align: center;  
   transition: background-color 0.2s;
 }
-.btn-learn-more:hover { 
-  background-color: #58cbca; /* Hover đổi màu mượt mà */
+.btn-learn-more:hover {  
+  background-color: #58cbca; /* Hover chuyển sang màu xanh ngọc nhạt */ 
 }
 
-.features-trust-section { 
-  padding: 60px 0; 
-  background-color: #f2fffd; /* Đồng nhất nền xanh thương hiệu cho toàn trang */
-  text-align: center; 
-  border-top: 1px solid #eef5fa; 
-  border-bottom: 1px solid #eef5fa; 
+
+.features-trust-section {  
+  padding: 60px 0;  
+  background-color: #f2fffd;  /* Thay nền sáng nhạt cũ bằng màu nền xanh aqua thương hiệu */ 
+  text-align: center;  
+  border-top: 1px solid #eef5fa;  
+  border-bottom: 1px solid #eef5fa;  
 }
 .trust-title {
-  font-family: "Open Sans", sans-serif; 
-  font-size: 3rem; 
-  font-weight: 700; 
+  font-family: "Open Sans", sans-serif;  
+  font-size: 3rem;  
+  font-weight: 700;  
   color: #263238;
 }
 .trust-subtitle {
-  font-size: 1.6rem; 
-  color: #607d8b; 
+  font-size: 1.6rem;  
+  color: #607d8b;  
   margin-top: 10px;
 }
-.trust-grid { 
-  display: flex; 
-  justify-content: space-between; 
-  gap: 20px; 
-  margin-top: 40px; 
+.trust-grid {  
+  display: flex;  
+  justify-content: space-between;  
+  gap: 20px;  
+  margin-top: 40px;  
 }
-.trust-card { 
-  flex: 1; 
-  padding: 30px 20px; 
-  background: #fff; 
-  border: 1px dashed #58cbca; /* Đổi viền xanh lá cũ sang màu xanh ngọc của thương hiệu */
-  border-radius: 12px; 
-  transition: transform 0.3s; 
+.trust-card {  
+  flex: 1;  
+  padding: 30px 20px;  
+  background: #fff;  
+  border: 1px dashed #58cbca;  /* Đổi viền xanh lá đậm cũ thành xanh ngọc thương hiệu */ 
+  border-radius: 12px;  
+  transition: transform 0.3s;  
 }
-.trust-card:hover { 
-  transform: translateY(-5px); 
+.trust-card:hover {  
+  transform: translateY(-5px);  
 }
 .trust-icon {
-  font-size: 3.5rem; 
-  color: #58cbca; /* Đồng bộ màu icon sang xanh ngọc */
+  font-size: 3.5rem;  
+  color: #58cbca;  /* Đổi icon từ màu xanh lá sang màu xanh ngọc thương hiệu */ 
   margin-bottom: 15px;
 }
 .trust-card-title {
-  font-size: 1.8rem; 
-  font-weight: 700; 
-  margin-bottom: 10px; 
+  font-size: 1.8rem;  
+  font-weight: 700;  
+  margin-bottom: 10px;  
   color: #263238;
 }
 .trust-card-desc {
-  font-size: 1.4rem; 
-  color: #607d8b; 
+  font-size: 1.4rem;  
+  color: #607d8b;  
   line-height: 1.6;
 }
 
-.consultant-section { 
-  padding: 80px 0; 
-  background-color: #f2fffd; /* Sử dụng đồng nhất màu nền của brand */
+
+.consultant-section {  
+  padding: 80px 0;  
+  background-color: #f2fffd;  /* Đồng bộ nền xanh nhạt của brand */ 
 }
 .consultant-row {
-  display: flex; 
-  gap: 50px; 
+  display: flex;  
+  gap: 50px;  
   align-items: stretch;
 }
 .consultant-left-col {
-  flex: 1; 
-  display: flex; 
-  flex-direction: column; 
+  flex: 1;  
+  display: flex;  
+  flex-direction: column;  
   justify-content: space-between;
 }
 .consultant-head-title {
-  font-family: "Open Sans", sans-serif; 
-  font-size: 3rem; 
-  font-weight: 700; 
-  margin-bottom: 15px; 
+  font-family: "Open Sans", sans-serif;  
+  font-size: 3rem;  
+  font-weight: 700;  
+  margin-bottom: 15px;  
   color: #263238;
 }
 .consultant-head-desc {
-  font-size: 1.6rem; 
-  color: #546e7a; 
-  line-height: 1.7; 
+  font-size: 1.6rem;  
+  color: #546e7a;  
+  line-height: 1.7;  
   margin-bottom: 40px;
 }
 .consultant-feature-list {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;  
+  flex-direction: column;  
   gap: 25px;
 }
 .consultant-feature-item {
-  display: flex; 
-  gap: 20px; 
+  display: flex;  
+  gap: 20px;  
   align-items: flex-start;
 }
 .consultant-feature-icon {
-  background: #fff; 
-  color: #58cbca; /* Sửa sang xanh ngọc chủ đạo */
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-size: 2rem; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+  background: #fff;  
+  color: #58cbca;  /* Đổi màu xanh lá đậm sang màu xanh ngọc thương hiệu */ 
+  width: 50px;  
+  height: 50px;  
+  border-radius: 50%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  font-size: 2rem;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);  
   flex-shrink: 0;
 }
 .consultant-feature-title {
-  font-family: "Open Sans", sans-serif; 
-  font-size: 1.8rem; 
-  font-weight: 700; 
-  margin-bottom: 5px; 
+  font-family: "Open Sans", sans-serif;  
+  font-size: 1.8rem;  
+  font-weight: 700;  
+  margin-bottom: 5px;  
   color: #263238;
 }
 .consultant-feature-desc {
-  color: #607d8b; 
+  color: #607d8b;  
   font-size: 1.45rem;
 }
 .consultant-quote {
-  font-size: 1.3rem; 
-  color: #90a4ae; 
-  margin-top: 30px; 
+  font-size: 1.3rem;  
+  color: #90a4ae;  
+  margin-top: 30px;  
   font-style: italic;
 }
 
-.form-col-box { 
-  background: #fff; 
-  padding: 40px; 
-  border-radius: 20px; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04); 
-  border: 1px solid #eef5fa; 
+
+.form-col-box {  
+  background: #fff;  
+  padding: 40px;  
+  border-radius: 20px;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);  
+  border: 1px solid #eef5fa;  
 }
 .form-title {
-  font-family: "Open Sans", sans-serif ; 
-  font-size: 2.4rem; 
-  font-weight: 700; 
-  margin-bottom: 8px; 
+  font-family: "Open Sans", sans-serif ;  
+  font-size: 2.4rem;  
+  font-weight: 700;  
+  margin-bottom: 8px;  
   color: #263238;
 }
 .form-subtitle {
-  color: #78909c; 
-  font-size: 1.45rem; 
+  color: #78909c;  
+  font-size: 1.45rem;  
   margin-bottom: 30px;
 }
 .form-row {
-  display: flex; 
-  gap: 20px; 
+  display: flex;  
+  gap: 20px;  
   margin-bottom: 20px;
 }
-.form-group-box { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 8px; 
-  flex: 1; 
+.form-group-box {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 8px;  
+  flex: 1;  
 }
 .form-label {
-  font-size: 1.4rem; 
-  font-weight: 600; 
+  font-size: 1.4rem;  
+  font-weight: 600;  
   color: #455a64;
 }
-.form-group-box input, 
-.form-group-box select { 
-  padding: 12px 16px; 
-  border: 1px solid #cfd8dc; 
-  border-radius: 8px; 
-  font-size: 1.5rem; 
-  color: #263238; 
-  background-color: #fafafa; 
-  outline: none; 
-  font-family: inherit; 
+.form-group-box input,  
+.form-group-box select {  
+  padding: 12px 16px;  
+  border: 1px solid #cfd8dc;  
+  border-radius: 8px;  
+  font-size: 1.5rem;  
+  color: #263238;  
+  background-color: #fafafa;  
+  outline: none;  
+  font-family: inherit;  
 }
-.form-group-box input:focus, 
-.form-group-box select:focus { 
-  border-color: #58cbca; /* Đổi viền input khi focus từ xanh lá cũ sang xanh ngọc mới */
-  background-color: #fff; 
+.form-group-box input:focus,  
+.form-group-box select:focus {  
+  border-color: #58cbca;  /* Đổi màu viền focus sang xanh ngọc thương hiệu */ 
+  background-color: #fff;  
 }
 .btn-submit-consultant {
-  width: 100%; 
-  padding: 15px; 
-  background-color: #ee6961; /* Thay nút Submit chocolate sang đỏ san hô cực kì bắt mắt */
-  color: #fff; 
-  border: none; 
-  border-radius: 8px; 
-  font-size: 1.6rem; 
-  font-weight: 700; 
-  cursor: pointer; 
-  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.2); 
-  margin-top: 10px; 
+  width: 100%;  
+  padding: 15px;  
+  background-color: #ee6961;  /* Đổi từ chocolate sang màu đỏ san hô nổi bật */ 
+  color: #fff;  
+  border: none;  
+  border-radius: 8px;  
+  font-size: 1.6rem;  
+  font-weight: 700;  
+  cursor: pointer;  
+  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.2);  /* Đổi bóng đổ theo tông đỏ san hô */ 
+  margin-top: 10px;  
   font-family: inherit;
   transition: opacity 0.2s;
 }
@@ -650,10 +426,8 @@
 .header.header-scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 10px 0; 
+  padding: 10px 0;  
 }
-
-/* Các đoạn responsive @media giữ nguyên cấu trúc logic của bạn */
 @media (max-width: 991.98px) {
   .hero {
     padding: 40px 0;
