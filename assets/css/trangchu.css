@@ -357,7 +357,7 @@
   border: 1px solid #eef5fa; 
 }
 .form-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif !important; 
   font-size: 2.4rem; 
   font-weight: 700; 
   margin-bottom: 8px; 
