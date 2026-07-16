@@ -1,0 +1,224 @@
+/* TRANG ĐĂNG NHẬP */
+/* Nền trang */
+body{
+    font-family:"Open Sans",sans-serif;
+    background:linear-gradient(135deg,#F9FDFF,#EAF5FF,#D6EEFF); /* Nền chuyển màu */
+    overflow-x:hidden; /* Ẩn thanh cuộn ngang */
+    position:relative; /* Làm mốc định vị cho phần tử con */
+}
+/* Hình tròn trang trí góc trên trái */
+body::before{ 
+    content:""; /* Tạo phần tử giả */
+    position:fixed;  /* Cố định trên màn hình */
+    width:350px; /* Chiều rộng */
+    height:350px; /* Chiều cao */
+    background:#FFE082; /* Màu nền */
+    border-radius:50%; /* Tạo hình tròn */
+    top:-120px; /* Đưa lên trên */
+    left:-120px; /* Đưa sang trái */
+    opacity:0.25; /* Độ trong suốt */
+    z-index:-1; /* Nằm phía sau nội dung */
+}
+/* Hình tròn trang trí góc dưới phải */
+body::after{ 
+    content:"";
+    position:fixed;
+    width:300px;
+    height:300px;
+    background:#90CAF9;
+    border-radius:50%;
+    bottom:-100px;
+    right:-100px;
+    opacity:0.25;
+    z-index:-1;
+}
+
+/* Khung ngoài */
+.dangnhap-container{
+    width:100%;/* Chiều rộng chiếm toàn bộ màn hình */
+    min-height:calc(100vh - 80px);/*Chiều cao tối thiểu*/
+    display:flex; /*Dùng Flexbox để căn giữa form.*/
+    justify-content:center;/* Căn giữa theo chiều ngang */
+    align-items:center;/* Căn giữa theo chiều dọc */
+    padding:100px 20px 40px;/*Khoảng cách bên trong*/
+}
+
+/* Khung đăng nhập */
+.dangnhap-box{
+    width:450px; /* Chiều rộng khung */
+    background:#ffffff;
+    padding:40px; /* Khoảng cách bên trong */
+    border-radius:20px; /* Bo góc */
+    border:2px solid #E3F2FD; /* Viền màu xanh nhạt */
+    box-shadow:0 12px 30px rgba(30,136,229,.18); /* Đổ bóng */
+}
+
+/* Logo */
+.dangnhap-text{
+    text-align:center;/* Căn giữa nội dung */
+    font-size:3rem;/* Kích thước chữ */
+    font-weight:bold;/* Chữ đậm */
+    color:#1976D2;/* Màu xanh */
+    margin-bottom:15px;/* Khoảng cách phía dưới */
+}
+
+/* Tiêu đề */
+.dangnhap-box h1{
+    text-align:center;/* Căn giữa */
+    color:#000000;/* Màu chữ */
+    margin-bottom:10px;/* Khoảng cách phía dưới */
+    font-size:2.8rem; /* Kích thước chữ */
+}
+
+/* Nhóm ô nhập */
+.form-group{
+    margin-bottom:20px;/* Khoảng cách giữa các nhóm nhập */
+}
+
+/* Tiêu đề ô nhập */
+.form-group label{
+    display:block;/*Hiển thị trên một dòng riêng.*/
+    margin-bottom:8px;/* Khoảng cách với ô nhập */
+    font-weight:600;/* Chữ đậm */
+    color:#333; /* Màu chữ */
+}
+
+/* Ô nhập */
+.form-group input{
+    width:100%; /* Chiều rộng bằng khung */
+    padding:13px; /* Khoảng cách bên trong */
+    border:1px solid #BBDEFB; /* Viền xanh nhạt */
+    border-radius:10px; /* Bo góc */
+    background:#FCFEFF;
+    transition:.3s; /* Hiệu ứng chuyển đổi */
+}
+
+/* Khi rê chuột */
+.form-group input:hover{
+    border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
+}
+
+/* Khi nhập dữ liệu */
+.form-group input:focus{
+    background:#ffffff; /* Đổi nền thành màu trắng */
+    border-color:#1976D2; /* Đổi màu viền sang xanh */
+    outline:none; /* Bỏ viền mặc định của trình duyệt */
+    box-shadow:0 0 8px rgba(25,118,210,.25); /* Thêm hiệu ứng đổ bóng xanh */
+}
+
+/* Checkbox */
+.checkbox{
+    display:flex;/*Hiển thị trên một hàng.*/
+    align-items:center;/* Căn giữa theo chiều dọc */
+    margin:18px 0;/* Khoảng cách trên dưới */
+}
+.checkbox input{
+    margin-right:10px;/* Khoảng cách giữa ô checkbox và chữ */
+}
+
+/* Nút đăng nhập */
+button{
+    width:100%;/* Chiều rộng bằng form */
+    padding:14px;/* Chiều cao bên trong */
+    background:#1976D2;/* Màu nền */
+    color:white;/* Màu chữ */
+    border:none;/* Bỏ viền mặc định */
+    border-radius:10px;/* Bo góc */
+    font-size:1.7rem;/* Kích thước chữ */
+    font-weight:bold;/* Chữ đậm */
+    cursor:pointer;/*Đổi con trỏ thành hình bàn tay.*/
+    transition:0.3s;/* Hiệu ứng chuyển màu */
+}
+button:hover{/* Khi rê chuột vào nút */
+    background:#1565C0;/* Đổi màu xanh đậm hơn */
+}
+
+/* Thông báo lỗi */
+.error{
+    display:block;/* Hiển thị trên một dòng */
+    color:red;/* Màu đỏ */
+    font-size:1.3rem;/* Kích thước chữ */
+    margin-top:5px; /* Khoảng cách phía trên */
+}
+
+/* Quên mật khẩu */
+.quenmatkhau-link{
+    text-align:right;/* Căn phải */
+    margin-top:15px;/* Khoảng cách phía trên */
+}
+.quenmatkhau-link a{/* Link quên mật khẩu */
+    color:#1976D2;
+}
+.quenmatkhau-link a:hover{/* Khi rê chuột */
+    text-decoration:underline;
+}
+
+/* Ô lấy mã */
+.code-box{
+    display:flex; /*Hiển thị ô nhập và nút trên cùng một hàng.*/
+    gap:10px;/* Khoảng cách */
+}
+
+/* Ô nhập mã */
+.code-box input{
+    flex:1;/*Tự động chiếm phần diện tích còn lại.*/
+}
+
+/* Nút lấy mã */
+.code-btn{
+    width:auto;/* Chiều rộng tự động */
+    padding:12px 18px; /* Khoảng cách bên trong */
+    white-space:nowrap;/*Không xuống dòng*/
+}
+
+/* Đăng ký */
+.dangky-link{
+    text-align:center;/* Căn giữa */
+    margin-top:20px;/* Khoảng cách phía trên */
+}
+.dangky-link a{/* Link đăng ký */
+    color:#1976D2;
+    font-weight:bold;
+}
+.dangky-link a:hover{/* Khi rê chuột */
+    text-decoration:underline;
+}
+
+/* Trang chủ */
+.trangchu-link{
+    text-align:center; /* Căn giữa */
+    margin-top:18px;/* Khoảng cách phía trên */
+}
+.trangchu-link a{/* Link quay về */
+    color:#666;
+}
+.trangchu-link a:hover{/* Khi rê chuột */
+    text-decoration:underline;
+}
+
+/* Khung chứa ô mật khẩu và icon con mắt */
+.oNhapMatKhau{
+    position:relative; /* Làm mốc để đặt icon */
+}
+.oNhapMatKhau input{
+    padding-right:45px; /* Chừa chỗ cho icon con mắt */
+}
+
+/* Icon con mắt */
+.conMat{
+    position:absolute; /* Đặt vị trí tự do trong khung */
+    right:15px; /* Cách mép phải 15px */
+    top:50%; /* Căn giữa theo chiều dọc */
+    transform:translateY(-50%); /* Căn chính giữa */
+    cursor:pointer; /* Hiện bàn tay khi rê chuột */
+    color:#777;
+}
+/* Khi rê chuột vào icon */
+.conMat:hover{
+    color:#1976D2; /* Đổi sang màu xanh */
+}
+
+/* Form quên mật khẩu */
+#formQuenMatKhau{
+    display:none; /* Ẩn form khi mới mở trang */
+}
