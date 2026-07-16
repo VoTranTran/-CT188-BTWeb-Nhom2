@@ -1,4 +1,13 @@
-
+.hero-title, 
+.section-title, 
+.course-card-title, 
+.course-price-box .new-price,
+.trust-title, 
+.consultant-head-title, 
+.consultant-feature-title, 
+.form-title {
+    font-family: 'Poppins', sans-serif !important;
+}
 .top-banner { 
   background-color: #263238; 
   color: #fff; 
