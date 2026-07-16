@@ -18,11 +18,19 @@ function setupTimelineScroll() {
   });
 }
 
-function toggleVisibility(selector) {
+function add_class_show(selector) {
   toggleSelector = document.querySelector(selector);
   if (toggleSelector.classList.contains("hidden")) {
     toggleSelector.classList.remove("hidden");
     toggleSelector.classList.add("show");
+  }
+}
+
+function add_class_hidden(selector) {
+  toggleSelector = document.querySelector(selector);
+  if (toggleSelector.classList.contains("show")) {
+    toggleSelector.classList.remove("show");
+    toggleSelector.classList.add("hidden");
   }
 }
 
@@ -238,11 +246,7 @@ function btn_products() {
 
       saveSelectedProducts();
       updateTimeLine(1);
-      const section_4 = document.querySelector(".section-4");
-      if (section_4.classList.contains("hidden")) {
-        section_4.classList.remove("hidden");
-        section_4.classList.add("show");
-      }
+      add_class_show(".section-4")
       runParallax();
     } else {
       alert("Vui lòng chọn 1 sản phẩm trước khi xác nhận");
@@ -274,11 +278,7 @@ function saveUserInfo() {
   document.getElementById('displayGender').textContent = detailForm.sex;
   document.getElementById('empty-state').style.display = 'none';
   document.getElementById('infor-display').classList.add('show');
-  const col_right_UserInfo = document.querySelector(".section-4 .col-right");
-  if (col_right_UserInfo.classList.contains("hidden")) {
-    col_right_UserInfo.classList.remove("hidden");
-    col_right_UserInfo.classList.add("show");
-  }
+  add_class_show(".section-4 .col-right")
 }
 // end section-4
 
@@ -291,16 +291,9 @@ function selectBank() {
         el.classList.remove("active");
         el.classList.add("hidden");
       });
-      const credit_infor = document.querySelector(".credit-infor");
-      if (credit_infor.classList.contains("hidden")) {
-        credit_infor.classList.remove("hidden");
-        credit_infor.classList.add("show");
-      }
-      const card_default = document.querySelector(".card-default");
-      if (card_default.classList.contains("show")) {
-        card_default.classList.remove("show");
-        card_default.classList.add("hidden");
-      }
+      add_class_show(".credit-infor")
+      add_class_hidden(".card-default")
+      
 
       const bankId = this.id;
       const card_right = document.querySelector(`#bankData-${bankId}`);
@@ -318,7 +311,7 @@ function selectBank() {
           const time_now = new Date().toLocaleString('vi-VN');
           localStorage.setItem("order_Date", time_now);
           displayOrderInfo();
-          toggleVisibility(".section-6");
+          add_class_show(".section-6");
           updateTimeLine(3);
         }
       }
@@ -334,7 +327,7 @@ function displayOrderInfo() {
   document.querySelector(".section-6 .buyer-card__body .buyer-name span").innerHTML = detailForm.fullName;
   document.querySelector(".section-6 .buyer-card__body .buyer-email span").innerHTML = detailForm.email;
   document.querySelector(".section-6 .buyer-card__body .buyer-phoneNumber span").innerHTML = detailForm.phoneNumber;
-  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.DateOfBirth;
+  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.dateOfBirth;
   document.querySelector(".section-6 .buyer-card__body .buyer-gender span").innerHTML = detailForm.sex;
   document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = localStorage.getItem("order_Date");
 
@@ -364,12 +357,8 @@ function displayOrderInfo() {
 
 const cardItems = JSON.parse(localStorage.getItem("cardItems"));
 if (cardItems.length > 0) {
-  const card_empty = document.querySelector(".section-3 .user-card-body .card-empty");
-  card_empty.classList.remove("show");
-  card_empty.classList.add("hidden");
-  const card_non_empty = document.querySelector(".section-3 .user-card-body .card-non-empty");
-  card_non_empty.classList.remove("hidden");
-  card_non_empty.classList.add("show");
+  add_class_hidden(".section-3 .user-card-body .card-empty");
+  add_class_show(".section-3 .user-card-body .card-non-empty")
 
   const productTotal = `(${cardItems.length} sản phẩm)`
   const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
@@ -430,7 +419,7 @@ form.addEventListener('submit', function (event) {
 
 const btn_UserInfo = document.querySelector(".section-4 .col-right button");
 btn_UserInfo.addEventListener('click', () => {
-  toggleVisibility(".section-5");
+  add_class_show(".section-5");
   updateTimeLine(2);
 })
 
