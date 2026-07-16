@@ -1,291 +1,492 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link rel="stylesheet" href=".assets/css/reset.css" />
+/* ==========================================
+   HERO SECTION (BANNER CHÍNH)
+   ========================================== */
+.hero {
+  background: url('../img/background.png') no-repeat center center;
+  background-size: cover;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;600;700;800&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
 
-    <link rel="stylesheet" href="./assets/css/trangchu.css" />
+.hero-badge {
+  display: inline-block;
+  background-color: #fffbcc;
+  color: #ff7a00;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-    <title>BrightEnglish - Chinh Phục Tiếng Anh Dễ Dàng</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
-  </head>
-  <body>
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #263238;
+  margin-bottom: 24px;
+}
 
-    <div class="top-banner">
-        <span class="badge-hot">Hot</span>
-        <span>Ưu đãi tháng này: Tặng kèm học liệu Flashcard & Đăng ký học thử miễn phí!</span>
-        <a href="#consultant" class="col-yellow top-banner-link">Đăng ký ngay <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
+.hero-desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #546e7a;
+  margin-bottom: 36px;
+}
 
-    <header class="header fixed">
-      <div class="container">
-        <div class="header-body">
-          
-          <div class="mobile-header">
-            <input type="checkbox" id="menu-control" class="menu-checkbox dis-none" />
-            
-            <label for="menu-control" class="menu-header__icon">
-              <i class="fa-solid fa-bars" style="font-size: 2.4rem; padding: 10px;"></i>
-            </label>
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
 
-            <label for="menu-control" class="menu-overlay"></label>
+/* Các nút kêu gọi hành động (CTA) */
+.btn-yellow-cta, .btn-outline-cta {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
 
-            <div class="menu-drawer">
-              <div class="mobile-drawer-logo">
-                <label for="menu-control" class="menu-drawer-iconclose">
-                  <i class="fa-solid fa-xmark" style="padding: 5px 8px;"></i>
-                </label>
-              </div>
-              
-              <ul class="menu-drawer-list">
-                <li><a href="trangchu.html" class="navbar-link">Trang chủ</a></li>
-                <li><a href="./khoahoc.html" class="navbar-link">Khóa học</a></li>
-                <li><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
-                
-                <hr style="border: 0.5px solid #ccc; margin: 15px 0;">
-                <li><a href="./giohang.html" class="navbar-link"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
-                <li><a href="./dangky.html" class="navbar-link" style="color: chocolate;">Đăng ký</a></li>
-                <li><a href="./dangnhap.html" class="navbar-link" style="color: #67a606;">Đăng nhập</a></li>
-              </ul>
-            </div>
-          </div>
+.btn-yellow-cta {
+  background-color: #f2ce5a;
+  color: #263238;
+  box-shadow: 0 4px 14px rgba(242, 206, 90, 0.4);
+}
 
-          <a href="trangchu.html" class="logo">
-            <img src="logo.png" alt="BrightEnglish Logo" />
-          </a>
+.btn-yellow-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(242, 206, 90, 0.6);
+}
 
-          <nav class="navbar">
-            <ul class="navbar-left">
-              <li><a href="trangchu.html" class="home-style">Trang chủ</a></li>
-              <li><a href="./khoahoc.html">Khóa học</a></li>
-              <li><a href="./gioithieu.html">Giới thiệu</a></li>
-              
-            </ul>
-            <ul class="navbar-right">
-              <a href="./giohang.html">
-                <span class="shopping-icon-frame">
-                  <i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i>
-                </span>
-              </a>
-              <li class="frame">
-                <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
-              </li>
-              <li class="frame">
-                <a href="./dangnhap.html" class="color-green">Đăng nhập</a>
-              </li>
-            </ul>
-          </nav>
+.btn-outline-cta {
+  background-color: transparent;
+  color: #ff7a00;
+  border: 2px solid #ff7a00;
+}
 
-        </div>
-      </div>
-    </header>
+.btn-outline-cta:hover {
+  background-color: #ff7a00;
+  color: #fff;
+  transform: translateY(-3px);
+}
 
-    <main class="main-content">
-      
-      <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <span class="hero-badge">Môi trường lý tưởng cho trẻ</span>
-                <h1 class="hero-title">BrightEnglish gieo mầm<br><span class="color-chocolate">Tự tin tương lai</span></h1>
-                <p class="hero-desc">Mỗi đứa trẻ đều mang trong mình một thế giới riêng. Tại BrightEnglish, trẻ học tiếng Anh không vì áp lực điểm số, mà vì niềm vui khám phá và khơi dậy đam mê ngôn ngữ từ thuở nhỏ.</p>
-                <div class="hero-buttons">
-                    <a href="./khoahoc.html" class="btn-yellow-cta">Xem khóa học của trẻ</a>
-                    <a href="#consultant" class="btn-outline-cta">Nhận tư vấn lộ trình</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="./assets/img/banner.png" alt="BrightEnglish Brand Banner">
-            </div>
-        </div>
-      </section>
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
-      <section id="courses" class="courses-section">
-        <div class="container">
-            <div class="section-header-box">
-                <h2 class="section-title">Hệ Thống Khóa Học Cho Trẻ</h2>
-                <p class="section-subtitle">Chương trình đào tạo chuẩn tương tác, giúp bé tiếp cận ngoại ngữ một cách tự nhiên nhất.</p>
-            </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <img src="./assets/img/khoa-hoc-1.png" alt="Khóa học Mầm non" class="course-card-img">
-                    <div class="course-card-body">
-                        <span class="course-badge blue">Độ tuổi 3 - 5</span>
-                        <h3 class="course-card-title">Khóa Học Tiếng Anh Mầm Non</h3>
-                        <p class="course-card-desc">Kích hoạt phản xạ nghe nói nhạy bén từ sớm cho bé qua các hoạt động vui nhộn, bài hát sinh động, tạo dựng tình yêu ngôn ngữ tự nhiên.</p>
-                        <div class="course-card-footer">
-                            <div class="course-price-box">
-                                <span class="old-price">1.700.000đ</span>
-                                <span class="new-price color-green">1.299.000đ</span>
-                            </div>
-                            <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <img src="./assets/img/khoa-hoc-2.png" alt="Khóa học Tiểu học" class="course-card-img">
-                    <div class="course-card-body">
-                        <span class="course-badge yellow">Độ tuổi 6 - 11</span>
-                        <h3 class="course-card-title">Khóa Học Tiếng Anh Tiểu Học</h3>
-                        <p class="course-card-desc">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết, lồng ghép tư duy phản biện. Giúp con tự tin bứt phá điểm số trên lớp và các kỳ thi quốc tế.</p>
-                        <div class="course-card-footer">
-                            <div class="course-price-box">
-                                <span class="old-price">2.300.000đ</span>
-                                <span class="new-price color-green">1.799.000đ</span>
-                            </div>
-                            <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.1));
+}
 
-      <section class="features-trust-section">
-          <div class="container">
-              <h2 class="trust-title">Phương Pháp Giảng Dạy Đột Phá</h2>
-              <p class="trust-subtitle">Lấy trẻ làm trung tâm để mang lại trải nghiệm học tập hứng khởi và hiệu quả nhất.</p>
-              
-              <div class="trust-grid">
-                  <div class="trust-card">
-                      <i class="fa-solid fa-music trust-icon"></i>
-                      <h4 class="trust-card-title">SONGS (Bài hát)</h4>
-                      <p class="trust-card-desc">Học qua giai điệu vui tươi giúp trẻ dễ tiếp thu, ghi nhớ từ vựng và luyện phát âm chuẩn xác ngay từ đầu.</p>
-                  </div>
-                  <div class="trust-card">
-                      <i class="fa-regular fa-clone trust-icon"></i>
-                      <h4 class="trust-card-title">FLASHCARD (Thẻ từ)</h4>
-                      <p class="trust-card-desc">Hình ảnh trực quan sinh động giúp kích thích tối đa trí nhớ não bộ, liên tưởng từ vựng nhanh chóng.</p>
-                  </div>
-                  <div class="trust-card">
-                      <i class="fa-solid fa-brain trust-icon"></i>
-                      <h4 class="trust-card-title">CRITICAL THINKING</h4>
-                      <p class="trust-card-desc">Phương pháp tư duy phản biện lồng ghép giúp trẻ chủ động phân tích, giải quyết vấn đề bằng tiếng Anh.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
+/* TOP BANNER KHUYẾN MÃI */
+.top-banner {
+  background-color: #ff7a00;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 
-      <section id="consultant" class="consultant-section">
-        <div class="container consultant-row">
-            <div class="consultant-left-col">
-                <div class="consultant-left-top">
-                    <h3 class="consultant-head-title">Đồng hành cùng con vươn xa!</h3>
-                    <p class="consultant-head-desc">Đội ngũ giảng viên giàu kinh nghiệm (đạt chứng chỉ TESOL từ các trường đại học hàng đầu như Oxford, Harvard, Cambridge) luôn sẵn sàng đồng hành cùng con.</p>
-                    <div class="consultant-feature-list">
-                        <div class="consultant-feature-item">
-                            <div class="consultant-feature-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                            <div class="consultant-feature-text">
-                                <h4 class="consultant-feature-title">Tư vấn lộ trình học thử</h4>
-                                <p class="consultant-feature-desc">Định hướng phương pháp phù hợp với tính cách của trẻ.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="consultant-quote">
-                    * Được sai. Được thử. Được trưởng thành.
-                </div>
-            </div>
-            
-            <div class="form-col-box">
-                <h3 class="form-title">Nhận Tư Vấn Lộ Trình Cho Bé</h3>
-                <p class="form-subtitle">Ba mẹ điền thông tin dưới đây để nhận lịch kiểm tra trình độ miễn phí.</p>
-                <form id="consultantForm">
-                    <div class="form-row">
-                        <div class="form-group-box">
-                            <label class="form-label">Họ và tên Phụ huynh *</label>
-                            <input type="text" id="fullName" required placeholder="Nguyễn Văn A">
-                        </div>
-                        <div class="form-group-box">
-                            <label class="form-label">Số điện thoại *</label>
-                            <input type="tel" id="phoneNumber" required placeholder="0912 xxx xxx">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group-box">
-                            <label class="form-label">Độ tuổi của bé</label>
-                            <select id="learningGoal">
-                                <option>Bé học mầm non (3 - 5 tuổi)</option>
-                                <option>Học sinh tiểu học (6 - 11 tuổi)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-submit-consultant">Gửi yêu cầu nhận tư vấn</button>
-                </form>
-            </div>
-        </div>
-      </section>
-      
-    </main>
+.badge-hot {
+  background-color: red;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-right: 8px;
+  font-weight: 700;
+}
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="logocty.png" alt="Group 2 Logo" />
-        </div>
-        <div class="footer-body">
-          <div class="footer-left">
-            <p class="footer-name">
-              Công ty Cổ phần Đầu tư phát triển Group 2
-            </p>
-            <p class="footer-info">
-              Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
-              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
-              Giờ làm việc: 7h - 11h30 | 13h - 21h
-            </p>
-          </div>
-          <div class="footer-center">
-            <p class="footer-name">Follow us</p>
-            <ul class="footer-contact">
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-facebook footer-icon color-blue"
-                  ></i
-                  >CTY GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-youtube footer-icon color-red"
-                  ></i
-                  >GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                  STORIES</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-right">
-            <p class="footer-name"> Hỗ trợ khách hàng </p>
-            <ul class="footer-support">
-              <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
-              <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
-              <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+.top-banner-link {
+  margin-left: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+}
 
-    <a href="" class="btn-contact">
-      <i class="fa-brands fa-facebook-messenger color-blue"></i>
-    </a>
-    
-    <script src="./assets/js/trangchu.js"></script>
-  </body>
-</html>
+/* ==========================================
+   COURSES SECTION (HỆ THỐNG KHÓA HỌC)
+   ========================================== */
+.courses-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.section-header-box {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #263238;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  color: #78909c;
+  line-height: 1.5;
+}
+
+.courses-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: calc(50% - 15px);
+  max-width: 540px;
+  border: 1px solid #f0f4f8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.course-card-body {
+  padding: 30px;
+}
+
+.course-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.course-badge.blue {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+}
+
+.course-badge.yellow {
+  background-color: #fffde7;
+  color: #fbc02d;
+}
+
+.course-card-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #263238;
+  margin-bottom: 12px;
+}
+
+.course-card-desc {
+  font-size: 1.5rem;
+  color: #546e7a;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  height: 72px; /* Đảm bảo các thẻ đều nhau */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.course-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f4f8;
+  padding-top: 20px;
+}
+
+.course-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.old-price {
+  font-size: 1.4rem;
+  color: #90a4ae;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn-learn-more {
+  background-color: #ff7a00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: background 0.2s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #e06d00;
+}
+
+/* ==========================================
+   FEATURES TRUST SECTION (PHƯƠNG PHÁP ĐỘT PHÁ)
+   ========================================== */
+.features-trust-section {
+  padding: 80px 0;
+  background-color: #f8fbfd;
+  text-align: center;
+}
+
+.trust-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #263238;
+}
+
+.trust-subtitle {
+  font-size: 1.8rem;
+  color: #78909c;
+  margin-bottom: 50px;
+}
+
+.trust-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.trust-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+  border: 1px solid #edf2f6;
+  transition: all 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7a00;
+}
+
+.trust-icon {
+  font-size: 4rem;
+  color: #ff7a00;
+  margin-bottom: 24px;
+}
+
+.trust-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #263238;
+  margin-bottom: 14px;
+}
+
+.trust-card-desc {
+  font-size: 1.5rem;
+  color: #607d8b;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CONSULTANT SECTION (TƯ VẤN LỘ TRÌNH)
+   ========================================== */
+.consultant-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #fffde7 100%);
+}
+
+.consultant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.consultant-left-col {
+  flex: 1;
+}
+
+.consultant-head-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #263238;
+  margin-bottom: 20px;
+}
+
+.consultant-head-desc {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #455a64;
+  margin-bottom: 30px;
+}
+
+.consultant-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.consultant-feature-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ff7a00;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.consultant-feature-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.consultant-feature-desc {
+  font-size: 1.4rem;
+  color: #78909c;
+}
+
+.consultant-quote {
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: 600;
+  color: #ff7a00;
+  font-size: 1.8rem;
+}
+
+/* Form đăng ký nhận lịch tư vấn */
+.form-col-box {
+  flex: 1;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-subtitle {
+  font-size: 1.5rem;
+  color: #78909c;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 8px;
+}
+
+.form-group-box input,
+.form-group-box select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+.form-group-box input:focus,
+.form-group-box select:focus {
+  border-color: #ff7a00;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
+}
+
+.btn-submit-consultant {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.btn-submit-consultant:hover {
+  background-color: #e06d00;
+}
+
+.btn-submit-consultant:active {
+  transform: scale(0.98);
+}
