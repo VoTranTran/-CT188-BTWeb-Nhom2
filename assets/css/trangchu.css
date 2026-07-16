@@ -1,5 +1,8 @@
-.top-banner {  
-  background-color: #2ec4b6; /* Thay xám đậm #263238 bằng xanh ngọc thương hiệu */ 
+/* ==========================================================================
+   1. BANNER TRÊN CÙNG (TOP BANNER)
+   ========================================================================== */
+.top-banner { 
+  background: linear-gradient(90deg, #2ec4b6, #58cbca); /* Chuyển từ đen xám sang dải gradient xanh ngọc */ 
   color: #fff;  
   text-align: center;  
   padding: 10px;  
@@ -12,10 +15,11 @@
 .top-banner-link {
   font-weight: 600;  
   margin-left: 5px;
-  color: #fdec7b; /* Thay đổi link banner sang màu vàng nhạt thương hiệu cho nổi bật */
+  color: #fdec7b; /* Màu vàng thương hiệu giúp liên kết nổi bật trên nền xanh */
+  text-decoration: underline;
 }
 .badge-hot {  
-  background-color: #ee6961; /* Thay đỏ tươi bằng đỏ san hô thương hiệu */ 
+  background-color: #ee6961; /* Đổi từ đỏ tươi sang đỏ san hô thương hiệu */ 
   color: #fff;  
   padding: 2px 8px;  
   border-radius: 4px;  
@@ -24,9 +28,11 @@
   text-transform: uppercase;  
 }
 
-
+/* ==========================================================================
+   2. KHU VỰC HERO (HERO SECTION)
+   ========================================================================== */
 .hero {  
-  background: linear-gradient(180deg, #f2fffd 0%, #ffffff 100%); /* Thay xanh dương nhạt bằng nền xanh nhạt của brand */ 
+  background: linear-gradient(180deg, #f2fffd 0%, #ffffff 100%); /* Thay màu xanh dương nhạt bằng màu nền ngọc nhạt của brand */ 
   padding: 80px 0;  
 }
 .hero-container {  
@@ -40,14 +46,14 @@
 }
 .hero-badge {  
   display: inline-block;  
-  background-color: #fff;  
-  color: #ee6961; /* Thay chocolate bằng đỏ san hô thương hiệu */ 
+  background-color: rgba(238, 105, 97, 0.08); /* Đổi sang nền hồng san hô mỏng cực trendy */ 
+  color: #ee6961; /* Thay màu chocolate bằng màu đỏ san hô */ 
   padding: 6px 14px;  
   border-radius: 20px;  
   font-weight: 700;  
   font-size: 1.3rem;  
   margin-bottom: 20px;  
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px;  
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 8px;  
 }
 .hero-title {  
   font-family: "Open Sans", sans-serif !important;  
@@ -74,44 +80,55 @@
 }
 .hero-image img {
   border-radius: 20px;  
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);  
+  box-shadow: 0 15px 35px rgba(46, 196, 182, 0.1); /* Bóng đổ mềm tông xanh ngọc mờ */ 
   width: 100%;  
   max-width: 500px;  
   height: 350px;  
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.hero-image img:hover {
+  transform: translateY(-4px);
 }
 
-
+/* ==========================================================================
+   3. NÚT BẤM (BUTTONS)
+   ========================================================================== */
 .btn-yellow-cta {  
-  background-color: #fdec7b; /* Đổi chocolate thành màu vàng thương hiệu cho đúng tên class "btn-yellow-cta" */ 
-  color: #263238 !important; /* Chuyển màu chữ sang tối để dễ đọc trên nền vàng sáng */ 
+  background-color: #fdec7b; /* Chuyển nút bấm CTA vàng chuẩn màu thương hiệu */ 
+  color: #263238 !important; /* Chuyển màu chữ sang đen xám để dễ đọc trên nền vàng */ 
   padding: 14px 28px;  
   border-radius: 30px;  
-  font-weight: 600;  
+  font-weight: 700;  
   font-size: 1.6rem;  
-  box-shadow: 0 4px 15px rgba(253, 236, 123, 0.3); /* Đồng bộ bóng đổ màu vàng nhạt */ 
+  box-shadow: 0 4px 15px rgba(253, 236, 123, 0.4); /* Bóng đổ màu vàng mờ */ 
   display: inline-block;  
-  transition: opacity 0.2s;
+  transition: all 0.25s ease;
 }
 .btn-yellow-cta:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253, 236, 123, 0.5);
 }
 .btn-outline-cta {  
-  border: 2px solid #58cbca; /* Thay xám đen bằng màu xanh ngọc thương hiệu */ 
+  border: 2px solid #58cbca; /* Thay viền xám đen bằng viền xanh ngọc mượt mà */ 
   color: #58cbca;  
   padding: 12px 26px;  
   border-radius: 30px;  
   font-weight: 600;  
   font-size: 1.6rem;  
   display: inline-block;  
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 .btn-outline-cta:hover {  
   background-color: #58cbca;  
   color: #fff !important;  
+  box-shadow: 0 4px 15px rgba(88, 203, 202, 0.2);
 }
 
-
+/* ==========================================================================
+   4. PHẦN KHÓA HỌC (COURSES SECTION)
+   ========================================================================== */
 .courses-section {  
   padding: 80px 0;  
   background-color: #fff;  
@@ -142,12 +159,17 @@
 }
 .course-card {  
   background: #fff;  
-  border: 1px solid #eef5fa;  
+  border: 1px solid rgba(88, 203, 202, 0.12); /* Thay viền thô bằng viền ngọc siêu mỏng */ 
   border-radius: 16px;  
   overflow: hidden;  
   box-shadow: 0 4px 15px rgba(0,0,0,0.02);  
   display: flex;  
   flex-direction: column;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(46, 196, 182, 0.08);
 }
 .course-card-img {
   height: 220px;  
@@ -171,11 +193,11 @@
   text-transform: uppercase;  
 }
 .course-badge.blue {  
-  background-color: #f2fffd; /* Đồng bộ sang nền xanh pastel nhạt */ 
-  color: #2ec4b6; /* Chữ xanh teal nổi bật */ 
+  background-color: rgba(46, 196, 182, 0.08); /* Nền xanh ngọc nhạt */ 
+  color: #2ec4b6; /* Chữ xanh ngọc đậm */ 
 }
 .course-badge.yellow {  
-  background-color: #fffdf7; /* Đồng bộ sang nền vàng nhạt */ 
+  background-color: rgba(253, 236, 123, 0.15); /* Nền vàng nhạt */ 
   color: #b59500; /* Chữ vàng sậm dễ đọc */ 
 }
 .course-card-title {
@@ -210,29 +232,32 @@
   font-size: 2rem;  
   font-weight: 800;  
   font-family: "Open Sans", sans-serif;
-  color: #ee6961; /* Đổi màu hiển thị giá mới sang đỏ san hô để tăng kích thích mua hàng */
+  color: #ee6961; /* Thay màu mặc định bằng màu đỏ san hô nổi bật giá tiền */
 }
 .btn-learn-more {  
-  background-color: #2ec4b6; /* Thay màu xám tối bằng màu xanh ngọc đậm */ 
+  background-color: #2ec4b6; /* Đổi nút xám đen sang màu xanh ngọc thương hiệu */ 
   color: #fff !important;  
   padding: 8px 18px;  
   border-radius: 6px;  
   font-weight: 600;  
   font-size: 1.4rem;  
   text-align: center;  
-  transition: background-color 0.2s;
+  transition: all 0.25s ease;
 }
 .btn-learn-more:hover {  
-  background-color: #58cbca; /* Hover chuyển sang màu xanh ngọc nhạt */ 
+  background-color: #58cbca; /* Hover đổi màu mượt mà */ 
+  box-shadow: 0 4px 12px rgba(88, 203, 202, 0.3);
 }
 
-
+/* ==========================================================================
+   5. PHẦN TÍN NHIỆM & TÍNH NĂNG (FEATURES TRUST)
+   ========================================================================== */
 .features-trust-section {  
   padding: 60px 0;  
-  background-color: #f2fffd;  /* Thay nền sáng nhạt cũ bằng màu nền xanh aqua thương hiệu */ 
+  background-color: #f2fffd; /* Đổi sang tông nền ngọc nhạt của thương hiệu */ 
   text-align: center;  
-  border-top: 1px solid #eef5fa;  
-  border-bottom: 1px solid #eef5fa;  
+  border-top: 1px solid rgba(88, 203, 202, 0.1);  
+  border-bottom: 1px solid rgba(88, 203, 202, 0.1);  
 }
 .trust-title {
   font-family: "Open Sans", sans-serif;  
@@ -255,16 +280,17 @@
   flex: 1;  
   padding: 30px 20px;  
   background: #fff;  
-  border: 1px dashed #58cbca;  /* Đổi viền xanh lá đậm cũ thành xanh ngọc thương hiệu */ 
+  border: 1px dashed #58cbca; /* Thay màu xanh lá mạ bằng màu xanh ngọc */ 
   border-radius: 12px;  
-  transition: transform 0.3s;  
+  transition: transform 0.3s, box-shadow 0.3s;  
 }
 .trust-card:hover {  
   transform: translateY(-5px);  
+  box-shadow: 0 8px 25px rgba(88, 203, 202, 0.12);
 }
 .trust-icon {
   font-size: 3.5rem;  
-  color: #58cbca;  /* Đổi icon từ màu xanh lá sang màu xanh ngọc thương hiệu */ 
+  color: #58cbca; /* Thay đổi màu icon */ 
   margin-bottom: 15px;
 }
 .trust-card-title {
@@ -279,10 +305,12 @@
   line-height: 1.6;
 }
 
-
+/* ==========================================================================
+   6. PHẦN TƯ VẤN (CONSULTANT SECTION)
+   ========================================================================== */
 .consultant-section {  
   padding: 80px 0;  
-  background-color: #f2fffd;  /* Đồng bộ nền xanh nhạt của brand */ 
+  background-color: #f2fffd; /* Đồng bộ màu nền ngọc của brand */ 
 }
 .consultant-row {
   display: flex;  
@@ -320,7 +348,7 @@
 }
 .consultant-feature-icon {
   background: #fff;  
-  color: #58cbca;  /* Đổi màu xanh lá đậm sang màu xanh ngọc thương hiệu */ 
+  color: #58cbca; /* Thay đổi màu icon từ xanh lá mạ sang xanh ngọc */ 
   width: 50px;  
   height: 50px;  
   border-radius: 50%;  
@@ -328,7 +356,7 @@
   align-items: center;  
   justify-content: center;  
   font-size: 2rem;  
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);  
+  box-shadow: 0 4px 10px rgba(88, 203, 202, 0.15);  
   flex-shrink: 0;
 }
 .consultant-feature-title {
@@ -349,13 +377,15 @@
   font-style: italic;
 }
 
-
+/* ==========================================================================
+   7. FORM ĐĂNG KÝ (CONSULTANT FORM)
+   ========================================================================== */
 .form-col-box {  
   background: #fff;  
   padding: 40px;  
   border-radius: 20px;  
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);  
-  border: 1px solid #eef5fa;  
+  border: 1px solid rgba(88, 203, 202, 0.1);  
 }
 .form-title {
   font-family: "Open Sans", sans-serif ;  
@@ -388,46 +418,54 @@
 .form-group-box input,  
 .form-group-box select {  
   padding: 12px 16px;  
-  border: 1px solid #cfd8dc;  
+  border: 1.5px solid #cfd8dc;  
   border-radius: 8px;  
   font-size: 1.5rem;  
   color: #263238;  
   background-color: #fafafa;  
   outline: none;  
   font-family: inherit;  
+  transition: all 0.25s ease;
 }
 .form-group-box input:focus,  
 .form-group-box select:focus {  
-  border-color: #58cbca;  /* Đổi màu viền focus sang xanh ngọc thương hiệu */ 
+  border-color: #58cbca; /* Đổi viền focus sang màu xanh ngọc */ 
   background-color: #fff;  
+  box-shadow: 0 0 0 3px rgba(88, 203, 202, 0.15); /* Viền phát sáng nhẹ hiện đại */
 }
 .btn-submit-consultant {
   width: 100%;  
   padding: 15px;  
-  background-color: #ee6961;  /* Đổi từ chocolate sang màu đỏ san hô nổi bật */ 
+  background-color: #ee6961; /* Thay chocolate bằng màu đỏ san hô nổi bật và thúc giục CTA */ 
   color: #fff;  
   border: none;  
   border-radius: 8px;  
   font-size: 1.6rem;  
   font-weight: 700;  
   cursor: pointer;  
-  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.2);  /* Đổi bóng đổ theo tông đỏ san hô */ 
+  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.3);  
   margin-top: 10px;  
   font-family: inherit;
-  transition: opacity 0.2s;
+  transition: all 0.25s ease;
 }
 .btn-submit-consultant:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(238, 105, 97, 0.4);
 }
+
+/* ==========================================================================
+   8. MENU ĐẦU TRANG & RESPONSIVE (HEADER & MEDIA QUERIES)
+   ========================================================================== */
 .header {
   transition: all 0.3s ease;
 }
-
 .header.header-scrolled {
   background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 10px 0;  
 }
+
 @media (max-width: 991.98px) {
   .hero {
     padding: 40px 0;
