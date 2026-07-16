@@ -50,7 +50,7 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px; 
 }
 .hero-title { 
-  font-family: "Open Sans", sans-serif !important; 
+  font-family: "Poppins", sans-serif ; 
   font-size: 4.4rem; 
   font-weight: 800; 
   line-height: 1.2; 
@@ -121,7 +121,7 @@
   margin-bottom: 50px;
 }
 .section-title {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Poppins", sans-serif; 
   font-size: 3.2rem; 
   font-weight: 700; 
   color: #263238; 
@@ -179,7 +179,7 @@
   color: #ffb300; 
 }
 .course-card-title {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Poppins", sans-serif; 
   font-size: 2rem; 
   font-weight: 700; 
   margin-bottom: 12px; 
@@ -209,7 +209,7 @@
   display: block; 
   font-size: 2rem; 
   font-weight: 800; 
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .btn-learn-more { 
   background-color: #263238; 
@@ -234,7 +234,7 @@
   border-bottom: 1px solid #eef5fa; 
 }
 .trust-title {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Poppins", sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   color: #263238;
@@ -295,7 +295,7 @@
   justify-content: space-between;
 }
 .consultant-head-title {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Poppins", sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   margin-bottom: 15px; 
@@ -331,7 +331,7 @@
   flex-shrink: 0;
 }
 .consultant-feature-title {
-  font-family: "Open Sans", sans-serif; 
+  font-family: "Poppins", sans-serif; 
   font-size: 1.8rem; 
   font-weight: 700; 
   margin-bottom: 5px; 
@@ -357,7 +357,7 @@
   border: 1px solid #eef5fa; 
 }
 .form-title {
-  font-family: "Open Sans", sans-serif ; 
+  font-family: "Poppins", sans-serif ; 
   font-size: 2.4rem; 
   font-weight: 700; 
   margin-bottom: 8px; 
