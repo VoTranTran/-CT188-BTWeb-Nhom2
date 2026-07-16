@@ -3,12 +3,14 @@
   box-sizing: border-box;
 }
 
+
+/* Của ĐTĐ xin đừng xoá */
 :root {
     --color-one: #63DEFF;
     --color-two: #FCDD51;
     --color-text: #001C66;
     --color-background: #6b7280;
-}   
+}  
 
 html {
   font-size: 62.5%;
@@ -19,7 +21,6 @@ body {
   font-size: 1.6rem;
   font-family: "open sans", sans-serif;
   color: #263238;
-  
 }
 
 a {
@@ -27,13 +28,13 @@ a {
   color: #263238;
 }
 
-
 img {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
     border-color: currentcolor;
 }
+
 
 ul {
     list-style-type: none;
@@ -44,6 +45,8 @@ ul {
 li {
     margin-left: 0;
 }
+/* end của ĐTDD */
+
 
 .container {
   width: 1170px;
@@ -213,6 +216,7 @@ li {
 /* ---------------------------------------------------------------------------- */
 
 /* Header */
+/* Header */
 .header {
   background-color: #e3f2fd;
   box-shadow:
@@ -223,7 +227,7 @@ li {
 .header.fixed {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .navbar-right {
   float: right;
@@ -238,12 +242,12 @@ li {
 }
 
 .header-body .logo {
-  background-image: url("../img/logo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 20rem;
-  height: 8rem;
+    mix-blend-mode: multiply;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 8rem;
 }
 
 .header-body nav {

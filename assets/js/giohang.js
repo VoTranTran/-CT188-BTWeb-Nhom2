@@ -74,7 +74,7 @@ function getRemainingProducts() {
 function updateTotalPrice(gridProduct, quantity) {
   const priceElement = gridProduct.querySelector('.col-price');
   const totalElement = gridProduct.querySelector('.col-total');
-  const priceNumber = parseInt(priceElement.textContent.replace(/,/g, ''));
+  const priceNumber = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
   const total = priceNumber * quantity;
   totalElement.textContent = total.toLocaleString('en-US') + ' VNĐ';
 }
@@ -86,7 +86,7 @@ function calculate() {
     const checkBox = item.querySelector(".col-action input");
     const totalElement = item.querySelector(".col-total");
     if (checkBox.checked) {
-      const priceNumber = parseInt(totalElement.textContent.replace(/,/g, ''));
+      const priceNumber = parseInt(totalElement.textContent.replace(/[^0-9]/g, ''));
       total += priceNumber;
     }
   });
@@ -177,13 +177,15 @@ function deleteEvent() {
   let remainingProducts = getRemainingProducts();
   deleteButtons.forEach(item => {
     item.addEventListener('click', function () {
-      const grid_product = this.closest(".grid-products");
-      grid_product.remove();
-      const productId = grid_product.id;
-      localStorage.removeItem(productId);
-      let col_product_feature = document.querySelector(".column-feature .col-product");
-      col_product_feature.innerHTML = `Tất cả (${remainingProducts.length} sản phẩm)`;
-      calculate();
+      if (confirm("Xoá sản phẩm này ra khỏi giỏ hàng")) {
+        const grid_product = this.closest(".grid-products");
+        grid_product.remove();
+        const productId = grid_product.id;
+        localStorage.removeItem(productId);
+        let col_product_feature = document.querySelector(".column-feature .col-product");
+        col_product_feature.innerHTML = `Tất cả (${remainingProducts.length} sản phẩm)`;
+        calculate();
+      }
     });
   });
   if (remainingProducts.length === 0) {
@@ -327,14 +329,14 @@ function selectBank() {
 
 // section 6
 function displayOrderInfo() {
-  
+
   const detailForm = JSON.parse(localStorage.getItem("savedForm"));
   document.querySelector(".section-6 .buyer-card__body .buyer-name span").innerHTML = detailForm.fullName;
   document.querySelector(".section-6 .buyer-card__body .buyer-email span").innerHTML = detailForm.email;
   document.querySelector(".section-6 .buyer-card__body .buyer-phoneNumber span").innerHTML = detailForm.phoneNumber;
   document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.DateOfBirth;
   document.querySelector(".section-6 .buyer-card__body .buyer-gender span").innerHTML = detailForm.sex;
-  document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = order_Date;
+  document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = localStorage.getItem("order_Date");
 
   const courseList = document.querySelector(".course-list__body");
   const selectedProducts = saveSelectedProducts();
@@ -360,61 +362,49 @@ function displayOrderInfo() {
 // end section-6
 
 
-const allKeys = Object.keys(localStorage);
-const productKeys = allKeys.filter(key => key.startsWith('Product-'));
-if (productKeys.length > 0) {
+const cardItems = JSON.parse(localStorage.getItem("cardItems"));
+if (cardItems.length > 0) {
   const card_empty = document.querySelector(".section-3 .user-card-body .card-empty");
   card_empty.classList.remove("show");
   card_empty.classList.add("hidden");
   const card_non_empty = document.querySelector(".section-3 .user-card-body .card-non-empty");
   card_non_empty.classList.remove("hidden");
   card_non_empty.classList.add("show");
-  fetchApi("http://localhost:3000/products")
-    .then(products => {
-      const cartItems = productKeys.map(key => {
-        const productId = key.replace('Product-', '');
-        const quantity = parseInt(localStorage.getItem(key));
-        const product = products.find(p => p.id == productId);
-        return {
-          ...product,
-          quantity: quantity
-        };
-      })
-      const productTotal = ` (${cartItems.length} sản phẩm)`
-      const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
-      col_feature_product.innerHTML += productTotal;
-      let htmls = "";
-      cartItems.forEach(item => {
-        const priceNumber = parseInt(item.price.replace(/,/g, ''));
-        let totalPrice = priceNumber * item.quantity;
-        totalPrice = totalPrice.toLocaleString('en-US') + ' VNĐ';
-        htmls += `
-        <div class="grid-products" id="Product-${item.id}">
+
+  const productTotal = `(${cardItems.length} sản phẩm)`
+  const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
+  col_feature_product.innerHTML += productTotal;
+  let htmls = "";
+  cardItems.forEach(item => {
+    const priceNumber = parseInt(item.priceNew.replace(/[^0-9]/g, ''));
+    let totalPrice = priceNumber * item.quantity;
+    totalPrice = totalPrice.toLocaleString('en-US') + ' VNĐ';
+    htmls += `
+        <div class="grid-products" id="">
           <div class="col-action">
             <input type="checkbox">
           </div>
           <div class="col-product">
-            <img src="${item.thumbnail}" alt="${item.name}">
-            <span>${item.name}</span> 
+            <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt="${item.courseName}">
+            <span>${item.courseName} - ${item.teacherName}</span> 
           </div>
-          <div class="col-price">${item.price}</div>
+          <div class="col-price">${item.priceNew}</div>
           <div class="col-quantity">
             <button class="btn-minus">-</button>
             <span class="quantity">${item.quantity}</span>
             <button class="btn-plus">+</button>
           </div>
-          <div class="col-total">${totalPrice}</div>
+          <div class="col-total">${item.priceNew}</div>
           <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
         </div>
       `
-      })
-      const column_products = document.querySelector(".section-3 .user-card-body .column-products");
-      column_products.innerHTML = htmls;
-      checkBoxEvent();
-      quantityButtons();
-      deleteEvent();
-      btn_products();
-    });
+  })
+  const column_products = document.querySelector(".section-3 .user-card-body .column-products");
+  column_products.innerHTML = htmls;
+  checkBoxEvent();
+  quantityButtons();
+  deleteEvent();
+  btn_products();
 }
 
 

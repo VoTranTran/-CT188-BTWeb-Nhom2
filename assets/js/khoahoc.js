@@ -101,6 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", checkHash);
   checkHash();
 
+  
+  function addToCard() {
+    let cardItems = JSON.parse(localStorage.getItem("cardItems")) || [];
+    let card = {
+      courseName: document.querySelector(".tab-btn.active").textContent,
+      priceOld: document.querySelector("#price-old").textContent,
+      priceNew: document.querySelector("#price-new").textContent,
+      teacherName: document.querySelector(".teacher-group.active .teacher-box.active h3").textContent.trim(),
+      quantity: 1
+    };
+    cardItems.push(card);
+    localStorage.setItem("cardItems", JSON.stringify(cardItems)) 
+    alert("Đã thêm vào giỏ hàng")
+  }
+
+
   const btnAddCart = document.getElementById("btn-add-cart");
   const cartPopup = document.getElementById("cartPopup");
   btnAddCart.addEventListener("click", (event) => {
@@ -114,5 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cartPopup.classList.remove("hide");
       }, 400);
     }, 3000);
+    addToCard();
   });
 });
