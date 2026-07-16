@@ -50,7 +50,7 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px; 
 }
 .hero-title { 
-  font-family: "Open Sans", sans-serif ; 
+  font-family: "Open Sans", sans-serif !important; 
   font-size: 4.4rem; 
   font-weight: 800; 
   line-height: 1.2; 
@@ -209,7 +209,7 @@
   display: block; 
   font-size: 2rem; 
   font-weight: 800; 
-  font-family: 'Poppins', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .btn-learn-more { 
   background-color: #263238; 
