@@ -1,15 +1,232 @@
-.hero-title, 
-.section-title, 
-.course-card-title, 
-.course-price-box .new-price,
-.trust-title, 
-.consultant-head-title, 
-.consultant-feature-title, 
-.form-title {
-    font-family: 'Poppins', sans-serif !important;
+/* ==========================================================================
+   PHẦN 1: CSS GỐC TỪ FILE WORD (Giữ nguyên toàn bộ cấu trúc & thuộc tính)
+   ========================================================================== */
+.section-title {
+  text-align: center; /* [cite: 3] */
+  font-weight: 700; /* [cite: 5] */
+  font-size: 2.5rem; /* [cite: 6] */
+  margin-bottom: 30px; /* [cite: 8] */
+  text-transform: uppercase; /* [cite: 9] */
 }
+.section-title::after {
+  content: ""; /* [cite: 12] */
+  width: 80px; /* [cite: 13] */
+  height: 4px; /* [cite: 14] */
+  background: #fdec7b; /* Sử dụng màu vàng thương hiệu */ /* [cite: 15] */
+  display: block; /* [cite: 16] */
+  margin: 15px auto 0; /* [cite: 17] */
+  border-radius: 10px; /* [cite: 18] */
+}
+/* Hero */
+.intro-bgr {
+  width: 100%; /* [cite: 22] */
+  height: 70vh; /* [cite: 23] */
+  min-height: 300px; /* [cite: 24] */
+  background-image: url(../img/gioithieu/background.png); /* [cite: 25] */
+  background-size: cover; /* [cite: 26] */
+  background-position: center; /* [cite: 27] */
+}
+/*Brand*/
+.brand {
+  background: linear-gradient(135deg, #f2fffd, #fffdf7); /*  */
+  padding: 60px 0; /* [cite: 32] */
+  position: relative; /* [cite: 33] */
+  overflow: hidden; /* [cite: 34] */
+}
+.brand::before {
+  content: ""; /* [cite: 37] */
+  position: absolute; /* [cite: 38] */
+  width: 400px; /* [cite: 39] */
+  height: 400px; /* [cite: 40] */
+  background: #fdec7b; /*  */
+  border-radius: 50%; /* [cite: 42] */
+  top: -150px; /* [cite: 43] */
+  left: -150px; /* [cite: 44] */
+  opacity: 0.25; /* [cite: 45] */
+}
+.brand::after {
+  content: ""; /* [cite: 48] */
+  position: absolute; /* [cite: 49] */
+  width: 300px; /* [cite: 50] */
+  height: 300px; /* [cite: 51] */
+  background: #58cbca; /* [cite: 52] */
+  border-radius: 50%; /* [cite: 53] */
+  bottom: -120px; /* [cite: 54] */
+  right: -120px; /* [cite: 55] */
+  opacity: 0.2; /* [cite: 56] */
+}
+.brand-content {
+  display: flex; /* [cite: 59] */
+  align-items: center; /* [cite: 60] */
+  gap: 50px; /* [cite: 61] */
+}
+.brand-story-text {
+  flex: 1; /* [cite: 64] */
+  font-size: 2rem; /* [cite: 66] */
+  text-align: left; /* [cite: 67] */
+  line-height: 1.5; /* [cite: 68] */
+  background: white; /* [cite: 69] */
+  border-radius: 30px; /* [cite: 70] */
+  padding: 30px; /* [cite: 71] */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05); /* [cite: 72] */
+}
+.brand-story-text strong {
+  display: block; /* [cite: 75] */
+  background: #ee6961; /*  */
+  color: white; /* [cite: 77] */
+  padding: 6px 18px; /* [cite: 78] */
+  border-radius: 30px; /* [cite: 79] */
+  margin: 10px 0; /* [cite: 80] */
+  font-weight: 600; /* [cite: 81] */
+  text-align: center; /* [cite: 82] */
+}
+.brand-image {
+  flex: 1; /* [cite: 85] */
+}
+.brand-image img {
+  width: 100%; /* [cite: 88] */
+  border-radius: 10px; /* [cite: 89] */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* [cite: 90] */
+  transition: 0.4s ease; /* [cite: 91] */
+}
+.brand-image img:hover {
+  transform: scale(1.03); /* [cite: 94] */
+}
+/*PP Giang day*/
+.method {
+  padding: 40px 0; /* [cite: 98] */
+}
+.method-list {
+  display: flex; /* [cite: 101] */
+  justify-content: space-between; /* [cite: 102] */
+  gap: 30px; /* [cite: 103] */
+}
+.method-item {
+  width: 100%; /* [cite: 106] */
+  text-align: center; /* [cite: 107] */
+  flex: 1; /* [cite: 108] */
+  padding: 20px; /* [cite: 109] */
+  border-radius: 10px; /* [cite: 110] */
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease; /* [cite: 111, 112, 113] */
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #58cbca, #fdec7b) border-box; /* [cite: 114, 115, 116] */
+  border: 3px solid transparent; /* [cite: 117] */
+}
+.method-img {
+  padding: 5px; /* [cite: 120] */
+  background: #fff; /* [cite: 121] */
+  margin-bottom: 15px; /* [cite: 122] */
+  height: 250px; /* [cite: 123] */
+  display: flex; /* [cite: 124] */
+  align-items: center; /* [cite: 125] */
+  justify-content: center; /* [cite: 126] */
+  overflow: hidden; /* [cite: 127] */
+  border-radius: 10px; /* [cite: 128] */
+}
+.method-img img {
+  max-width: 100%; /* [cite: 131] */
+  max-height: 100%; /* [cite: 132] */
+  object-fit: contain; /* [cite: 133] */
+  border-radius: 10px; /* [cite: 134] */
+}
+.method-item:hover {
+  transform: scale(1.05); /* [cite: 137] */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* [cite: 138] */
+  border-color: #aaa; /* [cite: 139] */
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #58cbca, #fdec7b) border-box; /* [cite: 140, 141, 142] */
+  border: 3px solid transparent; /* [cite: 143] */
+}
+.method-item h3 {
+  font-family: "Sen", sans-serif; /* [cite: 146] */
+  font-weight: 700; /* [cite: 147] */
+  color: #333; /* [cite: 148] */
+  text-transform: uppercase; /* [cite: 149] */
+}
+/*Giao vien*/
+.teacher {
+  padding: 40px 0; /* [cite: 153] */
+  background: #f2fffd; /* [cite: 154] */
+}
+.teacher-list {
+  display: flex; /* [cite: 157] */
+  justify-content: center; /* [cite: 158] */
+  gap: 60px; /* [cite: 159] */
+  flex-wrap: wrap; /* [cite: 160] */
+}
+.teacher-item {
+  text-align: center; /* [cite: 163] */
+  background: transparent; /* [cite: 164] */
+  width: 335px; /* [cite: 165] */
+  padding: 10px; /* [cite: 166] */
+  border-radius: 20px; /* [cite: 167] */
+  background-color: #fff; /* [cite: 168] */
+  border: 2px solid #ccc; /* [cite: 169] */
+  border-top: 5px solid #2ec4b6; /* [cite: 170] */
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease; /* [cite: 171, 172, 173] */
+}
+.teacher-item:hover {
+  transform: scale(1.05); /* [cite: 176] */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* [cite: 177] */
+  border-top: 5px solid #2ec4b6; /* [cite: 179] */
+}
+.teacher-img {
+  width: 300px; /* [cite: 182] */
+  height: 360px; /* [cite: 183] */
+  margin: 0 auto 20px; /* [cite: 184] */
+  overflow: hidden; /* [cite: 185] */
+  border-radius: 15px; /* [cite: 186] */
+}
+.teacher-img img {
+  width: 100%; /* [cite: 189] */
+  height: 100%; /* [cite: 190] */
+  object-fit: cover; /* [cite: 191] */
+  object-position: top; /* [cite: 192] */
+}
+.teacher-name {
+  font-family: "Sen", sans-serif; /* [cite: 195] */
+  font-weight: 800; /* [cite: 196] */
+  font-size: 2rem; /* [cite: 197] */
+  margin-bottom: 10px; /* [cite: 198] */
+  text-transform: uppercase; /* [cite: 199] */
+}
+.teacher-item p {
+  font-size: 1.5rem; /* [cite: 202] */
+  margin: 2px 0; /* [cite: 203] */
+  color: #555; /* [cite: 204] */
+  font-family: "Open Sans", sans-serif; /* [cite: 205] */
+  line-height: 1.5; /* [cite: 206] */
+}
+.teacher-view-more i {
+  cursor: pointer; /* [cite: 209] */
+}
+.teacher-more {
+  display: none; /* [cite: 212] */
+  margin-top: 70px; /* [cite: 213] */
+}
+.teacher-more.active {
+  display: block; /* [cite: 216] */
+}
+.teacher-view-more.active {
+  transform: rotate(180deg); /* [cite: 219] */
+}
+.library img {
+  width: 100%; /* [cite: 222] */
+  display: block; /* [cite: 223] */
+}
+
+/* ==========================================================================
+   PHẦN 2: CHỈNH SỬA MÀU SẮC ĐỂ ĐỒNG BỘ VỚI FILE WORD
+   ========================================================================== */
+
 .top-banner { 
-  background-color: #263238; 
+  background-color: #2ec4b6; /* Đổi sang tone xanh ngọc thương hiệu nhẹ nhàng hơn màu xám cũ */
   color: #fff; 
   text-align: center; 
   padding: 10px; 
@@ -22,9 +239,10 @@
 .top-banner-link {
   font-weight: 600; 
   margin-left: 5px;
+  color: #fffdf7; /* Đồng bộ chữ trong link banner trắng sữa */
 }
 .badge-hot { 
-  background-color: red; 
+  background-color: #ee6961; /* Đổi màu đỏ tươi sang màu đỏ san hô ấm áp của thương hiệu */
   color: #fff; 
   padding: 2px 8px; 
   border-radius: 4px; 
@@ -33,9 +251,8 @@
   text-transform: uppercase; 
 }
 
-/* --- 2. Hero Section --- */
 .hero { 
-  background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%); 
+  background: linear-gradient(180deg, #f2fffd 0%, #ffffff 100%); /* Đổi xanh dương pastel sang màu nền xanh mint dịu của brand */
   padding: 80px 0; 
 }
 .hero-container { 
@@ -50,7 +267,7 @@
 .hero-badge { 
   display: inline-block; 
   background-color: #fff; 
-  color: chocolate; 
+  color: #58cbca; /* Đổi màu chocolate sang xanh ngọc chủ đạo */
   padding: 6px 14px; 
   border-radius: 20px; 
   font-weight: 700; 
@@ -59,7 +276,7 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 8px; 
 }
 .hero-title { 
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif !important; 
   font-size: 4.4rem; 
   font-weight: 800; 
   line-height: 1.2; 
@@ -83,31 +300,33 @@
 }
 .hero-image img {
   border-radius: 20px; 
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+  box-shadow: 0 15px 35px rgba(88, 203, 202, 0.15); /* Chuyển shadow nhẹ nhàng sang sắc xanh ngọc */
   width: 100%; 
   max-width: 500px; 
   height: 350px; 
   object-fit: cover;
 }
 
-/* --- 3. CTA Buttons --- */
+/* Nút CTA màu Vàng sáng có tương phản cao cho chữ đọc dễ chịu */
 .btn-yellow-cta { 
-  background-color: chocolate; 
-  color: #fff !important; 
+  background-color: #fdec7b; /* Chuyển từ màu chocolate sang vàng thương hiệu đúng như tên class */
+  color: #333 !important; /* Thay chữ trắng bằng chữ tối để nổi bật nhất trên nền vàng */
   padding: 14px 28px; 
   border-radius: 30px; 
   font-weight: 600; 
   font-size: 1.6rem; 
-  box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3); 
+  box-shadow: 0 4px 15px rgba(253, 236, 123, 0.3); /* Đồng bộ bóng mờ màu vàng ấm */
   display: inline-block; 
   transition: opacity 0.2s;
 }
 .btn-yellow-cta:hover {
   opacity: 0.9;
 }
+
+/* Nút CTA viền màu xanh ngọc */
 .btn-outline-cta { 
-  border: 2px solid #263238; 
-  color: #263238; 
+  border: 2px solid #58cbca; /* Thay viền xám đen bằng viền màu xanh ngọc chủ đạo */
+  color: #58cbca; 
   padding: 12px 26px; 
   border-radius: 30px; 
   font-weight: 600; 
@@ -116,11 +335,10 @@
   transition: all 0.2s ease;
 }
 .btn-outline-cta:hover { 
-  background-color: #263238; 
+  background-color: #58cbca; 
   color: #fff !important; 
 }
 
-/* --- 4. Courses Section --- */
 .courses-section { 
   padding: 80px 0; 
   background-color: #fff; 
@@ -130,7 +348,7 @@
   margin-bottom: 50px;
 }
 .section-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif; 
   font-size: 3.2rem; 
   font-weight: 700; 
   color: #263238; 
@@ -180,15 +398,15 @@
   text-transform: uppercase; 
 }
 .course-badge.blue { 
-  background-color: #e3f2fd; 
-  color: #2196f3; 
+  background-color: #f2fffd; /* Tone nền xanh nhạt brand */
+  color: #2ec4b6; /* Chữ xanh teal nổi bật */
 }
 .course-badge.yellow { 
-  background-color: #fff8e1; 
-  color: #ffb300; 
+  background-color: #fffdf7; /* Tone nền kem nhẹ brand */
+  color: #b59500; /* Chữ vàng nâu hài hòa */
 }
 .course-card-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif; 
   font-size: 2rem; 
   font-weight: 700; 
   margin-bottom: 12px; 
@@ -218,10 +436,11 @@
   display: block; 
   font-size: 2rem; 
   font-weight: 800; 
-  font-family: 'Poppins', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #ee6961; /* Đổi mức giá sang màu đỏ san hô kích thích người dùng click mua */
 }
 .btn-learn-more { 
-  background-color: #263238; 
+  background-color: #2ec4b6; /* Đổi sang màu xanh teal nhấn */
   color: #fff !important; 
   padding: 8px 18px; 
   border-radius: 6px; 
@@ -231,19 +450,18 @@
   transition: background-color 0.2s;
 }
 .btn-learn-more:hover { 
-  background-color: #67a606; 
+  background-color: #58cbca; /* Hover đổi màu mượt mà */
 }
 
-/* --- 5. Features Section --- */
 .features-trust-section { 
   padding: 60px 0; 
-  background-color: #f8fbfd; 
+  background-color: #f2fffd; /* Đồng nhất nền xanh thương hiệu cho toàn trang */
   text-align: center; 
   border-top: 1px solid #eef5fa; 
   border-bottom: 1px solid #eef5fa; 
 }
 .trust-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   color: #263238;
@@ -263,7 +481,7 @@
   flex: 1; 
   padding: 30px 20px; 
   background: #fff; 
-  border: 1px dashed #67a606; 
+  border: 1px dashed #58cbca; /* Đổi viền xanh lá cũ sang màu xanh ngọc của thương hiệu */
   border-radius: 12px; 
   transition: transform 0.3s; 
 }
@@ -272,7 +490,7 @@
 }
 .trust-icon {
   font-size: 3.5rem; 
-  color: #67a606; 
+  color: #58cbca; /* Đồng bộ màu icon sang xanh ngọc */
   margin-bottom: 15px;
 }
 .trust-card-title {
@@ -287,10 +505,9 @@
   line-height: 1.6;
 }
 
-/* --- 6. Consultant Section --- */
 .consultant-section { 
   padding: 80px 0; 
-  background-color: #f3fffe; 
+  background-color: #f2fffd; /* Sử dụng đồng nhất màu nền của brand */
 }
 .consultant-row {
   display: flex; 
@@ -304,7 +521,7 @@
   justify-content: space-between;
 }
 .consultant-head-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif; 
   font-size: 3rem; 
   font-weight: 700; 
   margin-bottom: 15px; 
@@ -328,7 +545,7 @@
 }
 .consultant-feature-icon {
   background: #fff; 
-  color: #67a606; 
+  color: #58cbca; /* Sửa sang xanh ngọc chủ đạo */
   width: 50px; 
   height: 50px; 
   border-radius: 50%; 
@@ -340,7 +557,7 @@
   flex-shrink: 0;
 }
 .consultant-feature-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif; 
   font-size: 1.8rem; 
   font-weight: 700; 
   margin-bottom: 5px; 
@@ -357,7 +574,6 @@
   font-style: italic;
 }
 
-/* --- 7. Form --- */
 .form-col-box { 
   background: #fff; 
   padding: 40px; 
@@ -366,7 +582,7 @@
   border: 1px solid #eef5fa; 
 }
 .form-title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Open Sans", sans-serif ; 
   font-size: 2.4rem; 
   font-weight: 700; 
   margin-bottom: 8px; 
@@ -406,20 +622,20 @@
 }
 .form-group-box input:focus, 
 .form-group-box select:focus { 
-  border-color: #67a606; 
+  border-color: #58cbca; /* Đổi viền input khi focus từ xanh lá cũ sang xanh ngọc mới */
   background-color: #fff; 
 }
 .btn-submit-consultant {
   width: 100%; 
   padding: 15px; 
-  background-color: chocolate; 
+  background-color: #ee6961; /* Thay nút Submit chocolate sang đỏ san hô cực kì bắt mắt */
   color: #fff; 
   border: none; 
   border-radius: 8px; 
   font-size: 1.6rem; 
   font-weight: 700; 
   cursor: pointer; 
-  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.2); 
+  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.2); 
   margin-top: 10px; 
   font-family: inherit;
   transition: opacity 0.2s;
@@ -431,15 +647,13 @@
   transition: all 0.3s ease;
 }
 
-/* Class này sẽ được JS tự động thêm vào khi cuộn trang xuống quá 50px */
 .header.header-scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 10px 0; /* Thu nhỏ header lại một chút cho gọn */
+  padding: 10px 0; 
 }
-/* ==========================================================================
-   CSS RESPONSIVE RIÊNG TRANG CHỦ (Tự chuyển layout mượt mà khi qua Mobile/Tablet)
-   ========================================================================== */
+
+/* Các đoạn responsive @media giữ nguyên cấu trúc logic của bạn */
 @media (max-width: 991.98px) {
   .hero {
     padding: 40px 0;
