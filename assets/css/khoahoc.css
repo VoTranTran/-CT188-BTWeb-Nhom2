@@ -349,3 +349,15 @@ white-space: nowrap;
 .menu-drawer {
     z-index: 1002 !important;
 }
+.menu-drawer-list li {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+}
+.menu-drawer-list .sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 28px;
+    margin-top: 10px;
+}
