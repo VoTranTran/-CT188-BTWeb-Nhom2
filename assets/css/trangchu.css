@@ -1,5 +1,5 @@
 .hero {
-  background: url('../img/background.png') no-repeat center center;
+  background: url('./assets/img/gioithieu/background.png') no-repeat center center;
   background-size: cover;
   padding: 80px 0;
   display: flex;
