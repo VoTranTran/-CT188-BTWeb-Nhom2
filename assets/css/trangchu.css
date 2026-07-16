@@ -1,8 +1,13 @@
-/* ==========================================================================
-   CSS RIÊNG CỦA TRANG CHỦ (Đã loại bỏ hoàn toàn inline-style, tương thích CSS nhóm)
-   ========================================================================== */
-
-/* --- 1. Top Banner --- */
+.hero-title, 
+.section-title, 
+.course-card-title, 
+.course-price-box .new-price,
+.trust-title, 
+.consultant-head-title, 
+.consultant-feature-title, 
+.form-title {
+    font-family: 'Poppins', sans-serif !important;
+}
 .top-banner { 
   background-color: #263238; 
   color: #fff; 
