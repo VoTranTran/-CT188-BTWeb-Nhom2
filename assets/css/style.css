@@ -3,13 +3,6 @@
   box-sizing: border-box;
 }
 
-:root {
-    --color-one: #63DEFF;
-    --color-two: #FCDD51;
-    --color-text: #001C66;
-    --color-background: #6b7280;
-}   
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -19,30 +12,11 @@ body {
   font-size: 1.6rem;
   font-family: "open sans", sans-serif;
   color: #263238;
-  
 }
 
 a {
   text-decoration: none;
   color: #263238;
-}
-
-
-img {
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-    border-color: currentcolor;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    margin-left: 0;
 }
 
 .container {
@@ -213,6 +187,7 @@ li {
 /* ---------------------------------------------------------------------------- */
 
 /* Header */
+/* Header */
 .header {
   background-color: #e3f2fd;
   box-shadow:
@@ -223,7 +198,7 @@ li {
 .header.fixed {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .navbar-right {
   float: right;
@@ -238,12 +213,12 @@ li {
 }
 
 .header-body .logo {
-  background-image: url("../img/logo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 20rem;
-  height: 8rem;
+    mix-blend-mode: multiply;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 8rem;
 }
 
 .header-body nav {
