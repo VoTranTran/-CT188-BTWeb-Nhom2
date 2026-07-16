@@ -2,7 +2,7 @@
   display: block;
   width: 150px;                 /* Chiều rộng của logo */
   height: 50px;                 /* Chiều cao của logo */
-  background-image: url('./assets/img/gioithieu/logo.png'); /* Đường dẫn đến file ảnh logo của bạn */
+  background-image: url('../assets/img/gioithieu/logo.png'); /* Đường dẫn đến file ảnh logo của bạn */
   background-size: contain;     /* Giữ nguyên tỉ lệ ảnh không bị móp méo */
   background-repeat: no-repeat; /* Không lặp lại ảnh */
   background-position: left center; /* Căn lề trái */
@@ -14,7 +14,7 @@
   display: block;
   width: 120px;                 /* Chiều rộng logo nhỏ hơn trên mobile */
   height: 40px;                 /* Chiều cao logo trên mobile */
-  background-image: url('./assets/img/gioithieu/logo.png'); /* Đường dẫn đến file ảnh logo */
+  background-image: url('../assets/img/gioithieu/logo.png'); /* Đường dẫn đến file ảnh logo */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
