@@ -340,3 +340,12 @@ font-size: 1.6rem;
 white-space: nowrap;
 }
 }
+.menu-header__icon {
+    z-index: 1001 !important;
+}
+.menu-overlay {
+    z-index: 1000 !important;
+}
+.menu-drawer {
+    z-index: 1002 !important;
+}
