@@ -21,26 +21,33 @@
 <body>
 
   <header class="header fixed">
-    <div class="container">
-      <div class="header-body">
-        <a href="index.html" class="logo"></a>
-        <nav class="navbar">
-          <ul class="navbar-left">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="./khoahoc.html" class="home-style">Khóa học</a></li>
-          </ul>
-          <ul class="navbar-right">
-            <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
-                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
-            </li>
-            <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
-            <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <div class="header-body">
+          <!-- Sửa class của thẻ <a> thành logo-link -->
+        <a href="index.html" class="logo-link">
+            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+        </a>
+          <nav class="navbar">
+            <ul class="navbar-left">
+              <li>
+                <a href="index.html" >Trang chủ</a>
+              </li>
+              <li><a href="./gioithieu.html" class="home-style" >Giới thiệu</a></li>
+              <li><a href="./khoahoc.html" >Khóa học</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
+              <li class="frame">
+                <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
+              </li>
+              <li class="frame">
+                <a href="./dangnhap.html" class="color-green">Đăng nhập</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
   <div class="mobile-header">
     <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
     <label for="menu-checkbox">
