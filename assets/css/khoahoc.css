@@ -349,10 +349,3 @@ white-space: nowrap;
 .menu-drawer {
     z-index: 1002 !important;
 }
-.menu-drawer-list {
-    white-space: nowrap !important;
-}
-.menu-drawer-list > li > i {
-    min-width: 30px; 
-}
-
