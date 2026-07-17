@@ -80,7 +80,7 @@
   font-weight: 800;
   color: var(--color-text, #001C66);
   margin-bottom: 20px;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif ;
 }
 
 .hero-desc {
@@ -195,7 +195,7 @@
   color: var(--color-text, #001C66);
   font-weight: 700;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -345,7 +345,7 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .trust-subtitle {
@@ -495,7 +495,7 @@
   color: var(--color-text, #001C66);
   font-weight: 700;
   margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .form-subtitle {
