@@ -1,11 +1,3 @@
-.header-body .logo {
-background-image: url('../img/logo.png') !important;
-background-size: contain !important;
-background-position: center !important;
-background-repeat: no-repeat !important;
-width: 25rem !important;
-height: 8rem !important;
-}
 .header {
 background-color: #ffffff !important;
 border-bottom: 2px solid #ffc107;
