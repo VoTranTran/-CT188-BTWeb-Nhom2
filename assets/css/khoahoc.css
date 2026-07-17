@@ -343,7 +343,7 @@ white-space: nowrap;
 }
 .header-body .logo-link img.logo {
     width: auto !important;
-    height: 70px !important;
+    height: 80px !important;
     object-fit: contain !important;
     background: transparent !important;
 }
@@ -351,7 +351,7 @@ white-space: nowrap;
 /* Tự động thu nhỏ logo cho vừa vặn khi xem trên Điện thoại */
 @media (max-width: 991.98px) {
     .header-body .logo-link img.logo {
-        height: 60px !important; 
-        margin-top: 5px;
+        height: 65px !important; 
+        margin-top: 7px;
     }
 }
