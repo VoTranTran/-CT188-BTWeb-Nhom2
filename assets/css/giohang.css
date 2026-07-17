@@ -673,7 +673,8 @@
 }
 
 .section-5 .payment .payment-body .credit-card .list-card .card-item .card-circle.active {
-    color: var(--color-two);
+    background-color: var(--color-two);
+    border: 2px solid var(--color-text);
 }
 
 .section-5 .payment .payment-body .card-default {

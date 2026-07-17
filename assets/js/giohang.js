@@ -294,10 +294,13 @@ function selectBank() {
       add_class_show(".credit-infor")
       add_class_hidden(".card-default")
       
+      const card_circle = card.lastElementChild;
+      document.querySelectorAll(".card-circle").forEach(el => {
+        el === card_circle ? el.classList.add("active") : el.classList.remove("active");
+      })
 
       const bankId = this.id;
       const card_right = document.querySelector(`#bankData-${bankId}`);
-      console.log(card_right);
       if (card_right) {
         card_right.classList.remove("hidden");
         card_right.classList.add("active");
@@ -360,7 +363,7 @@ if (cardItems.length > 0) {
   add_class_hidden(".section-3 .user-card-body .card-empty");
   add_class_show(".section-3 .user-card-body .card-non-empty")
 
-  const productTotal = `(${cardItems.length} sản phẩm)`
+  const productTotal = ` (${cardItems.length} sản phẩm)`
   const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
   col_feature_product.innerHTML += productTotal;
   let htmls = "";
