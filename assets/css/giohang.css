@@ -133,7 +133,7 @@
 
 @media (max-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 100%;
   }
 
   .section-1 .inner-wrap {
