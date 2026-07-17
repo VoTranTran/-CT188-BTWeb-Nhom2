@@ -144,7 +144,38 @@
   border-radius: 20px;
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
 }
+.brand {
+  position: relative; /* Làm điểm neo cho 2 hình tròn trang trí */
+  overflow: hidden;   /* Cắt bỏ phần hình tròn bị tràn ra ngoài rìa, chống vỡ giao diện */
+}
 
+/* Hình tròn trang trí màu vàng ở góc trên bên trái */
+.brand::before {
+  content: ""; 
+  position: absolute; 
+  width: 400px; 
+  height: 400px; 
+  background: #fdec7b; 
+  border-radius: 50%; 
+  top: -150px; 
+  left: -150px; 
+  opacity: 0.25; 
+  z-index: -1;        /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
+}
+
+/* Hình tròn trang trí màu xanh ở góc dưới bên phải */
+.brand::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #58cbca; 
+  border-radius: 50%;
+  bottom: -120px; 
+  right: -120px; 
+  opacity: 0.2; 
+  z-index: -1;        /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
+}
 
 /* ===== 3. COURSES SECTION ===== */
 .courses-section {
