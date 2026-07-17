@@ -341,3 +341,17 @@ white-space: nowrap;
 .menu-drawer {
     z-index: 1002 !important;
 }
+.header-body .logo-link img.logo {
+    width: auto !important;
+    height: 60px !important;
+    object-fit: contain !important;
+    background: transparent !important;
+}
+
+/* Tự động thu nhỏ logo cho vừa vặn khi xem trên Điện thoại */
+@media (max-width: 991.98px) {
+    .header-body .logo-link img.logo {
+        height: 40px !important; 
+        margin-top: 5px;
+    }
+}
