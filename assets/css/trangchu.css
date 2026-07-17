@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 /* ===== 1. TOP BANNER ===== */
 .top-banner {
   background-color: linear-gradient(135deg, #f2fffd, #fffdf7);
@@ -420,7 +420,7 @@
   color: var(--color-text, #001C66);
   font-weight: 800;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .consultant-head-desc {
