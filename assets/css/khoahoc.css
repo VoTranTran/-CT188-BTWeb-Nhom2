@@ -343,7 +343,7 @@ white-space: nowrap;
 }
 .header-body .logo-link img.logo {
     width: auto !important;
-    height: 80px !important;
+    height: 65px !important;
     object-fit: contain !important;
     background: transparent !important;
 }
