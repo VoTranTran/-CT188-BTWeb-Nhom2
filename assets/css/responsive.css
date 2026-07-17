@@ -16,9 +16,10 @@
   }
   .header .logo {
     position: absolute;
+    top: 50%;
     left: 50%;
-    translate: -50% 50%;
-  }
+    transform: translate(-50%, -50%);
+  } /*Sửa lỗi logo bị tràn ra khỏi thanh header*/
   .menu-header__icon {
     position: fixed;
     cursor: pointer;
