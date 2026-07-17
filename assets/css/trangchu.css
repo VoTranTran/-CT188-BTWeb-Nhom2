@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==========================================================================
    1. BANNER TRÊN CÙNG (TOP BANNER)
    ========================================================================== */
@@ -11,8 +12,37 @@
   justify-content: center;  
   align-items: center;  
   gap: 10px;  
+=======
+
+/* ===== 1. TOP BANNER ===== */
+.top-banner {
+  background-color: linear-gradient(135deg, #f2fffd, #fffdf7);
+  color: var(--color-text, #001C66);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
+
+.badge-hot {
+  background-color: red;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  animation: pulse 1.5s infinite;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .top-banner-link {
+<<<<<<< HEAD
   font-weight: 600;  
   margin-left: 5px;
   color: #fdec7b; /* Màu vàng thương hiệu giúp liên kết nổi bật trên nền xanh */
@@ -40,9 +70,43 @@
   align-items: center;  
   justify-content: space-between;  
   gap: 40px;  
+=======
+  color: #fffb00; /* Màu vàng nổi bật */
+  text-decoration: underline;
+  font-weight: 700;
+  margin-left: 5px;
+  transition: opacity 0.2s ease;
 }
+
+.top-banner-link:hover {
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+/* ===== 2. HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .hero-text {
   flex: 1;
+<<<<<<< HEAD
 }
 .hero-badge {  
   display: inline-block;  
@@ -62,14 +126,47 @@
   line-height: 1.2;  
   margin-bottom: 25px;  
   color: #263238;  
+=======
+  max-width: 600px;
 }
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(99, 222, 255, 0.2); /* Sắc xanh nhẹ từ --color-one */
+  color: var(--color-text, #001C66);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 4.8rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--color-text, #001C66);
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif ;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .hero-desc {
+<<<<<<< HEAD
   color: #546e7a;  
   margin-bottom: 35px;  
   font-size: 1.6rem;  
   line-height: 1.8;
+=======
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #546e7a;
+  margin-bottom: 35px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .hero-buttons {
+<<<<<<< HEAD
   display: flex;  
   gap: 15px;
 }
@@ -104,8 +201,28 @@
   box-shadow: 0 4px 15px rgba(253, 236, 123, 0.4); /* Bóng đổ màu vàng mờ */ 
   display: inline-block;  
   transition: all 0.25s ease;
+=======
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
+
+/* Các loại nút nhấn CTA (Call to Action) */
+.btn-yellow-cta {
+  background-color: var(--color-two, #FCDD51);
+  color: var(--color-text, #001C66);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 15px rgba(252, 221, 81, 0.4);
+  transition: all 0.3s ease;
+  display: inline-block;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .btn-yellow-cta:hover {
+<<<<<<< HEAD
   opacity: 0.95;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(253, 236, 123, 0.5);
@@ -132,19 +249,126 @@
 .courses-section {  
   padding: 80px 0;  
   background-color: #fff;  
+=======
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(252, 221, 81, 0.6);
 }
+
+.btn-outline-cta {
+  background-color: transparent;
+  color: var(--color-text, #001C66);
+  border: 2px solid var(--color-text, #001C66);
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
+.btn-outline-cta:hover {
+  background-color: var(--color-text, #001C66);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
+}
+.brand {
+  position: relative; /* Làm điểm neo cho 2 hình tròn trang trí */
+  overflow: hidden;   /* Cắt bỏ phần hình tròn bị tràn ra ngoài rìa, chống vỡ giao diện */
+}
+
+/* Hình tròn trang trí màu vàng ở góc trên bên trái */
+.brand::before {
+  content: ""; 
+  position: absolute; 
+  width: 400px; 
+  height: 400px; 
+  background: #fdec7b; 
+  border-radius: 50%; 
+  top: -150px; 
+  left: -150px; 
+  opacity: 0.25; 
+  z-index: -1;        /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
+}
+
+/* Hình tròn trang trí màu xanh ở góc dưới bên phải */
+.brand::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #58cbca; 
+  border-radius: 50%;
+  bottom: -120px; 
+  right: -120px; 
+  opacity: 0.2; 
+  z-index: -1;        /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
+}
+
+/* ===== 3. COURSES SECTION ===== */
+.courses-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
 .section-header-box {
+<<<<<<< HEAD
   text-align: center;  
   margin-bottom: 50px;
+=======
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .section-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;  
   font-size: 3.2rem;  
   font-weight: 700;  
   color: #263238;  
   margin-bottom: 15px;
+=======
+  font-size: 3.2rem;
+  color: var(--color-text, #001C66);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-one, #63DEFF);
+  border-radius: 2px;
+}
+
 .section-subtitle {
+<<<<<<< HEAD
   font-size: 1.6rem;  
   color: #607d8b;  
   max-width: 600px;  
@@ -170,13 +394,52 @@
 .course-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(46, 196, 182, 0.08);
+=======
+  font-size: 1.6rem;
+  color: #78909c;
+  line-height: 1.6;
 }
+
+/* Flexbox / Grid layout cho các khoá học */
+.courses-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: calc(50% - 15px);
+  max-width: 540px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f4f8;
+  display: flex;
+  flex-direction: column;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
 .course-card-img {
+<<<<<<< HEAD
   height: 220px;  
   width: 100%;  
+=======
+  width: 100%;
+  height: 250px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   object-fit: cover;
 }
+
 .course-card-body {
+<<<<<<< HEAD
   padding: 25px;  
   flex-grow: 1;  
   display: flex;  
@@ -199,22 +462,66 @@
 .course-badge.yellow {  
   background-color: rgba(253, 236, 123, 0.15); /* Nền vàng nhạt */ 
   color: #b59500; /* Chữ vàng sậm dễ đọc */ 
+=======
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
+
+.course-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.course-badge.blue {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+}
+
+.course-badge.yellow {
+  background-color: #fffde7;
+  color: #fbc02d;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .course-card-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;  
   font-size: 2rem;  
   font-weight: 700;  
   margin-bottom: 12px;  
   color: #263238;
+=======
+  font-size: 2.2rem;
+  color: var(--color-text, #001C66);
+  font-weight: 700;
+  margin-bottom: 12px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .course-card-desc {
+<<<<<<< HEAD
   color: #607d8b;  
   font-size: 1.45rem;  
   line-height: 1.6;  
   margin-bottom: 20px;  
+=======
+  font-size: 1.5rem;
+  color: #607d8b;
+  line-height: 1.6;
+  margin-bottom: 25px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   flex-grow: 1;
 }
+
 .course-card-footer {
+<<<<<<< HEAD
   display: flex;  
   align-items: center;  
   justify-content: space-between;  
@@ -258,14 +565,71 @@
   text-align: center;  
   border-top: 1px solid rgba(88, 203, 202, 0.1);  
   border-bottom: 1px solid rgba(88, 203, 202, 0.1);  
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f4f8;
+  padding-top: 15px;
+  margin-top: auto;
 }
+
+.course-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.old-price {
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  color: #b0bec5;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn-learn-more {
+  background-color: chocolate;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-learn-more:hover {
+  opacity: 0.9;
+}
+
+
+/* ===== 4. FEATURES & TRUST SECTION ===== */
+.features-trust-section {
+  background-color: #f8fdff;
+  padding: 80px 0;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .trust-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;  
   font-size: 3rem;  
   font-weight: 700;  
   color: #263238;
+=======
+  font-size: 3.2rem;
+  color: var(--color-text, #001C66);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .trust-subtitle {
+<<<<<<< HEAD
   font-size: 1.6rem;  
   color: #607d8b;  
   margin-top: 10px;
@@ -287,19 +651,65 @@
 .trust-card:hover {  
   transform: translateY(-5px);  
   box-shadow: 0 8px 25px rgba(88, 203, 202, 0.12);
+=======
+  font-size: 1.6rem;
+  color: #78909c;
+  text-align: center;
+  margin-bottom: 50px;
 }
+
+.trust-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.trust-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease;
+  border: 1px solid #f0f4f8;
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .trust-icon {
+<<<<<<< HEAD
   font-size: 3.5rem;  
   color: #58cbca; /* Thay đổi màu icon */ 
   margin-bottom: 15px;
+=======
+  font-size: 4rem;
+  color: var(--color-one, #63DEFF);
+  margin-bottom: 20px;
+  display: inline-block;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .trust-card-title {
+<<<<<<< HEAD
   font-size: 1.8rem;  
   font-weight: 700;  
   margin-bottom: 10px;  
   color: #263238;
+=======
+  font-size: 2rem;
+  color: var(--color-text, #001C66);
+  font-weight: 700;
+  margin-bottom: 15px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .trust-card-desc {
+<<<<<<< HEAD
   font-size: 1.4rem;  
   color: #607d8b;  
   line-height: 1.6;
@@ -311,42 +721,97 @@
 .consultant-section {  
   padding: 80px 0;  
   background-color: #f2fffd; /* Đồng bộ màu nền ngọc của brand */ 
+=======
+  font-size: 1.45rem;
+  color: #607d8b;
+  line-height: 1.6;
 }
+
+
+/* ===== 5. CONSULTANT SECTION ===== */
+.consultant-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .consultant-row {
+<<<<<<< HEAD
   display: flex;  
   gap: 50px;  
   align-items: stretch;
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-left-col {
+<<<<<<< HEAD
   flex: 1;  
   display: flex;  
   flex-direction: column;  
   justify-content: space-between;
+=======
+  flex: 1;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-head-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;  
   font-size: 3rem;  
   font-weight: 700;  
   margin-bottom: 15px;  
   color: #263238;
+=======
+  font-size: 3.6rem;
+  color: var(--color-text, #001C66);
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-head-desc {
+<<<<<<< HEAD
   font-size: 1.6rem;  
   color: #546e7a;  
   line-height: 1.7;  
   margin-bottom: 40px;
+=======
+  font-size: 1.6rem;
+  color: #546e7a;
+  line-height: 1.7;
+  margin-bottom: 30px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-feature-list {
+<<<<<<< HEAD
   display: flex;  
   flex-direction: column;  
   gap: 25px;
+=======
+  margin-bottom: 30px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-feature-item {
+<<<<<<< HEAD
   display: flex;  
   gap: 20px;  
+=======
+  display: flex;
+  gap: 15px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   align-items: flex-start;
 }
+
 .consultant-feature-icon {
+<<<<<<< HEAD
   background: #fff;  
   color: #58cbca; /* Thay đổi màu icon từ xanh lá mạ sang xanh ngọc */ 
   width: 50px;  
@@ -357,20 +822,52 @@
   justify-content: center;  
   font-size: 2rem;  
   box-shadow: 0 4px 10px rgba(88, 203, 202, 0.15);  
+=======
+  background-color: rgba(99, 222, 255, 0.2);
+  color: var(--color-text, #001C66);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   flex-shrink: 0;
 }
+
+.consultant-feature-text {
+  flex-grow: 1;
+}
+
 .consultant-feature-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;  
   font-size: 1.8rem;  
   font-weight: 700;  
   margin-bottom: 5px;  
   color: #263238;
+=======
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text, #001C66);
+  margin-bottom: 5px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-feature-desc {
+<<<<<<< HEAD
   color: #607d8b;  
   font-size: 1.45rem;
+=======
+  font-size: 1.45rem;
+  color: #607d8b;
+  line-height: 1.5;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
 }
+
 .consultant-quote {
+<<<<<<< HEAD
   font-size: 1.3rem;  
   color: #90a4ae;  
   margin-top: 30px;  
@@ -386,8 +883,29 @@
   border-radius: 20px;  
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);  
   border: 1px solid rgba(88, 203, 202, 0.1);  
+=======
+  font-style: italic;
+  color: chocolate;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-left: 3px solid chocolate;
+  padding-left: 15px;
+  margin-top: 20px;
 }
+
+/* Khối Form Tư Vấn bên phải */
+.form-col-box {
+  flex: 1;
+  background-color: #f3fffe;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
+}
+
 .form-title {
+<<<<<<< HEAD
   font-family: "Open Sans", sans-serif ;  
   font-size: 2.4rem;  
   font-weight: 700;  
@@ -504,10 +1022,129 @@
     width: 100%;
     max-width: 400px;
   }
+=======
+  font-size: 2.4rem;
+  color: var(--color-text, #001C66);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-subtitle {
+  font-size: 1.45rem;
+  color: #607d8b;
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text, #001C66);
+  margin-bottom: 8px;
+}
+
+.form-col-box input,
+.form-col-box select {
+  padding: 12px 16px;
+  border: 1.5px solid rgba(99, 222, 255, 0.4);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form-col-box input:focus,
+.form-col-box select:focus {
+  border-color: var(--color-one, #63DEFF);
+  box-shadow: 0 0 0 3px rgba(99, 222, 255, 0.15);
+}
+
+.btn-submit-consultant {
+  background-color: #ff7a00;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
+}
+
+.btn-submit-consultant:hover {
+  background-color: #e66e00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
+}
+
+
+/* ===== 6. HEADER SCROLLED (Thay đổi giao diện khi cuộn trang) ===== */
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(5px);
+  height: 7rem !important;
+  transition: all 0.3s ease;
+}
+
+.header-scrolled .header-body .logo {
+  height: 7rem !important;
+}
+
+
+/* ===== 7. RESPONSIVE CHO TRANG CHỦ ===== */
+@media (max-width: 991.98px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 3.6rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+
+  .trust-card {
+    width: 100%;
+  }
+
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   .consultant-row {
     flex-direction: column;
     gap: 40px;
   }
+<<<<<<< HEAD
   .consultant-left-col {
     text-align: center;
   }
@@ -519,8 +1156,37 @@
   .form-col-box {
     padding: 30px 20px;
   }
+=======
+
+  .consultant-left-col {
+    text-align: center;
+  }
+
+  .consultant-feature-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .consultant-quote {
+    border-left: none;
+    border-top: 3px solid chocolate;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+
+  .form-col-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1
   .form-row {
     flex-direction: column;
     gap: 15px;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e25a5d858543c089f5051b275cc3a99a7329e2b1

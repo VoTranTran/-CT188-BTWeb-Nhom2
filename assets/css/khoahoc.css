@@ -767,3 +767,19 @@ font-size: 1.6rem;
 white-space: nowrap;
 }
 }
+.menu-header__icon {
+    z-index: 1001 !important;
+}
+.menu-overlay {
+    z-index: 1000 !important;
+}
+.menu-drawer {
+    z-index: 1002 !important;
+}
+.menu-drawer-list {
+    white-space: nowrap !important;
+}
+.menu-drawer-list > li > i {
+    min-width: 30px; 
+}
+
