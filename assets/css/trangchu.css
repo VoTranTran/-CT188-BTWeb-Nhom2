@@ -1,11 +1,6 @@
-
-/* ==========================================================================
-   TRANG CHỦ - BRIGHTENGLISH CSS
-   ========================================================================== */
-
 /* ===== 1. TOP BANNER ===== */
 .top-banner {
-  background-color: var(--color-one, #63DEFF);
+  background-color: linear-gradient(135deg, #f2fffd, #fffdf7);
   color: var(--color-text, #001C66);
   font-size: 1.4rem;
   font-weight: 600;
