@@ -2,9 +2,9 @@
 .button-1 {
   border: none;
   color: #fff;
-  background-image: linear-gradient(to right, var(--color-text), var(--color-one), #00ADEF, var(--color-text), var(--color-one)); 
+  background-image: linear-gradient(to right, var(--color-text), var(--color-one), #00ADEF, var(--color-text), var(--color-one));
   font-size: 20px;
-  padding: 20px;
+  padding: 16px;
   border-radius: 16px;
   background-size: 300% 100%;
   cursor: pointer;
@@ -182,27 +182,10 @@
   padding: 0 30px;
   border-radius: 15px;
   transition: all 3s ease-in-out;
-
   background: linear-gradient(to right, var(--color-two), var(--color-two)) no-repeat;
   background-color: #E5E7EB;
-}
-
-.timeline-bar.step-0 {
   background-size: 0% 100%;
 }
-
-.timeline-bar.step-1 {
-  background-size: 25% 100%;
-}
-
-.timeline-bar.step-2 {
-  background-size: 50% 100%;
-}
-
-.timeline-bar.step-3 {
-  background-size: 100% 100%;
-}
-
 
 .section-2 .inner-wrap {
   display: flex;
@@ -454,6 +437,7 @@
 }
 
 @media (max-width: 768px) {
+
   .section-3 .user-card-body .column-feature .col-price,
   .section-3 .user-card-body .column-feature .col-quantity,
   .section-3 .user-card-body .column-feature .col-total {
@@ -785,7 +769,7 @@
 
 .section-4 .col-right .button-1 {
   margin-right: 10%;
-  
+
 }
 
 @media (max-width: 992px) {
@@ -793,25 +777,25 @@
     display: none;
   }
 
-  .section-4 .inner-wrap > div:last-child.container {
+  .section-4 .inner-wrap>div:last-child.container {
     width: 100%;
     margin-right: 0;
   }
 
   .section-4 .grid-row {
-    grid-template-columns: 1fr 340px; 
+    grid-template-columns: 1fr 340px;
     gap: 15px;
   }
 }
 
 @media (max-width: 768px) {
   .section-4 .col-left .personal-wrap .personal-header h2 {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .section-4 .grid-row {
     grid-template-columns: 1fr;
-    gap: 50px; 
+    gap: 50px;
   }
 
   .section-4 .col-right .button-1 {
@@ -822,12 +806,18 @@
 
 @media (max-width: 576px) {
   .section-4 .col-left .personal-wrap .personal-header h2 {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .section-4 .grid-row {
     grid-template-columns: 1fr;
-    gap: 50px; 
+    gap: 50px;
+  }
+
+  .section-4 .col-left .personal-detail .card-body .form-row {
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr;
+    gap: 14px;
   }
 }
 
@@ -849,7 +839,6 @@
 }
 
 .section-5 .container {
-  width: 80%;
   margin: 0 auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
@@ -994,7 +983,7 @@
 }
 
 .section-5 .payment-body .button-1 {
-  margin-left: 50%;
+  margin: 0 auto;
 }
 
 
@@ -1004,22 +993,32 @@
   }
 
   .section-5 .payment .payment-body .credit-card .list-card .card-item {
-    width: calc(100% / 4 - 30px);  
+    width: calc(100% / 4 - 30px);
   }
 
   .section-5 .payment .payment-body .credit-card .list-card .card-item .card-title {
     padding: 9px;
   }
+
+  .section-5 .payment .payment-body .card-default {
+    padding: 80px;
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 786px) {
   .section-5 .payment .payment-body .credit-card .list-card .card-item {
-    width: calc(100% / 4 - 15px);  
+    width: calc(100% / 4 - 15px);
   }
 
   .section-5 .payment .payment-body .credit-card .list-card .card-item .card-title {
     padding: 5px;
   }
+
+  .section-5 .payment .payment-body .card-default {
+  padding: 60px;
+  font-size: 16px;
+}
 }
 
 @media (max-width: 576px) {
@@ -1039,7 +1038,13 @@
   .section-5 .payment .payment-body .credit-infor .grid-card-infor {
     gap: 15px;
   }
+
+  .section-5 .payment .payment-body .card-default {
+    padding: 40px;
+    font-size: 14px;
+  }
 }
+
 /* end section 5 */
 
 /* section 6 */
