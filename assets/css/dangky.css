@@ -62,12 +62,15 @@ body::after{
 
 /* Mỗi ô nhập */
 .form-group{
-    margin-bottom:27px; /* Khoảng cách giữa các nhóm */
+    margin-bottom:22px; /* Khoảng cách giữa các nhóm */
 }
 
-/* Tiêu đề */
+/* Tiêu đề ô nhập */
 .form-group label{
-    font-weight:600;
+    display:block;/*Hiển thị trên một dòng riêng.*/
+    margin-bottom:8px;/* Khoảng cách với ô nhập */
+    font-weight:600;/* Chữ đậm */
+    color:#333; /* Màu chữ */
 }
 
 /* Ô nhập */
