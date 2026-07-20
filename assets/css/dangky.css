@@ -62,7 +62,7 @@ body::after{
 
 /* Mỗi ô nhập */
 .form-group{
-    margin-bottom:18px; /* Khoảng cách giữa các nhóm */
+    margin-bottom:20px; /* Khoảng cách giữa các nhóm */
 }
 
 /* Tiêu đề */
