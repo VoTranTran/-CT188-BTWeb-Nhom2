@@ -67,7 +67,8 @@ body::after{
     text-align:center;/* Căn giữa */
     color:#000000;/* Màu chữ */
     margin-bottom:10px;/* Khoảng cách phía dưới */
-    font-size:2.8rem; /* Kích thước chữ */
+    font-size:40px; /* Kích thước chữ */
+    font-weight:700; /* Chữ đậm */
 }
 
 /* Nhóm ô nhập */
