@@ -1,59 +1,63 @@
+const scroll_To = (selector) => {
+  const selectorElement = document.querySelector(selector);
+  const headerHeight = 205;
+
+  if (selectorElement.classList.contains("show")) {
+    const selectorTop = selectorElement.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: selectorTop - headerHeight,
+      behavior: "smooth"
+    });
+  }
+}
+
+
 function setupTimelineScroll() {
   const icons = document.querySelectorAll('.timeline-icon');
   const sections = ['.section-3', '.section-4', '.section-5', '.section-6'];
-  const headerHeight = 205;
+
   icons.forEach((icon, index) => {
     icon.addEventListener('click', function () {
-      if (this.classList.contains('active')) {
-        const section = document.querySelector(sections[index]);
-        if (section) {
-          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-            top: sectionTop - headerHeight,
-            behavior: 'smooth'
-          });
-        }
-      }
+      scroll_To(sections[index]);
     });
   });
 }
 
-function toggleVisibility(selector) {
-  toggleSelector = document.querySelector(selector);
+function add_class_show(selector) {
+  const toggleSelector = document.querySelector(selector);
   if (toggleSelector.classList.contains("hidden")) {
     toggleSelector.classList.remove("hidden");
     toggleSelector.classList.add("show");
   }
 }
 
-
-function updateTimeLine(step) {
-  const timeline_bar = document.querySelector(".timeline-bar");
-  timeline_bar.classList.remove('step-0', 'step-1', 'step-2', 'step-3', 'step-4');
-  timeline_bar.classList.add(`step-${step}`);
-
-
-  const icons = document.querySelectorAll(".timeline-icon");
-  icons.forEach((icon, index) => {
-    const isActive = (step === 3) ? true : (index < step);
-    if (isActive) {
-      icon.classList.add('active');
-    } else {
-      icon.classList.remove('active');
-    }
-  });
-
-  const item_actives = document.querySelectorAll(".item-active");
-  item_actives.forEach((icon, index) => {
-    const isActive = (step === 3) ? true : (index < step);
-    if (isActive) {
-      icon.classList.add('active');
-    } else {
-      icon.classList.remove('active');
-    }
-  });
+function add_class_hidden(selector) {
+  const toggleSelector = document.querySelector(selector);
+  if (toggleSelector.classList.contains("show")) {
+    toggleSelector.classList.remove("show");
+    toggleSelector.classList.add("hidden");
+  }
 }
 
+
+function updateTimeLine(step) {
+  const totalStep = 3;
+  const bar = document.querySelector(".timeline-bar");
+  const percentBar = (step / totalStep) * 100;
+  bar.style.backgroundSize = `${percentBar}% 100%`;
+
+
+  document.querySelectorAll(".timeline-icon").forEach((el, index) => {
+    const isActive = (step == totalStep) ? true : (index < step);
+    el.classList.toggle("active", isActive);
+  });
+
+  document.querySelectorAll(".item-active").forEach((el, index) => {
+    const isActive = (step == totalStep) ? true : (index < step);
+    el.classList.toggle("active", isActive);
+  });
+}
 
 function runParallax() {
   document.querySelectorAll(".imgs img").forEach((img, index) => {
@@ -67,14 +71,10 @@ function runParallax() {
   });
 }
 
-function getRemainingProducts() {
-  return document.querySelectorAll(".column-products .grid-products");
-}
-
 function updateTotalPrice(gridProduct, quantity) {
   const priceElement = gridProduct.querySelector('.col-price');
   const totalElement = gridProduct.querySelector('.col-total');
-  const priceNumber = parseInt(priceElement.textContent.replace(/,/g, ''));
+  const priceNumber = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
   const total = priceNumber * quantity;
   totalElement.textContent = total.toLocaleString('en-US') + ' VNĐ';
 }
@@ -86,7 +86,7 @@ function calculate() {
     const checkBox = item.querySelector(".col-action input");
     const totalElement = item.querySelector(".col-total");
     if (checkBox.checked) {
-      const priceNumber = parseInt(totalElement.textContent.replace(/,/g, ''));
+      const priceNumber = parseInt(totalElement.textContent.replace(/[^0-9]/g, ''));
       total += priceNumber;
     }
   });
@@ -160,9 +160,18 @@ function checkBoxEvent() {
   });
 }
 
+const updateUI = (remainingProducts) => {
+  if (remainingProducts === 0) {
+    add_class_hidden(".section-3 .user-card-body .card-non-empty");
+    add_class_show(".section-3 .user-card-body .card-empty");
+  } 
+} 
+
+
 function deleteEvent() {
   const deleteAllButton = document.querySelector(".column-feature .col-del i");
   const deleteButtons = document.querySelectorAll(".column-products .col-del i");
+  let remainingProducts = document.querySelectorAll(".column-products .grid-products");
   deleteAllButton.addEventListener('click', function () {
     if (confirm("xoá tất cả sản phẩm trong giỏ hàng")) {
       deleteButtons.forEach(btn => {
@@ -171,55 +180,48 @@ function deleteEvent() {
         const productId = grid_product.id;
         localStorage.removeItem(productId);
       });
+      remainingProducts = 0;
+      updateUI(remainingProducts);
     }
   })
 
-  let remainingProducts = getRemainingProducts();
   deleteButtons.forEach(item => {
     item.addEventListener('click', function () {
-      const grid_product = this.closest(".grid-products");
-      grid_product.remove();
-      const productId = grid_product.id;
-      localStorage.removeItem(productId);
-      let col_product_feature = document.querySelector(".column-feature .col-product");
-      col_product_feature.innerHTML = `Tất cả (${remainingProducts.length} sản phẩm)`;
-      calculate();
+      if (confirm("Xoá sản phẩm này ra khỏi giỏ hàng")) {
+        const grid_product = this.closest(".grid-products");
+        grid_product.remove();
+        const productId = grid_product.id;
+        localStorage.removeItem(productId);
+        remainingProducts = document.querySelectorAll(".column-products .grid-products").length;
+        updateUI(remainingProducts);
+        let col_product_feature = document.querySelector(".column-feature .col-product");
+        col_product_feature.innerHTML = `Tất cả (${remainingProducts.length} sản phẩm)`;
+        calculate();
+      }
     });
   });
-  if (remainingProducts.length === 0) {
-    const card_non_empty = document.querySelector(".section-3 .user-card-body .card-non-empty");
-    const card_empty = document.querySelector(".section-3 .user-card-body .card-empty");
-    if (card_non_empty) {
-      card_non_empty.classList.remove("show");
-      card_non_empty.classList.add("hidden");
-    }
-    if (card_empty) {
-      card_empty.classList.remove("hidden");
-      card_empty.classList.add("show");
-    }
-  }
 }
 
 function saveSelectedProducts() {
   const selectedProducts = [];
   const checkBoxes = document.querySelectorAll(".column-products .grid-products .col-action input:checked");
+  const time_now = new Date().toLocaleString('vi-VN');
 
   checkBoxes.forEach(item => {
     const gridProduct = item.closest(".grid-products");
-    if (gridProduct) {
-      const product = {
-        id: gridProduct.id,
-        name: gridProduct.querySelector('.col-product span').textContent,
-        price: gridProduct.querySelector('.col-price').textContent,
-        quantity: gridProduct.querySelector('.quantity').textContent,
-        total: gridProduct.querySelector('.col-total').textContent,
-        thumbnail: gridProduct.querySelector('.col-product img').src
-      }
-      selectedProducts.push(product);
-      console.log(selectedProducts);
+    const product = {
+      id: gridProduct.id,
+      name: gridProduct.querySelector('.col-product span').textContent,
+      price: gridProduct.querySelector('.col-price').textContent,
+      quantity: gridProduct.querySelector('.quantity').textContent,
+      total: gridProduct.querySelector('.col-total').textContent,
+      thumbnail: gridProduct.querySelector('.col-product img').src,
+      order_Date: time_now
     }
+    selectedProducts.push(product);
+    console.log(selectedProducts);
   });
-  return selectedProducts;
+  localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
 }
 
 function btn_products() {
@@ -233,14 +235,9 @@ function btn_products() {
       }
     });
     if (hasBoxChecked) {
-
-      saveSelectedProducts();
       updateTimeLine(1);
-      const section_4 = document.querySelector(".section-4");
-      if (section_4.classList.contains("hidden")) {
-        section_4.classList.remove("hidden");
-        section_4.classList.add("show");
-      }
+      add_class_show(".section-4")
+      scroll_To(".section-4");
       runParallax();
     } else {
       alert("Vui lòng chọn 1 sản phẩm trước khi xác nhận");
@@ -272,11 +269,7 @@ function saveUserInfo() {
   document.getElementById('displayGender').textContent = detailForm.sex;
   document.getElementById('empty-state').style.display = 'none';
   document.getElementById('infor-display').classList.add('show');
-  const col_right_UserInfo = document.querySelector(".section-4 .col-right");
-  if (col_right_UserInfo.classList.contains("hidden")) {
-    col_right_UserInfo.classList.remove("hidden");
-    col_right_UserInfo.classList.add("show");
-  }
+  add_class_show(".section-4 .col-right")
 }
 // end section-4
 
@@ -289,20 +282,16 @@ function selectBank() {
         el.classList.remove("active");
         el.classList.add("hidden");
       });
-      const credit_infor = document.querySelector(".credit-infor");
-      if (credit_infor.classList.contains("hidden")) {
-        credit_infor.classList.remove("hidden");
-        credit_infor.classList.add("show");
-      }
-      const card_default = document.querySelector(".card-default");
-      if (card_default.classList.contains("show")) {
-        card_default.classList.remove("show");
-        card_default.classList.add("hidden");
-      }
+      add_class_show(".credit-infor")
+      add_class_hidden(".card-default")
+
+      const card_circle = card.lastElementChild;
+      document.querySelectorAll(".card-circle").forEach(el => {
+        el === card_circle ? el.classList.add("active") : el.classList.remove("active");
+      })
 
       const bankId = this.id;
       const card_right = document.querySelector(`#bankData-${bankId}`);
-      console.log(card_right);
       if (card_right) {
         card_right.classList.remove("hidden");
         card_right.classList.add("active");
@@ -313,10 +302,10 @@ function selectBank() {
       btn_credit.onclick = () => {
         if (confirm("Chấp nhận chuyển khoản")) {
           localStorage.setItem('bankName', bankName);
-          const time_now = new Date().toLocaleString('vi-VN');
-          localStorage.setItem("order_Date", time_now);
+          saveSelectedProducts();
           displayOrderInfo();
-          toggleVisibility(".section-6");
+          add_class_show(".section-6");
+          scroll_To(".section-6");
           updateTimeLine(3);
         }
       }
@@ -327,23 +316,24 @@ function selectBank() {
 
 // section 6
 function displayOrderInfo() {
-  
+
   const detailForm = JSON.parse(localStorage.getItem("savedForm"));
   document.querySelector(".section-6 .buyer-card__body .buyer-name span").innerHTML = detailForm.fullName;
   document.querySelector(".section-6 .buyer-card__body .buyer-email span").innerHTML = detailForm.email;
   document.querySelector(".section-6 .buyer-card__body .buyer-phoneNumber span").innerHTML = detailForm.phoneNumber;
-  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.DateOfBirth;
+  document.querySelector(".section-6 .buyer-card__body .buyer-dateOfBirth span").innerHTML = detailForm.dateOfBirth;
   document.querySelector(".section-6 .buyer-card__body .buyer-gender span").innerHTML = detailForm.sex;
-  document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = order_Date;
+  document.querySelector(".section-6 .buyer-card__body .buyer-orderDate span").innerHTML = localStorage.getItem("order_Date");
 
   const courseList = document.querySelector(".course-list__body");
-  const selectedProducts = saveSelectedProducts();
+  const selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
   console.log(selectedProducts);
-  const totalCouseList = document.querySelector(".course-list__count");
-  totalCouseList.innerHTML = `${selectedProducts.length} khoá học`;
-  let htmls = '';
-  selectedProducts.forEach(item => {
-    htmls += `
+  if (selectedProducts.length > 0) {
+    const totalCouseList = document.querySelector(".course-list__count");
+    totalCouseList.innerHTML = `${selectedProducts.length} khoá học`;
+    let htmls = '';
+    selectedProducts.forEach(item => {
+      htmls += `
     <div class="course-item">
       <img src="${item.thumbnail}" alt="Course"
           class="course-item__thumb">
@@ -354,67 +344,52 @@ function displayOrderInfo() {
       </div>
     </div>
     `
-  });
-  courseList.innerHTML = htmls;
+    });
+    courseList.innerHTML = htmls;
+  }
 }
 // end section-6
 
 
-const allKeys = Object.keys(localStorage);
-const productKeys = allKeys.filter(key => key.startsWith('Product-'));
-if (productKeys.length > 0) {
-  const card_empty = document.querySelector(".section-3 .user-card-body .card-empty");
-  card_empty.classList.remove("show");
-  card_empty.classList.add("hidden");
-  const card_non_empty = document.querySelector(".section-3 .user-card-body .card-non-empty");
-  card_non_empty.classList.remove("hidden");
-  card_non_empty.classList.add("show");
-  fetchApi("http://localhost:3000/products")
-    .then(products => {
-      const cartItems = productKeys.map(key => {
-        const productId = key.replace('Product-', '');
-        const quantity = parseInt(localStorage.getItem(key));
-        const product = products.find(p => p.id == productId);
-        return {
-          ...product,
-          quantity: quantity
-        };
-      })
-      const productTotal = ` (${cartItems.length} sản phẩm)`
-      const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
-      col_feature_product.innerHTML += productTotal;
-      let htmls = "";
-      cartItems.forEach(item => {
-        const priceNumber = parseInt(item.price.replace(/,/g, ''));
-        let totalPrice = priceNumber * item.quantity;
-        totalPrice = totalPrice.toLocaleString('en-US') + ' VNĐ';
-        htmls += `
-        <div class="grid-products" id="Product-${item.id}">
+const cardItems = JSON.parse(localStorage.getItem("cardItems"));
+if (cardItems.length > 0) {
+  add_class_hidden(".section-3 .user-card-body .card-empty");
+  add_class_show(".section-3 .user-card-body .card-non-empty")
+
+  const productTotal = ` (${cardItems.length} sản phẩm)`
+  const col_feature_product = document.querySelector(".section-3 .column-feature .col-product");
+  col_feature_product.innerHTML += productTotal;
+  let htmls = "";
+  cardItems.forEach(item => {
+    const priceNumber = parseInt(item.priceNew.replace(/[^0-9]/g, ''));
+    let totalPrice = priceNumber * item.quantity;
+    totalPrice = totalPrice.toLocaleString('en-US') + ' VNĐ';
+    htmls += `
+        <div class="grid-products" id="">
           <div class="col-action">
             <input type="checkbox">
           </div>
           <div class="col-product">
-            <img src="${item.thumbnail}" alt="${item.name}">
-            <span>${item.name}</span> 
+            <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt="${item.courseName}">
+            <span>${item.courseName} - ${item.teacherName}</span> 
           </div>
-          <div class="col-price">${item.price}</div>
+          <div class="col-price">${item.priceNew}</div>
           <div class="col-quantity">
             <button class="btn-minus">-</button>
             <span class="quantity">${item.quantity}</span>
             <button class="btn-plus">+</button>
           </div>
-          <div class="col-total">${totalPrice}</div>
+          <div class="col-total">${item.priceNew}</div>
           <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
         </div>
       `
-      })
-      const column_products = document.querySelector(".section-3 .user-card-body .column-products");
-      column_products.innerHTML = htmls;
-      checkBoxEvent();
-      quantityButtons();
-      deleteEvent();
-      btn_products();
-    });
+  })
+  const column_products = document.querySelector(".section-3 .user-card-body .column-products");
+  column_products.innerHTML = htmls;
+  checkBoxEvent();
+  quantityButtons();
+  deleteEvent();
+  btn_products();
 }
 
 
@@ -440,7 +415,8 @@ form.addEventListener('submit', function (event) {
 
 const btn_UserInfo = document.querySelector(".section-4 .col-right button");
 btn_UserInfo.addEventListener('click', () => {
-  toggleVisibility(".section-5");
+  add_class_show(".section-5");
+  scroll_To(".section-5");
   updateTimeLine(2);
 })
 
