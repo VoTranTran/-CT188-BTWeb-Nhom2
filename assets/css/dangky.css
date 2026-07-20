@@ -58,7 +58,6 @@ body::after{
     font-size:40px; /* Phóng to chữ */
     font-weight:700; /* Chữ đậm */
     margin-bottom:12px; /* Khoảng cách phía dưới */
-    letter-spacing:1px; /* Giãn nhẹ các ký tự */
 }
 
 /* Mỗi ô nhập */
