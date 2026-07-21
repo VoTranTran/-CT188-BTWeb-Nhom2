@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/giohang.css">
-  
+
 </head>
 
 <body>
@@ -95,22 +95,20 @@
 
   <main>
     <!-- section 1 -->
-    <section class="section-1">
+    <section class="breadcrumb-section">
       <div class="container">
-        <ul class="inner-wrap">
-          <li class="list-item">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item">
             <i class="fa-solid fa-house"></i>
-            <a href="index.html">
-              <span>Trang chủ</span>
+            <a href="index.html" class="breadcrumb__link">
+              <span class="breadcrumb__text">Trang chủ</span>
             </a>
           </li>
-          <div class="item-between">
-            /
-          </div>
-          <li class="list-item">
+          <div class="breadcrumb__separator">/</div>
+          <li class="breadcrumb__item">
             <i class="fa-solid fa-cart-shopping"></i>
-            <a href="/">
-              <span>Giỏ hàng</span>
+            <a href="/" class="breadcrumb__link">
+              <span class="breadcrumb__text">Giỏ hàng</span>
             </a>
           </li>
         </ul>
@@ -121,60 +119,60 @@
 
     <!-- section 2 -->
 
-    <section class="section-2">
+    <section class="order-timeline-section">
       <div class="container">
         <div class="order-timeline">
-          <div class="timeline-bar"></div>
-          <ul class="inner-wrap">
-            <li class="list-item">
-              <div class="timeline-wrapper">
-                <div class="timeline-icon">
+          <div class="order-timeline__bar"></div>
+          <ul class="order-timeline__list">
+            <li class="order-timeline__item">
+              <div class="order-timeline__wrapper">
+                <div class="order-timeline__icon">
                   <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-                <div class="item-active"></div>
+                <div class="order-timeline__dot"></div>
               </div>
-              <div class="timeline-title">
+              <div class="order-timeline__title">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <strong class="timeline-content">Giỏ hàng</strong>
+                <strong class="order-timeline__content">Giỏ hàng</strong>
               </div>
             </li>
 
-            <li class="list-item">
-              <div class="timeline-wrapper">
-                <div class="timeline-icon">
+            <li class="order-timeline__item">
+              <div class="order-timeline__wrapper">
+                <div class="order-timeline__icon">
                   <i class="fa-regular fa-address-card"></i>
                 </div>
-                <div class="item-active"></div>
+                <div class="order-timeline__dot"></div>
               </div>
-              <div class="timeline-title">
+              <div class="order-timeline__title">
                 <i class="fa-regular fa-address-book"></i>
-                <strong class="timeline-content">Thông tin cá nhân</strong>
+                <strong class="order-timeline__content">Thông tin cá nhân</strong>
               </div>
             </li>
 
-            <li class="list-item">
-              <div class="timeline-wrapper">
-                <div class="timeline-icon">
+            <li class="order-timeline__item">
+              <div class="order-timeline__wrapper">
+                <div class="order-timeline__icon">
                   <i class="fa-solid fa-credit-card"></i>
                 </div>
-                <div class="item-active"></div>
+                <div class="order-timeline__dot"></div>
               </div>
-              <div class="timeline-title">
+              <div class="order-timeline__title">
                 <i class="fa-regular fa-credit-card"></i>
-                <strong class="timeline-content">Thanh Toán</strong>
+                <strong class="order-timeline__content">Thanh Toán</strong>
               </div>
             </li>
 
-            <li class="list-item">
-              <div class="timeline-wrapper">
-                <div class="timeline-icon">
+            <li class="order-timeline__item">
+              <div class="order-timeline__wrapper">
+                <div class="order-timeline__icon">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <div class="item-active"></div>
+                <div class="order-timeline__dot"></div>
               </div>
-              <div class="timeline-title">
+              <div class="order-timeline__title">
                 <i class="fa-solid fa-circle-check"></i>
-                <strong class="timeline-content">Hoàn thành</strong>
+                <strong class="order-timeline__content">Hoàn thành</strong>
               </div>
             </li>
           </ul>
@@ -186,43 +184,43 @@
 
     <!-- section 3 -->
 
-    <section class="section-3 show">
+    <section class="cart-section show">
       <div class="container">
-        <div class="user-card">
-          <div class="user-card-header">
-            <h2 class="user-cart__title">
+        <div class="cart">
+          <div class="cart__header">
+            <h2 class="cart__title">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span class="inner-desc">Giỏ hàng của bạn</span>
+              <span class="cart__title-text">Giỏ hàng của bạn</span>
             </h2>
           </div>
-          <div class="user-card-body">
-            <div class="card-empty show">
-              <div class="user-card-empty">
+          <div class="cart__body">
+            <div class="cart__content cart__content--empty">
+              <div class="cart__empty-message">
                 Chưa có sản phẩm trong giỏ hàng
               </div>
             </div>
-            <div class="card-non-empty hidden">
-              <div class="column-feature">
-                <div class="grid-products">
-                  <div class="col-action">
-                    <input type="checkbox" id="selectAll">
+            <div class="cart__content cart__content--non-empty cart__content--hidden">
+              <div class="cart__features">
+                <div class="cart-grid">
+                  <div class="cart-grid__col cart-grid__col--action">
+                    <input type="checkbox">
                   </div>
-                  <div class="col-product">Tất cả</div>
-                  <div class="col-price">Đơn giá</div>
-                  <div class="col-quantity">Số lượng</div>
-                  <div class="col-total">Thành tiền</div>
-                  <div class="col-del"><i class="fa-solid fa-trash-can"></i></div>
+                  <div class="cart-grid__col cart-grid__col--product">Tất cả</div>
+                  <div class="cart-grid__col cart-grid__col--price">Đơn giá</div>
+                  <div class="cart-grid__col cart-grid__col--quantity">Số lượng</div>
+                  <div class="cart-grid__col cart-grid__col--total">Thành tiền</div>
+                  <div class="cart-grid__col cart-grid__col--del"><i class="fa-solid fa-trash-can"></i></div>
                 </div>
               </div>
-              <div class="column-products">
+              <div class="cart__products-list">
 
               </div>
-              <div class="column-total-price">
-                <div>Tổng tiền hàng:
-                  <span>0 VNĐ</span>
+              <div class="cart__summary">
+                <div class="cart__total-box">Tổng tiền hàng:
+                  <span class="cart__total-price">0 VNĐ</span>
                 </div>
               </div>
-              <button class="button-1 btn__user-card">Xác nhận</button>
+              <button class="button-1 cart__btn-submit">Xác nhận</button>
             </div>
           </div>
         </div>
@@ -233,112 +231,69 @@
 
     <!-- section 4 -->
 
-    <section class="section-4 hidden">
-      <div class="inner-wrap">
-        <div class="imgs">
-          <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt="">
-          <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt="">
-          <img src="assets/images/0dcbe195-cd5e-41e1-9859-baf8a678e842-removebg-preview.png" alt="">
+    <section class="checkout-personal hidden">
+      <div class="checkout-personal__inner">
+        <div class="checkout-personal__images">
+          <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt=""
+            class="checkout-personal__img">
+          <img src="assets/images/bcbca4f6-70c3-4893-9cc5-211e4b6cf2ab-removebg-preview.png" alt=""
+            class="checkout-personal__img">
+          <img src="assets/images/0dcbe195-cd5e-41e1-9859-baf8a678e842-removebg-preview.png" alt=""
+            class="checkout-personal__img">
         </div>
         <div class="container">
-          <div class="grid-row">
-            <div class="col-left">
-              <div class="personal-wrap">
+          <div class="personal-block">
 
-                <div class="personal-header">
-                  <h2>
-                    <i class="fa-regular fa-address-card"></i>
-                    <span class="personal-detail">Thông tin cá nhân</span>
-                  </h2>
-                  <p class="personal-desc">Vui lòng nhập thông tin cá nhân trước khi thanh toán</p>
-                </div>
-
-                <div class="personal-detail">
-                  <div class="personal-card">
-                    <div class="card-title">
-                      <i class="fa-regular fa-id-card"></i>
-                      <span>Thông tin cơ bản</span>
-                    </div>
-                    <div class="card-body">
-                      <form id="personalForm">
-                        <div class="form-group">
-                          <label for="fullName">Họ và tên</label>
-                          <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A"
-                            autocomplete="name" required>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="Email">Email</label>
-                          <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
-                            autocomplete="email">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="phoneNumber">Số điện thoại</label>
-                          <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required>
-                        </div>
-                        <div class="form-row">
-                          <div class="form-group">
-                            <label for="dateOfBirth">Ngày sinh</label>
-                            <input name="dateOfBirth" id="dateOfBirth" type="date">
-                          </div>
-                          <div class="form-group">
-                            <label for="sex">Giới tính</label>
-                            <select name="sex" id="sex">
-                              <option>Nam</option>
-                              <option>Nữ</option>
-                              <option>Khác</option>
-                            </select>
-                          </div>
-                        </div>
-                        <button class="button-1" type="submit">Lưu thông tin</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="personal-block__header">
+              <h2 class=".personal-block__title">
+                <i class="fa-regular fa-address-card"></i>
+                <span class="personal-block__title">Thông tin cá nhân</span>
+              </h2>
+              <p class="personal-block__desc">Vui lòng nhập thông tin cá nhân trước khi thanh toán</p>
             </div>
-            <div class="col-right hidden">
-              <div class="profile-infor-wrap">
-                <div class="profile-infor-header">
-                  <div class="card-title">
-                    <i class="fa-regular fa-circle-user"></i>
-                    <span>Thông tin đã lưu</span>
-                  </div>
+
+            <div class="personal-block__body">
+              <div class="personal-card">
+                <div class="personal-card__header">
+                  <i class="fa-regular fa-id-card"></i>
+                  <span class="personal-card__title">Thông tin cơ bản</span>
                 </div>
-                <div class="profile-infor-body">
-                  <div class="infor-empty" id="empty-state">
-                    <p>Chưa có thông tin</p>
-                  </div>
-
-                  <div class="infor-display" id="infor-display">
-                    <div class="infor-row">
-                      <span class="infor-label">Họ và tên: </span>
-                      <span class="infor-value" id="displayName"></span>
+                <div class="personal-card__body">
+                  <form id="personalForm" class="personal-form">
+                    <div class="personal-form__group">
+                      <label for="fullName">Họ và tên</label>
+                      <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name"
+                        required class="personal-form__input">
                     </div>
 
-                    <div class="infor-row">
-                      <span class="infor-label">Email: </span>
-                      <span class="infor-value" id="displayEmail"></span>
+                    <div class="personal-form__group">
+                      <label for="Email">Email</label>
+                      <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
+                        autocomplete="email" class="personal-form__input">
                     </div>
 
-                    <div class="infor-row">
-                      <span class="infor-label">Số điện thoại: </span>
-                      <span class="infor-value" id="displayPhone"></span>
+                    <div class="personal-form__group">
+                      <label for="phoneNumber">Số điện thoại</label>
+                      <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required
+                        class="personal-form__input">
                     </div>
-
-                    <div class="infor-row">
-                      <span class="infor-label">Ngày sinh: </span>
-                      <span class="infor-value" id="displayBirthday"></span>
+                    <div class="form-row">
+                      <div class="personal-form__group">
+                        <label for="dateOfBirth">Ngày sinh</label>
+                        <input name="dateOfBirth" id="dateOfBirth" type="date" class="personal-form__input">
+                      </div>
+                      <div class="personal-form__group">
+                        <label for="sex">Giới tính</label>
+                        <select name="sex" id="sex" class="personal-form__input">
+                          <option>Nam</option>
+                          <option>Nữ</option>
+                          <option>Khác</option>
+                        </select>
+                      </div>
                     </div>
-
-                    <div class="infor-row">
-                      <span class="infor-label">Giới tính: </span>
-                      <span class="infor-value" id="displayGender"></span>
-                    </div>
-                  </div>
+                    <button class="button-1" type="submit">Lưu thông tin</button>
+                  </form>
                 </div>
-                <button class="button-1">Xác nhận</button>
               </div>
             </div>
           </div>
@@ -350,272 +305,156 @@
 
 
     <!-- section-5 -->
-    <section class="section-5 hidden">
+    <section class="checkout-payment hidden">
       <div class="container">
-        <div class="payment">
-          <div class="payment-header">
-            <h2 class="payment-content">
+        <div class="payment-block">
+          <div class="payment-block__header">
+            <h2 class="payment-block__title">
               <i class="fa-regular fa-credit-card"></i>
-              <span>Thanh toán</span>
+              <span class="payment-block__title-text">Thanh toán</span>
             </h2>
           </div>
-          <div class="payment-body">
+          <div class="payment-block__body">
             <div class="payment-amount">
-              <span class="amount-label">
+              <span class="payment-amount__label">
                 <i class="fa-solid fa-coins"></i>
                 Số tiền cần thanh toán:
               </span>
-              <span class="amount-value">0 VNĐ
+              <span class="payment-amount__value">0 VNĐ
               </span>
             </div>
 
 
-            <div class="credit-card">
-              <ul class="list-card" id="bank">
-                <li class="card-item" name="Ngân hàng TMCP Ngoại thương Việt Nam" id="1">
-                  <div class="card-item__hover">
+            <div class="payment-methods">
+              <ul class="payment-methods__list" id="bank">
+                <li class="payment-method-item" name="Ngân hàng TMCP Ngoại thương Việt Nam" id="1">
+                  <div class="payment-method-item__wrapper">
                     <img src="assets/images/logo-vietcomnbank.jpg" alt="Vietcombank">
-                    <div class="card-title">Ngân hàng TMCP Ngoại thương Việt Nam</div>
+                    <div class="payment-method-item__title">Ngân hàng TMCP Ngoại thương Việt Nam</div>
                   </div>
 
-                  <div class="card-circle"></div>
+                  <div class="payment-method-item__dot"></div>
                 </li>
-                <li class="card-item" name="Ngân hàng TMCP Quân đội" id="2">
-                  <div class="card-item__hover">
-                    <img src="assets/images/logo-mb.jpg" alt="MB Bank">
-                    <div class="card-title">Ngân hàng TMCP Quân đội</div>
+                <li class="payment-method-item" name="Ngân hàng TMCP Quân đội" id="2">
+                  <div class="payment-method-item__wrapper">
+                    <img class="payment-method-item__logo" src="assets/images/logo-mb.jpg" alt="MB Bank">
+                    <div class="payment-method-item__title">Ngân hàng TMCP Quân đội</div>
                   </div>
 
-                  <div class="card-circle"></div>
+                  <div class="payment-method-item__dot"></div>
                 </li>
-                <li class="card-item" name="Ngân hàng Nông nghiệp và PTNT Việt Nam" id="3">
-                  <div class="card-item__hover">
-                    <img src="assets/images/logo-agribank.jpg" alt="Agribank">
-                    <div class="card-title">Ngân hàng Nông nghiệp và PTNT Việt Nam</div>
+                <li class="payment-method-item" name="Ngân hàng Nông nghiệp và PTNT Việt Nam" id="3">
+                  <div class="payment-method-item__wrapper">
+                    <img class="payment-method-item__logo" src="assets/images/logo-agribank.jpg" alt="Agribank">
+                    <div class="payment-method-item__title">Ngân hàng Nông nghiệp và PTNT Việt Nam</div>
                   </div>
 
-                  <div class="card-circle"></div>
+                  <div class="payment-method-item__dot"></div>
                 </li>
-                <li class="card-item" name="Ví điện tử MoMo" id="4">
-                  <div class="card-item__hover">
-                    <img src="assets/images/Logo-MoMo.webp" alt="MoMo">
-                    <div class="card-title">Ví điện tử MoMo</div>
+                <li class="payment-method-item" name="Ví điện tử MoMo" id="4">
+                  <div class="payment-method-item__wrapper">
+                    <img class="payment-method-item__logo" src="assets/images/Logo-MoMo.webp" alt="MoMo">
+                    <div class="payment-method-item__title">Ví điện tử MoMo</div>
                   </div>
 
-                  <div class="card-circle"></div>
+                  <div class="payment-method-item__dot"></div>
                 </li>
               </ul>
             </div>
-            <div class="card-default show">Vui lòng chọn ngân hàng chuyển khoản</div>
+            <div class="payment-default show">Vui lòng chọn ngân hàng chuyển khoản</div>
 
 
-            <div class="credit-infor hidden">
-              <div class="grid-card-infor">
-                <div class="grid-card-left hidden">
-                  <div class="bank-infor">
-                    <div class="bank-name">Ngân hàng: </div>
-                    <div class="account-holder">Chủ tài khoản: </div>
-                    <div class="account-number">Số tài khoản: </div>
-                    <div class="content">Nội dung chuyển khoản: </div>
-                  </div>
+            <div class="payment-info hidden">
+              <div class="payment-info__grid">
+                <div class="payment-info__labels hidden">
+                  <div class="payment-info__label-item">Ngân hàng: </div>
+                  <div class="payment-info__label-item">Chủ tài khoản: </div>
+                  <div class="payment-info__label-item">Số tài khoản: </div>
+                  <div class="payment-info__label-item">Nội dung chuyển khoản: </div>
                 </div>
 
-                <div class="grid-card-right">
-                  <div class="bank-value hidden" id="bankData-1">
-                    <div class="bank-name-value">Vietcombank</div>
-                    <div class="account-holder-value">Bright English</div>
-                    <div class="account-number-value">1234 5678 9012 3456</div>
-                    <div class="content-value">....</div>
+                <div class="payment-info__values">
+                  <div class="bank-detail hidden" id="bankData-1">
+                    <div class="bank-detail__item">Vietcombank</div>
+                    <div class="bank-detail__item">Bright English</div>
+                    <div class="bank-detail__item">1234 5678 9012 3456</div>
+                    <div class="bank-detail__item">....</div>
                   </div>
-                  <div class="bank-value hidden" id="bankData-2">
-                    <div class="bank-name-value">MB Bank</div>
-                    <div class="account-holder-value">Bright English</div>
-                    <div class="account-number-value">9876 5432 1098 7654</div>
-                    <div class="content-value">....</div>
+                  <div class="bank-detail hidden" id="bankData-2">
+                    <div class="bank-detail__item">MB Bank</div>
+                    <div class="bank-detail__item">Bright English</div>
+                    <div class="bank-detail__item">9876 5432 1098 7654</div>
+                    <div class="bank-detail__item">....</div>
                   </div>
-                  <div class="bank-value hidden" id="bankData-3">
-                    <div class="bank-name-value">Agribank</div>
-                    <div class="account-holder-value">Bright English</div>
-                    <div class="account-number-value">5678 9012 3456 7890</div>
-                    <div class="content-value">....</div>
+                  <div class="bank-detail hidden" id="bankData-3">
+                    <div class="bank-detail__item">Agribank</div>
+                    <div class="bank-detail__item">Bright English</div>
+                    <div class="bank-detail__item">5678 9012 3456 7890</div>
+                    <div class="bank-detail__item">....</div>
                   </div>
-                  <div class="bank-value hidden" id="bankData-4">
-                    <div class="bank-name-value">MoMo</div>
-                    <div class="account-holder-value">Bright English</div>
-                    <div class="account-number-value">0987 654 321</div>
-                    <div class="content-value">....</div>
+                  <div class="bank-detail hidden" id="bankData-4">
+                    <div class="bank-detail__item">MoMo</div>
+                    <div class="bank-detail__item">Bright English</div>
+                    <div class="bank-detail__item">0987 654 321</div>
+                    <div class="bank-detail__item">....</div>
                   </div>
                 </div>
               </div>
-              <button class="button-1">Chuyển khoản ngay</button>
+              <button class="button-1 payment-info__submit-btn">Chuyển khoản ngay</button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- end section 5 -->
-
-    <!-- section-6 -->
-
-    <section class="section-6 hidden">
-      <div class="container">
-        <div class="order-success">
-          <div class="order-success__header">
-            <div class="order-sucess_badge">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="order-success__title-group">
-              <h2 class="order-success__title">Đăng kí khoá học thành công</h2>
-              <p class="order-success__subtitle">Cảm ơn bạn đã tin tưởng và lựa chọn chúng tôi!</p>
-            </div>
-          </div>
-          <div class="buyer-card">
-            <div class="buyer-card__header">
-              <i class="fa-solid fa-user"></i>
-              <span class="buyer-card__title">Thông tin người mua</span>
-            </div>
-            <div class="buyer-card__body">
-              <div class="buyer-card__row ">
-                <span class="buyer-card__label">
-                  Họ và tên
-                </span>
-                <span class="buyer-card__value buyer-name">
-                  <i class="fa-solid fa-user"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Email
-                </span>
-                <span class="buyer-card__value buyer-email">
-                  <i class="fa-solid fa-envelope"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Số điện thoại
-                </span>
-                <span class="buyer-card__value buyer-phoneNumber">
-                  <i class="fa-solid fa-phone"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Ngày sinh
-                </span>
-                <span class="buyer-card__value buyer-dateOfBirth">
-                  <i class="fa-solid fa-cake-candles"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Giới tính
-                </span>
-                <span class="buyer-card__value buyer-gender">
-                  <i class="fas fa-venus-mars"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-
-              <div class="buyer-card__row">
-                <span class="buyer-card__label">
-                  Thời gian đặt hàng
-                </span>
-                <span class="buyer-card__value buyer-orderDate">
-                  <i class="fa-regular fa-clock"></i>
-                  <span class="buyer-text"></span>
-
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="course-list">
-            <div class="course-list__header">
-              <div class="course-list__title">
-                <i class="fa-solid fa-book"></i>
-                Danh sách khoá học
-              </div>
-              <span class="course-list__count">0 khoá học</span>
-            </div>
-            <div class="course-list__body">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- end section-6 -->
   </main>
 
   <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="./assets/img/trangchu/logocty.png" alt="Logo công ty" />
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./assets/img/logo.png" alt="Logo công ty" />
+      </div>
+      <div class="footer-body">
+        <div class="footer-left">
+          <p class="footer-name">
+            Công ty Cổ phần Đầu tư phát triển Group 2
+          </p>
+          <p class="footer-info">
+            Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+            Tel: 0666188188 | Fax: 0188666188 | Email: groupsix@gmaill.com
+            <br />
+            Giờ làm việc: 7h - 11h30 | 13h - 21h
+          </p>
         </div>
-        <div class="footer-body">
-          <div class="footer-left">
-            <p class="footer-name">
-              Công ty Cổ phần Đầu tư phát triển Group 2
-            </p>
-            <p class="footer-info">
-              Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
-              Tel: 0666188188 | Fax: 0188666188 | Email: groupsix@gmaill.com
-              <br />
-              Giờ làm việc: 7h - 11h30 | 13h - 21h
-            </p>
-          </div>
-          <div class="footer-center">
-            <p class="footer-name">Follow us</p>
-            <ul class="footer-contact">
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-facebook footer-icon color-blue"
-                  ></i
-                  >CTY GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-youtube footer-icon color-red"
-                  ></i
-                  >GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                  STORIES</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-right">
-            <p class="footer-name">Hỗ trợ khách hàng</p>
-            <ul class="footer-support">
-              <li><a href="" class="footer-info">Chính sách và Bảo mật</a></li>
-              <li><a href="" class="footer-info">Quyền lợi khách hàng</a></li>
-              <li><a href="" class="footer-info">Hướng dẫn sử dụng</a></li>
-            </ul>
-          </div>
+        <div class="footer-center">
+          <p class="footer-name">Follow us</p>
+          <ul class="footer-contact">
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP 2</a>
+            </li>
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a>
+            </li>
+            <li>
+              <a href="" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                STORIES</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-name">Hỗ trợ khách hàng</p>
+          <ul class="footer-support">
+            <li><a href="" class="footer-info">Chính sách và Bảo mật</a></li>
+            <li><a href="" class="footer-info">Quyền lợi khách hàng</a></li>
+            <li><a href="" class="footer-info">Hướng dẫn sử dụng</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <a href="" class="btn-contact">
-      <i class="fa-brands fa-facebook-messenger color-blue"></i>
-    </a>
+    </div>
+  </footer>
+  <a href="" class="btn-contact">
+    <i class="fa-brands fa-facebook-messenger color-blue"></i>
+  </a>
 
   <script src="assets/js/giohang.js"></script>
 
