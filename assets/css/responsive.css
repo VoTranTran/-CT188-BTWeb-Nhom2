@@ -55,6 +55,7 @@
     padding: 0 20px 20px 20px;
     line-height: 2;
     font-size: 2rem;
+    
   }
   .menu-drawer-list a {
     display: inline-block;
@@ -63,6 +64,8 @@
   .navbar-link:hover {
     background-color: #fffbcc;
     font-weight: 500;
+    border-radius: 15px;
+    padding:1px 10px;
   }
   .mobile-drawer-logo {
     background-image: url(../img/logo.png);
