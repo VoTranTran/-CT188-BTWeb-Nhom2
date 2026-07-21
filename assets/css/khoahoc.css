@@ -2,10 +2,10 @@
 z-index: 999 !important;
 }
 .course-hero {
-background-color: #0056b3;
+background-color: #e3f2fd;
 color: #ffffff;
 padding: 4rem 0;
-border-bottom: 5px solid #ffc107;
+border-bottom: 5px solid #FCDD51 ;
 }
 .course-hero-inner {
 align-items: center;
@@ -16,15 +16,19 @@ flex: 1;
 }
 .course-info h1 {
 font-size: 3.2rem;
-color: #ffc107 !important;
+color: #001C66 !important;
 font-weight: 700;
 margin-bottom: 1.5rem;
 line-height: 1.3;
+background-color: rgba(99, 221, 255, 0.419);
+border-radius: 20px;
+padding: 6px 16px;
 }
 .course-desc {
 font-size: 1.6rem;
 margin-bottom: 2rem;
 line-height: 1.8;
+color: #475b65; 
 }
 .course-banner {
 flex: 1;
@@ -34,7 +38,7 @@ text-align: right;
 max-width: 100%;
 border-radius: 16px;
 box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-border: 3px solid #ffc107;
+border: 3px  ;
 }
 .course-content {
 padding: 5rem 0;
@@ -80,15 +84,15 @@ margin-bottom: 4rem;
 padding: 1.5rem 3rem;
 font-size: 2rem;
 font-weight: bold;
-border: 2px solid #0056b3;
+border: 2px solid #001C66;
 background-color: #ffffff;
-color: #0056b3;
+color: #001C66;
 border-radius: 30px;
 cursor: pointer;
 transition: all 0.3s ease;
 }
 .tab-btn.active, .tab-btn:hover {
-background-color: #0056b3;
+background-color: #001C66;
 color: #ffffff;
 box-shadow: 0 4px 10px rgba(0,86,179,0.3);
 }
@@ -124,8 +128,8 @@ color: #555;
 transition: all 0.3s ease;
 }
 .format-btn.active {
-background-color: #ffc107;
-color: #0056b3;
+background-color: #fcdd51;
+color: #001C66;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .section-title {
@@ -133,16 +137,16 @@ font-size: 2.4rem;
 font-weight: 700;
 margin-bottom: 2rem;
 margin-top: 3rem;
-border-bottom: 2px solid #0056b3;
+border-bottom: 2px solid #001C66;
 padding-bottom: 1rem;
-color: #0056b3 !important;
+color: #001C66 !important;
 }
 .content-left .section-title:first-child {
 margin-top: 0;
 }
 .syllabus-item {
 background-color: #f8f9fa;
-border-left: 5px solid #ffc107 !important;
+border-left: 5px solid #fcdd51 !important;
 padding: 2rem;
 margin-bottom: 1.5rem;
 border-radius: 0 8px 8px 0;
@@ -152,10 +156,10 @@ box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 font-size: 1.8rem;
 font-weight: 600;
 margin-bottom: 1rem;
-color: #0056b3 !important;
+color: #001C66;
 }
 .syllabus-item h3 i {
-color: #ffc107;
+color: #fcdd51;
 margin-right: 8px;
 }
 .teacher-selectors {
@@ -170,13 +174,13 @@ align-items: center;
 gap: 1rem;
 padding: 1rem 1.5rem;
 background-color: #ffffff;
-border: 2px solid #e3f2fd;
+border: 2px solid #001C66;
 border-radius: 30px;
 cursor: pointer;
 transition: all 0.3s ease;
 font-size: 1.4rem;
-font-weight: 600;
-color: #555;
+font-weight: 700;
+color: #001C66;
 }
 .teacher-btn img {
 width: 30px;
@@ -186,13 +190,13 @@ object-fit: cover;
 border: 2px solid transparent;
 }
 .teacher-btn.active {
-border-color: #0056b3;
-background-color: #f3fffe;
-color: #0056b3;
+border-color: #001C66;
+background-color: #001C66;
+color: #ffffff;
 box-shadow: 0 4px 10px rgba(0,86,179,0.1);
 }
 .teacher-btn.active img {
-border-color: #ffc107;
+border-color: #fcdd51;
 }
 .teacher-box {
 gap: 2rem;
@@ -207,22 +211,22 @@ width: 120px;
 height: 120px;
 object-fit: cover;
 border-radius: 50%;
-border: 4px solid #ffc107 !important;
+border: 4px solid #fcdd51 !important;
 }
 .teacher-info h3 {
 font-size: 2rem;
-color: #0056b3 !important;
+color: #001C66 !important;
 font-weight: 700;
 margin-bottom: 0.5rem;
 }
 .font-weight-bold {
 font-weight: bold;
 margin-bottom: 1rem;
-color: #0056b3 !important;
+color: #001C66 !important;
 }
 .sticky-sidebar {
 background-color: #ffffff;
-border: 2px solid #0056b3;
+border: 2px solid #001C66;
 padding: 2.5rem;
 border-radius: 12px;
 box-shadow: 0 10px 20px rgba(0,0,0,0.08);
@@ -242,7 +246,7 @@ margin-right: 1rem;
 .new-price {
 font-size: 3.2rem;
 font-weight: 700;
-color: #0056b3 !important;
+color: #001C66 !important;
 }
 #btn-add-cart {
 font-size: 1.8rem;
@@ -250,8 +254,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 1rem;
-background-color: #ffc107 !important;
-color: #0056b3 !important;
+background-color: #fcdd51 !important;
+color: #001C66 !important;
 border: none;
 transition: all 0.3s ease;
 }
@@ -275,18 +279,18 @@ gap: 1.5rem;
 font-size: 2rem;
 width: 25px;
 text-align: center;
-color: #ffc107 !important;
+color: #fcdd51 !important;
 }
 #cartPopup {
-background-color: #0056b3 !important;
+background-color: #001C66 !important;
 color: #ffffff !important;
-border: 2px solid #ffc107;
+border: 2px solid #fcdd51;
 font-weight: bold;
 font-size: 1.6rem;
 z-index: 9999;
 }
 #cartPopup i {
-color: #ffc107;
+color: #fcdd51;
 margin-right: 8px;
 }
 @keyframes slideDown {
@@ -329,11 +333,105 @@ white-space: nowrap;
 }
 }
 .menu-header__icon {
-    z-index: 1001 !important;
+z-index: 1001 !important;
 }
 .menu-overlay {
-    z-index: 1000 !important;
+z-index: 1000 !important;
 }
 .menu-drawer {
-    z-index: 1002 !important;
+z-index: 1002 !important;
+}
+/* ===== CẤP ĐỘ KHÓA HỌC & NÚT CHI TIẾT (BỔ SUNG VÀ LỌC SẠCH INLINE CSS) ===== */
+.btn-chi-tiet {
+display: block;
+text-align: center;
+padding: 10px;
+margin-top: 10px;
+border: 2px solid #001C66;
+border-radius: 8px;
+color: #001C66;
+font-weight: 700;
+font-size: 1.4rem;
+transition: all 0.3s ease;
+text-decoration: none;
+background-color: #f8f9fa;
+}
+.btn-chi-tiet:hover {
+background-color: #001C66;
+color: #ffffff;
+transform: translateY(-2px);
+}
+.btn-chi-tiet.w-100 {
+width: 100%;
+}
+.teacher-pair {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+.teacher-single {
+display: flex;
+gap: 15px;
+align-items: center;
+background: #ffffff;
+padding: 15px;
+border-radius: 12px;
+border: 1px solid #e3f2fd;
+flex: 1;
+min-width: 200px;
+}
+.teacher-single img {
+width: 70px !important;
+height: 70px !important;
+border-radius: 50% !important;
+object-fit: cover !important;
+border: 3px solid #fcdd51 !important;
+}
+.level-box {
+flex-direction: column;
+align-items: stretch;
+padding: 0;
+background: transparent;
+border: none;
+gap: 0;
+}
+.hidden-title {
+display: none;
+}
+.teacher-pair-title {
+font-size: 2.4rem; 
+font-weight: 700;
+color: #001C66;
+border-bottom: 2px solid #001C66; 
+padding-bottom: 1rem;
+margin-top: 3rem;
+margin-bottom: 2rem;
+}
+.teacher-single .teacher-info h3 {
+font-size: 1.8rem;
+color: #001C66;
+font-weight: 700;
+margin-bottom: 5px;
+}
+.teacher-single .teacher-info p {
+font-size: 1.4rem;
+font-weight: 600;
+}
+.sidebar-detail-group {
+margin-top: 20px;
+}
+.sidebar-detail-box {
+padding: 0;
+border: none;
+background: transparent;
+gap: 0;
+}
+/* ===== Hiệu ứng nảy lên (Bounce up) cho các nút chọn ===== */
+.tab-btn:hover, 
+.format-btn:hover, 
+.teacher-btn:hover {
+    transform: translateY(-2px); /* Kéo nút nảy lên 2px */
+    box-shadow: 0 6px 15px rgba(0, 28, 102, 0.15) !important; /* Đổ bóng màu xanh đen nhạt cho nút nổi bật hơn */
+    transition: all 0.3s ease;
 }
