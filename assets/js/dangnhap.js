@@ -70,7 +70,7 @@ function dangNhap(){
     // Kết quả đăng nhập
     if(dangNhapThanhCong){
         alert("Đăng nhập thành công!");
-        window.location.href = "trangchu.html";
+        window.location.href = "index.html";
     }
     else{
         document.getElementById("accountError").textContent = "Email hoặc số điện thoại hoặc mật khẩu không đúng.";
