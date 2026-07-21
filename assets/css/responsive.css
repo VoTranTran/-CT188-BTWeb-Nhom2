@@ -66,6 +66,7 @@
     font-weight: 500;
     border-radius: 15px;
     padding:1px 10px;
+    transform: translateY(-2px);
   }
   .mobile-drawer-logo {
     background-image: url(../img/logo.png);
