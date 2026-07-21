@@ -104,16 +104,21 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function addToCard() {
     let cardItems = JSON.parse(localStorage.getItem("cardItems")) || [];
+    // 1. Lấy thông tin Hình thức học (Online / Trực tiếp)
+    let formatName = document.querySelector(".format-btn.active").textContent.trim();
+    // 2. Lấy thông tin Cấp độ (Cơ bản / Nâng cao)
+    let levelName = document.querySelector(".teacher-group.active .teacher-box.active h3").textContent.trim();
     let card = {
       courseName: document.querySelector(".tab-btn.active").textContent,
       priceOld: document.querySelector("#price-old").textContent,
       priceNew: document.querySelector("#price-new").textContent,
-      teacherName: document.querySelector(".teacher-group.active .teacher-box.active h3").textContent.trim(),
+      // 3. Nối Hình thức học và Cấp độ lại với nhau
+      teacherName: formatName + " - " + levelName,
       quantity: 1
     };
     cardItems.push(card);
-    localStorage.setItem("cardItems", JSON.stringify(cardItems)) 
-    alert("Đã thêm vào giỏ hàng")
+    localStorage.setItem("cardItems", JSON.stringify(cardItems)); 
+    
   }
 
 
