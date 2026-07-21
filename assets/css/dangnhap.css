@@ -67,18 +67,19 @@ body::after{
     text-align:center;/* Căn giữa */
     color:#000000;/* Màu chữ */
     margin-bottom:10px;/* Khoảng cách phía dưới */
-    font-size:2.8rem; /* Kích thước chữ */
+    font-size:40px; /* Kích thước chữ */
+    font-weight:700; /* Chữ đậm */
 }
 
 /* Nhóm ô nhập */
 .form-group{
-    margin-bottom:20px;/* Khoảng cách giữa các nhóm nhập */
+    margin-bottom:22px;/* Khoảng cách giữa các nhóm nhập */
 }
 
 /* Tiêu đề ô nhập */
 .form-group label{
     display:block;/*Hiển thị trên một dòng riêng.*/
-    margin-bottom:8px;/* Khoảng cách với ô nhập */
+    margin-bottom:7px;/* Khoảng cách với ô nhập */
     font-weight:600;/* Chữ đậm */
     color:#333; /* Màu chữ */
 }

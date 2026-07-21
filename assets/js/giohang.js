@@ -129,9 +129,6 @@ function checkBoxEvent() {
     });
     calculate();
   })
-
-  console.log(checkBoxs);
-  console.log(...checkBoxs);
   checkBoxs.forEach(item => {
     item.addEventListener('change', function () {
       checkBoxAll.checked = [...checkBoxs].every(p => p.checked);
@@ -140,42 +137,30 @@ function checkBoxEvent() {
   });
 }
 
-const updateUI = (remainingProducts) => {
-  if (remainingProducts === 0) {
-    add_class(".cart__content--non-empty", "cart__content--hidden");
-    add_class(".cart__content--empty", "card__content--show");
-  }
-}
-
-
 function deleteEvent() {
+  let cardItems = JSON.parse(localStorage.getItem("cardItems")) || null;
   const deleteAllButton = document.querySelector(".cart__features .cart-grid__col--del i");
   const deleteButtons = document.querySelectorAll(".cart-grid--product-item .cart-grid__col--del i");
-  let remainingProducts = document.querySelectorAll(".cart-grid--product-item");
+  let col_product_feature = document.querySelector(".cart__features .cart-grid__col--product");
   deleteAllButton.addEventListener('click', function () {
     if (confirm("xoá tất cả sản phẩm trong giỏ hàng")) {
-      deleteButtons.forEach(btn => {
-        const grid_product = btn.closest(".cart-grid--product-item");
-        grid_product.remove();
-        const productId = grid_product.id;
-        localStorage.removeItem(productId);
-      });
-      remainingProducts = 0;
-      updateUI(remainingProducts);
+      localStorage.removeItem("cardItems");
+      document.querySelectorAll(".cart-grid--product-item").forEach(el => el.remove());
+      col_product_feature.textContent = `Tất cả (0 sản phẩm)`;
     }
   })
 
-  deleteButtons.forEach((item) => {
+  deleteButtons.forEach((item, index) => {
     item.addEventListener('click', function () {
       if (confirm("Xoá sản phẩm này ra khỏi giỏ hàng")) {
-        const grid_product = this.closest(".cart-grid--product-item");
-        grid_product.remove();
-        const productId = grid_product.id;
-        localStorage.removeItem(productId);
-        remainingProducts = document.querySelectorAll(".cart-grid--product-item").length;
-        updateUI(remainingProducts);
-        let col_product_feature = document.querySelector(".cart__features .cart-grid__col--product");
-        col_product_feature.textContent = `Tất cả (${remainingProducts} sản phẩm)`;
+        const productRow = item.closest(".cart-grid--product-item");
+        const productId = productRow.getAttribute("id");
+        console.log(productId);
+        cardItems = cardItems.filter(p => p.id !== productId);
+        
+        localStorage.setItem('cardItems', JSON.stringify(cardItems));
+        productRow.remove(); 
+        col_product_feature.textContent = `Tất cả (${cardItems.length} sản phẩm)`;
         calculate();
       }
     });
@@ -247,7 +232,6 @@ function selectBank() {
   })
 }
 // end section_5
-
 function renderCardItems() {
   const cardItems = JSON.parse(localStorage.getItem("cardItems"));
   if (cardItems.length > 0) {
@@ -270,7 +254,7 @@ function renderCardItems() {
 
       const gridProducts = document.createElement("div");
       gridProducts.className = "cart-grid cart-grid--product-item";
-      gridProducts.id = "";
+      gridProducts.id = item.id;
 
       const colAction = document.createElement("div");
       colAction.className = "cart-grid__col--action";

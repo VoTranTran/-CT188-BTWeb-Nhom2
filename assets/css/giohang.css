@@ -720,11 +720,11 @@
 
 
 /* section 5 */
-.section-5.hidden {
+.checkout-payment.hidden {
   display: none;
 }
 
-.section-5.show {
+.checkout-payment.show {
   display: block;
 }
 

@@ -21,8 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // document.querySelectorAll(".syllabus-list, .course-features").forEach(el => {
+    //   if (el.getAttribute("data-course") === currentCourse && el.getAttribute("data-format") === currentFormat) {
+    //     el.classList.add("active");
+    //   } else {
+    //     el.classList.remove("active");
+    //   }
+    // });
+
     document.querySelectorAll(".syllabus-list, .course-features").forEach(el => {
-      if (el.getAttribute("data-course") === currentCourse && el.getAttribute("data-format") === currentFormat) {
+      const parentTeacherBox = el.closest(".teacher-box");
+      const teacherIdx = parentTeacherBox ? parentTeacherBox.getAttribute("data-teacher") : null;
+      const isCorrectTeacher = !teacherIdx || teacherIdx === selectedTeachers[currentCourse];
+      if (el.getAttribute("data-course") === currentCourse && el.getAttribute("data-format") === currentFormat && isCorrectTeacher) {
         el.classList.add("active");
       } else {
         el.classList.remove("active");
@@ -101,19 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", checkHash);
   checkHash();
 
-  
+
   function addToCard() {
     let cardItems = JSON.parse(localStorage.getItem("cardItems")) || [];
-    let card = {
+    // 1. Lấy thông tin Hình thức học (Online / Trực tiếp)
+    let formatName = document.querySelector(".format-btn.active").textContent.trim();
+    // 2. Lấy thông tin Cấp độ (Cơ bản / Nâng cao)
+    let levelName = document.querySelector(".teacher-group.active .teacher-box.active h3").textContent.trim();
+    
+    let syllabusItem = document.querySelector('.syllabus-list.active');
+    let productId = syllabusItem.id;
+    let existingItem = cardItems.find(item => item.id === productId);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+    let card = { 
+      id: productId,
       courseName: document.querySelector(".tab-btn.active").textContent,
       priceOld: document.querySelector("#price-old").textContent,
       priceNew: document.querySelector("#price-new").textContent,
-      teacherName: document.querySelector(".teacher-group.active .teacher-box.active h3").textContent.trim(),
+      // 3. Nối Hình thức học và Cấp độ lại với nhau
+      teacherName: formatName + " - " + levelName,
       quantity: 1
     };
     cardItems.push(card);
-    localStorage.setItem("cardItems", JSON.stringify(cardItems)) 
-    alert("Đã thêm vào giỏ hàng")
+    }
+    localStorage.setItem("cardItems", JSON.stringify(cardItems));
   }
 
 

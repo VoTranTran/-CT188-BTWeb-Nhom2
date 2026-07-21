@@ -53,19 +53,24 @@ body::after{
 
 /* Tiêu đề */
 .dangky-box h1{
-    text-align:center; /* Căn giữa chữ */
+    text-align:center; /* Căn giữa */
     color:#000000; /* Màu chữ */
-    margin-bottom:10px; /* Khoảng cách phía dưới */
+    font-size:40px; /* Phóng to chữ */
+    font-weight:700; /* Chữ đậm */
+    margin-bottom:12px; /* Khoảng cách phía dưới */
 }
 
 /* Mỗi ô nhập */
 .form-group{
-    margin-bottom:18px; /* Khoảng cách giữa các nhóm */
+    margin-bottom:22px; /* Khoảng cách giữa các nhóm */
 }
 
-/* Tiêu đề */
+/* Tiêu đề ô nhập */
 .form-group label{
-    font-weight:600;
+    display:block;/*Hiển thị trên một dòng riêng.*/
+    margin-bottom:7px;/* Khoảng cách với ô nhập */
+    font-weight:600;/* Chữ đậm */
+    color:#333; /* Màu chữ */
 }
 
 /* Ô nhập */
