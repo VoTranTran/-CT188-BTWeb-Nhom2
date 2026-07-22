@@ -2,6 +2,7 @@
 * Tên file: khoahoc.html
 * Nhóm thực hiện: Nhóm 2
 * Thành viên code chính: Nguyễn An Khang - B2405508
+* Mục đích: Trang hiển thị chi tiết khóa học, lộ trình, giảng viên và chức năng thêm vào giỏ hàng.
 -->
 <!DOCTYPE html>
 <html lang="vi">
@@ -10,6 +11,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrightEnglish - Khóa học</title>
+
+  <!-- Nạp các file CSS theo thứ tự: Reset -> Style chung -> Style riêng -> Responsive (mức độ ưu tiên cao nhất) -->
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,16 +21,16 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/responsive.css" />
   <link rel="stylesheet" href="./assets/css/khoahoc.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
   <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
 </head>
 
 <body>
+  <!-- HEADER: Thanh điều hướng dùng chung -->
   <header class="header fixed">
     <div class="container">
       <div class="header-body">
-        <!-- Sửa class của thẻ <a> thành logo-link -->
         <a href="index.html" class="logo-link">
           <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
         </a>
@@ -39,8 +42,7 @@
           </ul>
           <ul class="navbar-right">
             <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
-                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
-            </li>
+                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a></li>
             <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
             <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
           </ul>
@@ -48,6 +50,8 @@
       </div>
     </div>
   </header>
+
+  <!-- MOBILE HEADER: Sử dụng Checkbox Hack để làm menu Drawer không cần JS -->
   <div class="mobile-header">
     <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
     <label for="menu-checkbox">
@@ -70,14 +74,9 @@
           </svg>
         </label>
       </div>
-
       <ul class="menu-drawer-list">
-        <li>
-          <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
-        </li>
+        <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a></li>
+        <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
         <li>
           <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a>
           <ul class="sub-menu">
@@ -86,57 +85,59 @@
           </ul>
         </li>
         <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
-        <li>
-          <a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a>
-        </li>
-        <li>
-          <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
-        </li>
+        <li><a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a></li>
+        <li><a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a></li>
       </ul>
     </div>
   </div>
+
+  <!-- PHẦN THÂN TRANG: Nội dung chi tiết khóa học -->
   <main class="course-detail-page">
+
+    <!-- KHỐI HERO: Banner và tiêu đề chính thay đổi theo độ tuổi -->
     <section class="course-hero">
       <div class="container">
         <div class="course-hero-inner toggle-flex active" data-course="mamnon">
           <div class="course-info">
             <h1>Tiếng Anh Mầm Non (3-5 tuổi)</h1>
-            <p class="course-desc">Phương pháp học qua bài hát, trò chơi và Flashcard giúp trẻ yêu thích
-              tiếng Anh ngay từ nhỏ.</p>
+            <p class="course-desc">Phương pháp học qua bài hát, trò chơi và Flashcard giúp trẻ yêu thích tiếng Anh ngay
+              từ nhỏ.</p>
           </div>
-          <div class="course-banner">
-            <img src="./assets/img/pp1.png" alt="Khóa học Mầm non">
-          </div>
+          <div class="course-banner"><img src="./assets/img/pp1.png" alt="Khóa học Mầm non"></div>
         </div>
         <div class="course-hero-inner toggle-flex" data-course="tieuhoc">
           <div class="course-info">
             <h1>Tiếng Anh Tiểu Học (6-11 tuổi)</h1>
-            <p class="course-desc">Xây dựng tư duy phản biện và nền tảng ngữ pháp vững chắc theo chuẩn
-              Cambridge.</p>
+            <p class="course-desc">Xây dựng tư duy phản biện và nền tảng ngữ pháp vững chắc theo chuẩn Cambridge.</p>
           </div>
-          <div class="course-banner">
-            <img src="./assets/img/pp2.png" alt="Khóa học Tiểu học">
-          </div>
+          <div class="course-banner"><img src="./assets/img/pp2.png" alt="Khóa học Tiểu học"></div>
         </div>
       </div>
     </section>
+
+    <!-- KHỐI NỘI DUNG: Chia làm 2 cột (Trái: Lộ trình - Phải: Giá & Nút giỏ hàng) -->
     <section class="course-content">
       <div class="container">
+
+        <!-- Tab điều hướng Nhóm độ tuổi -->
         <div class="course-tabs">
           <button class="tab-btn active" data-target="mamnon">Mầm Non (3-5 tuổi)</button>
           <button class="tab-btn" data-target="tieuhoc">Tiểu Học (6-11 tuổi)</button>
         </div>
+
+        <!-- Bố cục lưới Flexbox chia cột -->
         <div class="course-grid">
+
+          <!-- Cột Trái: Chứa thông tin lộ trình và giảng viên -->
           <div class="content-left">
             <div class="format-toggle">
               <button class="format-btn active" data-format="online">Học Online</button>
               <button class="format-btn" data-format="offline">Học Trực Tiếp</button>
             </div>
 
-            <!-- Áp dụng class để bỏ margin thay vì inline CSS -->
             <h2 class="section-title color-blue content-left-title-first">Lộ trình & Cấp độ khóa học</h2>
 
-            <!-- CẤP ĐỘ KHÓA HỌC: MẦM NON -->
+            <!-- KHỐI DỮ LIỆU: Mầm non -->
             <div class="teacher-group toggle-item active" data-course="mamnon">
               <div class="teacher-selectors">
                 <button class="teacher-btn active" data-teacher="0" data-offset="0">Khóa Cơ Bản</button>
@@ -220,7 +221,7 @@
               </div>
             </div>
 
-            <!-- CẤP ĐỘ KHÓA HỌC: TIỂU HỌC -->
+            <!-- KHỐI DỮ LIỆU: Tiểu học -->
             <div class="teacher-group toggle-item" data-course="tieuhoc">
               <div class="teacher-selectors">
                 <button class="teacher-btn active" data-teacher="0" data-offset="0">Khóa học cơ bản</button>
@@ -309,6 +310,7 @@
 
           </div>
 
+          <!-- Cột Phải: Chứa Box Giá tiền và thông số (Ghim Sticky) -->
           <div class="content-right">
             <div class="sticky-sidebar">
               <div class="price-box">
@@ -318,18 +320,16 @@
               <button id="btn-add-cart" class="modal-submit"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
                 hàng</button>
 
-              <!-- Mầm non - Online -->
+              <!-- Tính năng Mầm non - Online -->
               <ul class="course-features toggle-item active" data-course="mamnon" data-format="online"
                 data-old="1200000" data-new="799000">
                 <li><i class="fa-regular fa-clock"></i> <span>Thời lượng: <strong>24 buổi</strong></span></li>
                 <li><i class="fa-solid fa-desktop"></i> <span>Hình thức: <strong>Video Tương Tác</strong></span></li>
                 <li class="feature-level-container">
                   <div class="teacher-group toggle-item active" data-course="mamnon">
-                    <!-- Hiện khi chọn Khóa cơ bản -->
                     <div class="teacher-box toggle-flex active feature-level-box" data-teacher="0">
                       <i class="fa-solid fa-signal"></i> <span>Trình độ: <strong>Làm quen</strong></span>
                     </div>
-                    <!-- Hiện khi chọn Khóa nâng cao -->
                     <div class="teacher-box toggle-flex feature-level-box" data-teacher="1">
                       <i class="fa-solid fa-signal"></i> <span>Trình độ: <strong>Cơ bản - Khá</strong></span>
                     </div>
@@ -346,7 +346,7 @@
                 </div>
               </ul>
 
-              <!-- Mầm non - Offline -->
+              <!-- Tính năng Mầm non - Offline -->
               <ul class="course-features toggle-item" data-course="mamnon" data-format="offline" data-old="2500000"
                 data-new="1899000">
                 <li><i class="fa-regular fa-clock"></i> <span>Thời lượng: <strong>36 buổi</strong></span></li>
@@ -363,18 +363,16 @@
                 </div>
               </ul>
 
-              <!-- Tiểu học - Online -->
+              <!-- Tính năng Tiểu học - Online -->
               <ul class="course-features toggle-item" data-course="tieuhoc" data-format="online" data-old="1800000"
                 data-new="1299000">
                 <li><i class="fa-regular fa-clock"></i> <span>Thời lượng: <strong>48 buổi</strong></span></li>
                 <li><i class="fa-solid fa-desktop"></i> <span>Hình thức: <strong>Zoom 1 kèm 4</strong></span></li>
                 <li class="feature-level-container">
                   <div class="teacher-group toggle-item active" data-course="tieuhoc">
-                    <!-- Hiện khi chọn Khóa cơ bản -->
                     <div class="teacher-box toggle-flex active feature-level-box" data-teacher="0">
                       <i class="fa-solid fa-signal"></i> <span>Trình độ: <strong>Cơ bản - Nhập môn</strong></span>
                     </div>
-                    <!-- Hiện khi chọn Khóa nâng cao -->
                     <div class="teacher-box toggle-flex feature-level-box" data-teacher="1">
                       <i class="fa-solid fa-signal"></i> <span>Trình độ: <strong>Khá - Giỏi</strong></span>
                     </div>
@@ -391,7 +389,7 @@
                 </div>
               </ul>
 
-              <!-- Tiểu học - Offline -->
+              <!-- Tính năng Tiểu học - Offline -->
               <ul class="course-features toggle-item" data-course="tieuhoc" data-format="offline" data-old="3200000"
                 data-new="2499000">
                 <li><i class="fa-regular fa-clock"></i> <span>Thời lượng: <strong>60 buổi</strong></span></li>
@@ -413,8 +411,12 @@
       </div>
     </section>
   </main>
+
   <a href="#" class="btn-contact"><i class="fa-brands fa-facebook-messenger color-blue"></i></a>
+
+  <!-- Popup thông báo thêm giỏ hàng -->
   <div class="popup" id="cartPopup"><i class="fa-solid fa-circle-check"></i> Đã thêm vào giỏ hàng!</div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-logo">
@@ -435,8 +437,7 @@
                 2</a></li>
             <li><a href="#" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a>
             </li>
-            <li><a href="#" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                STORIES</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2 STORIES</a></li>
           </ul>
         </div>
         <div class="footer-right">
