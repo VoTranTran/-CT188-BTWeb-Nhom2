@@ -72,11 +72,11 @@
   box-sizing: border-box;
 }
 /* Khi rê chuột */
-.form-group input:hover{
+.input-group input:hover{
     border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
 }
 /* Khi nhập dữ liệu */
-.form-group input:focus{
+.input-group input:focus{
     background:#ffffff; /* Đổi nền thành màu trắng */
     border-color:#1976D2; /* Đổi màu viền sang xanh */
     outline:none; /* Bỏ viền mặc định của trình duyệt */
@@ -98,6 +98,10 @@
   opacity: 0.6;
   user-select: none;
 }
+.toggle:hover{
+    color:#0084ff;
+}
+
 
 /* Điều khoản sử dụng (Cách viết flexbox chuẩn của bạn bạn) */
 .terms {
