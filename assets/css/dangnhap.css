@@ -75,7 +75,7 @@
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
-  transition: .3s;
+  transition:all .3s ease;
 }
 /* Khi rê chuột */
 .form-group input:hover{
@@ -86,7 +86,9 @@
     background:#ffffff; /* Đổi nền thành màu trắng */
     border-color:#1976D2; /* Đổi màu viền sang xanh */
     outline:none; /* Bỏ viền mặc định của trình duyệt */
-    box-shadow:0 0 8px rgba(25,118,210,.25); /* Thêm hiệu ứng đổ bóng xanh */
+    box-shadow:
+        0 0 0 4px rgba(0,132,255,.12),
+        0 6px 18px rgba(0,132,255,.15); /* Thêm hiệu ứng đổ bóng xanh */
 }
 
 /* Password Box & Icon con mắt (Theo cách căn % của bạn bạn) */
