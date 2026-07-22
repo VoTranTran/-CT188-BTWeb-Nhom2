@@ -1,169 +1,146 @@
-/*TRANG ĐĂNG KÝ*/
-/* Nền trang */
-body{
-    font-family:"Open Sans",sans-serif;
-    background:linear-gradient(135deg,#F9FDFF,#E3F4FF,#D6EEFF);
-}
-/* Hình tròn trang trí góc trên trái */
-body::before{ 
-    content:""; /* Tạo phần tử giả */
-    position:fixed; /* Cố định trên màn hình */
-    width:350px; /* Chiều rộng */
-    height:350px; /* Chiều cao */
-    background:#FFE082; /* Màu vàng nhạt */
-    border-radius:50%; /* Tạo hình tròn */
-    top:-120px; /* Đưa lên phía trên */
-    left:-120px; /* Đưa sang bên trái */
-    opacity:0.25; /* Độ trong suốt */
-    z-index:-1;  /* Nằm phía sau nội dung */
-}
-/* Hình tròn trang trí góc dưới phải */
-body::after{
-    content:"";
-    position:fixed;
-    width:300px;
-    height:300px;
-    background:#90CAF9;
-    border-radius:50%;
-    bottom:-100px;
-    right:-100px;
-    opacity:0.25;
-    z-index:-1;
+/* 1. CONTAINER BAO NGOÀI (Chứa Banner đằng sau) */
+.container_register {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Đưa form ra giữa màn hình */
-.dangky-container{
-    width:100%; /* Chiều rộng chiếm toàn bộ màn hình */
-    min-height:calc(100vh - 80px); /*Chiều cao tối thiểu.*/
-    display:flex; /*Dùng Flexbox để dễ căn chỉnh các phần tử con.*/
-    justify-content:center; /*Căn giữa theo chiều ngang.*/
-    align-items:center; /*Căn giữa theo chiều dọc.*/
-    padding:100px 20px 40px; /*Khoảng cách bên trong lần lượt là phía trên, trái và phải, phía dưới*/
+/* Banner nằm đằng sau tự dãn full 100% chiều rộng */
+.register-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Khung đăng ký */
-.dangky-box{
-    width:500px; /* Chiều rộng khung */
-    background:#ffffff;
-    padding:40px;
-    border-radius:20px;  /* Bo góc */
-    border:2px solid #E3F2FD; /* Viền xanh nhạt */
-    box-shadow: 0 12px 30px rgba(30,136,229,.18); /* Đổ bóng */
+/* 2. KHUNG FORM ĐĂNG KÝ (Đè lên banner & tự co dãn) */
+.form-register {
+  position: absolute;
+  /* Căn trí chuẩn lót lòng trên không gian trống của banner */
+  left: 42.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 💡 Bắt chước bạn bạn: Dùng width % để khung dãn rộng ra khi kéo màn hình */
+  width: 35%; 
+  min-width: 340px; /* Giới hạn nhỏ nhất để không bị bóp nghẹt trên màn hình nhỏ */
+  max-width: 500px; /* Giới hạn lớn nhất để không bị vỡ giao diện */
+
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Tiêu đề */
-.dangky-box h1{
-    text-align:center; /* Căn giữa */
-    color:#000000; /* Màu chữ */
-    font-size:40px; /* Phóng to chữ */
-    font-weight:700; /* Chữ đậm */
-    margin-bottom:12px; /* Khoảng cách phía dưới */
+/* Tiêu đề & Mô tả */
+.form-register h1 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #0084ff;
+  margin-bottom: 8px;
 }
 
-/* Mỗi ô nhập */
-.form-group{
-    margin-bottom:22px; /* Khoảng cách giữa các nhóm */
+.subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-/* Tiêu đề ô nhập */
-.form-group label{
-    display:block;/*Hiển thị trên một dòng riêng.*/
-    margin-bottom:7px;/* Khoảng cách với ô nhập */
-    font-weight:600;/* Chữ đậm */
-    color:#333; /* Màu chữ */
+/* 3. CÁC Ô INPUT (Bắt chước bạn bạn: Dùng % để dãn dài ra) */
+.register-box {
+  width: 100%;
 }
 
-/* Ô nhập */
-.form-group input{
-    width:100%;
-    padding:13px;
-    border:1px solid #BBDEFB;
-    border-radius:10px;
-    transition:.3s; /* Hiệu ứng chuyển đổi */
-    background:#FCFEFF;
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-/* Khi bấm vào ô nhập */
-.form-group input:focus{
-    outline:none;
-    border-color:#1E88E5;
-    box-shadow: 0 0 10px rgba(30,136,229,.25); /* Hiệu ứng phát sáng */
-}
-/* Chữ báo lỗi */
-.error{
-    display:block; /*Hiển thị thành một dòng riêng.*/
-    color:red; /* Chữ màu đỏ */
-    font-size:1.3rem; /* Kích thước chữ */
-    margin-top:5px; /* Khoảng cách phía trên */
+/* Các thanh ngang (Họ tên, Email, Mật khẩu) dãn 100% theo form */
+.input-group input {
+  width: 100%; /* Dãn tràn 100% chiều rộng khung form */
+  padding: 14px 45px 14px 18px; /* Chừa 45px bên phải để không bị che con mắt */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #fafafa;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
 }
 
-/* Điều khoản */
-.checkbox{
-    display:flex;
-    align-items:center; /* Căn giữa theo chiều dọc */
-    margin:15px 0; /* Khoảng cách trên dưới */
-}
-.checkbox input{
-    margin-right:10px; /* Khoảng cách với dòng chữ */
+/* Password Box & Icon con mắt (Theo cách căn % của bạn bạn) */
+.password-box {
+  position: relative;
 }
 
-/* Nút đăng ký */
-button{
-    width:100%; /* Chiều rộng bằng form */
-    padding:13px; /* Chiều cao bên trong */
-    background:#1A72BF; /* Màu nền */
-    color:white; /* Màu chữ */
-    border:none; /* Bỏ viền mặc định */
-    border-radius:8px; /* Bo góc */
-    cursor:pointer; /*Khi đưa chuột vào sẽ hiện hình bàn tay.*/
-    margin-top:10px; /* Khoảng cách phía trên */
-    transition:0.3s; /* Hiệu ứng chuyển màu */
-}
-button:hover{ /*Khi đưa chuột vào nút.*/
-    background:#125B99; /*Đổi sang màu xanh đậm hơn.*/
+.toggle {
+  position: absolute;
+  right: 15px; /* Hoặc căn theo %: right: 4% */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  user-select: none;
 }
 
-/* Đăng nhập */
-.dangnhap-link{
-    text-align:center; /* Căn giữa */
-    margin-top:20px; /* Khoảng cách phía trên */
-}
-.dangnhap-link a{ /*Link đăng nhập.*/
-    color:#1A72BF; /* Màu xanh */
-    font-weight:bold; /* Chữ đậm */
-}
-.dangnhap-link a:hover{ /*Khi rê chuột vào link.*/
-    text-decoration:underline; /*Gạch chân liên kết.*/
+/* Điều khoản sử dụng (Cách viết flexbox chuẩn của bạn bạn) */
+.terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 18px 0;
+  font-size: 13px;
+  color: #555;
 }
 
-/* Quay về trang chủ */
-.trangchu-link{
-    text-align:center;/* Căn giữa */
-    margin-top:15px;/* Khoảng cách phía trên */
-}
-.trangchu-link a{/* Link quay về */
-    color:#666;
-}
-.trangchu-link a:hover{/* Khi rê chuột */
-    color:#1A72BF;
+.terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
 }
 
-.oNhapMatKhau{
-    position:relative; /*Làm phần tử cha để icon con mắt định vị bên trong.*/
+.terms a {
+  color: #0084ff;
+  text-decoration: none;
 }
-.oNhapMatKhau input{
-    width:100%;
-    padding-right:45px; /*Chừa khoảng trống bên phải*/
-    box-sizing:border-box;
+
+/* Nút Đăng ký (Dãn dài đồng bộ với các thanh input) */
+button.register {
+  width: 100%; /* Dãn 100% bằng với độ dài ô input */
+  padding: 13px;
+  background: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
 }
-.conMat{
-    position:absolute; /*Định vị tuyệt đối trong ô nhập mật khẩu.*/
-    right:15px;/* Cách mép phải */
-    top:50%;/*Đặt ở giữa theo chiều dọc.*/
-    transform:translateY(-50%);  /*Dịch lên 50% để nằm ở chính giữa hoàn toàn.*/
-    cursor:pointer;/* Hiển thị hình bàn tay */
-    color:#777; /* Màu xám */
+
+button.register:hover {
+  background: #0068ca;
 }
-.conMat:hover{/* Khi rê chuột */
-    color:#1A72BF;/* Đổi sang màu xanh */
+
+/* Điều hướng đăng nhập */
+.register_nav {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register_nav a {
+  color: #0084ff;
+  font-weight: 600;
+  text-decoration: none;
 }
