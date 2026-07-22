@@ -162,6 +162,16 @@ button.login:hover {
     text-decoration:underline;
 }
 
+/* Quên mật khẩu */
+.forgot-password{
+    color:#0084ff;
+    text-decoration:none;
+    transition:0.3s;
+}
+.forgot-password:hover{
+    text-decoration:underline;
+}
+
 /* Ô lấy mã */
 .code-box{
     display:flex; /*Hiển thị ô nhập và nút trên cùng một hàng.*/
