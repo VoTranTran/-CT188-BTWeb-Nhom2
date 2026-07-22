@@ -159,3 +159,13 @@ button.register:hover {
 .register_nav a:hover{
     text-decoration:underline;
 }
+
+/*HIỆU ỨNG INPUT*/
+.input-group input:hover{
+    border-color:#0084ff;
+}
+
+/* HIỆU ỨNG ICON MẮT*/
+.toggle:hover{
+    transform:translateY(-50%) scale(1.08);
+}
