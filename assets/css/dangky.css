@@ -22,8 +22,6 @@
   left: 42.5%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  /* 💡 Bắt chước bạn bạn: Dùng width % để khung dãn rộng ra khi kéo màn hình */
   width: 35%; 
   min-width: 340px; /* Giới hạn nhỏ nhất để không bị bóp nghẹt trên màn hình nhỏ */
   max-width: 500px; /* Giới hạn lớn nhất để không bị vỡ giao diện */
