@@ -1,221 +1,281 @@
-// LƯU MÃ XÁC NHẬN
-let maXacNhan = "";
+document.addEventListener("DOMContentLoaded", function () {
 
-// TẠO MÃ XÁC NHẬN 6 SỐ
-function taoMaXacNhan(){
-    maXacNhan = "";
-    // Ngẫu nhiên 6 chữ số
-    for(let i = 0; i < 6; i++){
-        maXacNhan += Math.floor(Math.random() * 10);
-    }
-    // Hiển thị mã xác nhận
-    alert("Mã xác nhận của bạn là: " + maXacNhan);
-}
+  // =========================
+  // FORM ĐĂNG NHẬP
+  // =========================
 
-// HÀM ĐĂNG NHẬP
-function dangNhap(){
-    // Xóa thông báo lỗi cũ
-    document.getElementById("accountError").textContent = "";
-    document.getElementById("passwordError").textContent = "";
+  const loginForm = document.getElementById("loginForm");
+  const forgotPasswordForm = document.getElementById("forgotPasswordForm");
+
+  // Mặc định chỉ hiển thị form đăng nhập
+  if (forgotPasswordForm) {
+    forgotPasswordForm.style.display = "none";
+  }
+
+  // =========================
+  // XỬ LÝ ĐĂNG NHẬP
+  // =========================
+
+  window.login = function () {
 
     // Lấy dữ liệu người dùng nhập
-    let account = document.getElementById("account").value;
-    let password = document.getElementById("password").value;
-    let hopLe = true;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-    // Kiểm tra tài khoản
-    if(account == ""){
-        document.getElementById("accountError").textContent = "Vui lòng nhập Email hoặc số điện thoại.";
-        hopLe = false;
-    }
-
-    // Kiểm tra mật khẩu
-    if(password == ""){
-        document.getElementById("passwordError").textContent = "Vui lòng nhập mật khẩu.";
-        hopLe = false;
-    }
-
-    // Nếu còn lỗi
-    if(hopLe == false){
-        return;
+    // Kiểm tra ô trống
+    if (!email || !password) {
+      alert("Vui lòng nhập đầy đủ thông tin!");
+      return;
     }
 
     // Lấy danh sách tài khoản
     let danhSachTaiKhoan = localStorage.getItem("danhSachTaiKhoan");
 
-    // Chưa có tài khoản
-    if(danhSachTaiKhoan == null || danhSachTaiKhoan == ""){
-        alert("Bạn chưa có tài khoản.");
-        return;
+    if (danhSachTaiKhoan === null || danhSachTaiKhoan === "") {
+      alert("Chưa có tài khoản nào!");
+      return;
     }
 
-    // Tách từng tài khoản
-    let ds = danhSachTaiKhoan.split(";");
+    // Tách thành từng tài khoản
+    let cacTaiKhoan = danhSachTaiKhoan.split(";");
 
     let dangNhapThanhCong = false;
 
-    // Kiểm tra từng tài khoản
-    for(let i = 0; i < ds.length - 1; i++){
-        let thongTin = ds[i].split("|");
-        let taiKhoan = thongTin[1];
-        let matKhau = thongTin[2];
-        if(account == taiKhoan && password == matKhau){
-            dangNhapThanhCong = true;
-            // Lưu tài khoản đang đăng nhập
-            localStorage.setItem("nguoiDungDangNhap", taiKhoan);
-            break;
-        }
+    for (let i = 0; i < cacTaiKhoan.length; i++) {
+
+      if (cacTaiKhoan[i] === "") {
+        continue;
+      }
+
+      let thongTin = cacTaiKhoan[i].split("|");
+
+      let taiKhoan = thongTin[1];
+      let matKhau = thongTin[2];
+
+      if (email === taiKhoan && password === matKhau) {
+
+        dangNhapThanhCong = true;
+
+        break;
+      }
+
     }
 
-    // Kết quả đăng nhập
-    if(dangNhapThanhCong){
-        alert("Đăng nhập thành công!");
-        window.location.href = "index.html";
-    }
-    else{
-        document.getElementById("accountError").textContent = "Email hoặc số điện thoại hoặc mật khẩu không đúng.";
-    }
-}
+    if (dangNhapThanhCong) {
 
-// HÀM CẬP NHẬT MẬT KHẨU
-function capNhatMatKhau(){
-    // Xóa thông báo lỗi
-    document.getElementById("accountErrorForgot").textContent = "";
-    document.getElementById("codeError").textContent = "";
-    document.getElementById("passwordErrorForgot").textContent = "";
-    document.getElementById("repasswordErrorForgot").textContent = "";
+      alert("Đăng nhập thành công!");
 
-    // Lấy dữ liệu
-    let account = document.getElementById("accountForgot").value;
-    let code = document.getElementById("code").value;
-    let password = document.getElementById("passwordForgot").value;
-    let repassword = document.getElementById("repasswordForgot").value;
+      window.location.href = "./index.html";
 
-    let hopLe = true;
+    } else {
 
-    // Kiểm tra tài khoản
-    if(account == ""){
-        document.getElementById("accountErrorForgot").textContent = "Vui lòng nhập Email hoặc số điện thoại.";
-        hopLe = false;
+      alert("Sai Email hoặc Mật khẩu!");
+
     }
 
-    // Kiểm tra mã xác nhận
-    if(code == ""){
-        document.getElementById("codeError").textContent = "Vui lòng nhập mã xác nhận.";
-        hopLe = false;
+  };
+
+  // =========================
+  // HIỂN THỊ FORM QUÊN MẬT KHẨU
+  // =========================
+
+  window.showForgotPassword = function () {
+
+    loginForm.style.display = "none";
+
+    forgotPasswordForm.style.display = "block";
+
+  };
+
+  // =========================
+  // QUAY LẠI FORM ĐĂNG NHẬP
+  // =========================
+
+  window.quayLaiDangNhap = function () {
+
+    forgotPasswordForm.style.display = "none";
+
+    loginForm.style.display = "block";
+
+  };
+
+  // =========================
+  // HIỆN / ẨN MẬT KHẨU
+  // =========================
+
+  const toggles = document.querySelectorAll(".toggle");
+
+  toggles.forEach(function (toggle) {
+
+    toggle.addEventListener("click", function () {
+
+      const input = this.previousElementSibling;
+
+      if (input.type === "password") {
+
+        input.type = "text";
+
+        this.style.opacity = "1";
+
+      } else {
+
+        input.type = "password";
+
+        this.style.opacity = "0.6";
+
+      }
+
+    });
+
+  });
+
+});
+// =========================
+// BIẾN LƯU MÃ XÁC NHẬN
+// =========================
+
+let verificationCode = "";
+
+// =========================
+// TẠO MÃ XÁC NHẬN
+// =========================
+
+window.createCode = function () {
+
+  verificationCode = "";
+
+  for (let i = 0; i < 6; i++) {
+
+    verificationCode += Math.floor(Math.random() * 10);
+
+  }
+
+  alert("Mã xác nhận của bạn là: " + verificationCode);
+
+};
+
+// =========================
+// CẬP NHẬT MẬT KHẨU
+// =========================
+
+window.updatePassword = function () {
+
+  const email = document.getElementById("emailForgot").value.trim();
+
+  const code = document.getElementById("code").value.trim();
+
+  const newPassword = document.getElementById("newPassword").value;
+
+  const confirmNewPassword =
+    document.getElementById("confirmNewPassword").value;
+
+  // Kiểm tra nhập đầy đủ
+
+  if (!email || !code || !newPassword || !confirmNewPassword) {
+
+    alert("Vui lòng điền đầy đủ thông tin!");
+
+    return;
+
+  }
+
+  // Kiểm tra mã xác nhận
+
+  if (code !== verificationCode) {
+
+    alert("Mã xác nhận không đúng!");
+
+    return;
+
+  }
+
+  // Kiểm tra mật khẩu nhập lại
+
+  if (newPassword !== confirmNewPassword) {
+
+    alert("Mật khẩu nhập lại không khớp!");
+
+    return;
+
+  }
+
+  // Lấy danh sách tài khoản
+
+  let danhSachTaiKhoan = localStorage.getItem("danhSachTaiKhoan");
+
+  if (danhSachTaiKhoan === null || danhSachTaiKhoan === "") {
+
+    alert("Không tìm thấy tài khoản!");
+
+    return;
+
+  }
+
+  // Tách danh sách tài khoản
+
+  let cacTaiKhoan = danhSachTaiKhoan.split(";");
+
+  let timThay = false;
+
+  let danhSachMoi = "";
+
+  for (let i = 0; i < cacTaiKhoan.length; i++) {
+
+    if (cacTaiKhoan[i] === "") {
+
+      continue;
+
     }
-    else if(code != maXacNhan){
-        document.getElementById("codeError").textContent = "Mã xác nhận không đúng.";
-        hopLe = false;
+
+    let thongTin = cacTaiKhoan[i].split("|");
+
+    let hoTen = thongTin[0];
+
+    let taiKhoan = thongTin[1];
+
+    let matKhau = thongTin[2];
+
+    if (taiKhoan === email) {
+
+      matKhau = newPassword;
+
+      timThay = true;
+
     }
 
-    // Kiểm tra mật khẩu
-    if(password == ""){
-        document.getElementById("passwordErrorForgot").textContent = "Vui lòng nhập mật khẩu mới.";
-        hopLe = false;
-    }
-    else if(password.length < 6){
-        document.getElementById("passwordErrorForgot").textContent = "Mật khẩu phải có ít nhất 6 ký tự.";
-        hopLe = false;
-    }
+    danhSachMoi += hoTen + "|" + taiKhoan + "|" + matKhau + ";";
 
-    // Kiểm tra nhập lại mật khẩu
-    if(repassword == ""){
-        document.getElementById("repasswordErrorForgot").textContent = "Vui lòng nhập lại mật khẩu.";
-        hopLe = false;
-    }
-    else if(password != repassword){
-        document.getElementById("repasswordErrorForgot").textContent = "Mật khẩu không trùng khớp.";
-        hopLe = false;
-    }
+  }
 
-    // Nếu còn lỗi
-    if(hopLe == false){
-        return;
-    }
+  // Không tìm thấy tài khoản
 
-    // Lấy danh sách tài khoản
-    let danhSachTaiKhoan = localStorage.getItem("danhSachTaiKhoan");
+  if (!timThay) {
 
-    if(danhSachTaiKhoan == null || danhSachTaiKhoan == ""){
-        alert("Chưa có tài khoản.");
-        return;
-    }
+    alert("Email không tồn tại!");
 
-    // Tách thành mảng
-    let ds = danhSachTaiKhoan.split(";");
-    let chuoiMoi = "";
-    let timThay = false;
+    return;
 
-    // Duyệt từng tài khoản
-    for(let i = 0; i < ds.length - 1; i++){
-        let thongTin = ds[i].split("|");
-        let hoTen = thongTin[0];
-        let taiKhoan = thongTin[1];
-        let matKhau = thongTin[2];
+  }
 
-        // Nếu đúng tài khoản thì đổi mật khẩu
-        if(taiKhoan == account){
-            matKhau = password;
-            timThay = true;
-        }
-        chuoiMoi += hoTen + "|" + taiKhoan + "|" + matKhau + ";";
-    }
+  // Lưu lại danh sách mới
 
-    // Không tìm thấy tài khoản
-    if(timThay == false){
-        document.getElementById("accountErrorForgot").textContent = "Email hoặc số điện thoại không tồn tại.";
-        return;
-    }
+  localStorage.setItem("danhSachTaiKhoan", danhSachMoi);
 
-    // Lưu lại
-    localStorage.setItem("danhSachTaiKhoan", chuoiMoi);
-    alert("Đổi mật khẩu thành công!");
-    window.location.href = "dangnhap.html";
-}
+  alert("Cập nhật mật khẩu thành công!");
 
-// HIỆN / ẨN MẬT KHẨU ĐĂNG NHẬP
-function anHienMatKhauDangNhap(){
-    let matKhau = document.getElementById("password");
-    let conMat = document.getElementById("conMatDangNhap");
+  // Xóa dữ liệu nhập
 
-    if(matKhau.type == "password"){
-        matKhau.type = "text";
-        conMat.classList.remove("fa-eye");
-        conMat.classList.add("fa-eye-slash");
-    }
-    else{
-        matKhau.type = "password";
-        conMat.classList.remove("fa-eye-slash");
-        conMat.classList.add("fa-eye");
-    }
-}
+  document.getElementById("emailForgot").value = "";
+  document.getElementById("code").value = "";
+  document.getElementById("newPassword").value = "";
+  document.getElementById("confirmNewPassword").value = "";
 
-// HIỆN / ẨN MẬT KHẨU DÙNG CHUNG
-function anHienMatKhau(idMatKhau,idConMat){
-    let matKhau = document.getElementById(idMatKhau);
-    let conMat = document.getElementById(idConMat);
+  verificationCode = "";
 
-    if(matKhau.type == "password"){
-        matKhau.type = "text";
-        conMat.classList.remove("fa-eye");
-        conMat.classList.add("fa-eye-slash");
-    }
-    else{
-        matKhau.type = "password";
-        conMat.classList.remove("fa-eye-slash");
-        conMat.classList.add("fa-eye");
-    }
-}
+  // Quay về form đăng nhập
 
-// MỞ FORM QUÊN MẬT KHẨU
-function moQuenMatKhau(){
-    document.getElementById("formDangNhap").style.display = "none";
-    document.getElementById("formQuenMatKhau").style.display = "block";
-}
+  forgotPasswordForm.style.display = "none";
 
-// QUAY LẠI ĐĂNG NHẬP
-function quayLaiDangNhap(){
-    document.getElementById("formDangNhap").style.display = "block";
-    document.getElementById("formQuenMatKhau").style.display = "none";
-}
+  loginForm.style.display = "block";
+
+};
