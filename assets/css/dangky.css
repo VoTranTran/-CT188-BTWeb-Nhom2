@@ -71,6 +71,17 @@
   outline: none;
   box-sizing: border-box;
 }
+/* Khi rê chuột */
+.form-group input:hover{
+    border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
+}
+/* Khi nhập dữ liệu */
+.form-group input:focus{
+    background:#ffffff; /* Đổi nền thành màu trắng */
+    border-color:#1976D2; /* Đổi màu viền sang xanh */
+    outline:none; /* Bỏ viền mặc định của trình duyệt */
+    box-shadow:0 0 8px rgba(25,118,210,.25); /* Thêm hiệu ứng đổ bóng xanh */
+}
 
 /* Password Box & Icon con mắt (Theo cách căn % của bạn bạn) */
 .password-box {
@@ -136,9 +147,11 @@ button.register:hover {
   font-size: 14px;
   color: #666;
 }
-
 .register_nav a {
   color: #0084ff;
   font-weight: 600;
   text-decoration: none;
+}
+.register_nav a:hover{
+    text-decoration:underline;
 }
