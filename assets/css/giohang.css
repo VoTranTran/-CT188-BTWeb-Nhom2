@@ -21,7 +21,7 @@
 
 /* end button */
 
-/* section 1 */
+/* breadcrumb */
 
 .breadcrumb {
   display: flex;
@@ -149,9 +149,9 @@
   }
 }
 
-/* end section 1 */
+/* end breadcrumb */
 
-/* section 2 */
+/* order-timeline */
 .order-timeline-section {
   margin: 25px 0;
   position: sticky;
@@ -239,7 +239,7 @@
 }
 
 @media (max-width: 992px) {
-  .order-timeline__icon{
+  .order-timeline__icon {
     padding: 15px;
   }
 
@@ -277,7 +277,7 @@
     right: 10%;
   }
 
-  .order-timeline__title{
+  .order-timeline__title {
     font-size: 11px;
     line-height: 1.3;
   }
@@ -291,9 +291,9 @@
   }
 }
 
-/* end section 2 */
+/* end order-timeline */
 
-/* section 3 */
+/* cart */
 .cart-section {
   margin: 100px 0;
 }
@@ -436,19 +436,19 @@
 }
 
 @media (max-width: 768px) {
+
   .cart__features .cart-grid__col--price,
   .cart__features .cart-grid__col--quantity,
   .cart__features .cart-grid__col--total {
     display: none;
   }
 
-  /* Khung bọc sản phẩm đổi thành Flex hàng ngang */
+  .cart-grid,
   .cart-grid--product-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
   }
 
   .cart-grid--product-item .cart-grid__col--action,
@@ -462,7 +462,8 @@
     align-items: center;
     gap: 10px;
     flex: 1;
-  } 
+  }
+
   .cart-grid--product-item .cart-grid__col--product {
     flex: 1;
   }
@@ -518,10 +519,10 @@
   }
 }
 
-/* end section 3 */
+/* end cart */
 
 
-/* section-4 */
+/* checkout-personal */
 .checkout-personal {
   margin: 100px auto;
   width: 80%;
@@ -575,11 +576,6 @@
   right: 5px;
   top: -25px;
   border-radius: 16px;
-}
-
-.section-4 .container {
-  margin-right: 2.5%;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .personal-block__header {
@@ -701,6 +697,8 @@
   .personal-block__title {
     font-size: 24px;
   }
+
+
 }
 
 @media (max-width: 576px) {
@@ -716,10 +714,10 @@
 }
 
 
-/* end section 4 */
+/* end checkout-personal */
 
 
-/* section 5 */
+/* checkout-payment */
 .checkout-payment.hidden {
   display: none;
 }
@@ -870,77 +868,72 @@
   display: none;
 }
 
-.bank-detail--active {
-  display: block;
-}
-
-.bank-detail__item {
-  
-  
-  line-height: 1.6;
-}
-
 .payment-info__submit-btn {
   margin: 50px auto;
 }
 
 
 @media (max-width: 992px) {
-  .section-5 .payment .payment-body .credit-card .list-card .card-item .card-circle {
+  .payment-method-item__dot {
     display: none;
   }
 
-  .section-5 .payment .payment-body .credit-card .list-card .card-item {
+  .payment-method-item {
     width: calc(100% / 4 - 30px);
   }
 
-  .section-5 .payment .payment-body .credit-card .list-card .card-item .card-title {
+  .payment-method-item__title {
     padding: 9px;
   }
 
-  .section-5 .payment .payment-body .card-default {
+  .payment-default {
     padding: 80px;
     font-size: 18px;
   }
 }
 
 @media (max-width: 786px) {
-  .section-5 .payment .payment-body .credit-card .list-card .card-item {
+  .payment-method-item {
     width: calc(100% / 4 - 15px);
   }
 
-  .section-5 .payment .payment-body .credit-card .list-card .card-item .card-title {
+  .payment-method-item__title {
     padding: 5px;
   }
 
-  .section-5 .payment .payment-body .card-default {
-  padding: 60px;
-  font-size: 16px;
-}
+  .payment-default {
+    padding: 60px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 576px) {
-  .section-5 .payment .payment-body .credit-card .list-card .card-item .card-title {
+  .payment-method-item__title {
     display: none;
   }
 
-  .section-5 .payment .payment-body .credit-infor .bank-infor {
+  .payment-info__labels {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .payment-info__values {
     font-size: 13px;
   }
 
-  .section-5 .payment .payment-body .credit-infor .grid-card-infor .grid-card-right .bank-value {
+  .bank-detail {
+    gap: 8px;
     font-size: 13px;
-    font-weight: 600;
   }
 
-  .section-5 .payment .payment-body .credit-infor .grid-card-infor {
+  .payment-info__grid {
     gap: 15px;
   }
 
-  .section-5 .payment .payment-body .card-default {
+  .payment-default {
     padding: 40px;
     font-size: 14px;
   }
 }
 
-/* end section 5 */
+/* checkout-payment */
