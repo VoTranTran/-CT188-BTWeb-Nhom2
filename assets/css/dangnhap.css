@@ -162,27 +162,6 @@ button.login:hover {
     text-decoration:underline;
 }
 
-/* Thông báo lỗi */
-.error{
-    display:block;/* Hiển thị trên một dòng */
-    color:red;/* Màu đỏ */
-    font-size:12px;/* Kích thước chữ */
-    margin-top:5px; /* Khoảng cách phía trên */
-    text-align:left;
-}
-
-/* Điều hướng Quên mật khẩu */
-.quenmatkhau-link{
-    text-align:right;/* Căn phải */
-    margin-top:15px;/* Khoảng cách phía trên */
-}
-.quenmatkhau-link a{/* Link quên mật khẩu */
-    color:#1976D2;
-}
-.quenmatkhau-link a:hover{/* Khi rê chuột */
-    text-decoration:underline;
-}
-
 /* Ô lấy mã */
 .code-box{
     display:flex; /*Hiển thị ô nhập và nút trên cùng một hàng.*/
