@@ -135,13 +135,19 @@
         <!-- Mật khẩu (Giữ lại icon con mắt toggle) -->
         <div class="input-group password-box">
           <input type="password" id="password" placeholder="Mật khẩu" required />
-          <span class="toggle">👁</span>
+          <i id="loginEye"
+              class="fa-solid fa-eye toggle"
+              onclick="toggleLoginPassword()">
+          </i>
         </div>
 
         <!-- Nhập lại mật khẩu (Giữ lại icon con mắt toggle) -->
         <div class="input-group password-box">
           <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
-          <span class="toggle">👁</span>
+          <i id="confirmloginEye"
+              class="fa-solid fa-eye toggle"
+              onclick="toggleLoginPassword()">
+          </i>
         </div>
 
         <!-- Điều khoản -->
