@@ -119,7 +119,7 @@
     <img src="./assets/img/dangnhap/banner.png" alt="BrightEnglish Banner" class="login-img">
 
     <!-- ================= ĐĂNG NHẬP ================= -->
-    <form action="" class="form-login">
+    <form action="" class="form-login" id="loginForm">
       <h1>Đăng Nhập</h1>
       <p class="subtitle">Chào mừng bạn quay trở lại với BrightEnglish</p>
 
@@ -133,19 +133,7 @@
           <!-- Mật khẩu -->
           <div class="input-group password-box">
             <input type="password" id="password" placeholder="Mật khẩu" required>
-            <i id="loginEye"
-              class="fa-solid fa-eye toggle"
-              onclick="toggleLoginPassword()">
-            </i>
-          </div>
-
-          <!-- Nhập lại mật khẩu  -->
-          <div class="input-group password-box">
-            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
-            <i id="confirmloginEye"
-              class="fa-solid fa-eye toggle"
-              onclick="toggleLoginPassword()">
-            </i>
+            <i class="fa-solid fa-eye toggle"></i>
           </div>
 
           <!-- Remember -->
@@ -154,7 +142,11 @@
               <input type="checkbox" id="remember">
               Ghi nhớ đăng nhập
             </label>
-            <a href="#" class="forgot-password" onclick="showForgotPassword()">Quên mật khẩu?</a>
+            <a href="javascript:void(0)"
+              class="forgot-password"
+              onclick="showForgotPassword()">
+              Quên mật khẩu?
+            </a>
           </div>
 
           <!--Nút đăng nhập-->
@@ -170,7 +162,7 @@
     </form>
 
     <!-- ================= QUÊN MẬT KHẨU ================= -->
-    <form action="" class="form-login">
+    <form action="" class="form-login" id="forgotPasswordForm">
       <h1>Quên Mật Khẩu</h1>
       <p class="subtitle">Khôi phục mật khẩu tài khoản BrightEnglish</p>
 
@@ -192,26 +184,20 @@
         <!-- Mật khẩu mới -->
         <div class="input-group password-box">
           <input type="password" id="newPassword" placeholder="Mật khẩu mới">
-          <i id="newPasswordEye" class="fa-solid fa-eye toggle"
-            onclick="togglePassword('newPassword','newPasswordEye')">
-          </i>
+          <i class="fa-solid fa-eye toggle"></i>
         </div>
 
         <!-- Nhập lại mật khẩu mới -->
         <div class="input-group password-box">
           <input type="password" id="confirmNewPassword" placeholder="Nhập lại mật khẩu mới">
-          <i
-            id="confirmPasswordEye"
-            class="fa-solid fa-eye toggle"
-            onclick="togglePassword('confirmNewPassword','confirmPasswordEye')">
-          </i>
+          <i class="fa-solid fa-eye toggle"></i>
         </div>
 
-        <button type="button" class="login" onclick="capNhatMatKhau()">Cập nhật mật khẩu</button>
+        <button type="button" class="login" onclick="updatePassword()">Cập nhật mật khẩu</button>
 
         <div class="login_nav">
           <p>
-            <a href="#" onclick="quayLaiDangNhap()">← Quay lại Đăng nhập</a>
+            <a href="#" onclick="backToLogin()">← Quay lại Đăng nhập</a>
           </p>
         </div>
 
