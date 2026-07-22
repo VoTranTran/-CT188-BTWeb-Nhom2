@@ -55,6 +55,7 @@
     padding: 0 20px 20px 20px;
     line-height: 2;
     font-size: 2rem;
+    
   }
   .menu-drawer-list a {
     display: inline-block;
@@ -63,6 +64,8 @@
   .navbar-link:hover {
     background-color: #fffbcc;
     font-weight: 500;
+    border-radius: 15px;
+    padding:1px 10px;
   }
   .mobile-drawer-logo {
     background-image: url(../img/logo.png);
@@ -169,17 +172,40 @@
     right: 20px;
   }
   /* ====================Đăng ký================================== */
+  /* 1. Tắt icon con mắt mặc định của trình duyệt Edge/Chrome/IE */
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+
+  /* 2. Fix khung container và form đăng ký trên điện thoại/tablet */
   .register-img {
     display: none;
   }
   .container_register {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    padding: 30px 15px;
+    min-height: auto;
+    background: #eef7ff; /* Phông nền nhẹ chống trống trải khi ẩn banner */
   }
   .form-register {
+    position: relative; /* Chuyển từ absolute về relative để không bị nhảy lệch */
+    left: auto;
+    top: auto;
+    transform: none;
     width: 100%;
+    max-width: 420px;
     margin: 0 auto;
+    padding: 25px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
+  
+  /* Tạo khoảng lót để chữ khi gõ không cấn vào icon con mắt */
+  .input-group input {
+    padding-right: 40px !important;
+  }
+
   .container_register > div {
     flex: 0;
   }

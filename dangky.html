@@ -19,14 +19,17 @@
   <header class="header fixed">
       <div class="container">
         <div class="header-body">
-          <a href="index.html" class="logo"></a>
+          <!-- Sửa class của thẻ <a> thành logo-link -->
+        <a href="index.html" class="logo-link">
+            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+        </a>
           <nav class="navbar">
             <ul class="navbar-left">
               <li>
                 <a href="index.html" >Trang chủ</a>
               </li>
-              <li><a href="./gioithieu.html">Giới thiệu</a></li>
-              <li><a href="./khoahoc.html">Khóa học</a></li>
+              <li><a href="./gioithieu.html" >Giới thiệu</a></li>
+              <li><a href="./khoahoc.html" >Khóa học</a></li>
             </ul>
             <ul class="navbar-right">
               <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
@@ -40,81 +43,124 @@
           </nav>
         </div>
       </div>
-  </header>
+    </header>
 
-  <div class="dangky-container"> <!-- Khung chứa toàn bộ phần đăng ký -->
-    <div class="dangky-box"> <!-- Hộp chứa form đăng ký -->
-
-      <!-- Tiêu đề -->
-      <h1>Tạo tài khoản</h1>
-        
-      <!-- Form đăng ký -->
-      <form id="registerForm">
-
-        <!-- Họ và tên -->
-        <div class="form-group">
-          <label for="fullname">Họ và tên</label> <!-- Nhãn của ô nhập -->
-          <input type="text" id="fullname" placeholder="Nhập họ và tên"> <!-- Ô nhập họ tên -->
-          <small id="fullnameError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
-        </div>
-
-        <!-- Email hoặc số điện thoại -->
-        <div class="form-group">
-          <label for="account">Email hoặc số điện thoại</label> <!-- Nhãn của ô nhập -->
-          <input type="text" id="account" placeholder="Nhập email hoặc số điện thoại"> <!-- Ô nhập sđt hoặc email -->
-          <small id="accountError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
-        </div>
-
-        <!-- Mật khẩu -->
-        <div class="form-group">
-          <label for="password">Mật khẩu</label> <!-- Nhãn của ô nhập -->
-          <div class="oNhapMatKhau"> <!-- Khung chứa ô nhập và icon con mắt -->
-            <input type="password" id="password" placeholder="Nhập mật khẩu"> <!-- Ô nhập mật khẩu -->
-            <i
-              id="conMat1"
-              class="fa-solid fa-eye conMat"
-              onclick="anHienMatKhau('password','conMat1')">
-            </i> <!-- Icon hiện/ẩn mật khẩu -->
-          </div>
-          <small id="passwordError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
-        </div>
-
-        <!-- Nhập lại mật khẩu -->
-        <div class="form-group">
-          <label for="repassword"> Nhập lại mật khẩu</label> <!-- Nhãn của ô nhập -->
-          <div class="oNhapMatKhau">
-            <input type="password" id="repassword" placeholder="Nhập lại mật khẩu"> <!-- Ô nhập lại mật khẩu -->
-            <i
-              id="conMat2"
-              class="fa-solid fa-eye conMat"
-              onclick="anHienMatKhau('repassword','conMat2')">
-            </i> <!-- Icon hiện/ẩn mật khẩu -->
-          </div>
-          <small id="repasswordError" class="error"></small> <!-- Hiển thị thông báo lỗi -->
-        </div>
-
-        <!-- Điều khoản sử dụng -->
-        <div class="checkbox">
-          <input type="checkbox" id="agree">
-          <label for="agree">Tôi đồng ý với điều khoản sử dụng</label> <!-- Nội dung điều khoản -->
-        </div>
-        <small id="agreeError" class="error"></small> <!-- Hiển thị lỗi nếu chưa tích -->
-
-        <!-- Nút đăng ký -->
-        <button type="button" onclick="dangKy()">ĐĂNG KÝ</button>
-
-        <!-- Liên kết chuyển sang trang đăng nhập -->
-        <div class="dangnhap-link">
-          Đã có tài khoản?
-          <a href="dangnhap.html">Đăng nhập</a>
-        </div>
-
-        <!-- Liên kết quay về trang chủ -->
-        <div class="trangchu-link"> 
-          <a href="index.html">← Quay lại Trang chủ</a>
-        </div>
-      </form>
+    <div class="mobile-header">
+  <input
+    type="checkbox"
+    name="menu-checkbox"
+    id="menu-checkbox"
+    class="menu-checkbox"
+    hidden
+  />
+  <label for="menu-checkbox">
+    <svg
+      class="menu-header__icon"
+      xmlns="http://www.w3.org/2000/svg"
+      height="30"
+      width="70"
+      viewBox="0 0 640 640"
+    >
+      <path 
+        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+      />
+    </svg>
+  </label>
+  
+  <label for="menu-checkbox" class="menu-overlay"></label>
+  
+  <div class="menu-drawer">
+    <div class="menu-drawer-top">
+      <a href="index.html" class="mobile-drawer-logo"></a>
+      <label for="menu-checkbox">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+          height="30"
+          width="30"
+          class="menu-drawer-iconclose"
+        >
+          <path
+          fill="#1a72bf"
+            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+          />
+        </svg>
+      </label>
     </div>
+    
+    <ul class="menu-drawer-list">
+      <li>
+        <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
+      </li>
+      <li>
+        <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
+      </li>
+      <li>
+        <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a>
+        <ul class="sub-menu">
+          <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
+          <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
+        </ul>
+      </li>
+      <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
+      <li>
+        <a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a>
+      </li>
+      <li>
+        <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <!-- Banner & Form Register -->
+  <div class="container_register">
+    <img src="./assets/img//dangky/banner.png" alt="BrightEnglish Banner" class="register-img" />
+
+    <form action="" class="form-register">
+      <h1>Đăng Ký</h1>
+      <p class="subtitle">Tạo tài khoản để bắt đầu hành trình học tiếng Anh cùng BrightEnglish</p>
+
+      <div class="register-box">
+        <!-- Họ và tên (Đã bỏ icon) -->
+        <div class="input-group">
+          <input type="text" id="fullname" placeholder="Họ và tên" required />
+        </div>
+
+        <!-- Email (Đã bỏ icon) -->
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+        </div>
+
+        <!-- Mật khẩu (Giữ lại icon con mắt toggle) -->
+        <div class="input-group password-box">
+          <input type="password" id="password" placeholder="Mật khẩu" required />
+          <i class="fa-solid fa-eye toggle"></i>
+        </div>
+
+        <!-- Nhập lại mật khẩu (Giữ lại icon con mắt toggle) -->
+        <div class="input-group password-box">
+          <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
+          <i class="fa-solid fa-eye toggle"></i>
+        </div>
+
+        <!-- Điều khoản -->
+        <div class="terms">
+          <input type="checkbox" id="agree" required />
+          <label for="agree">
+            Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a>
+          </label>
+        </div>
+
+        <!-- Nút Đăng ký -->
+        <button type="submit" class="register">Đăng ký</button>
+
+        <!-- Điều hướng Đăng nhập -->
+        <div class="register_nav">
+          <p>Đã có tài khoản? <a href="./dangnhap.html">Đăng nhập</a></p>
+        </div>
+      </div>
+    </form>
   </div>
 
   <footer class="footer">

@@ -1,443 +1,531 @@
+/*
+* Tên file: khoahoc.css
+* Nhóm thực hiện: Nhóm 2
+* Thành viên code chính: Nguyễn An Khang - B2405508
+* Mục đích: Định dạng CSS đặc thù cho trang chi tiết khóa học, bao gồm hiệu ứng, tab và cấu trúc grid.
+*/
+
+/* ========================================================
+   1. FIXED HEADER
+======================================================== */
 .header.fixed {
-z-index: 999 !important;
+    z-index: 999 !important;
 }
+
+/* ========================================================
+   2. KHU VỰC HERO (BANNER KHÓA HỌC)
+======================================================== */
 .course-hero {
-background-color: #e3f2fd;
-color: #ffffff;
-padding: 4rem 0;
-border-bottom: 5px solid #FCDD51 ;
+    background-color: #e3f2fd;
+    color: #ffffff;
+    padding: 4rem 0;
+    border-bottom: 5px solid #FCDD51;
 }
+
 .course-hero-inner {
-align-items: center;
-gap: 4rem;
+    align-items: center;
+    gap: 4rem;
 }
+
 .course-info {
-flex: 1;
+    flex: 1;
 }
+
 .course-info h1 {
-font-size: 3.2rem;
-color: #001C66 !important;
-font-weight: 700;
-margin-bottom: 1.5rem;
-line-height: 1.3;
-background-color: rgba(99, 221, 255, 0.419);
-border-radius: 20px;
-padding: 6px 16px;
+    font-size: 3.2rem;
+    color: #001C66 !important;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    background-color: rgba(99, 221, 255, 0.419);
+    border-radius: 20px;
+    padding: 6px 16px;
 }
+
 .course-desc {
-font-size: 1.6rem;
-font-weight: 600;
-margin-bottom: 2rem;
-line-height: 1.6;
-color: #475b65; 
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #475b65;
 }
+
 .course-banner {
-flex: 1;
-text-align: right;
+    flex: 1;
+    text-align: right;
 }
+
 .course-banner img {
-max-width: 100%;
-border-radius: 16px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-border: 3px  ;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 3px;
 }
+
+/* ========================================================
+   3. KHU VỰC NỘI DUNG CHÍNH (CONTENT)
+======================================================== */
 .course-content {
-padding: 5rem 0;
-background: linear-gradient(135deg, #f2fffd, #fffdf7);
-position: relative;
-overflow: clip;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f2fffd, #fffdf7);
+    position: relative;
+    overflow: clip;
 }
-.course-content > .container {
-position: relative;
-z-index: 1;
+
+.course-content>.container {
+    position: relative;
+    z-index: 1;
 }
+
+/* Hiệu ứng bong bóng chìm trang trí nền bằng Pseudo-elements */
 .course-content::before {
-content: "";
-position: absolute;
-width: 400px;
-height: 400px;
-background: #fdec7b;
-border-radius: 50%;
-top: -150px;
-left: -150px;
-opacity: 0.25;
-z-index: 0;
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #fdec7b;
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    opacity: 0.25;
+    z-index: 0;
 }
+
 .course-content::after {
-content: "";
-position: absolute;
-width: 300px;
-height: 300px;
-background: #58cbca;
-border-radius: 50%;
-bottom: -120px;
-right: -120px;
-opacity: 0.2;
-z-index: 0;
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #58cbca;
+    border-radius: 50%;
+    bottom: -120px;
+    right: -120px;
+    opacity: 0.2;
+    z-index: 0;
 }
+
+/* ========================================================
+   4. BỐ CỤC CỘT (GRID LAYOUT) & TABS
+======================================================== */
 .course-tabs {
-display: flex;
-justify-content: center;
-gap: 2rem;
-margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
+
 .tab-btn {
-padding: 1.5rem 3rem;
-font-size: 2rem;
-font-weight: bold;
-border: 2px solid #001C66;
-background-color: #ffffff;
-color: #001C66;
-border-radius: 30px;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-.tab-btn.active, .tab-btn:hover {
-background-color: #001C66;
-color: #ffffff;
-box-shadow: 0 4px 10px rgba(0,86,179,0.3);
-}
-.course-grid {
-display: flex;
-gap: 3rem;
-}
-.content-left {
-flex: 2;
-}
-.content-right {
-flex: 1;
-}
-.format-toggle {
-display: flex;
-gap: 1rem;
-margin-bottom: 3rem;
-background-color: #f8f9fa;
-padding: 1rem;
-border-radius: 12px;
-border: 1px solid #e3f2fd;
-}
-.format-btn {
-flex: 1;
-padding: 1.5rem;
-font-size: 1.6rem;
-font-weight: bold;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-background-color: transparent;
-color: #555;
-transition: all 0.3s ease;
-}
-.format-btn.active {
-background-color: #fcdd51;
-color: #001C66;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.section-title {
-font-size: 2.4rem;
-font-weight: 700;
-margin-bottom: 2rem;
-margin-top: 3rem;
-border-bottom: 2px solid #001C66;
-padding-bottom: 1rem;
-color: #001C66 !important;
-}
-.content-left .section-title:first-child {
-margin-top: 0;
-}
-.syllabus-item {
-background-color: #f8f9fa;
-border-left: 5px solid #fcdd51 !important;
-padding: 2rem;
-font-weight: 550;
-margin-bottom: 1.5rem;
-border-radius: 0 8px 8px 0;
-box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.syllabus-item h3 {
-font-size: 1.8rem;
-font-weight: 700;
-margin-bottom: 1rem;
-color: #001C66;
-}
-.syllabus-item h3 i {
-color: #fcdd51;
-margin-right: 8px;
-}
-.teacher-selectors {
-display: flex;
-gap: 1.5rem;
-margin-bottom: 2rem;
-flex-wrap: wrap;
-}
-.teacher-btn {
-display: flex;
-align-items: center;
-gap: 1rem;
-padding: 1rem 1.5rem;
-background-color: #ffffff;
-border: 2px solid #001C66;
-border-radius: 30px;
-cursor: pointer;
-transition: all 0.3s ease;
-font-size: 1.4rem;
-font-weight: 700;
-color: #001C66;
-}
-.teacher-btn img {
-width: 30px;
-height: 30px;
-border-radius: 50%;
-object-fit: cover;
-border: 2px solid transparent;
-}
-.teacher-btn.active {
-border-color: #001C66;
-background-color: #001C66;
-color: #ffffff;
-box-shadow: 0 4px 10px rgba(0,86,179,0.1);
-}
-.teacher-btn.active img {
-border-color: #fcdd51;
-}
-.teacher-box {
-gap: 2rem;
-background-color: #f8f9fa;
-padding: 2rem;
-border-radius: 12px;
-align-items: center;
-border: 1px solid #e3f2fd;
-}
-.teacher-img img {
-width: 120px;
-height: 120px;
-object-fit: cover;
-border-radius: 50%;
-border: 4px solid #fcdd51 !important;
-}
-.teacher-info h3 {
-font-size: 2rem;
-color: #001C66 !important;
-font-weight: 700;
-margin-bottom: 0.5rem;
-}
-.font-weight-bold {
-font-weight: bold;
-margin-bottom: 1rem;
-color: #001C66 !important;
-}
-.sticky-sidebar {
-background-color: #ffffff;
-border: 2px solid #001C66;
-padding: 2.5rem;
-border-radius: 12px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-position: sticky;
-top: 100px;
-}
-.price-box {
-margin-bottom: 2rem;
-text-align: center;
-}
-.old-price {
-font-size: 1.6rem;
-text-decoration: line-through;
-color: #888;
-margin-right: 1rem;
-}
-.new-price {
-font-size: 3.2rem;
-font-weight: 700;
-color: #001C66 !important;
-}
-#btn-add-cart {
-font-size: 1.8rem;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-background-color: #fcdd51 !important;
-color: #001C66 !important;
-border: none;
-transition: all 0.3s ease;
-}
-#btn-add-cart:hover {
-background-color: #e0a800 !important;
-transform: translateY(-2px);
-box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
-}
-.course-features {
-margin-top: 2rem;
-}
-.course-features li {
-font-size: 1.6rem;
-padding: 1.2rem 0;
-border-bottom: 2px solid #f0f0f0;
-display: flex;
-align-items: center;
-gap: 1.5rem;
-}
-.course-features li i {
-font-size: 2rem;
-width: 25px;
-text-align: center;
-color: #fcdd51;
-}
-#cartPopup {
-background-color: #001C66 !important;
-color: #ffffff !important;
-border: 4px solid #fcdd51;
-font-weight: bold;
-font-size: 1.6rem;
-z-index: 9999;
-}
-#cartPopup i {
-color: #fcdd51;
-margin-right: 8px;
-}
-@keyframes slideDown {
-0% { top: 100px; opacity: 0; }
-100% { top: 120px; opacity: 1; }
-}
-@keyframes slideUp {
-0% { top: 120px; opacity: 1; }
-100% { top: 100px; opacity: 0; }
-}
-.popup.show {
-opacity: 1 !important;
-}
-.popup.hide {
-display: block !important;
-}
-.toggle-item {
-display: none !important;
-}
-.toggle-item.active {
-display: block !important;
-}
-.toggle-flex {
-display: none !important;
-}
-.toggle-flex.active {
-display: flex !important;
-}
-@media (max-width: 991.98px) {
-.course-grid {
-flex-direction: column;
-}
-.tab-btn {
-padding: 1rem 1.5rem;
-font-size: 1.6rem;
-}
-.menu-drawer-list .sub-menu a {
-font-size: 1.6rem;
-white-space: nowrap;
-}
-}
-.menu-header__icon {
-z-index: 1001 !important;
-}
-.menu-overlay {
-z-index: 1000 !important;
-}
-.menu-drawer {
-z-index: 1002 !important;
-}
-/* ===== CẤP ĐỘ KHÓA HỌC & NÚT CHI TIẾT (BỔ SUNG VÀ LỌC SẠCH INLINE CSS) ===== */
-.btn-chi-tiet {
-display: block;
-text-align: center;
-padding: 10px;
-margin-top: 10px;
-border: 2px solid #001C66;
-border-radius: 8px;
-color: #001C66;
-font-weight: 700;
-font-size: 1.4rem;
-transition: all 0.3s ease;
-text-decoration: none;
-background-color: #f8f9fa;
-}
-.btn-chi-tiet:hover {
-background-color: #001C66;
-color: #ffffff;
-transform: translateY(-2px);
-}
-.btn-chi-tiet.w-100 {
-width: 100%;
-}
-.teacher-pair {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-margin-top: 15px;
-}
-.teacher-single {
-display: flex;
-gap: 15px;
-align-items: center;
-background: #ffffff;
-padding: 15px;
-border-radius: 12px;
-border: 1px solid #e3f2fd;
-flex: 1;
-min-width: 200px;
-}
-.teacher-single img {
-width: 70px !important;
-height: 70px !important;
-border-radius: 50% !important;
-object-fit: cover !important;
-border: 3px solid #fcdd51 !important;
-}
-.level-box {
-flex-direction: column;
-align-items: stretch;
-padding: 0;
-background: transparent;
-border: none;
-gap: 0;
-}
-.hidden-title {
-display: none;
-}
-.teacher-pair-title {
-font-size: 2.4rem; 
-font-weight: 700;
-color: #001C66;
-border-bottom: 2px solid #001C66; 
-padding-bottom: 1rem;
-margin-top: 3rem;
-margin-bottom: 2rem;
-}
-.teacher-single .teacher-info h3 {
-font-size: 1.8rem;
-color: #001C66;
-font-weight: 700;
-margin-bottom: 5px;
-}
-.teacher-single .teacher-info p {
-font-size: 1.4rem;
-font-weight: 600;
-}
-.sidebar-detail-group {
-margin-top: 20px;
-}
-.sidebar-detail-box {
-padding: 0;
-border: none;
-background: transparent;
-gap: 0;
-}
-/* ===== Hiệu ứng nảy lên (Bounce up) cho các nút chọn ===== */
-.tab-btn:hover, 
-.format-btn:hover, 
-.teacher-btn:hover {
-    transform: translateY(-2px); /* Kéo nút nảy lên 2px */
-    box-shadow: 0 6px 15px rgba(0, 28, 102, 0.15) !important; /* Đổ bóng màu xanh đen nhạt cho nút nổi bật hơn */
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid #001C66;
+    background-color: #ffffff;
+    color: #001C66;
+    border-radius: 30px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
-/* ===== TÍNH NĂNG THAY ĐỔI THEO CẤP ĐỘ KHÓA HỌC ===== */
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: #001C66;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+}
+
+.course-grid {
+    display: flex;
+    gap: 3rem;
+}
+
+.content-left {
+    flex: 2;
+}
+
+.content-right {
+    flex: 1;
+}
+
+/* ========================================================
+   5. NÚT CHUYỂN ĐỔI (TOGGLE BUTTONS)
+======================================================== */
+.format-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #e3f2fd;
+}
+
+.format-btn {
+    flex: 1;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.format-btn.active {
+    background-color: #fcdd51;
+    color: #001C66;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid #001C66;
+    padding-bottom: 1rem;
+    color: #001C66 !important;
+}
+
+.content-left .section-title:first-child {
+    margin-top: 0;
+}
+
+/* ========================================================
+   6. LỘ TRÌNH KHÓA HỌC (SYLLABUS)
+======================================================== */
+.syllabus-item {
+    background-color: #f8f9fa;
+    border-left: 5px solid #fcdd51 !important;
+    padding: 2rem;
+    font-weight: 550;
+    margin-bottom: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.syllabus-item h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #001C66;
+}
+
+.syllabus-item h3 i {
+    color: #fcdd51;
+    margin-right: 8px;
+}
+
+/* ========================================================
+   7. CHỌN GIẢNG VIÊN & CẤP ĐỘ KHÓA HỌC
+======================================================== */
+.teacher-selectors {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.teacher-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border: 2px solid #001C66;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #001C66;
+}
+
+.teacher-btn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+}
+
+.teacher-btn.active {
+    border-color: #001C66;
+    background-color: #001C66;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.1);
+}
+
+.teacher-btn.active img {
+    border-color: #fcdd51;
+}
+
+.teacher-box {
+    gap: 2rem;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    align-items: center;
+    border: 1px solid #e3f2fd;
+}
+
+.teacher-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fcdd51 !important;
+}
+
+.teacher-info h3 {
+    font-size: 2rem;
+    color: #001C66 !important;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.teacher-pair {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.teacher-single {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e3f2fd;
+    flex: 1;
+    min-width: 200px;
+}
+
+.teacher-single img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 3px solid #fcdd51 !important;
+}
+
+.teacher-single .teacher-info h3 {
+    font-size: 1.8rem;
+    color: #001C66;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.teacher-single .teacher-info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.teacher-pair-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #001C66;
+    border-bottom: 2px solid #001C66;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* ========================================================
+   8. SIDEBAR & GIỎ HÀNG (CỘT PHẢI)
+======================================================== */
+.sticky-sidebar {
+    background-color: #ffffff;
+    border: 2px solid #001C66;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.price-box {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.old-price {
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 1rem;
+}
+
+.new-price {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #001C66 !important;
+}
+
+#btn-add-cart {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fcdd51 !important;
+    color: #001C66 !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#btn-add-cart:hover {
+    background-color: #e0a800 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+.course-features {
+    margin-top: 2rem;
+}
+
+.course-features li {
+    font-size: 1.6rem;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.course-features li i {
+    font-size: 2rem;
+    width: 25px;
+    text-align: center;
+    color: #fcdd51;
+}
+
+/* ========================================================
+   9. POPUP & HIỆU ỨNG (ANIMATIONS)
+======================================================== */
+#cartPopup {
+    background-color: #001C66 !important;
+    color: #ffffff !important;
+    border: 4px solid #fcdd51;
+    font-weight: bold;
+    font-size: 1.6rem;
+    z-index: 9999;
+}
+
+#cartPopup i {
+    color: #fcdd51;
+    margin-right: 8px;
+}
+
+@keyframes slideDown {
+    0% {
+        top: 100px;
+        opacity: 0;
+    }
+    100% {
+        top: 120px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 120px;
+        opacity: 1;
+    }
+    100% {
+        top: 100px;
+        opacity: 0;
+    }
+}
+
+.popup.show {
+    opacity: 1 !important;
+}
+
+.popup.hide {
+    display: block !important;
+}
+
+/* Class hỗ trợ JS chuyển đổi trạng thái ẩn/hiện */
+.toggle-item {
+    display: none !important;
+}
+
+.toggle-item.active {
+    display: block !important;
+}
+
+.toggle-flex {
+    display: none !important;
+}
+
+.toggle-flex.active {
+    display: flex !important;
+}
+
+/* ========================================================
+   10. CLASS BỔ SUNG & GHI ĐÈ STYLE
+======================================================== */
+.btn-chi-tiet {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #001C66;
+    border-radius: 8px;
+    color: #001C66;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.btn-chi-tiet:hover {
+    background-color: #001C66;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-chi-tiet.w-100 {
+    width: 100%;
+}
+
+.level-box, .sidebar-detail-box {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    background: transparent;
+    border: none;
+    gap: 0;
+}
+
+.hidden-title {
+    display: none;
+}
+
+.sidebar-detail-group {
+    margin-top: 20px;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #001C66 !important;
+}
+
+.tab-btn:hover,
+.format-btn:hover,
+.teacher-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 28, 102, 0.15) !important;
+    transition: all 0.3s ease;
+}
+
 li.feature-level-container {
     display: block !important;
     padding: 0 !important;
@@ -451,4 +539,18 @@ li.feature-level-container {
     border-bottom: 1px solid #f0f0f0 !important;
     border-radius: 0 !important;
     gap: 1.5rem !important;
+}
+
+/* ========================================================
+   11. RESPONSIVE MOBILE
+======================================================== */
+@media (max-width: 991.98px) {
+    .course-grid {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem;
+    }
 }

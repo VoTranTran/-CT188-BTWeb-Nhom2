@@ -523,21 +523,6 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
 }
-
-
-/* ===== 6. HEADER SCROLLED (Thay đổi giao diện khi cuộn trang) ===== */
-.header-scrolled {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(5px);
-  height: 7rem !important;
-  transition: all 0.3s ease;
-}
-
-.header-scrolled .header-body .logo {
-  height: 7rem !important;
-}
-
-
 /* ===== 7. RESPONSIVE CHO TRANG CHỦ ===== */
 @media (max-width: 991.98px) {
   .hero-container {

@@ -348,3 +348,12 @@ nav a:hover {
     transform: rotate(-8deg);
   }
 }
+.menu-header__icon {
+z-index: 1001 !important;
+}
+.menu-overlay {
+z-index: 1000 !important;
+}
+.menu-drawer {
+z-index: 1002 !important;
+}

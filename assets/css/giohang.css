@@ -21,7 +21,7 @@
 
 /* end button */
 
-/* section 1 */
+/* breadcrumb */
 
 .breadcrumb {
   display: flex;
@@ -149,9 +149,9 @@
   }
 }
 
-/* end section 1 */
+/* end breadcrumb */
 
-/* section 2 */
+/* order-timeline */
 .order-timeline-section {
   margin: 25px 0;
   position: sticky;
@@ -291,9 +291,9 @@
   }
 }
 
-/* end section 2 */
+/* end order-timeline */
 
-/* section 3 */
+/* cart */
 .cart-section {
   margin: 100px 0;
 }
@@ -519,10 +519,10 @@
   }
 }
 
-/* end section 3 */
+/* end cart */
 
 
-/* section-4 */
+/* checkout-personal */
 .checkout-personal {
   margin: 100px auto;
   width: 80%;
@@ -714,10 +714,10 @@
 }
 
 
-/* end section 4 */
+/* end checkout-personal */
 
 
-/* section 5 */
+/* checkout-payment */
 .checkout-payment.hidden {
   display: none;
 }
@@ -936,4 +936,4 @@
   }
 }
 
-/* end section 5 */
+/* checkout-payment */
