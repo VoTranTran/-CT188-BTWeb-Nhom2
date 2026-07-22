@@ -70,6 +70,7 @@
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
+  transition:.3s ;
 }
 /* Khi rê chuột */
 .input-group input:hover{
