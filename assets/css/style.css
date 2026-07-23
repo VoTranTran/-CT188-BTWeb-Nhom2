@@ -293,10 +293,9 @@ nav a:hover {
 }
 
 .footer-logo img {
-  width: 20rem;
-  object-fit: cover;
-  height: 8rem;
-  margin-left: -35px;
+  width: 8rem;
+  height: auto;
+  margin-left: -10px;
 }
 
 .footer-body {
