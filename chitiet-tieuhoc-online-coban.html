@@ -1,0 +1,299 @@
+<!--
+* Tên file: chitiet-tieuhoc-online-coban.html
+* Nhóm thực hiện: Nhóm 2 (BrightEnglish)
+* Mục đích: Trang chi tiết sản phẩm khóa học Tiếng Anh Tiểu Học (6-11 tuổi) - Học Online - Khóa Cơ Bản.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết Khóa học: Tiếng Anh Tiểu Học Online Cơ Bản - BrightEnglish</title>
+
+  <!-- CSS Hệ thống BrightEnglish -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/khoahoc.css" />
+  <link rel="stylesheet" href="./assets/css/khoahocrieng.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header fixed">
+    <div class="container">
+      <div class="header-body">
+        <a href="index.html" class="logo-link">
+          <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar-left">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="./gioithieu.html">Giới thiệu</a></li>
+            <li><a href="./khoahoc.html" class="home-style">Khóa học</a></li>
+          </ul>
+          <ul class="navbar-right">
+            <li>
+              <a href="./giohang.html">
+                <span class="shopping-icon-frame">
+                  <i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i>
+                </span>
+              </a>
+            </li>
+            <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
+            <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE HEADER -->
+  <div class="mobile-header">
+    <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+    <label for="menu-checkbox">
+      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" height="30" width="70" viewBox="0 0 640 640">
+        <path
+          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+      </svg>
+    </label>
+    <label for="menu-checkbox" class="menu-overlay"></label>
+    <div class="menu-drawer">
+      <div class="menu-drawer-top">
+        <a href="index.html" class="mobile-drawer-logo"></a>
+      </div>
+      <ul class="menu-drawer-list">
+        <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a></li>
+        <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
+        <li><i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a></li>
+        <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NỘI DUNG TRANG CHI TIẾT SẢN PHẨM KHÓA HỌC -->
+  <main class="course-detail-page">
+
+    <!-- KHỐI HEADER TRANG CHI TIẾT KHÓA HỌC -->
+    <section class="detail-header-section">
+      <div class="container">
+        <div class="detail-header-card">
+          <div class="detail-header-info">
+            <span class="course-badge"><i class="fa-solid fa-graduation-cap"></i> Độ tuổi: 6 - 11 Tuổi | Học Online</span>
+            <h1 class="course-main-title">Tiếng Anh Tiểu Học - Khóa Cơ Bản (Online)</h1>
+            <p class="course-short-desc">
+                Chương trình dành cho học sinh Tiểu học từ 5 đến 11 tuổi giúp xây dựng nền tảng từ vựng, phát âm và giao tiếp tiếng Anh. Học sinh được luyện nghe - nói - đọc - viết thông qua bài giảng trực quan, trò chơi tương tác và bài tập thực hành.
+            </p>
+            
+            <!-- Thông số nhanh dạng Thẻ Badge -->
+            <div class="course-meta-pills">
+              <div class="meta-item"><i class="fa-regular fa-clock"></i> 48 Buổi học</div>
+              <div class="meta-item"><i class="fa-solid fa-video"></i> Zoom 1 kèm 4</div>
+              <div class="meta-item"><i class="fa-solid fa-star color-yellow"></i> 4.9/5 (165 Đánh giá)</div>
+            </div>
+
+            <!-- Khối Giá & Hành Động Mua -->
+            <div class="detail-purchase-box">
+              <div class="price-group">
+                <span class="old-price">1.800.000đ</span>
+                <span class="new-price color-red">1.299.000đ</span>
+              </div>
+              <button id="btn-add-cart" class="modal-submit btn-cart-large">
+                <i class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
+              </button>
+            </div>
+          </div>
+
+          <!-- Ảnh xem trước đại diện khóa học -->
+          <div class="detail-header-media">
+            <img src="./assets/img/khoahoc/mn1.jpg" alt="Khóa học Tiếng Anh Tiểu Học Cơ Bản Online" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KHỐI CHÍNH: NỘI DUNG TRÌNH BÀY CHI TIẾT MỘT CỘT RỘNG -->
+    <section class="detail-body-section">
+      <div class="container">
+        
+        <!-- 1. TỔNG QUAN GIỚI THIỆU KHÓA HỌC -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-circle-info"></i> Giới thiệu khóa học</h2>
+          <div class="block-content">
+            <p class="paragraph">
+              Khóa học <strong>Tiếng Anh Tiểu học Online - Cơ Bản</strong> được thiết kế dành riêng cho học sinh từ 5 đến 11 tuổi nhằm giúp các em xây dựng nền tảng tiếng Anh vững chắc ngay từ bậc Tiểu học. Chương trình bám sát năng lực theo từng độ tuổi và tạo hứng thú học tập thông qua hình ảnh, trò chơi và hoạt động tương tác.
+            </p>
+            <p class="paragraph">
+              Học sinh sẽ được phát triển đồng đều bốn kỹ năng Nghe - Nói - Đọc - Viết, làm quen với ngữ pháp cơ bản, mở rộng vốn từ vựng theo chủ đề và rèn luyện khả năng giao tiếp tự tin. Nội dung bài học kết hợp giữa video, bài tập trực tuyến và các hoạt động luyện phản xạ giúp việc học trở nên sinh động và dễ tiếp thu.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. NỘI DUNG BÀI HỌC CỤ THỂ (CURRICULUM) -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-list-check"></i> Nội dung chương trình chi tiết</h2>
+          
+          <div class="curriculum-grid">
+            
+            <div class="curriculum-card">
+                <div class="curriculum-header">
+                    <span class="part-badge">Chương 1</span>
+                    <h3>Làm quen Tiếng Anh Tiểu học (Buổi 1 - 12)</h3>
+                </div>
+                <ul class="curriculum-list">
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 1: Chào hỏi và giới thiệu bản thân</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 2: Ôn tập bảng chữ cái và cách phát âm</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 3: Học số đếm, màu sắc và đồ dùng học tập</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 4: Ôn tập từ vựng qua trò chơi tương tác</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-header">
+                    <span class="part-badge">Chương 2</span>
+                    <h3>Gia đình và Trường học (Buổi 13 - 24)</h3>
+                </div>
+                <ul class="curriculum-list">
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 5: Các thành viên trong gia đình</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 6: Bạn bè và thầy cô</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 7: Đồ vật và không gian lớp học</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 8: Ôn tập chủ đề gia đình và trường học</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-header">
+                    <span class="part-badge">Chương 3</span>
+                    <h3>Giao tiếp cơ bản hằng ngày (Buổi 25 - 36)</h3>
+                </div>
+                <ul class="curriculum-list">
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 9: Hỏi và trả lời những câu đơn giản</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 10: Nói về sở thích và hoạt động yêu thích</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 11: Luyện hội thoại theo tình huống quen thuộc</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 12: Trò chơi phản xạ giao tiếp</li>
+                </ul>
+            </div>
+
+            <div class="curriculum-card">
+                <div class="curriculum-header">
+                    <span class="part-badge">Chương 4</span>
+                    <h3>Củng cố kiến thức và Tổng kết (Buổi 37 - 48)</h3>
+                </div>
+                <ul class="curriculum-list">
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 13: Chủ đề động vật và thiên nhiên</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 14: Chủ đề thức ăn và đồ uống</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 15: Ôn tập và thực hành giao tiếp</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Bài 16: Kiểm tra cuối khóa và nhận chứng nhận hoàn thành</li>
+                </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. GIẢNG VIÊN ĐỒNG HÀNH -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-chalkboard-user"></i> Giảng viên trực tiếp giảng dạy</h2>
+          <div class="teacher-pair">
+            <div class="teacher-single">
+              <img src="./assets/img/gioithieu/gv5.jpg" alt="Cô Tony Alix">
+              <div class="teacher-info">
+                <h3>Cô Tony Alix</h3>
+                <p class="color-chocolate">Thạc sĩ Giảng dạy Greenland</p>
+                <span class="teacher-exp">Hơn 10 năm kinh nghiệm giảng dạy học sinh Tiểu học</span>
+              </div>
+            </div>
+            <div class="teacher-single">
+              <img src="./assets/img/gioithieu/gv6.png" alt="Thầy Jack Juventer">
+              <div class="teacher-info">
+                <h3>Thầy Jack Juventer</h3>
+                <p class="color-chocolate">Thạc sĩ Giảng dạy Oxford</p>
+                <span class="teacher-exp">Chuyên phát triển kỹ năng giao tiếp và phản xạ tiếng Anh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ĐÁNH GIÁ CỦA PHỤ HUYNH -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-comments"></i> Phụ huynh nói gì về khóa học?</h2>
+          <div class="review-grid">
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+              </div>
+              <p class="review-text">"Bé học lớp 2 sau hơn hai tháng đã tự tin giao tiếp những câu đơn giản và điểm tiếng Anh trên lớp cũng cải thiện rõ rệt."</p>
+              <span class="review-author">— Phụ huynh bé Thảo Trang (TP. Hồ Chí Minh)</span>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+              </div>
+              <p class="review-text">"Giáo viên giảng dễ hiểu, bài học nhiều trò chơi nên con rất thích học. Việc học online cũng giúp gia đình chủ động thời gian hơn."</p>
+              <span class="review-author">— Phụ huynh bé Bích Mỹ (Đà Nẵng)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" class="btn-contact"><i class="fa-brands fa-facebook-messenger color-blue"></i></a>
+
+  <!-- Popup thông báo giỏ hàng -->
+  <div class="popup" id="cartPopup"><i class="fa-solid fa-circle-check"></i> Đã thêm vào giỏ hàng!</div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./assets/img/logo.png" alt="BrightEnglish" style="height: auto; width: 150px; margin-left: 0; margin-bottom: 20px;" />
+      </div>
+      <div class="footer-body">
+        <div class="footer-left">
+          <p class="footer-name">Công ty Cổ phần Đầu tư phát triển Group 2</p>
+          <p class="footer-info">Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />Tel:
+            0666188188 | Fax: 0188666188 | Email: group2@gmail.com<br />Giờ làm việc: 7h - 11h30, 13h - 21h
+          </p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-name">Follow us</p>
+          <ul class="footer-contact">
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP 2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2 STORIES</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-name">Hỗ trợ khách hàng</p>
+          <ul class="footer-support">
+            <li><a href="#" class="footer-info">Chính sách và Bảo mật</a></li>
+            <li><a href="#" class="footer-info">Quyền lợi khách hàng</a></li>
+            <li><a href="#" class="footer-info">Hướng dẫn sử dụng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/khoahocrieng.js"></script>
+</body>
+
+</html>
