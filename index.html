@@ -1,43 +1,45 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
-
-    <link rel="stylesheet" href="./assets/css/trangchu.css" />
-
-    <title>BrightEnglish - Chinh Phục Tiếng Anh Dễ Dàng</title>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightEnglish - Chinh Phục Tiếng Anh Dễ Dàng</title>
   <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
-  </head>
-  <body>
 
-    
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <header class="header fixed">
-     <div class="container">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="stylesheet" href="./assets/css/trangchu.css" />
+</head>
+<body>
+
+  <!-- Desktop Header -->
+  <header class="header fixed">
+    <div class="container">
       <div class="header-body">
         <a href="index.html" class="logo-link">
-            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+          <img src="./assets/img/logo.png" alt="BrightEnglish Logo" class="logo" />
         </a>
         <nav class="navbar">
           <ul class="navbar-left">
-            <li><a href="index.html"class="home-style" >Trang chủ</a></li>
+            <li><a href="index.html" class="home-style">Trang chủ</a></li>
             <li><a href="./gioithieu.html">Giới thiệu</a></li>
-             <li><a href="./khoahoc.html" >Khóa học</a></li>
+            <li><a href="./khoahoc.html">Khóa học</a></li>
           </ul>
           <ul class="navbar-right">
-            <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
-                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
+            <li>
+              <a href="./giohang.html" aria-label="Giỏ hàng">
+                <span class="shopping-icon-frame">
+                  <i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i>
+                </span>
+              </a>
             </li>
             <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
             <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
@@ -46,265 +48,295 @@
       </div>
     </div>
   </header>
- <div class="mobile-header">
-  <input
-    type="checkbox"
-    name="menu-checkbox"
-    id="menu-checkbox"
-    class="menu-checkbox"
-    hidden
-  />
-  <label for="menu-checkbox">
-    <svg
-      class="menu-header__icon"
-      xmlns="http://www.w3.org/2000/svg"
-      height="30"
-      width="70"
-      viewBox="0 0 640 640"
-    >
-      <path 
-        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
-      />
-    </svg>
-  </label>
-  
-  <label for="menu-checkbox" class="menu-overlay"></label>
-  
-  <div class="menu-drawer">
-    <div class="menu-drawer-top">
-      <a href="index.html" class="mobile-drawer-logo"></a>
-      <label for="menu-checkbox">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 640"
-          height="30"
-          width="30"
-          class="menu-drawer-iconclose"
-        >
-          <path
-          fill="#1a72bf"
-            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
-          />
-        </svg>
-      </label>
-    </div>
+
+  <!-- Mobile Header & Drawer Navigation -->
+  <div class="mobile-header">
+    <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+    <label for="menu-checkbox" aria-label="Mở menu">
+      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" height="30" width="70" viewBox="0 0 640 640">
+        <path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/>
+      </svg>
+    </label>
     
-    <ul class="menu-drawer-list">
-      <li>
-        <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link home-style">Trang chủ</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
-      </li>
-      <li>
-        <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link">Khóa học</a>
-        <ul class="sub-menu">
-          <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
-          <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
-        </ul>
-      </li>
-      <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
-      <li>
-        <a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a>
-      </li>
-      <li>
-        <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
-      </li>
-    </ul>
-  </div>
-</div>
-  <main class="main-content">
-     <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <span class="hero-badge">Môi trường lý tưởng cho trẻ</span>
-                <h1 class="hero-title">BrightEnglish gieo mầm<br><span class="color-chocolate">Tự tin tương lai</span></h1>
-                <p class="hero-desc">Mỗi đứa trẻ đều mang trong mình một thế giới riêng. Tại BrightEnglish, trẻ học tiếng Anh không vì áp lực điểm số, mà vì niềm vui khám phá và khơi dậy đam mê ngôn ngữ từ thuở nhỏ.</p>
-                <div class="hero-buttons">
-                    <a href="./khoahoc.html" class="btn-yellow-cta">Xem khóa học của trẻ</a>
-                    <a href="#consultant" class="btn-outline-cta">Nhận tư vấn lộ trình</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="./assets/img/gioithieu/background.png" alt="BrightEnglish Brand Banner">
-            </div>
-        </div>
-      </section>
- <section id="courses" class="courses-section">
-        <div class="container">
-            <div class="section-header-box">
-                <h2 class="section-title">Hệ Thống Khóa Học Cho Trẻ</h2>
-                <p class="section-subtitle">Chương trình đào tạo chuẩn tương tác, giúp bé tiếp cận ngoại ngữ một cách tự nhiên nhất.</p>
-            </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <img src="./assets/img/khoahocmamnon.png" alt="Khóa học Mầm non" class="course-card-img">
-                    <div class="course-card-body">
-                        <span class="course-badge blue">Độ tuổi 3 - 5</span>
-                        <h3 class="course-card-title">Khóa Học Tiếng Anh Mầm Non</h3>
-                        <p class="course-card-desc">Kích hoạt phản xạ nghe nói nhạy bén từ sớm cho bé qua các hoạt động vui nhộn, bài hát sinh động, tạo dựng tình yêu ngôn ngữ tự nhiên.</p>
-                        <div class="course-card-footer">
-                            <div class="course-price-box">
-                                <span class="old-price">1.200.000đ</span>
-                                <span class="new-price color-green">799.000đ</span>
-                            </div>
-                            <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <img src="./assets/img/khoahoctieuhoc.png" alt="Khóa học Tiểu học" class="course-card-img">
-                    <div class="course-card-body">
-                        <span class="course-badge yellow">Độ tuổi 6 - 11</span>
-                        <h3 class="course-card-title">Khóa Học Tiếng Anh Tiểu Học</h3>
-                        <p class="course-card-desc">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết, lồng ghép tư duy phản biện. Giúp con tự tin bứt phá điểm số trên lớp và các kỳ thi quốc tế.</p>
-                        <div class="course-card-footer">
-                            <div class="course-price-box">
-                                <span class="old-price">1.800.000đ</span>
-                                <span class="new-price color-green">1.299.000đ</span>
-                            </div>
-                            <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-  <section class="features-trust-section">
-          <div class="container">
-              <h2 class="trust-title">Phương Pháp Giảng Dạy Đột Phá</h2>
-              <p class="trust-subtitle">Lấy trẻ làm trung tâm để mang lại trải nghiệm học tập hứng khởi và hiệu quả nhất.</p>
-              
-              <div class="trust-grid">
-                  <div class="trust-card">
-                      <i class="fa-solid fa-music trust-icon"></i>
-                      <h4 class="trust-card-title">SONGS (Bài hát)</h4>
-                      <p class="trust-card-desc">Học qua giai điệu vui tươi giúp trẻ dễ tiếp thu, ghi nhớ từ vựng và luyện phát âm chuẩn xác ngay từ đầu.</p>
-                  </div>
-                  <div class="trust-card">
-                      <i class="fa-regular fa-clone trust-icon"></i>
-                      <h4 class="trust-card-title">FLASHCARD (Thẻ từ)</h4>
-                      <p class="trust-card-desc">Hình ảnh trực quan sinh động giúp kích thích tối đa trí nhớ não bộ, liên tưởng từ vựng nhanh chóng.</p>
-                  </div>
-                  <div class="trust-card">
-                      <i class="fa-solid fa-brain trust-icon"></i>
-                      <h4 class="trust-card-title">CRITICAL THINKING</h4>
-                      <p class="trust-card-desc">Phương pháp tư duy phản biện lồng ghép giúp trẻ chủ động phân tích, giải quyết vấn đề bằng tiếng Anh.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <section id="consultant" class="consultant-section">
-        <div class="container consultant-row">
-            <div class="consultant-left-col">
-                <div class="consultant-left-top">
-                    <h3 class="consultant-head-title">Đồng hành cùng con vươn xa!</h3>
-                    <p class="consultant-head-desc">Đội ngũ giảng viên giàu kinh nghiệm (đạt chứng chỉ TESOL từ các trường đại học hàng đầu như Oxford, Harvard, Cambridge) luôn sẵn sàng đồng hành cùng con.</p>
-                    <div class="consultant-feature-list">
-                        <div class="consultant-feature-item">
-                            <div class="consultant-feature-icon"><i class="fa-solid fa-phone-volume"></i></div>
-                            <div class="consultant-feature-text">
-                                <h4 class="consultant-feature-title">Tư vấn lộ trình học thử</h4>
-                                <p class="consultant-feature-desc">Định hướng phương pháp phù hợp với tính cách của trẻ.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="consultant-quote">
-                    * Được sai. Được thử. Được trưởng thành.
-                </div>
-            </div>
-            
-            <div class="form-col-box">
-                <h3 class="form-title">Nhận Tư Vấn Lộ Trình Cho Bé</h3>
-                <p class="form-subtitle">Ba mẹ điền thông tin dưới đây để nhận lịch kiểm tra trình độ miễn phí.</p>
-                <form id="consultantForm">
-                    <div class="form-row">
-                        <div class="form-group-box">
-                            <label class="form-label">Họ và tên Phụ huynh *</label>
-                            <input type="text" id="fullName" required placeholder="Nguyễn Văn A">
-                        </div>
-                        <div class="form-group-box">
-                            <label class="form-label">Số điện thoại *</label>
-                            <input type="tel" id="phoneNumber" required placeholder="0912 xxx xxx">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group-box">
-                            <label class="form-label">Độ tuổi của bé</label>
-                            <select id="learningGoal">
-                                <option>Bé học mầm non (3 - 5 tuổi)</option>
-                                <option>Học sinh tiểu học (6 - 11 tuổi)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-submit-consultant">Gửi yêu cầu nhận tư vấn</button>
-                </form>
-            </div>
-        </div>
-      </section>
+    <label for="menu-checkbox" class="menu-overlay"></label>
+    
+    <div class="menu-drawer">
+      <div class="menu-drawer-top">
+        <a href="index.html" class="mobile-drawer-logo"></a>
+        <label for="menu-checkbox" aria-label="Đóng menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="30" width="30" class="menu-drawer-iconclose">
+            <path fill="#1a72bf" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/>
+          </svg>
+        </label>
+      </div>
       
-    </main>
+      <ul class="menu-drawer-list">
+        <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link home-style">Trang chủ</a></li>
+        <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
+        <li>
+          <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link">Khóa học</a>
+          <ul class="sub-menu">
+            <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
+            <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
+          </ul>
+        </li>
+        <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
+        <li><a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a></li>
+        <li><a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <span class="hero-badge">Môi trường lý tưởng cho trẻ</span>
+          <h1 class="hero-title">BrightEnglish gieo mầm<br><span class="color-chocolate">Tự tin tương lai</span></h1>
+          <p class="hero-desc">Mỗi đứa trẻ đều mang trong mình một thế giới riêng. Tại BrightEnglish, trẻ học tiếng Anh không vì áp lực điểm số, mà vì niềm vui khám phá và khơi dậy đam mê ngôn ngữ từ thuở nhỏ.</p>
+          <div class="hero-buttons">
+            <a href="./khoahoc.html" class="btn-yellow-cta">Xem khóa học của trẻ</a>
+            <a href="#consultant" class="btn-outline-cta">Nhận tư vấn lộ trình</a>
+          </div>
         </div>
-        <div class="footer-body">
-          <div class="footer-left">
-            <p class="footer-name">
-              Công ty Cổ phần Đầu tư phát triển Group 2
-            </p>
-            <p class="footer-info">
-              Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
-              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
-              Giờ làm việc: 7h - 11h30 | 13h - 21h
-            </p>
+        <div class="hero-image">
+          <img src="./assets/img/gioithieu/background.png" alt="BrightEnglish Brand Banner">
+        </div>
+      </div>
+    </section>
+
+
+<!-- KHỐI CHỌN BRIGHTENGLISH -->
+<section class="why-choose">
+  <div class="container why-choose_inner">
+    
+    <!-- Cột trái: Bỏ div bọc ảnh, thay bằng figure -->
+    <div class="why-choose_left text-center">
+      <h2 class="why-choose_title">CHỌN BRIGHTENGLISH CHỌN THÀNH CÔNG</h2>
+      <p class="why-choose_subtitle">Cam kết đồng hành cùng học viên đến khi đạt mục tiêu</p>
+      
+      <figure class="why-choose_image">
+        <img src="./assets/img/trangchu/tc1.png" alt="Học viên BrightEnglish">
+      </figure>
+    </div>
+
+    <!-- Cột phải: Dùng ul / li thay cho div danh sách -->
+    <ul class="why-choose_right">
+      
+      <li class="why-choose_item">
+        <i class="fa-solid fa-shapes why-choose_icon"></i>
+        <article class="why-choose_text">
+          <h3>CHẤT LƯỢNG ĐÀO TẠO GIẢNG DẠY</h3>
+          <p>Giáo viên có chuyên môn & nghiệp vụ sư phạm, am hiểu tâm lý học viên. Bộ phận học vụ & trợ giảng hỗ trợ xuyên suốt quá trình học.</p>
+        </article>
+      </li>
+
+      <li class="why-choose_item">
+        <i class="fa-solid fa-chalkboard-user why-choose_icon"></i>
+        <article class="why-choose_text">
+          <h3>LỘ TRÌNH HỌC KHẾP KÍN</h3>
+          <p>Lộ trình học tập được thiết kế xuyên suốt. Học viên học từ 3 tuổi đến khi trưởng thành và đạt được chứng chỉ giá trị nhất hiện nay.</p>
+        </article>
+      </li>
+
+      <li class="why-choose_item">
+        <i class="fa-solid fa-sack-dollar why-choose_icon"></i>
+        <article class="why-choose_text">
+          <h3>TIẾT KIỆM CHI PHÍ & THỜI GIAN</h3>
+          <p>Chương trình học được thiết kế theo lộ trình ngắn nhất, phù hợp với trình độ và mục tiêu của học viên. Tiết kiệm thời gian và chi phí nhất.</p>
+        </article>
+      </li>
+
+      <li class="why-choose_item">
+        <i class="fa-solid fa-globe why-choose_icon"></i>
+        <article class="why-choose_text">
+          <h3>CƠ SỞ VẬT CHẤT HIỆN ĐẠI</h3>
+          <p>Phòng học trang bị đầy đủ thiết bị tương tác, không gian sáng tạo giúp bé có môi trường học tập thoải mái và an toàn nhất.</p>
+        </article>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+      <div class="container">
+        <div class="section-header-box">
+          <h2 class="section-title">Hệ Thống Khóa Học Cho Trẻ</h2>
+          <p class="section-subtitle">Chương trình đào tạo chuẩn tương tác, giúp bé tiếp cận ngoại ngữ một cách tự nhiên nhất.</p>
+        </div>
+        <div class="courses-grid">
+          <div class="course-card">
+            <img src="./assets/img/khoahocmamnon.png" alt="Khóa học Mầm non" class="course-card-img">
+            <div class="course-card-body">
+              <span class="course-badge blue">Độ tuổi 3 - 5</span>
+              <h3 class="course-card-title">Khóa Học Tiếng Anh Mầm Non</h3>
+              <p class="course-card-desc">Kích hoạt phản xạ nghe nói nhạy bén từ sớm cho bé qua các hoạt động vui nhộn, bài hát sinh động, tạo dựng tình yêu ngôn ngữ tự nhiên.</p>
+              <div class="course-card-footer">
+                <div class="course-price-box">
+                  <span class="old-price">1.200.000đ</span>
+                  <span class="new-price color-green">799.000đ</span>
+                </div>
+                <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
+              </div>
+            </div>
           </div>
-          <div class="footer-center">
-            <p class="footer-name">Follow us</p>
-            <ul class="footer-contact">
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-facebook footer-icon color-blue"
-                  ></i
-                  >CTY GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-youtube footer-icon color-red"
-                  ></i
-                  >GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                  STORIES</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-right">
-            <p class="footer-name"> Hỗ trợ khách hàng </p>
-            <ul class="footer-support">
-              <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
-              <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
-              <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
-            </ul>
+          <div class="course-card">
+            <img src="./assets/img/khoahoctieuhoc.png" alt="Khóa học Tiểu học" class="course-card-img">
+            <div class="course-card-body">
+              <span class="course-badge yellow">Độ tuổi 6 - 11</span>
+              <h3 class="course-card-title">Khóa Học Tiếng Anh Tiểu Học</h3>
+              <p class="course-card-desc">Phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết, lồng ghép tư duy phản biện. Giúp con tự tin bứt phá điểm số trên lớp và các kỳ thi quốc tế.</p>
+              <div class="course-card-footer">
+                <div class="course-price-box">
+                  <span class="old-price">1.800.000đ</span>
+                  <span class="new-price color-green">1.299.000đ</span>
+                </div>
+                <a href="#consultant" class="btn-learn-more">Đăng ký thử</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
- <a href="" class="btn-contact">
+    </section>
+
+
+    
+
+    <!-- Features & Methodology Section -->
+    <section class="features-trust-section">
+      <div class="container">
+        <h2 class="trust-title">Phương Pháp Giảng Dạy Đột Phá</h2>
+        <p class="trust-subtitle">Lấy trẻ làm trung tâm để mang lại trải nghiệm học tập hứng khởi và hiệu quả nhất.</p>
+        
+        <div class="trust-grid">
+          <div class="trust-card">
+            <i class="fa-solid fa-music trust-icon"></i>
+            <h3 class="trust-card-title">SONGS (Bài hát)</h3>
+            <p class="trust-card-desc">Học qua giai điệu vui tươi giúp trẻ dễ tiếp thu, ghi nhớ từ vựng và luyện phát âm chuẩn xác ngay từ đầu.</p>
+          </div>
+          <div class="trust-card">
+            <i class="fa-regular fa-clone trust-icon"></i>
+            <h3 class="trust-card-title">FLASHCARD (Thẻ từ)</h3>
+            <p class="trust-card-desc">Hình ảnh trực quan sinh động giúp kích thích tối đa trí nhớ não bộ, liên tưởng từ vựng nhanh chóng.</p>
+          </div>
+          <div class="trust-card">
+            <i class="fa-solid fa-brain trust-icon"></i>
+            <h3 class="trust-card-title">CRITICAL THINKING</h3>
+            <p class="trust-card-desc">Phương pháp tư duy phản biện lồng ghép giúp trẻ chủ động phân tích, giải quyết vấn đề bằng tiếng Anh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultant Form Section -->
+    <section id="consultant" class="consultant-section">
+      <div class="container consultant-row">
+        <div class="consultant-left-col">
+          <div class="consultant-left-top">
+            <h3 class="consultant-head-title">Đồng hành cùng con vươn xa!</h3>
+            <p class="consultant-head-desc">Đội ngũ giảng viên giàu kinh nghiệm (đạt chứng chỉ TESOL từ các trường đại học hàng đầu như Oxford, Harvard, Cambridge) luôn sẵn sàng đồng hành cùng con.</p>
+            <div class="consultant-feature-list">
+              <div class="consultant-feature-item">
+                <div class="consultant-feature-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <div class="consultant-feature-text">
+                  <h4 class="consultant-feature-title">Tư vấn lộ trình học thử</h4>
+                  <p class="consultant-feature-desc">Định hướng phương pháp phù hợp với tính cách của trẻ.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-quote">
+            * Được sai. Được thử. Được trưởng thành.
+          </div>
+        </div>
+        
+        <div class="form-col-box">
+          <h3 class="form-title">Nhận Tư Vấn Lộ Trình Cho Bé</h3>
+          <p class="form-subtitle">Ba mẹ điền thông tin dưới đây để nhận lịch kiểm tra trình độ miễn phí.</p>
+          <form id="consultantForm">
+            <div class="form-row">
+              <div class="form-group-box">
+                <label for="fullName" class="form-label">Họ và tên Phụ huynh *</label>
+                <input type="text" id="fullName" required placeholder="Nguyễn Văn A">
+              </div>
+              <div class="form-group-box">
+                <label for="phoneNumber" class="form-label">Số điện thoại *</label>
+                <input type="tel" id="phoneNumber" required placeholder="0912 xxx xxx">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group-box">
+                <label for="learningGoal" class="form-label">Độ tuổi của bé</label>
+                <select id="learningGoal">
+                  <option value="mamnon">Bé học mầm non (3 - 5 tuổi)</option>
+                  <option value="tieuhoc">Học sinh tiểu học (6 - 11 tuổi)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit-consultant">Gửi yêu cầu nhận tư vấn</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
+      </div>
+      <div class="footer-body">
+        <div class="footer-left">
+          <p class="footer-name">Công ty Cổ phần Đầu tư phát triển Group 2</p>
+          <p class="footer-info">
+            Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+            Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmail.com<br />
+            Giờ làm việc: 7h - 11h30 | 13h - 21h
+          </p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-name">Follow us</p>
+          <ul class="footer-contact">
+            <li>
+              <a href="#" class="footer-info">
+                <i class="fa-brands fa-facebook footer-icon color-blue"></i> CTY GROUP 2
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-info">
+                <i class="fa-brands fa-youtube footer-icon color-red"></i> GROUP 2
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-info">
+                <i class="fa-brands fa-tiktok footer-icon"></i> GROUP 2 STORIES
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-name">Hỗ trợ khách hàng</p>
+          <ul class="footer-support">
+            <li><a href="#" class="footer-info">Chính sách và Bảo mật</a></li>
+            <li><a href="#" class="footer-info">Quyền lợi khách hàng</a></li>
+            <li><a href="#" class="footer-info">Hướng dẫn sử dụng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Messenger Contact Button -->
+<a href="" class="btn-contact">
       <i class="fa-brands fa-facebook-messenger color-blue"></i>
     </a>
     
-    <script src="./assets/js/trangchu.js"></script>
-  </body>
+  <!-- JavaScript -->
+  <script src="./assets/js/trangchu.js"></script>
+</body>
 </html>

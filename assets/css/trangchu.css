@@ -1,6 +1,140 @@
+/* ===== 1. RESET & VARIABLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  --color-one: #63DEFF;
+  --color-two: #FCDD51;
+  --color-text: #001C66;
+  --color-background: #6b7280;
+}
 
-/* ===== 2. HERO SECTION ===== */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #263238;
+}
+
+a {
+  text-decoration: none;
+  color: #263238;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Common Container & Helper Classes */
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-chocolate { color: chocolate; }
+.color-green { color: #67a606; }
+.color-red { color: red; }
+.color-blue { color: blue; }
+.col-yellow { color: #f2ce5a; }
+
+.dis-none { display: none; }
+.dis-inline-block { display: inline-block; }
+.text-center { text-align: center; }
+.lh { line-height: 1.8; }
+
+/* ===== 2. HEADER & NAVIGATION ===== */
+.header {
+  background-color: #e3f2fd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  height: 8rem;
+}
+
+.header.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-body {
+  display: flex;
+  align-items: center;
+}
+
+.header-body .logo {
+  mix-blend-mode: multiply;
+  width: 20rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.header-body nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-size: 1.8rem;
+  padding: 1.6rem;
+}
+
+nav a:hover {
+  text-shadow: 0.4px 0 0 currentColor;
+}
+
+.home-style {
+  text-shadow: 0.4px 0 0 black;
+  font-size: 1.9rem;
+}
+
+.frame {
+  padding: 10px 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.frame:hover,
+.shopping-icon-frame:hover {
+  opacity: 0.7;
+}
+
+.shopping-icon-frame {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Mobile Drawer Overlay Settings */
+.menu-header__icon { z-index: 1001 !important; }
+.menu-overlay { z-index: 1000 !important; }
+.menu-drawer { z-index: 1002 !important; }
+
+.menu-drawer-list .sub-menu {
+  padding-left: 20px;
+  font-size: 1.4rem;
+}
+
+/* ===== 3. HERO SECTION ===== */
 .hero {
   background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
   padding: 80px 0;
@@ -22,7 +156,6 @@
 .hero-badge {
   display: inline-block;
   background-color: rgba(99, 222, 255, 0.2);
-  /* Sắc xanh nhẹ từ --color-one */
   color: var(--color-text, #001C66);
   padding: 6px 16px;
   border-radius: 20px;
@@ -37,7 +170,6 @@
   font-weight: 800;
   color: var(--color-text, #001C66);
   margin-bottom: 20px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .hero-desc {
@@ -53,7 +185,6 @@
   flex-wrap: wrap;
 }
 
-/* Các loại nút nhấn CTA (Call to Action) */
 .btn-yellow-cta {
   background-color: var(--color-two, #FCDD51);
   color: var(--color-text, #001C66);
@@ -91,7 +222,6 @@
 
 .hero-image {
   flex: 1;
-  text-align: right;
   display: flex;
   justify-content: center;
 }
@@ -103,44 +233,7 @@
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
 }
 
-.brand {
-  position: relative;
-  /* Làm điểm neo cho 2 hình tròn trang trí */
-  overflow: hidden;
-  /* Cắt bỏ phần hình tròn bị tràn ra ngoài rìa, chống vỡ giao diện */
-}
-
-/* Hình tròn trang trí màu vàng ở góc trên bên trái */
-.brand::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: #fdec7b;
-  border-radius: 50%;
-  top: -150px;
-  left: -150px;
-  opacity: 0.25;
-  z-index: -1;
-  /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
-}
-
-/* Hình tròn trang trí màu xanh ở góc dưới bên phải */
-.brand::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #58cbca;
-  border-radius: 50%;
-  bottom: -120px;
-  right: -120px;
-  opacity: 0.2;
-  z-index: -1;
-  /* Đẩy hình tròn xuống dưới cùng để không che mất nội dung */
-}
-
-/* ===== 3. COURSES SECTION ===== */
+/* ===== 4. COURSES SECTION ===== */
 .courses-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -157,7 +250,6 @@
   color: var(--color-text, #001C66);
   font-weight: 700;
   margin-bottom: 15px;
-  font-family: 'Open Sans', sans-serif;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
@@ -181,7 +273,6 @@
   line-height: 1.6;
 }
 
-/* Flexbox / Grid layout cho các khoá học */
 .courses-grid {
   display: flex;
   justify-content: center;
@@ -294,8 +385,7 @@
   opacity: 0.9;
 }
 
-
-/* ===== 4. FEATURES & TRUST SECTION ===== */
+/* ===== 5. FEATURES & TRUST SECTION ===== */
 .features-trust-section {
   background-color: #f8fdff;
   padding: 80px 0;
@@ -307,7 +397,6 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 15px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .trust-subtitle {
@@ -359,8 +448,7 @@
   line-height: 1.6;
 }
 
-
-/* ===== 5. CONSULTANT SECTION ===== */
+/* ===== 6. CONSULTANT SECTION ===== */
 .consultant-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -382,8 +470,6 @@
   color: var(--color-text, #001C66);
   font-weight: 800;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .consultant-head-desc {
@@ -443,7 +529,6 @@
   margin-top: 20px;
 }
 
-/* Khối Form Tư Vấn bên phải */
 .form-col-box {
   flex: 1;
   background-color: #f3fffe;
@@ -458,7 +543,6 @@
   color: var(--color-text, #001C66);
   font-weight: 700;
   margin-bottom: 10px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .form-subtitle {
@@ -523,7 +607,152 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
 }
-/* ===== 7. RESPONSIVE CHO TRANG CHỦ ===== */
+
+/* ===== 7. FOOTER & FLOATING BUTTON ===== */
+.footer {
+  background-color: #f3fffe;
+  padding: 2rem 0 2rem;
+}
+
+.footer-logo img {
+  width: 8rem;
+  height: auto;
+  margin-left: -10px;
+}
+
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.footer-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-info {
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.footer-icon {
+  margin-right: 8px;
+}
+/* ===== KHỐI CHỌN BRIGHTENGLISH (ĐÃ ĐỒNG BỘ MÀU) ===== */
+.why-choose {
+  padding: 60px 0;
+  background-color: #f8fdff; /* Nền xanh nhạt đồng bộ với các section khác */
+}
+
+.why-choose_inner {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* --- Cột bên trái: Tiêu đề & Ảnh --- */
+.why-choose_left {
+  flex: 1;
+}
+
+.why-choose_title {
+  color: var(--color-text, #001C66); /* Màu xanh đậm chủ đạo trang chủ */
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.why-choose_subtitle {
+  font-size: 1.4rem;
+  color: #546e7a; /* Màu chữ phụ đề chuẩn tone trang chủ */
+  margin-bottom: 25px;
+}
+
+.why-choose_image {
+  margin: 0;
+}
+
+.why-choose_image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+/* --- Cột bên phải: Danh sách 4 điểm nổi bật --- */
+ul.why-choose_right {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.why-choose_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Icon tròn viền màu cam / xanh nổi bật */
+.why-choose_icon {
+  width: 45px;
+  height: 45px;
+  border: 1.5px solid #ff7a00; /* Đổi viền sang màu cam đốm nhấn */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff7a00; /* Màu icon cam nổi bật */
+  font-size: 1.8rem;
+  background-color: rgba(255, 122, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.why-choose_text h3 {
+  font-size: 1.6rem;
+  color: var(--color-text, #001C66); /* Chữ tiêu đề nhỏ màu xanh đậm */
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.why-choose_text p {
+  font-size: 1.35rem;
+  color: #607d8b;
+  line-height: 1.5;
+}
+/* Nút Messenger gốc */
+.btn-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  z-index: 99;
+}
+
+.btn-contact i {
+  animation: wiggle 0.6s infinite;
+  font-size: 3em; /* Giữ nguyên đơn vị em nguyên bản */
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+}
+
+/* ===== 8. RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 991.98px) {
   .hero-container {
     flex-direction: column-reverse;
@@ -547,10 +776,7 @@
     width: 80%;
   }
 
-  .course-card {
-    width: 100%;
-  }
-
+  .course-card,
   .trust-card {
     width: 100%;
   }
@@ -585,5 +811,10 @@
   .form-row {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .footer-body {
+    flex-direction: column;
+    gap: 20px;
   }
 }
