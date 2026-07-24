@@ -1,4 +1,3 @@
-/* ===== 1. RESET & VARIABLES ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,7 +56,6 @@ ul {
 .text-center { text-align: center; }
 .lh { line-height: 1.8; }
 
-/* ===== 2. HEADER & NAVIGATION ===== */
 .header {
   background-color: #e3f2fd;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -124,7 +122,6 @@ nav a:hover {
   background-color: white;
 }
 
-/* Mobile Drawer Overlay Settings */
 .menu-header__icon { z-index: 1001 !important; }
 .menu-overlay { z-index: 1000 !important; }
 .menu-drawer { z-index: 1002 !important; }
@@ -134,7 +131,6 @@ nav a:hover {
   font-size: 1.4rem;
 }
 
-/* ===== 3. HERO SECTION ===== */
 .hero {
   background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
   padding: 80px 0;
@@ -233,7 +229,6 @@ nav a:hover {
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
 }
 
-/* ===== 4. COURSES SECTION ===== */
 .courses-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -385,7 +380,6 @@ nav a:hover {
   opacity: 0.9;
 }
 
-/* ===== 5. FEATURES & TRUST SECTION ===== */
 .features-trust-section {
   background-color: #f8fdff;
   padding: 80px 0;
@@ -448,7 +442,6 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* ===== 6. CONSULTANT SECTION ===== */
 .consultant-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -608,7 +601,6 @@ nav a:hover {
   box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
 }
 
-/* ===== 7. FOOTER & FLOATING BUTTON ===== */
 .footer {
   background-color: #f3fffe;
   padding: 2rem 0 2rem;
@@ -640,7 +632,6 @@ nav a:hover {
 .footer-icon {
   margin-right: 8px;
 }
-/* ===== KHỐI CHỌN BRIGHTENGLISH (ĐÃ ĐỒNG BỘ MÀU) ===== */
 .why-choose {
   padding: 60px 0;
   background-color: #f8fdff; /* Nền xanh nhạt đồng bộ với các section khác */
@@ -684,7 +675,6 @@ nav a:hover {
   border-radius: 16px;
 }
 
-/* --- Cột bên phải: Danh sách 4 điểm nổi bật --- */
 ul.why-choose_right {
   list-style: none;
   padding: 0;
@@ -701,7 +691,6 @@ ul.why-choose_right {
   gap: 20px;
 }
 
-/* Icon tròn viền màu cam / xanh nổi bật */
 .why-choose_icon {
   width: 45px;
   height: 45px;
