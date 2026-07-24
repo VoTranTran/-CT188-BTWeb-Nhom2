@@ -175,14 +175,3 @@ button.register:hover {
 html {
   filter: grayscale(100%);
 }
-
-/* Ẩn hình ảnh thật, chỉ để lại khung chứa */
-img {
-  opacity: 0.2; /* Làm mờ ảnh */
-  border: 2px dashed #000; /* Tạo viền nét đứt như bản vẽ */
-}
-
-/* Hiện rõ viền của tất cả các khối (box) */
-div, section, header, footer, button {
-  outline: 1px solid #ccc !important;
-}
