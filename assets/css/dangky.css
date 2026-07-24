@@ -171,6 +171,11 @@ button.register:hover {
     transform:translateY(-50%) scale(1.08);
 }
 
+/* Chuyển toàn bộ trang web về đen trắng */
+html {
+  filter: grayscale(100%);
+}
+
 /* Ẩn hình ảnh thật, chỉ để lại khung chứa */
 img {
   opacity: 0.2; /* Làm mờ ảnh */
