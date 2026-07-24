@@ -1,7 +1,7 @@
 /* 1. CONTAINER BAO NGOÀI (Chứa Banner đằng sau) */
 .container_register {
   position: relative;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
