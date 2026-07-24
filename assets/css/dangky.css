@@ -9,8 +9,9 @@
 }
 
 /* Banner nằm đằng sau tự dãn full 100% chiều rộng */
-.register-img {
+.register-img{
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
