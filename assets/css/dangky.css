@@ -1,7 +1,7 @@
 /* 1. CONTAINER BAO NGOÀI (Chứa Banner đằng sau) */
 .container_register {
   position: relative;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,8 @@
 }
 
 /* Banner nằm đằng sau tự dãn full 100% chiều rộng */
-.register-img{
+.register-img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
 }
