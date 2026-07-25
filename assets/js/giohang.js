@@ -20,11 +20,6 @@ function setupTimelineScroll() {
   });
 }
 
-function add_class(selector, className) {
-  const selectorElement = document.querySelector(selector);
-  selectorElement.classList.add(className);
-}
-
 function updateTimeLine(step) {
   const totalStep = 3;
   const bar = document.querySelector(".order-timeline__bar");
@@ -194,8 +189,11 @@ function selectBank() {
         el.classList.add("bank-detail--hidden");
       });
 
-      add_class(".payment-info", "show");
-      add_class(".payment-default", "hidden");
+      const payment_infoElement = document.querySelector(".payment-info");
+      payment_infoElement.classList.add("show");
+
+      const payment_defaultElement = document.querySelector(".payment-default");
+      payment_defaultElement.classList.add("hidden");
 
       const currentDots = this.querySelector(".payment-method-item__dot");
       cardDots.forEach(dot => {
@@ -223,8 +221,8 @@ function selectBank() {
 }
 // end section_5
 function renderCardItems() {
-  const cardItems = JSON.parse(localStorage.getItem("cardItems"));
-  if (cardItems.length > 0) {
+  const cardItems = JSON.parse(localStorage.getItem("cardItems")) || "";
+  if (cardItems != "" && cardItems.length > 0) {
     const emptyCartView = document.querySelector(".cart__content--empty");
     const nonEmptyCartView = document.querySelector(".cart__content--non-empty");
     emptyCartView.classList.add("cart__content--hidden");
