@@ -2,14 +2,11 @@ const scroll_To = (selector) => {
   const selectorElement = document.querySelector(selector);
   const headerHeight = 205;
 
-  if (selectorElement.classList.contains("show")) {
-    const selectorTop = selectorElement.getBoundingClientRect().top + window.scrollY;
-
-    window.scrollTo({
-      top: selectorTop - headerHeight,
-      behavior: "smooth"
-    });
-  }
+  const selectorTop = selectorElement.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: selectorTop - headerHeight,
+    behavior: "smooth"
+  });
 }
 
 function setupTimelineScroll() {
@@ -173,9 +170,7 @@ function btn_products() {
     const hasBoxChecked = document.querySelector(".cart-grid--product-item .cart-grid__col--action input:checked"); // lấy input được chọn 
     if (hasBoxChecked) { // nếu chưa có sản phẩm nào được chọn trả về null
       updateTimeLine(1);
-      add_class(".checkout-personal", "show");
       scroll_To(".checkout-personal");
-      runParallax();
     } else {
       alert("Vui lòng chọn 1 sản phẩm trước khi xác nhận");
     }
@@ -328,7 +323,7 @@ function renderCardItems() {
 
 function saveInfo() {
   let isValid = true;
-  
+
   const fullNameElement = document.querySelector("#fullName");
   fullNameElement.addEventListener("blur", function () {
     const label_error = document.querySelector(".full-name__label--error");
@@ -370,7 +365,6 @@ function saveInfo() {
     event.preventDefault();
     if (isValid) {
       alert("Thông tin của bạn đã được lưu");
-      add_class(".checkout-payment", "show");
       scroll_To(".checkout-payment");
       updateTimeLine(2);
     }
@@ -380,6 +374,7 @@ function saveInfo() {
 function setupfunction() {
   setupTimelineScroll();
   renderCardItems();
+  runParallax();
   saveInfo();
   selectBank();
 }
