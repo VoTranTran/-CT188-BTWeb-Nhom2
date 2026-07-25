@@ -18,7 +18,7 @@ function setupTimelineScroll() {
 
   icons.forEach((icon, index) => {
     icon.addEventListener('click', function () {
-      scroll_To(sections[index]);
+      scroll_To(sections[index]); //chạy theo index trong sections
     });
   });
 }
@@ -32,11 +32,11 @@ function updateTimeLine(step) {
   const totalStep = 3;
   const bar = document.querySelector(".order-timeline__bar");
   const percentBar = (step / totalStep) * 100;
-  bar.style.backgroundSize = `${percentBar}% 100%`;
+  bar.style.backgroundSize = `${percentBar}% 100%`; // set lại style background-size
 
   document.querySelectorAll(".order-timeline__icon").forEach((el, index) => {
-    const isActive = (step == totalStep) ? true : (index < step);
-    el.classList.toggle("order-timeline__icon--active", isActive);
+    const isActive = (step == totalStep) ? true : (index < step); // nếu step = total thì tất cả đều active
+    el.classList.toggle("order-timeline__icon--active", isActive); // nếu isActive là true thì add nếu là false thì remove
   });
 
   document.querySelectorAll(".order-timeline__dot").forEach((el, index) => {
@@ -57,9 +57,9 @@ function runParallax() {
   });
 }
 
-function updateTotalPrice(gridProduct, quantity) {
-  const priceElement = gridProduct.querySelector('.cart-grid__col--price');
-  const totalElement = gridProduct.querySelector('.cart-grid__col--total');
+function updateTotalPrice(product_item, quantity) {
+  const priceElement = product_item.querySelector('.cart-grid__col--price');
+  const totalElement = product_item.querySelector('.cart-grid__col--total');
   const priceNumber = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
   const total = priceNumber * quantity;
   totalElement.textContent = total.toLocaleString('en-US') + ' VNĐ';
@@ -67,8 +67,8 @@ function updateTotalPrice(gridProduct, quantity) {
 
 function calculate() {
   let total = 0;
-  const grid_products = document.querySelectorAll(".cart-grid--product-item");
-  grid_products.forEach(item => {
+  const product_item = document.querySelectorAll(".cart-grid--product-item");
+  product_item.forEach(item => {
     const checkBox = item.querySelector(".cart-grid__col--action input");
     const totalElement = item.querySelector(".cart-grid__col--total");
     if (checkBox.checked) {
@@ -88,31 +88,31 @@ function quantityButtons() {
   const btn_minus = document.querySelectorAll(".cart-grid__btn-qty--minus");
   btn_minus.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const gridProduct = this.closest('.cart-grid--product-item');
-      const quantity = gridProduct.querySelector(".cart-grid__qty-value");
+      const product_item = this.closest('.cart-grid--product-item');
+      const quantity = product_item.querySelector(".cart-grid__qty-value");
       let currentQuantity = parseInt(quantity.textContent);
       if (currentQuantity > 1) {
         currentQuantity--;
         quantity.textContent = currentQuantity;
-        updateTotalPrice(gridProduct, currentQuantity);
+        updateTotalPrice(product_item, currentQuantity);
         calculate();
       } else if (currentQuantity == 1) {
-        const grid_ProductId = gridProduct.id;
+        const grid_ProductId = product_item.id;
         if (confirm("Xoá sản phẩm này ra khỏi giỏ hàng")) {
           localStorage.removeItem(grid_ProductId);
-          gridProduct.remove();
+          product_item.remove();
         }
       }
     })
   })
   document.querySelectorAll(".cart-grid__btn-qty--plus").forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const gridProduct = this.closest('.cart-grid--product-item');
-      const quantity = gridProduct.querySelector(".cart-grid__qty-value");
+      const product_item = this.closest('.cart-grid--product-item');
+      const quantity = product_item.querySelector(".cart-grid__qty-value");
       let currentQuantity = parseInt(quantity.textContent);
       currentQuantity++;
       quantity.textContent = currentQuantity;
-      updateTotalPrice(gridProduct, currentQuantity);
+      updateTotalPrice(product_item, currentQuantity);
       calculate();
     });
   });
@@ -157,9 +157,9 @@ function deleteEvent() {
         const productId = productRow.getAttribute("id");
         console.log(productId);
         cardItems = cardItems.filter(p => p.id !== productId);
-        
+
         localStorage.setItem('cardItems', JSON.stringify(cardItems));
-        productRow.remove(); 
+        productRow.remove();
         col_product_feature.textContent = `Tất cả (${cardItems.length} sản phẩm)`;
         calculate();
       }
@@ -183,11 +183,6 @@ function btn_products() {
 }
 
 // end section-3
-
-// section-4
-
-
-// end section-4
 
 // section-5
 
@@ -272,7 +267,7 @@ function renderCardItems() {
 
       const span = document.createElement("span");
       span.className = "cart-grid__product-name";
-      span.textContent = `${item.courseName} - ${item.teacherName}`;
+      span.textContent = `${item.courseName} - ${item.product_detail}`;
 
       colProduct.appendChild(img);
       colProduct.appendChild(span);
@@ -332,13 +327,53 @@ function renderCardItems() {
 }
 
 function saveInfo() {
+  let isValid = true;
+  
+  const fullNameElement = document.querySelector("#fullName");
+  fullNameElement.addEventListener("blur", function () {
+    const label_error = document.querySelector(".full-name__label--error");
+    const labelFullName = fullNameElement.nextElementSibling;
+    if (!fullNameElement.value) {
+      label_error.style.display = "block";
+      isValid = false;
+    } else {
+      label_error.style.display = "none";
+      labelFullName.style.top = "-10px";
+      isValid = true;
+    }
+  });
+
+  const phoneNumberElement = document.querySelector("#phoneNumber");
+  phoneNumberElement.addEventListener("blur", function () {
+    const label_error = phoneNumberElement.nextElementSibling.nextElementSibling;
+    const labelPhoneNumer = phoneNumberElement.nextElementSibling;
+    const label_invalid = phoneNumberElement.nextElementSibling.nextElementSibling.nextElementSibling;
+    if (!phoneNumberElement.value) {
+      label_error.style.display = "block";
+      isValid = false;
+    } else {
+      if (isNaN(phoneNumberElement.value) || phoneNumberElement.value.length != 10) {
+        label_error.style.display = "none";
+        label_invalid.style.display = "block";
+        labelPhoneNumer.style.top = "-10px";
+        isValid = false;
+      } else {
+        label_error.style.display = "none";
+        label_invalid.style.display = "none";
+        labelPhoneNumer.style.top = "-10px";
+        isValid = true;
+      }
+    }
+  });
   const form = document.querySelector("#personalForm");
   form.addEventListener('submit', function (event) {
     event.preventDefault();
-    alert("Thông tin của bạn đã được lưu");
-    add_class(".checkout-payment", "show");
-    scroll_To(".checkout-payment");
-    updateTimeLine(2);
+    if (isValid) {
+      alert("Thông tin của bạn đã được lưu");
+      add_class(".checkout-payment", "show");
+      scroll_To(".checkout-payment");
+      updateTimeLine(2);
+    }
   })
 }
 

@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         courseName: document.querySelector(".tab-btn.active").textContent,
         priceOld: document.querySelector("#price-old").textContent,
         priceNew: document.querySelector("#price-new").textContent,
-        teacherName: formatName + " - " + levelName,
+        product_detail: formatName + " - " + levelName,
         quantity: 1
       };
       cardItems.push(card);
