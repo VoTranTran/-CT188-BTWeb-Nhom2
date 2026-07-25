@@ -2,7 +2,7 @@
 .button-1 {
   border: none;
   color: #fff;
-  background-image: linear-gradient(to right, var(--color-text), var(--color-one), #00ADEF, var(--color-text), var(--color-one));
+  background-image: linear-gradient(to right, var(--color-text), var(--color-one), var(--color-one), var(--color-text));
   font-size: 20px;
   padding: 16px;
   border-radius: 16px;
@@ -14,7 +14,7 @@
 }
 
 .button-1:hover {
-  background-position: 100% 0;
+  background-position: 102% 0;
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
@@ -631,51 +631,96 @@
 }
 
 .personal-form__group {
-  margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .personal-form__label {
-  display: block;
-  font-size: 15px;
-  font-weight: 600;
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
   color: var(--color-background);
   margin-bottom: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .personal-form__input {
+  border: 0;
+  border-bottom: 2px solid #E6E3F1;
+  background-color: transparent;
+  padding-bottom: 8px;
+  padding-top: 20px;
+  border-radius: 0;
   width: 100%;
-  padding: 11px 15px;
-  border: 1.5px solid #e5e7eb;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  color: #1a1a2e;
 }
 
 .personal-form__input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
-.personal-form__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.personal-form__input:focus+.personal-form__label {
+  top: -10px;
+  font-size: 13px;
 }
 
-.personal-form__select {
+.focus_border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: 0.4s;
+  z-index: 1;
+  height: 2px;
+}
+
+.personal-form__input:focus~.focus_border {
   width: 100%;
-  padding: 11px 15px;
-  border: 1.5px solid #e5e7eb;
-  border-radius: 10px;
-  font-size: 14px;
+  background-color: #021F69;
 }
 
-.personal-form__select:focus {
+.full-name__label--error {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  font-size: 14px;
+  color: red;
+  line-height: 1;
+}
+
+.phoneNumber__label--error {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  font-size: 14px;
+  color: red;
+  line-height: 1
+}
+
+.phoneNumber__label--invalid {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  font-size: 14px;
+  color: red;
+  line-height: 1
+}
+
+.personal-form__note {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  min-height: 127px;
+  border-bottom: solid 2px #E6E3F1;
 }
 
 .checkout-personal .button-1 {

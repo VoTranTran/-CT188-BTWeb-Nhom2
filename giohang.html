@@ -229,7 +229,7 @@
 
     <!-- checkout-personal -->
 
-    <section class="checkout-personal hidden">
+    <section class="checkout-personal">
       <div class="checkout-personal__inner">
         <div class="checkout-personal__images">
           <img src="assets/images/z7985660187178_835f55be06882f93cd76e08853876281.jpg" alt=""
@@ -258,37 +258,28 @@
                 </div>
                 <div class="personal-card__body">
                   <form id="personalForm" class="personal-form">
+
                     <div class="personal-form__group">
-                      <label for="fullName">Họ và tên</label>
-                      <input name="fullName" id="fullName" type="text" placeholder="Nguyễn Văn A" autocomplete="name"
-                        required class="personal-form__input">
+                      <input id="fullName" type="text" autocomplete="name" required class="personal-form__input">
+                      <label class="personal-form__label" for="fullName">Họ và tên *</label>
+                      <label for="fullName" class="full-name__label--error">Vui lòng nhập thông tin</label>
+                      <span class="focus_border"></span>
                     </div>
 
                     <div class="personal-form__group">
-                      <label for="Email">Email</label>
-                      <input name="Email" id="Email" type="email" placeholder="nguyenvana@gmail.com"
-                        autocomplete="email" class="personal-form__input">
+                      <input id="phoneNumber" required class="personal-form__input">
+                      <label for="phoneNumber" class="personal-form__label">Số điện thoại *</label>
+                      <label for="phoneNumber" class="phoneNumber__label--error">Vui lòng nhập thông tin</label>
+                      <label for="phoneNumber" class="phoneNumber__label--invalid">Số điện thoại chưa chính xác</label>
+                      <span class="focus_border"></span>
+                    </div>
+                    
+                    <div class="personal-form__group">
+                      <textarea name="note" id="note" class="personal-form__input personal-form__note"></textarea>
+                      <label class="personal-form__label" for="note">ghi chú (Nếu có)</label>
+                      <span class="focus_border"></span>
                     </div>
 
-                    <div class="personal-form__group">
-                      <label for="phoneNumber">Số điện thoại</label>
-                      <input name="phoneNumber" id="phoneNumber" type="number" placeholder="1234567890" required
-                        class="personal-form__input">
-                    </div>
-                    <div class="form-row">
-                      <div class="personal-form__group">
-                        <label for="dateOfBirth">Ngày sinh</label>
-                        <input name="dateOfBirth" id="dateOfBirth" type="date" class="personal-form__input">
-                      </div>
-                      <div class="personal-form__group">
-                        <label for="sex">Giới tính</label>
-                        <select name="sex" id="sex" class="personal-form__input">
-                          <option>Nam</option>
-                          <option>Nữ</option>
-                          <option>Khác</option>
-                        </select>
-                      </div>
-                    </div>
                     <button class="button-1" type="submit">Lưu thông tin</button>
                   </form>
                 </div>

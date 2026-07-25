@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         courseName: "Tiếng Anh Mầm Non (3-5 tuổi) - Khóa Cơ Bản",
         priceOld: "1.200.000đ",
         priceNew: "799.000đ",
-        teacherName: "Học Online - Cô Ruby Lucy & Cô Anna Elsa",
+        product_detail: "Học Online - Cô Ruby Lucy & Cô Anna Elsa",
         quantity: 1
       };
       cardItems.push(newItem);
