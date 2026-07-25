@@ -1,62 +1,76 @@
-/*chung*/
+/* --- Title Section --- */
 .section-title {
   text-align: center;
-  /* font-family: "Sen", sans-serif; */
-  font-weight: 700;
-  font-size: 2.5rem;
-  /* color: #444; */
-  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: #2b2b2b;
+  margin-bottom: 35px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .section-title::after {
   content: "";
-  width: 80px;
+  width: 60px;
   height: 4px;
-  /* background: #fdec7b; */
+  background: #58cbca;
   display: block;
-  margin: 15px auto 0;
-  border-radius: 10px;
+  margin: 12px auto 0;
+  border-radius: 4px;
 }
-/* Hero */
+
+/* --- Hero --- */
 .intro-bgr {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   min-height: 300px;
   background-image: url(../img/gioithieu/background.png);
   background-size: cover;
   background-position: center;
 }
-/*Brand*/
 
+/* --- Brand / Sứ Mệnh --- */
 .brand {
-  background: linear-gradient(135deg, #f2fffd, #fffdf7);
-  padding: 60px 0;
+  background: #fafcfd;
+  padding: 70px 0;
   position: relative;
   overflow: hidden;
 }
-.brand::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: #fdec7b;
-  border-radius: 50%;
-  top: -150px;
-  left: -150px;
-  opacity: 0.25;
+
+.brand-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.brand::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #58cbca;
-  border-radius: 50%;
-  bottom: -120px;
-  right: -120px;
-  opacity: 0.2;
+.brand-story-text {
+  flex: 1.1;
+  font-size: 1.6rem;
+  text-align: left;
+  line-height: 1.8;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eef4f8;
+  color: #444;
 }
+
+.brand-highlight {
+  display: block;
+  background: linear-gradient(135deg, #ee6961, #f0827b);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(238, 105, 97, 0.2);
+}
+
+/* Container chứa cả chữ và video */
 .brand-content {
   display: flex;
   align-items: center;
@@ -65,7 +79,6 @@
 
 .brand-story-text {
   flex: 1;
-  /* font-style: italic; */
   font-size: 2rem;
   text-align: left;
   line-height: 1.5;
@@ -74,9 +87,10 @@
   padding: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
 }
+
 .brand-story-text strong {
   display: block;
-  background: #ee6961;
+  background: #001C66;
   color: white;
   padding: 6px 18px;
   border-radius: 30px;
@@ -84,122 +98,124 @@
   font-weight: 600;
   text-align: center;
 }
-.brand-image {
+
+/* KHỐI CHỨA VIDEO / HÌNH ẢNH (BÊN PHẢI) */
+.brand-image,
+.section-video {
   flex: 1;
+  min-width: 0; /* MẸO BẮT BỘC: Giúp video không tự phình to đè sang bên trái */
 }
 
-.brand-image img {
+/* Áp dụng style chuẩn cho CẢ img VÀ video */
+.brand-image img,
+.section-video video {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: auto;
+  display: block; /* Xóa khoảng hở thừa dưới chân video */
+  border-radius: 30px; /* Bo góc bằng với khối chữ bên trái cho đồng bộ */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
   transition: 0.4s ease;
 }
-.brand-image img:hover {
+
+.brand-image img:hover,
+.section-video video:hover {
   transform: scale(1.03);
 }
-/*PP Giang day*/
+/* --- Phương pháp giảng dạy --- */
 .method {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .method-list {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 25px;
 }
 
 .method-item {
-  width: 100%;
-  text-align: center;
   flex: 1;
-  padding: 20px;
-  border-radius: 10px;
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, #58cbca, #fdec7b) border-box;
-  border: 3px solid transparent;
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
 }
 
 .method-img {
-  padding: 5px;
-  background: #fff;
-  margin-bottom: 15px;
-  height: 250px;
+  background: #f9fbfd;
+  margin-bottom: 20px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
+  padding: 15px;
 }
 
 .method-img img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .method-item:hover {
+  transform: translateY(-6px);
+  border-color: #001C66;
+  box-shadow: 0 12px 25px rgba(88, 203, 202, 0.12);
+}
+
+.method-item:hover .method-img img {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  border-color: #aaa;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, #58cbca, #fdec7b) border-box;
-  border: 3px solid transparent;
 }
 
 .method-item h3 {
   font-family: "Sen", sans-serif;
   font-weight: 700;
+  font-size: 1.8rem;
   color: #333;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/*Giao vien*/
-
+/* --- Đội ngũ Giảng Viên --- */
 .teacher {
-  padding: 40px 0;
-  background: #f2fffd;
+  padding: 60px 0;
+  background: #f5fafb;
 }
 
 .teacher-list {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .teacher-item {
   text-align: center;
-  background: transparent;
-  width: 335px;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-top: 5px solid #2ec4b6;
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
+  width: 320px;
+  padding: 20px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e2ecee;
+  border-top: 4px solid #001C66;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .teacher-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  /* z-index: 10; */
-  border-top: 5px solid #2ec4b6;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .teacher-img {
-  width: 300px;
-  height: 360px;
-  margin: 0 auto 20px;
+  width: 100%;
+  height: 320px;
+  margin: 0 auto 18px;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .teacher-img img {
@@ -212,33 +228,53 @@
 .teacher-name {
   font-family: "Sen", sans-serif;
   font-weight: 800;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 12px;
 }
 
 .teacher-item p {
-  font-size: 1.5rem;
-  margin: 2px 0;
-  color: #555;
+  font-size: 1.3rem;
+  margin: 6px 0;
+  color: #666;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Nút Xem Thêm */
+.teacher-view-more {
+  text-align: center;
+  margin-top: 35px;
 }
 
 .teacher-view-more i {
+  font-size: 2.2rem;
   cursor: pointer;
+  color: #001C66;
+  transition: transform 0.3s ease;
 }
+
 .teacher-more {
   display: none;
-  margin-top: 70px;
+  margin-top: 30px;
 }
+
 .teacher-more.active {
   display: block;
 }
+
 .teacher-view-more.active {
   transform: rotate(180deg);
 }
+
+/* --- Library --- */
+.library {
+  padding: 40px 0;
+}
+
 .library img {
   width: 100%;
+  border-radius: 16px;
   display: block;
 }
