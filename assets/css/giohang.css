@@ -93,6 +93,7 @@
 @media (max-width: 992px) {
   .container {
     max-width: 960px;
+    max-width: calc(100% - 32px);
   }
 
   .breadcrumb__item {
@@ -107,6 +108,7 @@
 @media (max-width: 768px) {
   .container {
     max-width: 720px;
+    max-width: calc(100% - 24px);
   }
 
   .breadcrumb {
@@ -131,6 +133,7 @@
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
+    max-width: calc(100% - 16px);
   }
 
   .breadcrumb {
