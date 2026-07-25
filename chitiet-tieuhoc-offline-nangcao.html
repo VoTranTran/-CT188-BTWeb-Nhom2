@@ -1,161 +1,299 @@
+<!--
+* Tên file: chitiet-tieuhoc-offline-nangcao.html
+* Nhóm thực hiện: Nhóm 2 (BrightEnglish)
+* Mục đích: Trang chi tiết sản phẩm khóa học Tiếng Anh Tiểu Học (6-11 tuổi) - Học Trực Tiếp - Khóa Nâng Cao.
+-->
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiếng Anh Nâng Cao - Tiểu Học (Trực Tiếp)</title>
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Đường dẫn CSS theo cấu trúc thư mục của dự án -->
-  <link rel="stylesheet" href="assets/css/khoahocrieng.css">
-  
-  <style>
-    /* Cuộn trang mượt mà khi bấm nút chi tiết */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết Khóa học: Tiếng Anh Tiểu Học Trực Tiếp Nâng Cao - BrightEnglish</title>
+
+  <!-- CSS Hệ thống BrightEnglish -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/khoahoc.css" />
+  <link rel="stylesheet" href="./assets/css/khoahocrieng.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
 </head>
+
 <body>
-
-  <!-- Breadcrumb điều hướng -->
-  <nav class="breadcrumb-wrapper">
+  <!-- HEADER -->
+  <header class="header fixed">
     <div class="container">
-      <div class="breadcrumb-list">
-        <a href="index.html">Trang chủ</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <a href="khoahoc.html">Khóa học</a>
-        <i class="fa-solid fa-chevron-right"></i>
-        <span>Tiểu Học (6-11 tuổi) - Trực Tiếp</span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header Khóa học -->
-  <header class="detail-header-section">
-    <div class="container">
-      <div class="detail-header-card">
-        
-        <!-- Cột thông tin khóa học bên trái -->
-        <div class="detail-header-info">
-          <span class="course-badge">Tiểu Học (6-11 tuổi)</span>
-          <h1 class="course-main-title">Tiếng Anh Tiểu Học - Khóa Nâng Cao (Trực Tiếp)</h1>
-          <p class="course-short-desc">
-            Chương trình tăng cường chuyên sâu với giáo viên bản xứ, giải đề thực tế và cam kết đầu ra chứng chỉ quốc tế Cambridge (Starters/Movers/Flyers).
-          </p>
-
-          <!-- Thông số khóa học -->
-          <div class="course-meta-pills">
-            <div class="meta-item">
-              <i class="fa-regular fa-clock"></i>Thời lượng: 60 buổi
-            </div>
-            <div class="meta-item">
-              <i class="fa-solid fa-location-dot"></i>Hình thức: Tại Trung Tâm
-            </div>
-            <div class="meta-item">
-              <i class="fa-solid fa-users"></i>Sĩ số: Tối đa 15 bé/lớp
-            </div>
-          </div>
-
-          <!-- Khối Mua / Giỏ hàng & Nút Chi Tiết -->
-          <div class="detail-purchase-box">
-            <div class="price-group" style="width: 100%; margin-bottom: 12px;">
-              <span class="price-new" style="font-size: 2.4rem; font-weight: 800; color: #001C66; margin-right: 1rem;">2.699.000đ</span>
-              <span class="price-old" style="text-decoration: line-through; color: #a0aec0; font-size: 1.6rem;">3.400.000đ</span>
-            </div>
-
-            <!-- Nút Thêm vào giỏ hàng -->
-            <button id="btn-add-cart" class="btn btn-cart-large" style="background-color: #fcdd51; color: #001C66; border: none; font-weight: 700; border-radius: 10px; cursor: pointer; padding: 12px 24px; width: 100%; margin-bottom: 10px;">
-              <i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng
-            </button>
-
-            <!-- NÚT CHI TIẾT KHÓA NÂNG CAO -->
-            <a href="#loitrinh-sec" class="btn-detail-link" style="display: block; width: 100%; text-align: center; padding: 10px; border: 1.5px solid #001C66; color: #001C66; border-radius: 10px; font-weight: 700; text-decoration: none;">
-              Chi tiết Khóa Nâng Cao
-            </a>
-          </div>
-        </div>
-
-        <!-- Cột hình ảnh minh họa bên phải -->
-        <div class="detail-header-media">
-          <img src="assets/images/tieuhoc-offline-nangcao.jpg" alt="Tiếng Anh Nâng Cao Tiểu Học Trực Tiếp" onerror="this.src='https://via.placeholder.com/450x300?text=Tieu+Hoc+Nang+Cao+Offline'">
-        </div>
-
+      <div class="header-body">
+        <a href="index.html" class="logo-link">
+          <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+        </a>
+        <nav class="navbar">
+          <ul class="navbar-left">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="./gioithieu.html">Giới thiệu</a></li>
+            <li><a href="./khoahoc.html" class="home-style">Khóa học</a></li>
+          </ul>
+          <ul class="navbar-right">
+            <li>
+              <a href="./giohang.html">
+                <span class="shopping-icon-frame">
+                  <i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i>
+                </span>
+              </a>
+            </li>
+            <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
+            <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
 
-  <!-- Nội dung chi tiết -->
-  <main class="detail-body-section">
-    <div class="container">
-      
-      <!-- Lộ trình khóa học (Nơi nút 'Chi tiết Khóa Nâng Cao' sẽ cuộn xuống khi bấm) -->
-      <section id="loitrinh-sec" class="detail-block">
-        <h2 style="font-size: 2.2rem; color: #001C66; margin-bottom: 1.5rem; font-weight: 800;">Lộ trình Khóa Nâng Cao (Trực Tiếp)</h2>
-        <p class="paragraph">
-          Khóa học được thiết kế dành riêng cho học sinh từ 6 đến 11 tuổi có nhu cầu củng cố nền tảng phát âm chuẩn bản xứ, phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết và ôn luyện chứng chỉ Cambridge.
-        </p>
-
-        <div class="curriculum-grid">
-          <div class="curriculum-card">
-            <div class="curriculum-header">
-              <span class="part-badge">Phần 1</span>
-              <h3>Phát triển kỹ năng giao tiếp &amp; Phản xạ chuyên sâu</h3>
-            </div>
-            <ul class="curriculum-list" style="list-style: none; padding: 0;">
-              <li><i class="fa-solid fa-check-circle"></i> Tương tác trực tiếp 100% bằng Tiếng Anh với Giáo viên Bản xứ.</li>
-              <li><i class="fa-solid fa-check-circle"></i> Mở rộng vốn từ vựng theo các chủ đề học thuật nâng cao.</li>
-              <li><i class="fa-solid fa-check-circle"></i> Thực hành thuyết trình cá nhân và làm việc nhóm trực tiếp tại lớp.</li>
-            </ul>
-          </div>
-
-          <div class="curriculum-card">
-            <div class="curriculum-header">
-              <span class="part-badge">Phần 2</span>
-              <h3>Chuyên đề Ngữ pháp &amp; Luyện đề Cambridge</h3>
-            </div>
-            <ul class="curriculum-list" style="list-style: none; padding: 0;">
-              <li><i class="fa-solid fa-check-circle"></i> Hệ thống hóa ngữ pháp tiểu học, chuẩn bị cho các kỳ thi học sinh giỏi/chuyên.</li>
-              <li><i class="fa-solid fa-check-circle"></i> Cọ xát và giải các dạng đề thực tế Starters, Movers, Flyers.</li>
-              <li><i class="fa-solid fa-check-circle"></i> Kiểm tra đánh giá năng lực định kỳ theo từng giai đoạn.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Đánh giá phụ huynh -->
-      <section class="detail-block">
-        <h2 style="font-size: 2.2rem; color: #001C66; margin-bottom: 1.5rem; font-weight: 800;">Cảm nhận từ Phụ huynh</h2>
-        <div class="review-grid">
-          <div class="review-card">
-            <div class="review-stars" style="color: #f6ad55; margin-bottom: 10px;">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="review-text">"Môi trường học tại trung tâm rất hiện đại, lớp giới hạn 15 bé nên thầy cô quan tâm sát sao. Bé nhà mình tự tin nói tiếng Anh hơn hẳn."</p>
-            <span class="review-author">- Mẹ Minh Anh (Lớp 3)</span>
-          </div>
-
-          <div class="review-card">
-            <div class="review-stars" style="color: #f6ad55; margin-bottom: 10px;">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="review-text">"Lộ trình nâng cao giúp con đạt kết quả rất tốt trong kỳ thi Movers vừa qua. Cảm ơn trung tâm BrightEnglish!"</p>
-            <span class="review-author">- Phụ huynh Gia Bách (Lớp 5)</span>
-          </div>
-        </div>
-      </section>
-
+  <!-- MOBILE HEADER -->
+  <div class="mobile-header">
+    <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+    <label for="menu-checkbox">
+      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" height="30" width="70" viewBox="0 0 640 640">
+        <path
+          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+      </svg>
+    </label>
+    <label for="menu-checkbox" class="menu-overlay"></label>
+    <div class="menu-drawer">
+      <div class="menu-drawer-top">
+        <a href="index.html" class="mobile-drawer-logo"></a>
+      </div>
+      <ul class="menu-drawer-list">
+        <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a></li>
+        <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
+        <li><i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a></li>
+        <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
+      </ul>
     </div>
-  </main>
-
-  <!-- Popup Thông báo thêm giỏ hàng -->
-  <div id="cartPopup" class="cart-popup-toast" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #001C66; color: #fff; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 9999;">
-    <i class="fa-solid fa-circle-check" style="color: #fcdd51; margin-right: 8px;"></i> Đã thêm khóa học vào giỏ hàng!
   </div>
 
-  <!-- File JS kết nối theo cấu trúc thư mục -->
-  <script src="assets/js/khoahocrieng.js"></script>
+  <!-- NỘI DUNG TRANG CHI TIẾT SẢN PHẨM KHÓA HỌC -->
+  <main class="course-detail-page">
+
+    <!-- KHỐI HEADER TRANG CHI TIẾT KHÓA HỌC -->
+    <section class="detail-header-section">
+      <div class="container">
+        <div class="detail-header-card">
+          <div class="detail-header-info">
+            <span class="course-badge"><i class="fa-solid fa-graduation-cap"></i> Độ tuổi: 6 - 11 Tuổi | Học Trực Tiếp</span>
+            <h1 class="course-main-title">Tiếng Anh Tiểu Học - Khóa Nâng Cao (Trực Tiếp)</h1>
+            <p class="course-short-desc">
+              Chương trình tăng cường chuyên sâu với giáo viên bản xứ, giải đề thực tế và cam kết đầu ra chứng chỉ quốc tế Cambridge (Starters/Movers/Flyers).
+            </p>
+            
+            <!-- Thông số nhanh dạng Thẻ Badge -->
+            <div class="course-meta-pills">
+              <div class="meta-item"><i class="fa-regular fa-clock"></i> 60 Buổi học</div>
+              <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Tại Trung Tâm</div>
+              <div class="meta-item"><i class="fa-solid fa-users"></i> Sĩ số: Tối đa 15 bé/lớp</div>
+            </div>
+
+            <!-- Khối Giá & Hành Động Mua -->
+            <div class="detail-purchase-box">
+              <div class="price-group">
+                <span class="old-price">3.400.000đ</span>
+                <span class="new-price color-red">2.699.000đ</span>
+              </div>
+              <button id="btn-add-cart" class="modal-submit btn-cart-large">
+                <i class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
+              </button>
+            </div>
+          </div>
+
+          <!-- Ảnh xem trước đại diện khóa học -->
+          <div class="detail-header-media">
+            <img src="./assets/img/khoahoc/thnc-off.jpg" alt="Tiếng Anh Nâng Cao Tiểu Học Trực Tiếp" onerror="this.src='./assets/img/khoahoc/thcb1.jpg'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KHỐI CHÍNH: NỘI DUNG TRÌNH BÀY CHI TIẾT -->
+    <section class="detail-body-section">
+      <div class="container">
+        
+        <!-- 1. TỔNG QUAN GIỚI THIỆU KHÓA HỌC -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-circle-info"></i> Giới thiệu khóa học</h2>
+          <div class="block-content">
+            <p class="paragraph">
+              Khóa học <strong>Tiếng Anh Tiểu Học Trực Tiếp - Nâng Cao</strong> được thiết kế dành riêng cho học sinh từ 6 đến 11 tuổi có nhu cầu củng cố nền tảng phát âm chuẩn bản xứ, phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết và ôn luyện chứng chỉ Cambridge.
+            </p>
+            <p class="paragraph">
+              Lớp học giới hạn sĩ số giúp giáo viên bản xứ tương tác sát sao với từng bé, kết hợp không gian học tập hiện đại tại trung tâm giúp học sinh tự tin giao tiếp, phản xạ nhanh và đạt điểm số tối ưu trong các kỳ thi học thuật.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. NỘI DUNG BÀI HỌC CỤ THỂ (CURRICULUM) -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-list-check"></i> Nội dung chương trình chi tiết</h2>
+          
+          <div class="curriculum-grid">
+            
+            <div class="curriculum-card">
+              <div class="curriculum-header">
+                <span class="part-badge">Chương 1</span>
+                <h3>Phát triển kỹ năng giao tiếp & Phản xạ (Buổi 1 - 15)</h3>
+              </div>
+              <ul class="curriculum-list">
+                <li><i class="fa-solid fa-circle-play"></i> Bài 1: Tương tác 100% bằng Tiếng Anh với Giáo viên Bản xứ</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 2: Mở rộng vốn từ vựng theo chủ đề học thuật nâng cao</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 3: Thực hành thuyết trình cá nhân trực tiếp tại lớp</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 4: Hoạt động đóng vai và thảo luận nhóm trực tiếp</li>
+              </ul>
+            </div>
+
+            <div class="curriculum-card">
+              <div class="curriculum-header">
+                <span class="part-badge">Chương 2</span>
+                <h3>Ngữ pháp Chuyên sâu & Giải đề Cambridge (Buổi 16 - 30)</h3>
+              </div>
+              <ul class="curriculum-list">
+                <li><i class="fa-solid fa-circle-play"></i> Bài 5: Hệ thống hóa ngữ pháp tiểu học cho kỳ thi chuyên</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 6: Rèn kỹ năng giải đề Starters, Movers, Flyers</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 7: Kỹ thuật xử lý các dạng bài Đọc - Viết phức tạp</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 8: Kiểm tra đánh giá năng lực giai đoạn 1</li>
+              </ul>
+            </div>
+
+            <div class="curriculum-card">
+              <div class="curriculum-header">
+                <span class="part-badge">Chương 3</span>
+                <h3>Luyện kỹ năng Nghe - Nói nâng cao (Buổi 31 - 45)</h3>
+              </div>
+              <ul class="curriculum-list">
+                <li><i class="fa-solid fa-circle-play"></i> Bài 9: Luyện phản xạ phỏng vấn Speaking trực tiếp 1-1</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 10: Rèn ngữ điệu và phát âm chuẩn bản xứ</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 11: Luyện kỹ năng Nghe hiểu các bài hội thoại tốc độ thực tế</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 12: Thuyết trình đề tài tổng hợp trước lớp</li>
+              </ul>
+            </div>
+
+            <div class="curriculum-card">
+              <div class="curriculum-header">
+                <span class="part-badge">Chương 4</span>
+                <h3>Thi thử Cambridge & Tổng kết (Buổi 46 - 60)</h3>
+              </div>
+              <ul class="curriculum-list">
+                <li><i class="fa-solid fa-circle-play"></i> Bài 13: Thi thử mô phỏng kỳ thi Cambridge tại trung tâm</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 14: Sửa chi tiết đề thi thử và khắc phục điểm yếu</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 15: Tổng duyệt kỹ năng làm bài thi chính thức</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 16: Tổng kết khóa học & Trao chứng nhận xuất sắc</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. GIẢNG VIÊN ĐỒNG HÀNH -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-chalkboard-user"></i> Giảng viên trực tiếp giảng dạy</h2>
+          <div class="teacher-pair">
+            <div class="teacher-single">
+              <img src="./assets/img/gioithieu/gv5.jpg" alt="Cô Tony Alix">
+              <div class="teacher-info">
+                <h3>Cô Tony Alix</h3>
+                <p class="color-chocolate">Thạc sĩ Giảng dạy Greenland</p>
+                <span class="teacher-exp">Hơn 10 năm kinh nghiệm giảng dạy trực tiếp tại trung tâm</span>
+              </div>
+            </div>
+            <div class="teacher-single">
+              <img src="./assets/img/gioithieu/gv6.png" alt="Thầy Jack Juventer">
+              <div class="teacher-info">
+                <h3>Thầy Jack Juventer</h3>
+                <p class="color-chocolate">Thạc sĩ Giáo dục Tiếng Anh Oxford</p>
+                <span class="teacher-exp">Chuyên gia luyện thi Cambridge cấp độ Tiểu học</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ĐÁNH GIÁ CỦA PHỤ HUYNH -->
+        <div class="detail-block">
+          <h2 class="section-title color-blue"><i class="fa-solid fa-comments"></i> Phụ huynh nói gì về khóa học?</h2>
+          <div class="review-grid">
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+              </div>
+              <p class="review-text">"Môi trường học tại trung tâm rất hiện đại, lớp giới hạn 15 bé nên thầy cô quan tâm sát sao. Bé nhà mình tự tin nói tiếng Anh hơn hẳn."</p>
+              <span class="review-author">— Mẹ Minh Anh (Phụ huynh bé lớp 3)</span>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+                <i class="fa-solid fa-star color-yellow"></i>
+              </div>
+              <p class="review-text">"Lộ trình nâng cao giúp con đạt kết quả rất tốt trong kỳ thi Movers vừa qua. Cảm ơn trung tâm BrightEnglish!"</p>
+              <span class="review-author">— Phụ huynh Gia Bách (Phụ huynh bé lớp 5)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" class="btn-contact"><i class="fa-brands fa-facebook-messenger color-blue"></i></a>
+
+  <!-- Popup thông báo giỏ hàng -->
+  <div class="popup" id="cartPopup"><i class="fa-solid fa-circle-check"></i> Đã thêm vào giỏ hàng!</div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./assets/img/logo.png" alt="BrightEnglish" style="height: auto; width: 150px; margin-left: 0; margin-bottom: 20px;" />
+      </div>
+      <div class="footer-body">
+        <div class="footer-left">
+          <p class="footer-name">Công ty Cổ phần Đầu tư phát triển Group 2</p>
+          <p class="footer-info">Địa chỉ: Tầng 6, Tòa nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />Tel:
+            0666188188 | Fax: 0188666188 | Email: group2@gmail.com<br />Giờ làm việc: 7h - 11h30, 13h - 21h
+          </p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-name">Follow us</p>
+          <ul class="footer-contact">
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP 2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2 STORIES</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-name">Hỗ trợ khách hàng</p>
+          <ul class="footer-support">
+            <li><a href="#" class="footer-info">Chính sách và Bảo mật</a></li>
+            <li><a href="#" class="footer-info">Quyền lợi khách hàng</a></li>
+            <li><a href="#" class="footer-info">Hướng dẫn sử dụng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/khoahocrieng.js"></script>
 </body>
+
 </html>
