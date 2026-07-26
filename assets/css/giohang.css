@@ -207,9 +207,14 @@
   border-radius: 50px;
   background-color: var(--color-one);
   padding: 20px;
-  transition: all 0.3 ease-in-out;
-  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
 }
 
 .order-timeline__item:hover .order-timeline__icon {
@@ -299,10 +304,6 @@
 /* cart */
 .cart-section {
   margin: 100px 0;
-}
-
-.cart-section .container {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .cart__title {
@@ -528,7 +529,7 @@
 /* checkout-personal */
 .checkout-personal {
   margin-bottom: 40px;
-  background-image: url(../img/background.png);
+  background-image: url(../images/a4dea31e-de67-4999-ac6b-236798b96801.png);
   padding: 50px;
   background-size: cover; 
   background-attachment: fixed;
