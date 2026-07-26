@@ -22,39 +22,35 @@
       href="./assets/img/favicon.png"
       type="image/x-icon"
     />
-    <title>BrightEnglish - Giới thiệu</title>
+    <title>BrightEnglish - Đăng nhập</title>
   </head>
   <body>
-    <header class="header fixed">
-      <div class="container">
-        <div class="header-body">
-          <!-- Sửa class của thẻ <a> thành logo-link -->
-        <a href="index.html" class="logo-link">
-            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
-        </a>
-          <nav class="navbar">
-            <ul class="navbar-left">
-              <li>
-                <a href="index.html" >Trang chủ</a>
-              </li>
-              <li><a href="./gioithieu.html" >Giới thiệu</a></li>
-              <li><a href="./khoahoc.html" >Khóa học</a></li>
-            </ul>
-            <ul class="navbar-right">
-              <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
-              <li class="frame">
-                <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
-              </li>
-              <li class="frame">
-                <a href="./dangnhap.html" class="color-green home-style" >Đăng nhập</a>
-              </li>
-            </ul>
-          </nav>
+      <!-- HEADER: Thanh điều hướng dùng chung -->
+      <header class="header fixed">
+        <div class="container">
+          <div class="header-body">
+            <a href="index.html" class="logo-link">
+              <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+            </a>
+            <nav class="navbar">
+              <ul class="navbar-left">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="./gioithieu.html">Giới thiệu</a></li>
+                <li><a href="./khoahoc.html" >Khóa học</a></li>
+              </ul>
+              <ul class="navbar-right">
+                <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
+                        class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a></li>
+                <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
+                <li class="frame"><a href="./dangnhap.html" class="color-green home-style">Đăng nhập</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </header>
-    <!-- Responsive mobile/tablet header -->
-    <div class="mobile-header">
+      </header>
+      
+      <!-- Responsive mobile/tablet header -->
+      <div class="mobile-header">
       <input
         type="checkbox"
         name="menu-checkbox"
@@ -75,11 +71,10 @@
           />
         </svg>
       </label>
-      <!-- Overlay menu -->
+      
       <label for="menu-checkbox" class="menu-overlay"></label>
-      <!-- Menu content -->
+      
       <div class="menu-drawer">
-        <!-- Nav mobile -->
         <div class="menu-drawer-top">
           <a href="index.html" class="mobile-drawer-logo"></a>
           <label for="menu-checkbox">
@@ -95,16 +90,20 @@
                 d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
               />
             </svg>
+          </label>
         </div>
+        
         <ul class="menu-drawer-list">
           <li>
             <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
           </li>
-          <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link home-style" >Giới thiệu</a></li>
+          <li>
+            <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
+          </li>
           <li>
             <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link">Khóa học</a>
             <ul class="sub-menu">
-              <li><a href="./khoahoc.html" class="navbar-link">Mầm non</a></li>
+              <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
               <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
             </ul>
           </li>
@@ -113,164 +112,162 @@
             <a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a>
           </li>
           <li>
-            <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
+            <a href="./dangnhap.html" class="navbar-link color-green home-style">Đăng nhập</a>
           </li>
         </ul>
       </div>
     </div>
-<body>
+    <!-- Banner + Form login -->
+    <div class="container_login">
+      <!-- Banner -->
+      <img src="./assets/img//dangnhap/banner.png" alt="BrightEnglish Banner" class="login-img">
 
-  <!-- Banner + Form login -->
-  <div class="container_login">
-    <!-- Banner -->
-    <img src="./assets/img/dangnhap/banner.png" alt="BrightEnglish Banner" class="login-img">
+      <!-- ================= ĐĂNG NHẬP ================= -->
+      <form action="" class="form-login" id="loginForm">
+        <h1>Đăng Nhập</h1>
+        <p class="subtitle">Chào mừng bạn quay trở lại với BrightEnglish</p>
 
-    <!-- ================= ĐĂNG NHẬP ================= -->
-    <form action="" class="form-login" id="loginForm">
-      <h1>Đăng Nhập</h1>
-      <p class="subtitle">Chào mừng bạn quay trở lại với BrightEnglish</p>
+          <div class="login-box">
+
+            <!-- Email --> 
+            <div class="input-group">
+              <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="input-group password-box">
+              <input type="password" id="password" placeholder="Mật khẩu" required>
+              <i class="fa-solid fa-eye toggle"></i>
+            </div>
+
+            <!-- Remember -->
+            <div class="login-option">
+              <label class="remember">
+                <input type="checkbox" id="remember">
+                Ghi nhớ đăng nhập
+              </label>
+              <a href="javascript:void(0)"
+                class="forgot-password"
+                onclick="showForgotPassword()">
+                Quên mật khẩu?
+              </a>
+            </div>
+
+            <!--Nút đăng nhập-->
+            <button type="button" class="login" onclick="login()">Đăng nhập</button>
+
+            <!--Điều hướng đăng ký-->
+            <div class="login_nav">
+              <p>Chưa có tài khoản?
+                <a href="./dangky.html">Đăng ký</a>
+              </p>
+            </div>
+          </div>
+      </form>
+
+      <!-- ================= QUÊN MẬT KHẨU ================= -->
+      <form action="" class="form-login" id="forgotPasswordForm">
+        <h1>Quên Mật Khẩu</h1>
+        <p class="subtitle">Khôi phục mật khẩu tài khoản BrightEnglish</p>
 
         <div class="login-box">
 
-          <!-- Email --> 
+          <!-- Email -->
           <div class="input-group">
-            <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+            <input type="text" id="emailForgot" placeholder="Email">
           </div>
 
-          <!-- Mật khẩu -->
+          <!-- Mã xác nhận -->
+          <div class="input-group">
+            <div class="code-box">
+              <input type="text" id="code" placeholder="Mã xác nhận">
+              <button type="button" class="code-btn" onclick="createCode()"> Lấy mã</button>
+            </div>
+          </div>
+
+          <!-- Mật khẩu mới -->
           <div class="input-group password-box">
-            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <input type="password" id="newPassword" placeholder="Mật khẩu mới">
             <i class="fa-solid fa-eye toggle"></i>
           </div>
 
-          <!-- Remember -->
-          <div class="login-option">
-            <label class="remember">
-              <input type="checkbox" id="remember">
-              Ghi nhớ đăng nhập
-            </label>
-            <a href="javascript:void(0)"
-              class="forgot-password"
-              onclick="showForgotPassword()">
-              Quên mật khẩu?
-            </a>
+          <!-- Nhập lại mật khẩu mới -->
+          <div class="input-group password-box">
+            <input type="password" id="confirmNewPassword" placeholder="Nhập lại mật khẩu mới">
+            <i class="fa-solid fa-eye toggle"></i>
           </div>
 
-          <!--Nút đăng nhập-->
-          <button type="button" class="login" onclick="login()">Đăng nhập</button>
+          <button type="button" class="login" onclick="updatePassword()">Cập nhật mật khẩu</button>
 
-          <!--Điều hướng đăng ký-->
           <div class="login_nav">
-            <p>Chưa có tài khoản?
-              <a href="./dangky.html">Đăng ký</a>
+            <p>
+              <a href="#" onclick="backToLogin()">← Quay lại Đăng nhập</a>
             </p>
           </div>
-        </div>
-    </form>
 
-    <!-- ================= QUÊN MẬT KHẨU ================= -->
-    <form action="" class="form-login" id="forgotPasswordForm">
-      <h1>Quên Mật Khẩu</h1>
-      <p class="subtitle">Khôi phục mật khẩu tài khoản BrightEnglish</p>
-
-      <div class="login-box">
-
-        <!-- Email -->
-        <div class="input-group">
-          <input type="text" id="emailForgot" placeholder="Email">
         </div>
 
-        <!-- Mã xác nhận -->
-        <div class="input-group">
-          <div class="code-box">
-            <input type="text" id="code" placeholder="Mã xác nhận">
-            <button type="button" class="code-btn" onclick="createCode()"> Lấy mã</button>
-          </div>
-        </div>
-
-        <!-- Mật khẩu mới -->
-        <div class="input-group password-box">
-          <input type="password" id="newPassword" placeholder="Mật khẩu mới">
-          <i class="fa-solid fa-eye toggle"></i>
-        </div>
-
-        <!-- Nhập lại mật khẩu mới -->
-        <div class="input-group password-box">
-          <input type="password" id="confirmNewPassword" placeholder="Nhập lại mật khẩu mới">
-          <i class="fa-solid fa-eye toggle"></i>
-        </div>
-
-        <button type="button" class="login" onclick="updatePassword()">Cập nhật mật khẩu</button>
-
-        <div class="login_nav">
-          <p>
-            <a href="#" onclick="backToLogin()">← Quay lại Đăng nhập</a>
-          </p>
-        </div>
-
-      </div>
-
-    </form>
-  </div>
-  
-   <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
-        </div>
-        <div class="footer-body">
-          <div class="footer-left">
-            <p class="footer-name">
-              Công ty Cổ phần Đầu tư phát triển Group 2
-            </p>
-            <p class="footer-info">
-              Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
-              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
-              Giờ làm việc: 7h - 11h30 | 13h - 21h
-            </p>
-          </div>
-          <div class="footer-center">
-            <p class="footer-name">Follow us</p>
-            <ul class="footer-contact">
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-facebook footer-icon color-blue"
-                  ></i
-                  >CTY GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-youtube footer-icon color-red"
-                  ></i
-                  >GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                  STORIES</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-right">
-            <p class="footer-name"> Hỗ trợ khách hàng </p>
-            <ul class="footer-support">
-              <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
-              <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
-              <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
- <a href="" class="btn-contact">
-      <i class="fa-brands fa-facebook-messenger color-blue"></i>
-    </a>
+      </form>
+    </div>
     
-    <script src="./assets/js/dangnhap.js"></script>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-logo">
+            <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
+          </div>
+          <div class="footer-body">
+            <div class="footer-left">
+              <p class="footer-name">
+                Công ty Cổ phần Đầu tư phát triển Group 2
+              </p>
+              <p class="footer-info">
+                Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+                Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
+                Giờ làm việc: 7h - 11h30 | 13h - 21h
+              </p>
+            </div>
+            <div class="footer-center">
+              <p class="footer-name">Follow us</p>
+              <ul class="footer-contact">
+                <li>
+                  <a href="" class="footer-info"
+                    ><i
+                      class="fa-brands fa-facebook footer-icon color-blue"
+                    ></i
+                    >CTY GROUP 2</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-info"
+                    ><i
+                      class="fa-brands fa-youtube footer-icon color-red"
+                    ></i
+                    >GROUP 2</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-info"
+                    ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                    STORIES</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-right">
+              <p class="footer-name"> Hỗ trợ khách hàng </p>
+              <ul class="footer-support">
+                <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
+                <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
+                <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <a href="" class="btn-contact">
+        <i class="fa-brands fa-facebook-messenger color-blue"></i>
+      </a>
+      
+      <script src="./assets/js/dangnhap.js"></script>
   </body>
 </html>

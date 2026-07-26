@@ -76,11 +76,11 @@
   transition:.3s ;
 }
 /* Khi rê chuột */
-.form-group input:hover{
+.input-group input:hover{
     border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
 }
 /* Khi nhập dữ liệu */
-.form-group input:focus{
+.input-group input:focus{
     background:#ffffff; /* Đổi nền thành màu trắng */
     border-color:#1976D2; /* Đổi màu viền sang xanh */
     outline:none; /* Bỏ viền mặc định của trình duyệt */
@@ -207,22 +207,18 @@ button.login:hover {
 .toggle:hover{
     transform:translateY(-50%) scale(1.08);
 }
-
-/*RESPONSIVE NHỎ*/
+/* Mobile */
 @media (max-width:768px){
-    .form-login{
-        width:90%;
-        min-width:unset;
-        left:50%;
-    }
     .login-option{
         flex-direction:column;
         align-items:flex-start;
         gap:10px;
     }
+
     .code-box{
         flex-direction:column;
     }
+
     .code-btn{
         width:100%;
     }
