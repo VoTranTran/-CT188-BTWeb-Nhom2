@@ -528,13 +528,7 @@
 
 /* checkout-personal */
 .checkout-personal {
-  margin-bottom: 40px;
-  background-image: url(../images/a4dea31e-de67-4999-ac6b-236798b96801.png);
-  padding: 50px;
-  background-size: cover; 
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center; 
+  margin-bottom: 100px;
 }
 
 .checkout-personal.hidden {
@@ -751,10 +745,6 @@
   .personal-block {
     width: 100%;
     padding: 0;
-  }
-
-  .checkout-personal {
-    padding: 100px 0;
   }
 }
 
