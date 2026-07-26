@@ -1,63 +1,62 @@
 /* 1. CONTAINER BAO NGOÀI (Chứa Banner đằng sau) */
 .container_register {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  position: relative; /* Đặt vị trí tương đối để form có thể đè lên banner */
+  width: 100%; /* Chiều rộng chiếm toàn bộ màn hình */
+  display: flex; /* Dùng Flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  overflow: hidden; /* Ẩn phần nội dung bị tràn */
 }
 
 /* Banner nằm đằng sau tự dãn full 100% chiều rộng */
 .register-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: auto; /* Chiều cao tự co giãn theo ảnh */
+  display: block; /* Hiển thị dạng block để không bị khoảng trắng */
 }
 
 /* 2. KHUNG FORM ĐĂNG KÝ (Đè lên banner & tự co dãn) */
 /* 2. KHUNG FORM ĐĂNG KÝ */
 .form-register, .form-login {
-  position: absolute;
-  top: 50%;
+  position: absolute; /* Đặt form đè lên banner */
+  top: 50%; /* Căn giữa theo chiều dọc */
   
   /* Căn mép trái của form nằm đúng giữa màn hình, 
      sau đó dịch nhẹ sang trái một khoảng để tay bé gái chỉ đúng mép form */
   left: calc(50% - 90px); 
   transform: translate(-50%, -60%);
   
-  width: 35%; 
+  width: 35%;  /* Chiều rộng bằng 35% banner */
   min-width: 340px;
   max-width: 480px;
   
-  padding: 30px 25px;
+  padding: 30px 25px; /* Khoảng cách giữa nội dung và viền */
   background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  box-sizing: border-box;
+  border-radius: 20px; /* Bo tròn góc */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);  /* Đổ bóng */
+  text-align: center; /* Căn giữa chữ */
+  box-sizing: border-box;  /* Padding không làm tăng kích thước */
 }
 
 /* Tiêu đề & Mô tả */
 .form-register h1 {
-  font-weight: 700;
-  font-size: 26px;
+  font-weight: 700; /* Chữ đậm */
+  font-size: 26px; /* Cỡ chữ */
   color: #0084ff;
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* Khoảng cách phía dưới */
 }
-
 .subtitle {
   font-size: 13px;
   color: #666;
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: 1.4;  /* Khoảng cách giữa các dòng */
 }
 
 /* 3. CÁC Ô INPUT (Bắt chước bạn bạn: Dùng % để dãn dài ra) */
 .register-box {
   width: 100%;
 }
-
+/* Mỗi nhóm input */
 .input-group {
   position: relative;
   width: 100%;
@@ -69,12 +68,12 @@
   width: 100%; /* Dãn tràn 100% chiều rộng khung form */
   padding: 14px 45px 14px 18px; /* Chừa 45px bên phải để không bị che con mắt */
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e2e8f0; /* Viền màu xám */
   background-color: #fafafa;
   font-size: 14px;
-  outline: none;
-  box-sizing: border-box;
-  transition:.3s ;
+  outline: none;  /* Bỏ viền mặc định */
+  box-sizing: border-box;  /* Padding không làm tăng kích thước */
+  transition:.3s ; /* Hiệu ứng chuyển động */
 }
 /* Khi rê chuột */
 .input-group input:hover{
@@ -88,23 +87,25 @@
     box-shadow:0 0 8px rgba(25,118,210,.25); /* Thêm hiệu ứng đổ bóng xanh */
 }
 
-/* Password Box & Icon con mắt (Theo cách căn % của bạn bạn) */
+/* Password Box & Icon con mắt (Theo cách căn % của bạn) */
 .password-box {
   position: relative;
 }
 
+/* Icon con mắt */
 .toggle {
   position: absolute;
-  right: 15px; /* Hoặc căn theo %: right: 4% */
+  right: 15px; /* Cách mép phải */
   top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
+  transform: translateY(-50%); /* Dịch icon lên đúng giữa */
+  cursor: pointer; /* Đổi thành hình bàn tay */
   font-size: 18px;
-  opacity: 0.6;
-  user-select: none;
+  opacity: 0.6; /* Độ mờ */
+  user-select: none;  /* Không cho bôi đen icon */
 }
+/* Khi rê chuột vào icon */
 .toggle:hover{
-    color:#0084ff;
+  color:#0084ff;
 }
 
 
@@ -113,39 +114,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin: 12px 0 18px 0;
+  gap: 8px; /* Khoảng cách giữa checkbox và chữ */
+  margin: 12px 0 18px 0; /* Khoảng cách trên dưới */
   font-size: 13px;
   color: #555;
 }
-
+/* Checkbox */
 .terms input[type="checkbox"] {
   width: 16px;
   height: 16px;
   margin: 0;
   cursor: pointer;
 }
-
+/* Link điều khoản */
 .terms a {
   color: #0084ff;
-  text-decoration: none;
+  text-decoration: none; /* Bỏ gạch chân */
 }
 
 /* Nút Đăng ký (Dãn dài đồng bộ với các thanh input) */
 button.register {
   width: 100%; /* Dãn 100% bằng với độ dài ô input */
-  padding: 13px;
+  padding: 13px; /* Khoảng cách trong */
   background: #0084ff;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 12px; /* Bo góc */
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  box-sizing: border-box;
-  transition: background 0.3s ease;
+  box-sizing: border-box; /* Không tăng kích thước */
+  transition: background 0.3s ease; /* Hiệu ứng đổi màu */
 }
-
+/* Khi rê chuột vào nút */
 button.register:hover {
   background: #0068ca;
 }
@@ -156,21 +157,23 @@ button.register:hover {
   font-size: 14px;
   color: #666;
 }
+/* Link đăng nhập */
 .register_nav a {
   color: #0084ff;
   font-weight: 600;
   text-decoration: none;
 }
+/* Khi rê chuột vào link */
 .register_nav a:hover{
-    text-decoration:underline;
+  text-decoration:underline;
 }
 
 /*HIỆU ỨNG INPUT*/
 .input-group input:hover{
-    border-color:#0084ff;
+  border-color:#0084ff;
 }
 
 /* HIỆU ỨNG ICON MẮT*/
 .toggle:hover{
-    transform:translateY(-50%) scale(1.08);
+  transform:translateY(-50%) scale(1.08);
 }
