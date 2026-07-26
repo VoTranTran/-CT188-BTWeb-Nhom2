@@ -25,36 +25,32 @@
     <title>BrightEnglish - Giới thiệu</title>
   </head>
   <body>
-    <header class="header fixed">
-      <div class="container">
-        <div class="header-body">
-          <!-- Sửa class của thẻ <a> thành logo-link -->
-        <a href="index.html" class="logo-link">
-            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
-        </a>
-          <nav class="navbar">
-            <ul class="navbar-left">
-              <li>
-                <a href="index.html" >Trang chủ</a>
-              </li>
-              <li><a href="./gioithieu.html" >Giới thiệu</a></li>
-              <li><a href="./khoahoc.html" >Khóa học</a></li>
-            </ul>
-            <ul class="navbar-right">
-              <a href="./giohang.html"><span class="shopping-icon-frame"><i class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a>
-              <li class="frame">
-                <a href="./dangky.html" class="color-chocolate">Đăng ký</a>
-              </li>
-              <li class="frame">
-                <a href="./dangnhap.html" class="color-green home-style" >Đăng nhập</a>
-              </li>
-            </ul>
-          </nav>
+      <!-- HEADER: Thanh điều hướng dùng chung -->
+      <header class="header fixed">
+        <div class="container">
+          <div class="header-body">
+            <a href="index.html" class="logo-link">
+              <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+            </a>
+            <nav class="navbar">
+              <ul class="navbar-left">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="./gioithieu.html">Giới thiệu</a></li>
+                <li><a href="./khoahoc.html" >Khóa học</a></li>
+              </ul>
+              <ul class="navbar-right">
+                <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
+                        class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a></li>
+                <li class="frame"><a href="./dangky.html" class="color-chocolate">Đăng ký</a></li>
+                <li class="frame"><a href="./dangnhap.html" class="color-green home-style">Đăng nhập</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </header>
-    <!-- Responsive mobile/tablet header -->
-    <div class="mobile-header">
+      </header>
+      
+      <!-- Responsive mobile/tablet header -->
+      <div class="mobile-header">
       <input
         type="checkbox"
         name="menu-checkbox"
@@ -75,11 +71,10 @@
           />
         </svg>
       </label>
-      <!-- Overlay menu -->
+      
       <label for="menu-checkbox" class="menu-overlay"></label>
-      <!-- Menu content -->
+      
       <div class="menu-drawer">
-        <!-- Nav mobile -->
         <div class="menu-drawer-top">
           <a href="index.html" class="mobile-drawer-logo"></a>
           <label for="menu-checkbox">
@@ -95,16 +90,20 @@
                 d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
               />
             </svg>
+          </label>
         </div>
+        
         <ul class="menu-drawer-list">
           <li>
             <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
           </li>
-          <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link " >Giới thiệu</a></li>
+          <li>
+            <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
+          </li>
           <li>
             <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link">Khóa học</a>
             <ul class="sub-menu">
-              <li><a href="./khoahoc.html" class="navbar-link">Mầm non</a></li>
+              <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
               <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
             </ul>
           </li>
@@ -118,7 +117,6 @@
         </ul>
       </div>
     </div>
-
     <!-- Banner + Form login -->
     <div class="container_login">
       <!-- Banner -->
