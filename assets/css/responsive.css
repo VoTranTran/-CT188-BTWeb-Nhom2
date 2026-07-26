@@ -156,20 +156,28 @@
   .login-img {
     display: none;
   }
+
   .container_login {
     flex-direction: column;
-    width: 90%;
-  }
-  .form-sign-in {
     width: 100%;
+    padding: 30px 15px;
+    min-height: auto;
+    background: #eef7ff;
+  }
+
+  .form-login {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 420px;
     margin: 0 auto;
+    padding: 25px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
   }
-  .container_login > div {
+  .container_login > * {
     flex: 0;
-  }
-  .btn-contact {
-    font-size: 0.75em;
-    right: 20px;
   }
   /* ====================Đăng ký================================== */
   /* 1. Tắt icon con mắt mặc định của trình duyệt Edge/Chrome/IE */
