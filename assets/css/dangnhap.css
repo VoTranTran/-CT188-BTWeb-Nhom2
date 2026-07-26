@@ -19,14 +19,12 @@
 /* KHUNG FORM ĐĂNG KÝ (Đè lên banner & tự co dãn) */
 .form-login {
   position: absolute;
-  /* Căn trí chuẩn lót lòng trên không gian trống của banner */
-  left: 42.5%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 90px); 
+  transform: translate(-50%, -60%);
   width: 35%; 
-  min-width: 340px; /* Giới hạn nhỏ nhất để không bị bóp nghẹt trên màn hình nhỏ */
-  max-width: 500px; /* Giới hạn lớn nhất để không bị vỡ giao diện */
-
+  min-width: 340px;
+  max-width: 480px;
   padding: 30px 25px;
   background: #ffffff;
   border-radius: 20px;
