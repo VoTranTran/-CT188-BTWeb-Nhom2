@@ -1,269 +1,228 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrightEnglish - Khóa học</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightEnglish - Khóa học</title>
 
-  <!-- Nạp các file CSS theo thứ tự: Reset -> Style chung -> Style riêng -> Responsive (mức độ ưu tiên cao nhất) -->
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/dangky.css" />
-  <link rel="stylesheet" href="./assets/css/responsive.css" />
-  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
-</head>
+    <!-- Nạp các file CSS theo thứ tự: Reset -> Style chung -> Style riêng -> Responsive (mức độ ưu tiên cao nhất) -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/dangky.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon" />
+  </head>
 
-<body>
-  <!-- HEADER: Thanh điều hướng dùng chung -->
-  <header class="header fixed">
-    <div class="container">
-      <div class="header-body">
-        <a href="index.html" class="logo-link">
-          <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
-        </a>
-        <nav class="navbar">
-          <ul class="navbar-left">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="./gioithieu.html">Giới thiệu</a></li>
-            <li><a href="./khoahoc.html" >Khóa học</a></li>
-          </ul>
-          <ul class="navbar-right">
-            <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
-                    class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a></li>
-            <li class="frame"><a href="./dangky.html" class="color-chocolate home-style">Đăng ký</a></li>
-            <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
-          </ul>
-        </nav>
+  <body>
+    <!-- HEADER: Thanh điều hướng dùng chung -->
+    <header class="header fixed">
+      <div class="container">
+        <div class="header-body">
+          <a href="index.html" class="logo-link">
+            <img src="./assets/img/logo.png" alt="BrightEnglish" class="logo" />
+          </a>
+          <nav class="navbar">
+            <ul class="navbar-left">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./khoahoc.html" >Khóa học</a></li>
+            </ul>
+            <ul class="navbar-right">
+              <li><a href="./giohang.html"><span class="shopping-icon-frame"><i
+                      class="fa-solid fa-cart-shopping shopping-icon color-chocolate"></i></span></a></li>
+              <li class="frame"><a href="./dangky.html" class="color-chocolate home-style">Đăng ký</a></li>
+              <li class="frame"><a href="./dangnhap.html" class="color-green">Đăng nhập</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
-
-  <!-- MOBILE HEADER: Sử dụng Checkbox Hack để làm menu Drawer không cần JS -->
-  <div class="mobile-header">
-    <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+    </header>
+    
+    <!-- Responsive mobile/tablet header -->
+    <div class="mobile-header">
+    <input
+      type="checkbox"
+      name="menu-checkbox"
+      id="menu-checkbox"
+      class="menu-checkbox"
+      hidden
+    />
     <label for="menu-checkbox">
-      <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" height="30" width="70" viewBox="0 0 640 640">
-        <path
-          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+      <svg
+        class="menu-header__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        height="30"
+        width="70"
+        viewBox="0 0 640 640"
+      >
+        <path 
+          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+        />
       </svg>
     </label>
-
+    
     <label for="menu-checkbox" class="menu-overlay"></label>
-
+    
     <div class="menu-drawer">
       <div class="menu-drawer-top">
         <a href="index.html" class="mobile-drawer-logo"></a>
         <label for="menu-checkbox">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="30" width="30"
-            class="menu-drawer-iconclose">
-            <path fill="#1a72bf"
-              d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+            height="30"
+            width="30"
+            class="menu-drawer-iconclose"
+          >
+            <path
+            fill="#1a72bf"
+              d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+            />
           </svg>
         </label>
       </div>
+      
       <ul class="menu-drawer-list">
-        <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a></li>
-        <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
         <li>
-          <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html">Khóa học</a>
+          <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link">Khóa học</a>
           <ul class="sub-menu">
             <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
             <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
           </ul>
         </li>
         <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
-        <li><a href="./dangky.html" class="navbar-link color-chocolate" class="navbar-link home-style">Đăng ký</a></li>
-        <li><a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a></li>
+        <li>
+          <a href="./dangky.html" class="navbar-link color-chocolate home-style">Đăng ký</a>
+        </li>
+        <li>
+          <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
+        </li>
       </ul>
     </div>
   </div>
-</head>
-<body>
 
-    <div class="mobile-header">
-  <input
-    type="checkbox"
-    name="menu-checkbox"
-    id="menu-checkbox"
-    class="menu-checkbox"
-    hidden
-  />
-  <label for="menu-checkbox">
-    <svg
-      class="menu-header__icon"
-      xmlns="http://www.w3.org/2000/svg"
-      height="30"
-      width="70"
-      viewBox="0 0 640 640"
-    >
-      <path 
-        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
-      />
-    </svg>
-  </label>
-  
-  <label for="menu-checkbox" class="menu-overlay"></label>
-  
-  <div class="menu-drawer">
-    <div class="menu-drawer-top">
-      <a href="index.html" class="mobile-drawer-logo"></a>
-      <label for="menu-checkbox">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 640"
-          height="30"
-          width="30"
-          class="menu-drawer-iconclose"
-        >
-          <path
-          fill="#1a72bf"
-            d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
-          />
-        </svg>
-      </label>
+    <!-- Banner & Form Register -->
+    <div class="container_register">
+      <img src="./assets/img//dangky/banner.png" alt="BrightEnglish Banner" class="register-img" />
+
+      <form action="" class="form-register">
+        <h1>Đăng Ký</h1>
+        <p class="subtitle">Tạo tài khoản để bắt đầu hành trình học tiếng Anh cùng BrightEnglish</p>
+
+        <div class="register-box">
+          <!-- Họ và tên (Đã bỏ icon) -->
+          <div class="input-group">
+            <input type="text" id="fullname" placeholder="Họ và tên" required />
+          </div>
+
+          <!-- Email (Đã bỏ icon) -->
+          <div class="input-group">
+            <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+          </div>
+
+          <!-- Mật khẩu (Giữ lại icon con mắt toggle) -->
+          <div class="input-group password-box">
+            <input type="password" id="password" placeholder="Mật khẩu" required />
+            <i class="fa-solid fa-eye toggle"></i>
+          </div>
+
+          <!-- Nhập lại mật khẩu (Giữ lại icon con mắt toggle) -->
+          <div class="input-group password-box">
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
+            <i class="fa-solid fa-eye toggle"></i>
+          </div>
+
+          <!-- Điều khoản -->
+          <div class="terms">
+            <input type="checkbox" id="agree" required />
+            <label for="agree">
+              Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a>
+            </label>
+          </div>
+
+          <!-- Nút Đăng ký -->
+          <button type="submit" class="register">Đăng ký</button>
+
+          <!-- Điều hướng Đăng nhập -->
+          <div class="register_nav">
+            <p>Đã có tài khoản? <a href="./dangnhap.html">Đăng nhập</a></p>
+          </div>
+        </div>
+      </form>
     </div>
-    
-    <ul class="menu-drawer-list">
-      <li>
-        <i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a>
-      </li>
-      <li>
-        <i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a>
-        <ul class="sub-menu">
-          <li><a href="./khoahoc.html#mamnon" class="navbar-link">Mầm non</a></li>
-          <li><a href="./khoahoc.html#tieuhoc" class="navbar-link">Tiểu học</a></li>
-        </ul>
-      </li>
-      <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
-      <li>
-        <a href="./dangky.html" class="navbar-link color-chocolate">Đăng ký</a>
-      </li>
-      <li>
-        <a href="./dangnhap.html" class="navbar-link color-green">Đăng nhập</a>
-      </li>
-    </ul>
-  </div>
-</div>
 
-  <!-- Banner & Form Register -->
-  <div class="container_register">
-    <img src="./assets/img//dangky/banner.png" alt="BrightEnglish Banner" class="register-img" />
-
-    <form action="" class="form-register">
-      <h1>Đăng Ký</h1>
-      <p class="subtitle">Tạo tài khoản để bắt đầu hành trình học tiếng Anh cùng BrightEnglish</p>
-
-      <div class="register-box">
-        <!-- Họ và tên (Đã bỏ icon) -->
-        <div class="input-group">
-          <input type="text" id="fullname" placeholder="Họ và tên" required />
-        </div>
-
-        <!-- Email (Đã bỏ icon) -->
-        <div class="input-group">
-          <input type="email" id="email" placeholder="Email" required autocomplete="off" />
-        </div>
-
-        <!-- Mật khẩu (Giữ lại icon con mắt toggle) -->
-        <div class="input-group password-box">
-          <input type="password" id="password" placeholder="Mật khẩu" required />
-          <i class="fa-solid fa-eye toggle"></i>
-        </div>
-
-        <!-- Nhập lại mật khẩu (Giữ lại icon con mắt toggle) -->
-        <div class="input-group password-box">
-          <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
-          <i class="fa-solid fa-eye toggle"></i>
-        </div>
-
-        <!-- Điều khoản -->
-        <div class="terms">
-          <input type="checkbox" id="agree" required />
-          <label for="agree">
-            Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a>
-          </label>
-        </div>
-
-        <!-- Nút Đăng ký -->
-        <button type="submit" class="register">Đăng ký</button>
-
-        <!-- Điều hướng Đăng nhập -->
-        <div class="register_nav">
-          <p>Đã có tài khoản? <a href="./dangnhap.html">Đăng nhập</a></p>
-        </div>
-      </div>
-    </form>
-  </div>
-
-   <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
-        </div>
-        <div class="footer-body">
-          <div class="footer-left">
-            <p class="footer-name">
-              Công ty Cổ phần Đầu tư phát triển Group 2
-            </p>
-            <p class="footer-info">
-              Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
-              Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
-              Giờ làm việc: 7h - 11h30 | 13h - 21h
-            </p>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-logo">
+            <img src="./assets/img/trangchu/logocty.png" alt="Group 2 Logo" />
           </div>
-          <div class="footer-center">
-            <p class="footer-name">Follow us</p>
-            <ul class="footer-contact">
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-facebook footer-icon color-blue"
-                  ></i
-                  >CTY GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i
-                    class="fa-brands fa-youtube footer-icon color-red"
-                  ></i
-                  >GROUP 2</a
-                >
-              </li>
-              <li>
-                <a href="" class="footer-info"
-                  ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
-                  STORIES</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-right">
-            <p class="footer-name"> Hỗ trợ khách hàng </p>
-            <ul class="footer-support">
-              <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
-              <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
-              <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
-            </ul>
+          <div class="footer-body">
+            <div class="footer-left">
+              <p class="footer-name">
+                Công ty Cổ phần Đầu tư phát triển Group 2
+              </p>
+              <p class="footer-info">
+                Địa chỉ: Tầng 6, Toà nhà A6, Phố CT188, Ninh Kiều, Cần Thơ<br />
+                Tel: 0666188188 | Fax: 0188666188 | Email: group2@gmaill.com<br />
+                Giờ làm việc: 7h - 11h30 | 13h - 21h
+              </p>
+            </div>
+            <div class="footer-center">
+              <p class="footer-name">Follow us</p>
+              <ul class="footer-contact">
+                <li>
+                  <a href="" class="footer-info"
+                    ><i
+                      class="fa-brands fa-facebook footer-icon color-blue"
+                    ></i
+                    >CTY GROUP 2</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-info"
+                    ><i
+                      class="fa-brands fa-youtube footer-icon color-red"
+                    ></i
+                    >GROUP 2</a
+                  >
+                </li>
+                <li>
+                  <a href="" class="footer-info"
+                    ><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2
+                    STORIES</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-right">
+              <p class="footer-name"> Hỗ trợ khách hàng </p>
+              <ul class="footer-support">
+                <li><a href="" class="footer-info"> Chính sách và Bảo mật </a></li>
+                <li><a href="" class="footer-info"> Quyền lợi khách hàng </a></li>
+                <li><a href="" class="footer-info"> Hướng dẫn sử dụng </a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
- <a href="" class="btn-contact">
-      <i class="fa-brands fa-facebook-messenger color-blue"></i>
-    </a>
-    
-    <script src="./assets/js/dangky.js"></script>
+      </footer>
+  <a href="" class="btn-contact">
+        <i class="fa-brands fa-facebook-messenger color-blue"></i>
+      </a>
+      
+      <script src="./assets/js/dangky.js"></script>
   </body>
 </html>
 
