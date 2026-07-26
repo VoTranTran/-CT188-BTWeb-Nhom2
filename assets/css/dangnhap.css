@@ -207,23 +207,3 @@ button.login:hover {
 .toggle:hover{
     transform:translateY(-50%) scale(1.08);
 }
-
-/*RESPONSIVE NHỎ*/
-@media (max-width:768px){
-    .form-login{
-        width:90%;
-        min-width:unset;
-        left:50%;
-    }
-    .login-option{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
-    }
-    .code-box{
-        flex-direction:column;
-    }
-    .code-btn{
-        width:100%;
-    }
-}
