@@ -116,30 +116,33 @@
 
     <!-- Banner & Form Register -->
     <div class="container_register">
-      <img src="./assets/img//dangky/banner.png" alt="BrightEnglish Banner" class="register-img" />
+      <!-- Hiển thị ảnh banner -->
+      <img src="./assets/img/dangky/banner.png" alt="BrightEnglish Banner" class="register-img" />
 
+      <!-- Form đăng ký -->
       <form action="" class="form-register">
         <h1>Đăng Ký</h1>
         <p class="subtitle">Tạo tài khoản để bắt đầu hành trình học tiếng Anh cùng BrightEnglish</p>
 
+        <!-- Khối chứa tất cả các ô nhập liệu -->
         <div class="register-box">
-          <!-- Họ và tên (Đã bỏ icon) -->
+          <!-- Họ và tên -->
           <div class="input-group">
             <input type="text" id="fullname" placeholder="Họ và tên" required />
           </div>
 
-          <!-- Email (Đã bỏ icon) -->
+          <!-- Email -->
           <div class="input-group">
             <input type="email" id="email" placeholder="Email" required autocomplete="off" />
-          </div>
+          </div> <!-- autocomplete="off" là không gợi ý email đã lưu -->
 
-          <!-- Mật khẩu (Giữ lại icon con mắt toggle) -->
+          <!-- Mật khẩu  -->
           <div class="input-group password-box">
             <input type="password" id="password" placeholder="Mật khẩu" required />
-            <i class="fa-solid fa-eye toggle"></i>
+            <i class="fa-solid fa-eye toggle"></i> <!-- icon con mắt dùng JavaScript để ẩn/hiện mật khẩu -->
           </div>
 
-          <!-- Nhập lại mật khẩu (Giữ lại icon con mắt toggle) -->
+          <!-- Nhập lại mật khẩu -->
           <div class="input-group password-box">
             <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
             <i class="fa-solid fa-eye toggle"></i>
@@ -148,7 +151,7 @@
           <!-- Điều khoản -->
           <div class="terms">
             <input type="checkbox" id="agree" required />
-            <label for="agree">
+            <label for="agree"> <!-- for="agree": khi bấm vào chữ cũng sẽ tích checkbox -->
               Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a>
             </label>
           </div>

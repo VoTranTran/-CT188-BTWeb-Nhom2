@@ -1,12 +1,12 @@
 /* TRANG ĐĂNG NHẬP */
 /* CONTAINER BAO NGOÀI (Chứa Banner đằng sau) */
 .container_login {
-  position: relative;
+  position: relative;  /* Đặt vị trí tương đối để form có thể đè lên banner */
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  overflow: hidden; /* Ẩn phần nội dung bị tràn */
 }
 
 /* Banner nằm đằng sau tự dãn full 100% chiều rộng */
@@ -20,22 +20,22 @@
 .form-login {
   position: absolute;
   top: 50%;
-  left: calc(50% - 90px); 
-  transform: translate(-50%, -60%);
+  left: calc(50% - 90px);  /* Dịch sang trái một chút để cân đối với banner */
+  transform: translate(-50%, -60%); /* Dịch chuyển chính xác vào giữa */
   width: 35%; 
   min-width: 340px;
   max-width: 480px;
-  padding: 30px 25px;
+  padding: 30px 25px; /* Khoảng cách giữa nội dung và viền */
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding không làm tăng kích thước */
 }
 
 /* Mặc định ẩn form Quên mật khẩu */
 #forgotPasswordForm{
-    display: none;
+  display: none;
 }
 
 /* Tiêu đề & Mô tả */
@@ -45,12 +45,11 @@
   color: #0084ff;
   margin-bottom: 8px;
 }
-
 .subtitle {
   font-size: 13px;
   color: #666;
   margin-bottom: 20px;
-  line-height: 1.4;
+  line-height: 1.4;  /* Khoảng cách giữa các dòng */
 }
 
 
@@ -58,6 +57,7 @@
 .login-box {
   width: 100%;
 }
+/* Mỗi nhóm input */
 .input-group {
   position: relative;
   width: 100%;
@@ -71,60 +71,62 @@
   border: 1px solid #e2e8f0;
   background-color: #fafafa;
   font-size: 14px;
-  outline: none;
+  outline: none; /* Bỏ viền mặc định */
   box-sizing: border-box;
   transition:.3s ;
 }
 /* Khi rê chuột */
 .input-group input:hover{
-    border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
+  border-color:#64B5F6;/*Đổi màu viền khi rê chuột*/
 }
 /* Khi nhập dữ liệu */
 .input-group input:focus{
-    background:#ffffff; /* Đổi nền thành màu trắng */
-    border-color:#1976D2; /* Đổi màu viền sang xanh */
-    outline:none; /* Bỏ viền mặc định của trình duyệt */
-    box-shadow:0 0 8px rgba(25,118,210,.25);/* Thêm hiệu ứng đổ bóng xanh */
+  background:#ffffff; /* Đổi nền thành màu trắng */
+  border-color:#1976D2; /* Đổi màu viền sang xanh */
+  outline:none; /* Bỏ viền mặc định của trình duyệt */
+  box-shadow:0 0 8px rgba(25,118,210,.25);/* Thêm hiệu ứng đổ bóng xanh */
 }
 
 /* Password Box & Icon con mắt (Theo cách căn % của bạn bạn) */
 .password-box {
   position: relative;
 }
-
+/* Icon con mắt */
 .toggle {
   position: absolute;
   right: 15px; /* Hoặc căn theo %: right: 4% */
   top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
+  transform: translateY(-50%); /* Dịch icon đúng vào giữa */
+  cursor: pointer; /* Hiển thị hình bàn tay */
   font-size: 18px;
-  opacity: 0.6;
-  user-select: none;
-}
+  opacity: 0.6; /* Độ mờ */
+  user-select: none; /* Không cho bôi đen */
+} /* Khi rê chuột vào icon */
 .toggle:hover{
-    color:#0084ff;
+  color:#0084ff;
 }
 
 /* Ghi nhớ mật khẩu*/
 .login-option{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:12px 0 20px;
-    font-size:13px;
+  display:flex; /* Hiển thị theo hàng ngang */
+  justify-content:space-between; /* Đưa hai phần về hai đầu */
+  align-items:center;
+  margin:12px 0 20px;
+  font-size:13px;
 }
+/* Khung checkbox */
 .remember{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#555;
-    cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:8px; /* Khoảng cách giữa checkbox và chữ */
+  color:#555;
+  cursor:pointer;
 }
+/* Checkbox */
 .remember input{
-    width:16px;
-    height:16px;
-    cursor:pointer;
+  width:16px;
+  height:16px;
+  cursor:pointer;
 }
 
 /* Nút Đăng nhập (Dãn dài đồng bộ với các thanh input) */
@@ -151,75 +153,61 @@ button.login:hover {
   font-size: 14px;
   color: #666;
 }
+/* Link điều hướng */
 .login_nav a {
   color: #0084ff;
   font-weight: 600;
   text-decoration: none;
 }
+/* Khi rê chuột */
 .login_nav a:hover{
-    text-decoration:underline;
+  text-decoration:underline;
 }
 
 /* Quên mật khẩu */
 .forgot-password{
-    color:#0084ff;
-    text-decoration:none;
-    transition:0.3s;
+  color:#0084ff;
+  text-decoration:none;
+  transition:0.3s;
 }
 .forgot-password:hover{
-    text-decoration:underline;
+  text-decoration:underline;
 }
 
 /* Ô lấy mã */
 .code-box{
-    display:flex; /*Hiển thị ô nhập và nút trên cùng một hàng.*/
-    gap:10px;/* Khoảng cách */
+  display:flex; /*Hiển thị ô nhập và nút trên cùng một hàng.*/
+  gap:10px;/* Khoảng cách */
 }
 
 /* Ô nhập mã */
 .code-box input{
-    flex:1;/*Tự động chiếm phần diện tích còn lại.*/
+  flex:1;/*Tự động chiếm phần diện tích còn lại.*/
 }
 
 /* Nút lấy mã */
 .code-btn{
-    padding:12px 16px;
-    border:none;
-    border-radius:12px;
-    background:#0084ff;
-    color:#fff;
-    cursor:pointer;
-    font-size:14px;
-    font-weight:600;
-    white-space:nowrap;
-    transition:.3s;
+  padding:12px 16px;
+  border:none;
+  border-radius:12px;
+  background:#0084ff;
+  color:#fff;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap; /* Không xuống dòng */
+  transition:.3s;
 }
 .code-btn:hover{
-    background:#0068ca;
+  background:#0068ca;
 }
 
 /*HIỆU ỨNG INPUT*/
 .input-group input:hover{
-    border-color:#0084ff;
+  border-color:#0084ff;
 }
 
 /* HIỆU ỨNG ICON MẮT*/
 .toggle:hover{
-    transform:translateY(-50%) scale(1.08);
-}
-/* Mobile */
-@media (max-width:768px){
-    .login-option{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
-    }
-
-    .code-box{
-        flex-direction:column;
-    }
-
-    .code-btn{
-        width:100%;
-    }
+  transform:translateY(-50%) scale(1.08); /* Giữ icon ở giữa và phóng to nhẹ */
 }

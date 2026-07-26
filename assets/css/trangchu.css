@@ -1,18 +1,23 @@
+/* ==========================================
+   1. GLOBAL VARIABLES & RESET
+   Tạo các biến màu dùng chung và reset CSS cơ bản
+   ========================================== */
+:root {
+  --text: #001C66;
+  --one: #63DEFF;
+  --two: #FCDD51;
+  --choc: chocolate;
+  --trans: all 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --color-one: #63DEFF;
-  --color-two: #FCDD51;
-  --color-text: #001C66;
-  --color-background: #6b7280;
-}
-
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; /* Quy đổi 1rem = 10px để dễ tính toán */
   scroll-behavior: smooth;
 }
 
@@ -24,7 +29,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #263238;
+  color: inherit;
 }
 
 img {
@@ -34,32 +39,43 @@ img {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
 }
 
-/* Common Container & Helper Classes */
+
+/* ==========================================
+   2. UTILITY & HELPER CLASSES
+   Các class tiện ích hỗ trợ căn chỉnh và đổi màu nhanh
+   ========================================== */
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.color-chocolate { color: chocolate; }
-.color-green { color: #67a606; }
-.color-red { color: red; }
-.color-blue { color: blue; }
-.col-yellow { color: #f2ce5a; }
+/* Color Helpers */
+.color-chocolate { color: var(--choc); }
+.color-green     { color: #67a606; }
+.color-red       { color: red; }
+.color-blue      { color: blue; }
+.col-yellow      { color: #f2ce5a; }
 
-.dis-none { display: none; }
+/* Display & Text Helpers */
+.dis-none         { display: none; }
 .dis-inline-block { display: inline-block; }
-.text-center { text-align: center; }
-.lh { line-height: 1.8; }
+.text-center      { text-align: center; }
+.lh               { line-height: 1.8; }
 
+
+/* ==========================================
+   3. HEADER & NAVIGATION
+   Thanh điều hướng, Logo và Off-canvas Menu
+   ========================================== */
 .header {
-  background-color: #e3f2fd;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   height: 8rem;
+  background: #e3f2fd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, 
+              rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 }
 
 .header.fixed {
@@ -68,7 +84,8 @@ ul {
   z-index: 10;
 }
 
-.header-body {
+.header-body, 
+.header-body nav {
   display: flex;
   align-items: center;
 }
@@ -82,9 +99,7 @@ ul {
 
 .header-body nav {
   flex-grow: 1;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav li {
@@ -101,38 +116,56 @@ nav a:hover {
 }
 
 .home-style {
-  text-shadow: 0.4px 0 0 black;
+  text-shadow: 0.4px 0 0 #000;
   font-size: 1.9rem;
+}
+
+/* Icon Frames & Hover Effects */
+.frame, 
+.shopping-icon-frame {
+  background: #fff;
 }
 
 .frame {
   padding: 10px 0;
   border-radius: 20px;
-  background-color: white;
-}
-
-.frame:hover,
-.shopping-icon-frame:hover {
-  opacity: 0.7;
 }
 
 .shopping-icon-frame {
   padding: 10px;
   border-radius: 50%;
-  background-color: white;
 }
 
-.menu-header__icon { z-index: 1001 !important; }
-.menu-overlay { z-index: 1000 !important; }
-.menu-drawer { z-index: 1002 !important; }
+.frame:hover, 
+.shopping-icon-frame:hover {
+  opacity: 0.7;
+}
+
+/* Drawer & Overlay Stack Layers */
+.menu-header__icon {
+  z-index: 1001 !important;
+}
+
+.menu-overlay {
+  z-index: 1000 !important;
+}
+
+.menu-drawer {
+  z-index: 1002 !important;
+}
 
 .menu-drawer-list .sub-menu {
   padding-left: 20px;
   font-size: 1.4rem;
 }
 
+
+/* ==========================================
+   4. HERO SECTION
+   Khu vực giới thiệu chính đầu trang (Banner)
+   ========================================== */
 .hero {
-  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
   padding: 80px 0;
   overflow: hidden;
 }
@@ -151,8 +184,8 @@ nav a:hover {
 
 .hero-badge {
   display: inline-block;
-  background-color: rgba(99, 222, 255, 0.2);
-  color: var(--color-text, #001C66);
+  background: rgba(99, 222, 255, 0.2);
+  color: var(--text);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 1.4rem;
@@ -164,7 +197,7 @@ nav a:hover {
   font-size: 4.8rem;
   line-height: 1.2;
   font-weight: 800;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   margin-bottom: 20px;
 }
 
@@ -181,16 +214,21 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-.btn-yellow-cta {
-  background-color: var(--color-two, #FCDD51);
-  color: var(--color-text, #001C66);
-  padding: 14px 28px;
+/* CTA Buttons */
+.btn-yellow-cta, 
+.btn-outline-cta {
+  display: inline-block;
   border-radius: 30px;
   font-weight: 700;
   font-size: 1.6rem;
+  transition: var(--trans);
+  color: var(--text);
+}
+
+.btn-yellow-cta {
+  background: var(--two);
+  padding: 14px 28px;
   box-shadow: 0 4px 15px rgba(252, 221, 81, 0.4);
-  transition: all 0.3s ease;
-  display: inline-block;
 }
 
 .btn-yellow-cta:hover {
@@ -199,20 +237,14 @@ nav a:hover {
 }
 
 .btn-outline-cta {
-  background-color: transparent;
-  color: var(--color-text, #001C66);
-  border: 2px solid var(--color-text, #001C66);
+  background: transparent;
+  border: 2px solid var(--text);
   padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1.6rem;
-  transition: all 0.3s ease;
-  display: inline-block;
 }
 
 .btn-outline-cta:hover {
-  background-color: var(--color-text, #001C66);
-  color: white;
+  background: var(--text);
+  color: #fff;
   transform: translateY(-3px);
 }
 
@@ -223,17 +255,108 @@ nav a:hover {
 }
 
 .hero-image img {
-  max-width: 100%;
-  height: auto;
   border-radius: 20px;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
 }
 
-.courses-section {
-  padding: 80px 0;
-  background-color: #ffffff;
+
+/* ==========================================
+   5. WHY CHOOSE SECTION
+   Lý do chọn dịch vụ / tính năng nổi bật
+   ========================================== */
+.why-choose {
+  padding: 60px 0;
+  background: #f8fdff;
 }
 
+.why-choose_inner {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.why-choose_left, 
+ul.why-choose_right {
+  flex: 1;
+}
+
+.why-choose_title {
+  color: var(--text);
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.why-choose_subtitle {
+  font-size: 1.4rem;
+  color: #546e7a;
+  margin-bottom: 25px;
+}
+
+.why-choose_image {
+  margin: 0;
+}
+
+.why-choose_image img {
+  max-width: 480px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+ul.why-choose_right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.why-choose_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.why-choose_icon {
+  width: 45px;
+  height: 45px;
+  border: 1.5px solid #ff7a00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff7a00;
+  font-size: 1.8rem;
+  background: rgba(255, 122, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.why-choose_text h3 {
+  font-size: 1.6rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.why-choose_text p {
+  font-size: 1.35rem;
+  color: #607d8b;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   6. COURSES & TRUST SECTIONS
+   Danh sách khóa học và các yếu tố tạo uy tín
+   ========================================== */
+.courses-section, 
+.consultant-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+/* Shared Header Box Structure */
 .section-header-box {
   text-align: center;
   max-width: 700px;
@@ -242,7 +365,7 @@ nav a:hover {
 
 .section-title {
   font-size: 3.2rem;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 15px;
   position: relative;
@@ -258,38 +381,45 @@ nav a:hover {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: var(--color-one, #63DEFF);
+  background: var(--one);
   border-radius: 2px;
 }
 
-.section-subtitle {
+.section-subtitle, 
+.trust-subtitle {
   font-size: 1.6rem;
   color: #78909c;
   line-height: 1.6;
 }
 
-.courses-grid {
+.courses-grid, 
+.trust-grid {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
+/* Course Cards */
 .course-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   width: calc(50% - 15px);
   max-width: 540px;
-  transition: all 0.3s ease;
+  transition: var(--trans);
   border: 1px solid #f0f4f8;
   display: flex;
   flex-direction: column;
 }
 
-.course-card:hover {
+.course-card:hover, 
+.trust-card:hover {
   transform: translateY(-5px);
+}
+
+.course-card:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -316,21 +446,19 @@ nav a:hover {
   align-self: flex-start;
 }
 
-.course-badge.blue {
-  background-color: #e3f2fd;
-  color: #1e88e5;
-}
+.course-badge.blue   { background: #e3f2fd; color: #1e88e5; }
+.course-badge.yellow { background: #fffde7; color: #fbc02d; }
 
-.course-badge.yellow {
-  background-color: #fffde7;
-  color: #fbc02d;
+.course-card-title, 
+.trust-card-title {
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .course-card-title {
   font-size: 2.2rem;
-  color: var(--color-text, #001C66);
-  font-weight: 700;
-  margin-bottom: 12px;
 }
 
 .course-card-desc {
@@ -367,8 +495,8 @@ nav a:hover {
 }
 
 .btn-learn-more {
-  background-color: chocolate;
-  color: white;
+  background: var(--choc);
+  color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
@@ -380,60 +508,41 @@ nav a:hover {
   opacity: 0.9;
 }
 
+/* Trust / Features Grid */
 .features-trust-section {
-  background-color: #f8fdff;
+  background: #f8fdff;
   padding: 80px 0;
 }
 
 .trust-title {
   font-size: 3.2rem;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   text-align: center;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 .trust-subtitle {
-  font-size: 1.6rem;
-  color: #78909c;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.trust-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
 .trust-card {
-  background-color: #ffffff;
+  background: #fff;
   border-radius: 16px;
   padding: 35px 25px;
   text-align: center;
   width: calc(33.333% - 20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease;
+  transition: var(--trans);
   border: 1px solid #f0f4f8;
-}
-
-.trust-card:hover {
-  transform: translateY(-5px);
 }
 
 .trust-icon {
   font-size: 4rem;
-  color: var(--color-one, #63DEFF);
+  color: var(--one);
   margin-bottom: 20px;
   display: inline-block;
-}
-
-.trust-card-title {
-  font-size: 2rem;
-  color: var(--color-text, #001C66);
-  font-weight: 700;
-  margin-bottom: 15px;
 }
 
 .trust-card-desc {
@@ -442,11 +551,11 @@ nav a:hover {
   line-height: 1.6;
 }
 
-.consultant-section {
-  padding: 80px 0;
-  background-color: #ffffff;
-}
 
+/* ==========================================
+   7. CONSULTANT & REGISTRATION FORM
+   Phần giới thiệu tư vấn viên và Form đăng ký
+   ========================================== */
 .consultant-row {
   display: flex;
   justify-content: space-between;
@@ -460,7 +569,7 @@ nav a:hover {
 
 .consultant-head-title {
   font-size: 3.6rem;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   font-weight: 800;
   margin-bottom: 15px;
 }
@@ -483,8 +592,8 @@ nav a:hover {
 }
 
 .consultant-feature-icon {
-  background-color: rgba(99, 222, 255, 0.2);
-  color: var(--color-text, #001C66);
+  background: rgba(99, 222, 255, 0.2);
+  color: var(--text);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -502,7 +611,7 @@ nav a:hover {
 .consultant-feature-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   margin-bottom: 5px;
 }
 
@@ -514,17 +623,18 @@ nav a:hover {
 
 .consultant-quote {
   font-style: italic;
-  color: chocolate;
+  color: var(--choc);
   font-size: 1.6rem;
   font-weight: 600;
-  border-left: 3px solid chocolate;
+  border-left: 3px solid var(--choc);
   padding-left: 15px;
   margin-top: 20px;
 }
 
+/* Consultation Form Box */
 .form-col-box {
   flex: 1;
-  background-color: #f3fffe;
+  background: #f3fffe;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
@@ -533,7 +643,7 @@ nav a:hover {
 
 .form-title {
   font-size: 2.4rem;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -559,30 +669,30 @@ nav a:hover {
 .form-label {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--color-text, #001C66);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
-.form-col-box input,
+.form-col-box input, 
 .form-col-box select {
   padding: 12px 16px;
   border: 1.5px solid rgba(99, 222, 255, 0.4);
   border-radius: 8px;
   font-size: 1.5rem;
   outline: none;
-  background-color: #ffffff;
+  background: #fff;
   transition: all 0.2s ease;
 }
 
-.form-col-box input:focus,
+.form-col-box input:focus, 
 .form-col-box select:focus {
-  border-color: var(--color-one, #63DEFF);
+  border-color: var(--one);
   box-shadow: 0 0 0 3px rgba(99, 222, 255, 0.15);
 }
 
 .btn-submit-consultant {
-  background-color: #ff7a00;
-  color: white;
+  background: #ff7a00;
+  color: #fff;
   width: 100%;
   padding: 14px;
   border: none;
@@ -591,24 +701,28 @@ nav a:hover {
   font-weight: 700;
   cursor: pointer;
   margin-top: 15px;
-  transition: all 0.3s ease;
+  transition: var(--trans);
   box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
 }
 
 .btn-submit-consultant:hover {
-  background-color: #e66e00;
+  background: #e66e00;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
 }
 
+
+/* ==========================================
+   8. FOOTER & FIXED CONTACT BUTTON
+   Thông tin chân trang và Nút liên hệ cố định
+   ========================================== */
 .footer {
-  background-color: #f3fffe;
-  padding: 2rem 0 2rem;
+  background: #f3fffe;
+  padding: 2rem 0;
 }
 
 .footer-logo img {
   width: 8rem;
-  height: auto;
   margin-left: -10px;
 }
 
@@ -632,98 +746,13 @@ nav a:hover {
 .footer-icon {
   margin-right: 8px;
 }
-.why-choose {
-  padding: 60px 0;
-  background-color: #f8fdff; /* Nền xanh nhạt đồng bộ với các section khác */
-}
 
-.why-choose_inner {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-/* --- Cột bên trái: Tiêu đề & Ảnh --- */
-.why-choose_left {
-  flex: 1;
-}
-
-.why-choose_title {
-  color: var(--color-text, #001C66); /* Màu xanh đậm chủ đạo trang chủ */
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
-}
-
-.why-choose_subtitle {
-  font-size: 1.4rem;
-  color: #546e7a; /* Màu chữ phụ đề chuẩn tone trang chủ */
-  margin-bottom: 25px;
-}
-
-.why-choose_image {
-  margin: 0;
-}
-
-.why-choose_image img {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 16px;
-}
-
-ul.why-choose_right {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.why-choose_item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.why-choose_icon {
-  width: 45px;
-  height: 45px;
-  border: 1.5px solid #ff7a00; /* Đổi viền sang màu cam đốm nhấn */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ff7a00; /* Màu icon cam nổi bật */
-  font-size: 1.8rem;
-  background-color: rgba(255, 122, 0, 0.08);
-  flex-shrink: 0;
-}
-
-.why-choose_text h3 {
-  font-size: 1.6rem;
-  color: var(--color-text, #001C66); /* Chữ tiêu đề nhỏ màu xanh đậm */
-  font-weight: 700;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-}
-
-.why-choose_text p {
-  font-size: 1.35rem;
-  color: #607d8b;
-  line-height: 1.5;
-}
-/* Nút Messenger gốc */
+/* Floating Contact Button & Animation */
 .btn-contact {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
   z-index: 99;
@@ -731,79 +760,81 @@ ul.why-choose_right {
 
 .btn-contact i {
   animation: wiggle 0.6s infinite;
-  font-size: 3em; /* Giữ nguyên đơn vị em nguyên bản */
+  font-size: 3em;
 }
 
 @keyframes wiggle {
   0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-8deg); }
-  50% { transform: rotate(8deg); }
-  75% { transform: rotate(-8deg); }
+  25%, 75% { transform: rotate(-8deg); }
+  50%      { transform: rotate(8deg); }
 }
 
-/* ===== 8. RESPONSIVE BREAKPOINTS ===== */
+
+/* ==========================================
+   9. RESPONSIVE DESIGN
+   Cấu hình hiển thị cho màn hình tablet & mobile (< 992px)
+   ========================================== */
 @media (max-width: 991.98px) {
+  /* Layout adjustments */
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
     padding: 40px 0;
   }
-
+  
   .hero-text {
     max-width: 100%;
   }
-
+  
   .hero-title {
     font-size: 3.6rem;
   }
-
+  
   .hero-buttons {
     justify-content: center;
   }
-
+  
   .hero-image {
     width: 80%;
   }
-
-  .course-card,
+  
+  .course-card, 
   .trust-card {
     width: 100%;
   }
-
+  
+  .why-choose_inner, 
   .consultant-row {
     flex-direction: column;
     gap: 40px;
   }
-
+  
   .consultant-left-col {
     text-align: center;
   }
-
+  
   .consultant-feature-item {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .consultant-quote {
     border-left: none;
-    border-top: 3px solid chocolate;
+    border-top: 3px solid var(--choc);
     padding-left: 0;
     padding-top: 15px;
   }
-
+  
+  /* Form & Footer Responsive */
   .form-col-box {
     width: 100%;
     max-width: 100%;
     padding: 30px 20px;
   }
-
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-
+  
+  .form-row, 
   .footer-body {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 }
