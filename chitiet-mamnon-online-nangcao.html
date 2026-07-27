@@ -73,7 +73,8 @@
       <ul class="menu-drawer-list">
         <li><i class="fa-solid fa-house"></i><a href="index.html" class="navbar-link">Trang chủ</a></li>
         <li><i class="fa-solid fa-map"></i><a href="./gioithieu.html" class="navbar-link">Giới thiệu</a></li>
-        <li><i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a></li>
+        <li><i class="fa-brands fa-discourse"></i><a href="./khoahoc.html" class="navbar-link home-style">Khóa học</a>
+        </li>
         <li><i class="fa-brands fa-opencart"></i><a href="./giohang.html" class="navbar-link">Giỏ hàng</a></li>
       </ul>
     </div>
@@ -90,9 +91,10 @@
             <span class="course-badge"><i class="fa-solid fa-baby"></i> Độ tuổi: 3 - 5 Tuổi | Học Online</span>
             <h1 class="course-main-title">Tiếng Anh Mầm Non - Khóa Nâng Cao (Online)</h1>
             <p class="course-short-desc">
-              Chương trình chuyên sâu dành cho trẻ đã có nền tảng. Tập trung phát triển phản xạ nghe - nói tự nhiên, rèn luyện phát âm chuẩn bản xứ và làm quen với kỹ năng kể chuyện (Storytelling) qua video tương tác.
+              Chương trình chuyên sâu dành cho trẻ đã có nền tảng. Tập trung phát triển phản xạ nghe - nói tự nhiên, rèn
+              luyện phát âm chuẩn bản xứ và làm quen với kỹ năng kể chuyện (Storytelling) qua video tương tác.
             </p>
-            
+
             <!-- Thông số nhanh dạng Thẻ Badge -->
             <div class="course-meta-pills">
               <div class="meta-item"><i class="fa-regular fa-clock"></i> 24 Buổi học</div>
@@ -103,16 +105,16 @@
             <!-- Khối Giá & Hành Động Mua (Giá đã cộng 200k chênh lệch theo JS) -->
 
 
-           
-          <div class="detail-purchase-box">
-            <div class="price-group">
-              <span class="old-price">1.400.000đ</span>
-              <span class="new-price color-red">999.000đ</span>
+
+            <div class="detail-purchase-box">
+              <div class="price-group">
+                <span class="old-price">1.400.000đ</span>
+                <span class="new-price color-red">999.000đ</span>
+              </div>
+              <button id="btn-add-cart" class="modal-submit btn-cart-large" onclick="addToCart(this)">
+                <i class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
+              </button>
             </div>
-            <button id="btn-add-cart" class="modal-submit btn-cart-large" onclick="addToCart(this)">
-            <i class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
-            </button>
-          </div>
           </div>
 
           <!-- Ảnh xem trước đại diện khóa học -->
@@ -126,36 +128,43 @@
     <!-- KHỐI CHÍNH: NỘI DUNG TRÌNH BÀY CHI TIẾT MỘT CỘT RỘNG -->
     <section class="detail-body-section">
       <div class="container">
-        
+
         <!-- 1. TỔNG QUAN GIỚI THIỆU KHÓA HỌC -->
         <div class="detail-block">
           <h2 class="section-title color-blue"><i class="fa-solid fa-circle-info"></i> Giới thiệu khóa học</h2>
           <div class="block-content">
             <p class="paragraph">
-              Khóa học <strong>Tiếng Anh Mầm Non Online - Nâng Cao</strong> dành cho các bé đã vượt qua giai đoạn làm quen và sẵn sàng bứt phá tư duy ngôn ngữ. Trẻ sẽ được đắm mình trong môi trường Anh ngữ 100% với Giáo viên bản ngữ thông qua nền tảng Video tương tác độc quyền.
+              Khóa học <strong>Tiếng Anh Mầm Non Online - Nâng Cao</strong> dành cho các bé đã vượt qua giai đoạn làm
+              quen và sẵn sàng bứt phá tư duy ngôn ngữ. Trẻ sẽ được đắm mình trong môi trường Anh ngữ 100% với Giáo viên
+              bản ngữ thông qua nền tảng Video tương tác độc quyền.
             </p>
             <p class="paragraph">
-              Chương trình tập trung sâu vào việc ghép vần Phonics nâng cao, hình thành thói quen trả lời nguyên câu (Full sentences) và đặc biệt là rèn luyện kỹ năng <em>kể chuyện (Storytelling)</em> giúp bé tự tin diễn đạt suy nghĩ của mình ngay từ nhỏ.
+              Chương trình tập trung sâu vào việc ghép vần Phonics nâng cao, hình thành thói quen trả lời nguyên câu
+              (Full sentences) và đặc biệt là rèn luyện kỹ năng <em>kể chuyện (Storytelling)</em> giúp bé tự tin diễn
+              đạt suy nghĩ của mình ngay từ nhỏ.
             </p>
           </div>
         </div>
 
         <!-- 2. NỘI DUNG BÀI HỌC CỤ THỂ (CURRICULUM) -->
         <div class="detail-block">
-          <h2 class="section-title color-blue"><i class="fa-solid fa-list-check"></i> Nội dung chương trình chi tiết</h2>
-          
+          <h2 class="section-title color-blue"><i class="fa-solid fa-list-check"></i> Nội dung chương trình chi tiết
+          </h2>
+
           <div class="curriculum-grid">
-            
+
             <div class="curriculum-card">
               <div class="curriculum-header">
                 <span class="part-badge">Chương 1</span>
                 <h3>Ghép vần Phonics nâng cao & Từ vựng mở rộng (Buổi 1 - 8)</h3>
               </div>
               <ul class="curriculum-list">
-                <li><i class="fa-solid fa-circle-play"></i> Bài 1: Ôn tập bảng chữ cái và nhận biết âm ghép (Blending)</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 1: Ôn tập bảng chữ cái và nhận biết âm ghép (Blending)
+                </li>
                 <li><i class="fa-solid fa-circle-play"></i> Bài 2: Khám phá từ vựng chủ đề Cơ thể bé (My Body)</li>
                 <li><i class="fa-solid fa-circle-play"></i> Bài 3: Từ vựng chủ đề Cảm xúc (Feelings & Emotions)</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 4: Thực hành hát và vận động theo nhạc (Action Songs)</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 4: Thực hành hát và vận động theo nhạc (Action Songs)
+                </li>
               </ul>
             </div>
 
@@ -165,10 +174,14 @@
                 <h3>Mẫu câu giao tiếp & Trả lời nguyên câu (Buổi 9 - 16)</h3>
               </div>
               <ul class="curriculum-list">
-                <li><i class="fa-solid fa-circle-play"></i> Bài 5: Cách giới thiệu bản thân chi tiết (Self-Introduction)</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 6: Đặt câu hỏi và trả lời về sở thích (I like / I don't like)</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 7: Kỹ năng mô tả Thời tiết và Quần áo (Weather & Clothes)</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 8: Trò chơi tương tác E-learning: Đóng vai tình huống thực tế</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 5: Cách giới thiệu bản thân chi tiết (Self-Introduction)
+                </li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 6: Đặt câu hỏi và trả lời về sở thích (I like / I don't
+                  like)</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 7: Kỹ năng mô tả Thời tiết và Quần áo (Weather &
+                  Clothes)</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 8: Trò chơi tương tác E-learning: Đóng vai tình huống
+                  thực tế</li>
               </ul>
             </div>
 
@@ -179,9 +192,12 @@
               </div>
               <ul class="curriculum-list">
                 <li><i class="fa-solid fa-circle-play"></i> Bài 9: Làm quen với Truyện tranh E-book tương tác</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 10: Tập kể lại câu chuyện cổ tích ngắn bằng Tiếng Anh</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 11: Dự án cá nhân: Thuyết trình về Món đồ chơi yêu thích</li>
-                <li><i class="fa-solid fa-circle-play"></i> Bài 12: Tổng kết năng lực, trả bài kiểm tra và cấp Chứng nhận</li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 10: Tập kể lại câu chuyện cổ tích ngắn bằng Tiếng Anh
+                </li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 11: Dự án cá nhân: Thuyết trình về Món đồ chơi yêu thích
+                </li>
+                <li><i class="fa-solid fa-circle-play"></i> Bài 12: Tổng kết năng lực, trả bài kiểm tra và cấp Chứng
+                  nhận</li>
               </ul>
             </div>
 
@@ -190,7 +206,8 @@
 
         <!-- 3. GIẢNG VIÊN ĐỒNG HÀNH (Cập nhật khớp với dữ liệu khoahoc.html) -->
         <div class="detail-block">
-          <h2 class="section-title color-blue"><i class="fa-solid fa-chalkboard-user"></i> Giảng viên trực tiếp giảng dạy</h2>
+          <h2 class="section-title color-blue"><i class="fa-solid fa-chalkboard-user"></i> Giảng viên trực tiếp giảng
+            dạy</h2>
           <div class="teacher-pair">
             <div class="teacher-single">
               <img src="./assets/img/gioithieu/gv3.jpg" alt="Thầy Adeline John">
@@ -223,7 +240,8 @@
                 <i class="fa-solid fa-star color-yellow"></i>
                 <i class="fa-solid fa-star color-yellow"></i>
               </div>
-              <p class="review-text">"Bé nhà mình tiến bộ rõ rệt, giờ đã có thể tự tin kể một câu chuyện ngắn bằng tiếng Anh trước khi đi ngủ. Nền tảng video tương tác thực sự cuốn hút và hiệu quả!"</p>
+              <p class="review-text">"Bé nhà mình tiến bộ rõ rệt, giờ đã có thể tự tin kể một câu chuyện ngắn bằng tiếng
+                Anh trước khi đi ngủ. Nền tảng video tương tác thực sự cuốn hút và hiệu quả!"</p>
               <span class="review-author">— Mẹ bé Dâu Tây (Đà Nẵng)</span>
             </div>
 
@@ -235,7 +253,8 @@
                 <i class="fa-solid fa-star color-yellow"></i>
                 <i class="fa-solid fa-star color-yellow"></i>
               </div>
-              <p class="review-text">"Các thầy cô phát âm cực chuẩn và biết cách tạo không khí qua màn hình khiến bé không rời mắt. Bé đã bỏ hẳn thói quen nói tiếng Anh từng từ mà chuyển sang nói nguyên câu."</p>
+              <p class="review-text">"Các thầy cô phát âm cực chuẩn và biết cách tạo không khí qua màn hình khiến bé
+                không rời mắt. Bé đã bỏ hẳn thói quen nói tiếng Anh từng từ mà chuyển sang nói nguyên câu."</p>
               <span class="review-author">— Ba Gia Bảo (TP.HCM)</span>
             </div>
           </div>
@@ -255,7 +274,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-logo">
-        <img src="./assets/img/logo.png" alt="BrightEnglish" style="height: auto; width: 150px; margin-left: 0; margin-bottom: 20px;" />
+        <img src="./assets/img/logo.png" alt="BrightEnglish"
+          style="height: auto; width: 150px; margin-left: 0; margin-bottom: 20px;" />
       </div>
       <div class="footer-body">
         <div class="footer-left">
@@ -267,8 +287,10 @@
         <div class="footer-center">
           <p class="footer-name">Follow us</p>
           <ul class="footer-contact">
-            <li><a href="#" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP 2</a></li>
-            <li><a href="#" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-facebook footer-icon color-blue"></i>CTY GROUP
+                2</a></li>
+            <li><a href="#" class="footer-info"><i class="fa-brands fa-youtube footer-icon color-red"></i>GROUP 2</a>
+            </li>
             <li><a href="#" class="footer-info"><i class="fa-brands fa-tiktok footer-icon"></i>GROUP 2 STORIES</a></li>
           </ul>
         </div>

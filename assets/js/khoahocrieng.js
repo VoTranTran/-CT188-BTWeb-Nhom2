@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- A. LỘ TRÌNH BÀI HỌC - ACCORDION (CODE TRÚC) ---
   const periodItems = document.querySelectorAll(".period-item");
+  console.log(periodItems);
 
   periodItems.forEach((item) => {
     const btn = item.querySelector(".period-title");
+    console.log(btn);
     const content = item.querySelector(".period-inf");
 
     if (btn && content) {
@@ -109,7 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- B. COURSE MORE - XEM THÊM GIẢNG VIÊN (CODE TRÚC) ---
   const moreBtn = document.querySelector(".course-view-more");
+  console.log(moreBtn);
   const teacherMore = document.querySelector(".course-more-list");
+  console.log(teacherMore);
 
   if (moreBtn && teacherMore) {
     moreBtn.addEventListener("click", function () {
@@ -121,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- C. SCROLL SPY SIDEBAR (CODE TRÚC) ---
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
+  console.log(navLinks);
 
   if (sections.length > 0 && navLinks.length > 0) {
     const observer = new IntersectionObserver(
