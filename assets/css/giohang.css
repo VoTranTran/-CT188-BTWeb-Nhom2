@@ -657,7 +657,7 @@
 
 .personal-form__input {
   border: 0;
-  /* border-bottom: 2px solid #E6E3F1; */
+  border-bottom: 2px solid #E6E3F1;
   background-color: transparent;
   padding-bottom: 8px;
   padding-top: 20px;
