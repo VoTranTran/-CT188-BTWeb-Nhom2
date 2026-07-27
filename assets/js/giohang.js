@@ -363,6 +363,15 @@ function saveInfo() {
       }
     }
   });
+
+  const noteElement = document.querySelector("#note");
+  noteElement.addEventListener("blur", function() {
+    labelNote = noteElement.nextElementSibling;
+    if(noteElement.value != "") {
+      labelNote.style.top = "-10px";
+    }
+  });
+  
   const form = document.querySelector("#personalForm");
   form.addEventListener('submit', function (event) {
     event.preventDefault();

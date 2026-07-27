@@ -657,7 +657,7 @@
 
 .personal-form__input {
   border: 0;
-  border-bottom: 2px solid #E6E3F1;
+  /* border-bottom: 2px solid #E6E3F1; */
   background-color: transparent;
   padding-bottom: 8px;
   padding-top: 20px;
@@ -681,7 +681,7 @@
   width: 0;
   transition: 0.4s;
   z-index: 1;
-  height: 2px;
+  height: 2px;  
 }
 
 .personal-form__input:focus~.focus_border {
