@@ -76,6 +76,16 @@ function calculate() {
 }
 
 //section-3
+function saveCartItemQuantity(productId, quantity) {
+  const cardItems = JSON.parse(localStorage.getItem("cardItems")) || [];
+  const cartItem = cardItems.find(item => item.id === productId);
+
+  if (cartItem) {
+    cartItem.quantity = quantity;
+    localStorage.setItem("cardItems", JSON.stringify(cardItems));
+  }
+}
+
 function quantityButtons() {
   const btn_minus = document.querySelectorAll(".cart-grid__btn-qty--minus"); // lấy tất cả thẻ giảm số lượng sản phẩm
   btn_minus.forEach(function (btn) {
@@ -87,6 +97,7 @@ function quantityButtons() {
         currentQuantity--; // giảm số lượng đi 1
         quantity.textContent = currentQuantity; // đặt lại số lượng mới
         updateTotalPrice(product_item, currentQuantity);
+        saveCartItemQuantity(product_item.id, currentQuantity);
         calculate();
       } else if (currentQuantity == 1) {
         const grid_ProductId = product_item.id; // lấy id của sản phẩm
@@ -111,6 +122,7 @@ function quantityButtons() {
       currentQuantity++; // tăng số lượng lên 1
       quantity.textContent = currentQuantity; // đặt lại số lượng
       updateTotalPrice(product_item, currentQuantity);
+      saveCartItemQuantity(product_item.id, currentQuantity);
       calculate();
     });
   });

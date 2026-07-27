@@ -11,6 +11,11 @@
     --color-two: #FCDD51;
     --color-text: #001C66;
     --color-background: #6b7280;
+    --text: #001c66;
+    --one: #63deff;
+    --two: #fcdd51;
+    --choc: chocolate;
+    --trans: all 0.3s ease;
 }  
 
 html {
@@ -22,6 +27,7 @@ body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #263238;
+  line-height: 1.5;
 }
 
 a {
@@ -269,6 +275,14 @@ nav a {
 
 nav a:hover {
   text-shadow: 0.4px 0 0 currentColor;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(99, 222, 255, 0.75);
+  outline-offset: 3px;
 }
 .frame {
   padding: 10px 0;
