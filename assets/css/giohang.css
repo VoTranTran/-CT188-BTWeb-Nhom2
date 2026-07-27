@@ -657,7 +657,7 @@
 
 .personal-form__input {
   border: 0;
-  border-bottom: 2px solid #E6E3F1;
+  /* border-bottom: 2px solid #E6E3F1; */
   background-color: transparent;
   padding-bottom: 8px;
   padding-top: 20px;
@@ -726,7 +726,6 @@
   background-color: transparent;
   resize: none;
   min-height: 127px;
-  border-bottom: solid 2px #E6E3F1;
 }
 
 .checkout-personal .button-1 {
