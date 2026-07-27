@@ -1,164 +1,3 @@
-/* ==========================================
-   1. GLOBAL VARIABLES & RESET
-   Tạo các biến màu dùng chung và reset CSS cơ bản
-   ========================================== */
-:root {
-  --text: #001C66;
-  --one: #63DEFF;
-  --two: #FCDD51;
-  --choc: chocolate;
-  --trans: all 0.3s ease;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%; /* Quy đổi 1rem = 10px để dễ tính toán */
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #263238;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  list-style: none;
-}
-
-
-/* ==========================================
-   2. UTILITY & HELPER CLASSES
-   Các class tiện ích hỗ trợ căn chỉnh và đổi màu nhanh
-   ========================================== */
-.container {
-  width: 1170px;
-  max-width: calc(100% - 48px);
-  margin: 0 auto;
-}
-
-/* Color Helpers */
-.color-chocolate { color: var(--choc); }
-.color-green     { color: #67a606; }
-.color-red       { color: red; }
-.color-blue      { color: blue; }
-.col-yellow      { color: #f2ce5a; }
-
-/* Display & Text Helpers */
-.dis-none         { display: none; }
-.dis-inline-block { display: inline-block; }
-.text-center      { text-align: center; }
-.lh               { line-height: 1.8; }
-
-
-/* ==========================================
-   3. HEADER & NAVIGATION
-   Thanh điều hướng, Logo và Off-canvas Menu
-   ========================================== */
-.header {
-  height: 8rem;
-  background: #e3f2fd;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, 
-              rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-}
-
-.header.fixed {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header-body, 
-.header-body nav {
-  display: flex;
-  align-items: center;
-}
-
-.header-body .logo {
-  mix-blend-mode: multiply;
-  width: 20rem;
-  height: 8rem;
-  object-fit: contain;
-}
-
-.header-body nav {
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  font-size: 1.8rem;
-  padding: 1.6rem;
-}
-
-nav a:hover {
-  text-shadow: 0.4px 0 0 currentColor;
-}
-
-.home-style {
-  text-shadow: 0.4px 0 0 #000;
-  font-size: 1.9rem;
-}
-
-/* Icon Frames & Hover Effects */
-.frame, 
-.shopping-icon-frame {
-  background: #fff;
-}
-
-.frame {
-  padding: 10px 0;
-  border-radius: 20px;
-}
-
-.shopping-icon-frame {
-  padding: 10px;
-  border-radius: 50%;
-}
-
-.frame:hover, 
-.shopping-icon-frame:hover {
-  opacity: 0.7;
-}
-
-/* Drawer & Overlay Stack Layers */
-.menu-header__icon {
-  z-index: 1001 !important;
-}
-
-.menu-overlay {
-  z-index: 1000 !important;
-}
-
-.menu-drawer {
-  z-index: 1002 !important;
-}
-
-.menu-drawer-list .sub-menu {
-  padding-left: 20px;
-  font-size: 1.4rem;
-}
-
 
 /* ==========================================
    4. HERO SECTION
@@ -716,59 +555,6 @@ ul.why-choose_right {
    8. FOOTER & FIXED CONTACT BUTTON
    Thông tin chân trang và Nút liên hệ cố định
    ========================================== */
-.footer {
-  background: #f3fffe;
-  padding: 2rem 0;
-}
-
-.footer-logo img {
-  width: 8rem;
-  margin-left: -10px;
-}
-
-.footer-body {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.footer-name {
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.footer-info {
-  line-height: 1.7;
-  font-style: italic;
-}
-
-.footer-icon {
-  margin-right: 8px;
-}
-
-/* Floating Contact Button & Animation */
-.btn-contact {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-  z-index: 99;
-}
-
-.btn-contact i {
-  animation: wiggle 0.6s infinite;
-  font-size: 3em;
-}
-
-@keyframes wiggle {
-  0%, 100% { transform: rotate(0deg); }
-  25%, 75% { transform: rotate(-8deg); }
-  50%      { transform: rotate(8deg); }
-}
-
 
 /* ==========================================
    9. RESPONSIVE DESIGN
@@ -832,9 +618,61 @@ ul.why-choose_right {
     padding: 30px 20px;
   }
   
-  .form-row, 
-  .footer-body {
+  .form-row {
     flex-direction: column;
     gap: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 48px 0;
+  }
+
+  .hero-title,
+  .consultant-head-title {
+    font-size: 3rem;
+  }
+
+  .section-title,
+  .trust-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-yellow-cta,
+  .btn-outline-cta,
+  .btn-learn-more {
+    width: 100%;
+    text-align: center;
+  }
+
+  .course-card-body,
+  .form-col-box {
+    padding: 24px 18px;
+  }
+
+  .course-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-choose_item {
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
